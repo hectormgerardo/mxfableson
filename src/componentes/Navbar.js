@@ -11,23 +11,47 @@ import {
 const NavBar = () => {
     return(
         <div className="App">
-    <ReactBootStrap.Navbar collapseOnSelect expand="xl" className="nav-color" variant="light">
+    <ReactBootStrap.Navbar collapseOnSelect expand="xl" className="nav" sticky="top" variant="light" >
   <ReactBootStrap.Navbar.Brand href="#home">Scenathon 2020</ReactBootStrap.Navbar.Brand>
   <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-    <ReactBootStrap.Nav className="mr-auto"> 
-    <Link to="/Features">
-    <ReactBootStrap.Nav.Link href="#features">Global Targets</ReactBootStrap.Nav.Link>
+    <ReactBootStrap.Nav className="mr-auto" sticky="top"> 
+    
+      <ReactBootStrap.NavDropdown title="More" id="collasible-nav-dropdown">
+      <Link to="/Features">
+    <ReactBootStrap.Nav.Link href="#features">Global Targets summary</ReactBootStrap.Nav.Link>
     </Link>
     <Link to="/pages/NetForestCoverChange">
-    <ReactBootStrap.Nav.Link href="#netforestcoverchange">NetForestCoverChange</ReactBootStrap.Nav.Link>
+    <ReactBootStrap.Nav.Link href="#netforestcoverchange">Net forest cover change (1)</ReactBootStrap.Nav.Link>
     </Link>
-      <ReactBootStrap.NavDropdown title="More" id="collasible-nav-dropdown">
-        <ReactBootStrap.NavDropdown.Item href="#action/3.1">Action</ReactBootStrap.NavDropdown.Item>
-        <ReactBootStrap.NavDropdown.Item href="#action/3.2">Another action</ReactBootStrap.NavDropdown.Item>
-        <ReactBootStrap.NavDropdown.Item href="#action/3.3">Something</ReactBootStrap.NavDropdown.Item>
-        <ReactBootStrap.NavDropdown.Divider />
-        <ReactBootStrap.NavDropdown.Item href="#action/3.4">Separated link</ReactBootStrap.NavDropdown.Item>
+      <Link to="/pages/NetForestCoverChange">
+        <ReactBootStrap.Nav.Link href="#netforestcoverchange">Net forest cover change (2)</ReactBootStrap.Nav.Link>
+        </Link>
+        <Link to="/pages/NetForestCoverChange">
+        <ReactBootStrap.Nav.Link href="#netforestcoverchange">Biodiversity</ReactBootStrap.Nav.Link>
+        </Link>
+        <Link to="/pages/NetForestCoverChange">
+        <ReactBootStrap.Nav.Link href="#netforestcoverchange">Protected areas by type</ReactBootStrap.Nav.Link>
+        </Link>
+        <Link to="/pages/NetForestCoverChange">
+        <ReactBootStrap.Nav.Link href="#netforestcoverchange">Land cover</ReactBootStrap.Nav.Link>
+        </Link>
+        <Link to="/pages/NetForestCoverChange">
+        <ReactBootStrap.Nav.Link href="#netforestcoverchange">Fresh water use (1)</ReactBootStrap.Nav.Link>
+        </Link>
+        <Link to="/pages/NetForestCoverChange">
+        <ReactBootStrap.Nav.Link href="#netforestcoverchange">Fresh water use (2)</ReactBootStrap.Nav.Link>
+        </Link>
+        <Link to="/pages/NetForestCoverChange">
+        <ReactBootStrap.Nav.Link href="#netforestcoverchange">Greenhouse Gas (GHG) Emissions (1)</ReactBootStrap.Nav.Link>
+        </Link>
+        <Link to="/pages/NetForestCoverChange">
+        <ReactBootStrap.Nav.Link href="#netforestcoverchange">Food energy intake per capita (1)</ReactBootStrap.Nav.Link>
+        </Link>
+        <Link to="/pages/NetForestCoverChange">
+        <ReactBootStrap.Nav.Link href="#netforestcoverchange">Food energy intake per capita (2)</ReactBootStrap.Nav.Link>
+        </Link>
+        
       </ReactBootStrap.NavDropdown>
     </ReactBootStrap.Nav>
     <ReactBootStrap.Nav>
