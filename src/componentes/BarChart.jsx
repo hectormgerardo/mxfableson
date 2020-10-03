@@ -5,12 +5,13 @@ import { Bar } from 'react-chartjs-2';
 
 
 
-function BarChart(props) {
+const  BarChart=(props)=> {
 
 
 
     return (
-        <div>
+        <div >
+
             <Bar options={{
                 responsive: true,
                 text: 'Population growth (millions): Europe & Africa',

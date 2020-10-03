@@ -3,15 +3,11 @@ import BarChart from './BarChart'
 
 
 
-function crearData() {
-    console.log("asasass");
-
-}
 
 
 
-function ChooseGrafica(props) {
-    crearData();
+ const ChooseGrafica=(props)=> {
+   
     const efe = {
 
         labels: ["2000", "2005", "2010", "2015", "2020", "2025", "2030", "2035", "2040", "2045", "2050"],
