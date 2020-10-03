@@ -1,9 +1,9 @@
 import React from 'react';
 import './css/App.css';
-import Nfc from './pages/NetForestCoverChange';
+import Nfc from './pages/Grafica';
 import Navbar from "./componentes/Navbar";
-import Features from "./componentes/GlobalTargets";
-import About from './componentes/About';
+import Features from "./pages/GlobalTargets";
+import About from './pages/About';
 import {
   BrowserRouter as Router,
   Switch,
