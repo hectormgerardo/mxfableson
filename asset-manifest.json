@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/mxfableson.github.io/static/css/main.6eb38ebd.chunk.css",
-    "main.js": "/mxfableson.github.io/static/js/main.87a3df0a.chunk.js",
-    "main.js.map": "/mxfableson.github.io/static/js/main.87a3df0a.chunk.js.map",
-    "runtime-main.js": "/mxfableson.github.io/static/js/runtime-main.4f1ad075.js",
-    "runtime-main.js.map": "/mxfableson.github.io/static/js/runtime-main.4f1ad075.js.map",
-    "static/js/2.da415796.chunk.js": "/mxfableson.github.io/static/js/2.da415796.chunk.js",
-    "static/js/2.da415796.chunk.js.map": "/mxfableson.github.io/static/js/2.da415796.chunk.js.map",
-    "index.html": "/mxfableson.github.io/index.html",
-    "precache-manifest.17194f2d17cf5864ee6eff06a1a4343b.js": "/mxfableson.github.io/precache-manifest.17194f2d17cf5864ee6eff06a1a4343b.js",
-    "service-worker.js": "/mxfableson.github.io/service-worker.js",
-    "static/css/main.6eb38ebd.chunk.css.map": "/mxfableson.github.io/static/css/main.6eb38ebd.chunk.css.map",
-    "static/js/2.da415796.chunk.js.LICENSE.txt": "/mxfableson.github.io/static/js/2.da415796.chunk.js.LICENSE.txt"
+    "main.css": "/mxfableson/static/css/main.6eb38ebd.chunk.css",
+    "main.js": "/mxfableson/static/js/main.1a518ff4.chunk.js",
+    "main.js.map": "/mxfableson/static/js/main.1a518ff4.chunk.js.map",
+    "runtime-main.js": "/mxfableson/static/js/runtime-main.f04e9f69.js",
+    "runtime-main.js.map": "/mxfableson/static/js/runtime-main.f04e9f69.js.map",
+    "static/js/2.c57d1dc3.chunk.js": "/mxfableson/static/js/2.c57d1dc3.chunk.js",
+    "static/js/2.c57d1dc3.chunk.js.map": "/mxfableson/static/js/2.c57d1dc3.chunk.js.map",
+    "index.html": "/mxfableson/index.html",
+    "precache-manifest.e7684707eeb64bf208eb8d50adf2ed41.js": "/mxfableson/precache-manifest.e7684707eeb64bf208eb8d50adf2ed41.js",
+    "service-worker.js": "/mxfableson/service-worker.js",
+    "static/css/main.6eb38ebd.chunk.css.map": "/mxfableson/static/css/main.6eb38ebd.chunk.css.map",
+    "static/js/2.c57d1dc3.chunk.js.LICENSE.txt": "/mxfableson/static/js/2.c57d1dc3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f1ad075.js",
-    "static/js/2.da415796.chunk.js",
+    "static/js/runtime-main.f04e9f69.js",
+    "static/js/2.c57d1dc3.chunk.js",
     "static/css/main.6eb38ebd.chunk.css",
-    "static/js/main.87a3df0a.chunk.js"
+    "static/js/main.1a518ff4.chunk.js"
   ]
 }
