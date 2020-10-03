@@ -42,9 +42,9 @@ import BarChart from './BarChart'
     } else if (props.data.select.GraficaType === "group" && props.data.select.Iteration === "iteration_4" && props.data.select.Scenario === "Current_trend") {
         return <props.grafica data={efe} />
     } else if (props.data.select.GraficaType === "group" && props.data.select.Iteration === "iteration_3" && props.data.select.Scenario === "Current_trend") {
-        return <h1>group iteration_3 Current_trend</h1>
+        return <props.grafica data={efe} />
     } else if (props.data.select.GraficaType === "regions" && props.data.select.Iteration === "iteration_4" && props.data.select.Scenario === "Sustainaible") {
-        return <h1>regions iteration_4    Sustainaible</h1>
+        return <props.grafica data={efe} />
     } else if (props.data.select.GraficaType === "regions" && props.data.select.Iteration === "iteration_3" && props.data.select.Scenario === "Sustainaible") {
         return <h1>regions iteration_3    Sustainaible</h1>
     } else if (props.data.select.GraficaType === "regions" && props.data.select.Iteration === "iteration_4" && props.data.select.Scenario === "Current_trend") {
