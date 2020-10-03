@@ -38,7 +38,7 @@ import BarChart from './BarChart'
     if (props.data.select.GraficaType === "group" && props.data.select.Iteration === "iteration_4" && props.data.select.Scenario === "Sustainaible") {
         return <props.grafica data={efe} />
     } else if (props.data.select.GraficaType === "group" && props.data.select.Iteration === "iteration_3" && props.data.select.Scenario === "Sustainaible") {
-        return <h1>group iteration_3 Sustainaible</h1>
+        return <props.grafica data={efe} />
     } else if (props.data.select.GraficaType === "group" && props.data.select.Iteration === "iteration_4" && props.data.select.Scenario === "Current_trend") {
         return <h1>group iteration_4 Current_trend</h1>
     } else if (props.data.select.GraficaType === "group" && props.data.select.Iteration === "iteration_3" && props.data.select.Scenario === "Current_trend") {
