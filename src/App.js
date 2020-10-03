@@ -14,7 +14,7 @@ const NavBar = () => {
   return(
       <div className="App">
           <Router>
-          <Navbar />
+          <Navbar className="nav"/>
 
       {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
