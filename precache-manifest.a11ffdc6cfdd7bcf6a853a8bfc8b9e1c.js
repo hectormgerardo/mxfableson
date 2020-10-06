@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "39265b4afb9509d60b65aae3bd0a1429",
+    "revision": "4c5730ab71b576946151730b878541fa",
     "url": "/mxfableson/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mxfableson/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "20f6c0b6e36780e3c38d",
+    "revision": "4b023582067e732cdf6d",
     "url": "/mxfableson/static/css/main.0131b52e.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mxfableson/static/js/2.a607afbe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "20f6c0b6e36780e3c38d",
-    "url": "/mxfableson/static/js/main.5edc68dc.chunk.js"
+    "revision": "4b023582067e732cdf6d",
+    "url": "/mxfableson/static/js/main.5f999d0b.chunk.js"
   },
   {
     "revision": "031867e0d2f8a0b5dc99",
