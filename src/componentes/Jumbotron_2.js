@@ -2,20 +2,15 @@
 import React from 'react';
 import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 import styled from 'styled-components';
-import Banner from '../assets/banner.jpg';
+import Banner2 from '../assets/banner_2.jpg';
 
 const Styles = styled.div`
-    .bann{
-       color: white;
-       top:5;
-       text-align: center;
-       font-size:85px;
-    }
-    .jumbo{
-        background: url(${Banner});
+   
+    .jumbo2{
+        background: url(${Banner2});
         background-size: cover;
         color: #ccc;
-        height: 500px;
+        height: 200px;
         position: relative;
         z-index: -2;
     }
@@ -31,14 +26,14 @@ const Styles = styled.div`
     }`;
 
 
-export const Jumbotron = () => {
+export const Jumbotron_2 = () => {
     return(
 
     <Styles>
-        <Jumbo fluid className= "jumbo">
+        <Jumbo fluid className= "jumbo2">
             <div className= "overlay"></div>
             <Container>
-                <h1 className = "bann">Scenathon 2020</h1>
+               
             </Container>
         </Jumbo>
     </Styles>
