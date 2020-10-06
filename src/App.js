@@ -2,16 +2,11 @@ import React from 'react';
 import './css/App.css';
 import Nfc from './pages/Scenathon';
 import Navbar from "./componentes/Navbar";
-import Features from "./pages/GlobalTargets";
-import About from './pages/About';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
 
-const NavBar = () => {
+
+const App = () => {
   return(
+    
       <div className="App">
           <Router>
           <Navbar className="nav"/>
@@ -33,4 +28,4 @@ const NavBar = () => {
       </div>
   )
 }
-export default NavBar;
+export default App;
