@@ -7,7 +7,7 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import Nfc from '../pages/Grafica';
+import Nfc from '../pages/Scenathon';
 
 import Features from "../pages/GlobalTargets";
 import About from '../pages/About';
@@ -15,22 +15,25 @@ import About from '../pages/About';
 
 const NavBar = () => {
     return(
-      
-        <div className="App">
-    <ReactBootStrap.Navbar collapseOnSelect expand="xl" className="nav" variant="light">
-    <Link to="/Scenathon2020">
-      
-  <ReactBootStrap.Navbar.Brand href="#Scenathon">Scenathon 2020</ReactBootStrap.Navbar.Brand>
+        <div className="NavBar">
+
+<Router>
+
+
+<ReactBootStrap.Navbar collapseOnSelect expand="xl" className="nav" variant="light">
+    <Link to="/">
+
+  <ReactBootStrap.Navbar.Brand href="#home">Scenathon_2020</ReactBootStrap.Navbar.Brand>
   </Link>
   <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
     <ReactBootStrap.Nav className="mr-auto"> 
-   
-   
+
+
     </ReactBootStrap.Nav>
     <ReactBootStrap.Nav>
     <Link to="/About">
-    <ReactBootStrap.Nav.Link href="#About">About</ReactBootStrap.Nav.Link>
+    <ReactBootStrap.Nav.Link href="#About">About </ReactBootStrap.Nav.Link>
     </Link>
     </ReactBootStrap.Nav>
   </ReactBootStrap.Navbar.Collapse>
@@ -42,7 +45,7 @@ const NavBar = () => {
         <Route path="/Features" component={Features}>
           <Features />
         </Route>
-        <Route path="/pages/NetForestCoverChange" component={Nfc}>
+        <Route path="/" component={Nfc}>
           <Nfc />
         </Route>
         <Route path="/About" component={About}>
@@ -53,7 +56,7 @@ const NavBar = () => {
 
 
 
-
+</Router>
         </div>
     )
 }
