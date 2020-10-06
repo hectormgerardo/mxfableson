@@ -6,7 +6,8 @@ import ComboBox from '../componentes/ComboBox'
 
 import Dashboard from '../componentes/Dashboard'
 import TabSelector from '../componentes/TabSelector'
-import BarChart from '../componentes/BarChart'
+import About from './About'
+
 
 
 
@@ -21,7 +22,7 @@ class Scenathon extends Component {
             Iteration:'iteration_4',
             Scenario:'Sustainaible'
         },
-        dashboard:"biodeversity"
+        dashboard:"gts"
     }
     
     //variable para almacenar el dashboard escogido
@@ -75,9 +76,6 @@ class Scenathon extends Component {
             
           
                
-
-           
-
 
            
 

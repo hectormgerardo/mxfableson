@@ -32,9 +32,7 @@ const NavBar = () => {
 
     </ReactBootStrap.Nav>
     <ReactBootStrap.Nav>
-    <Link to="/About">
     <ReactBootStrap.Nav.Link href="#About">About </ReactBootStrap.Nav.Link>
-    </Link>
     </ReactBootStrap.Nav>
   </ReactBootStrap.Navbar.Collapse>
 </ReactBootStrap.Navbar>
@@ -48,8 +46,12 @@ const NavBar = () => {
         <Route path="/" component={Nfc}>
           <Nfc />
         </Route>
-        <Route path="/About" component={About}>
-          <About />
+        <Route path="/About"  render={
+          ()=>{
+            return( <h1>javi infiel</h1> );
+          }
+        }>
+          <About/>
         </Route>
       </Switch>
  

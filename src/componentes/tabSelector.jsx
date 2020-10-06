@@ -14,7 +14,7 @@ const seleccionarData = (props) => {
    
     if (props.data.dashboard==="gts")
     {
-       return <h1>.json no esta listo</h1>
+       return <h1>Gts</h1>
     }else if(props.data.dashboard==="ntch")
     {
         
