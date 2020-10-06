@@ -60,7 +60,7 @@ import {Bar} from 'react-chartjs-2';
   
   const  drawMixedChart=(props)=> {
     const data = {
-      labels: ['2005', '2010', '2015', '2020', '2025', '2030', '2035','2040','2045','2050'],  
+      labels: props.data.labels,  
       datasets: [{
         //net_forest_change <- ejemplo
               label: 'Net forest change',
@@ -131,7 +131,7 @@ import {Bar} from 'react-chartjs-2';
           ]
         };
         
-    console.log(props.data.forest_target)
+  
     return (
         <div>
           <h2>NET FOREST COVER CHANGE</h2>

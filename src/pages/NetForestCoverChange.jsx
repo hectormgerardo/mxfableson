@@ -1,49 +1,50 @@
 import React from "react";
-import MixedChart from "../componentes/MixedChart";
+import MixedChart from "../componentes/MixedChart.jsx";
+import data from '../data/NetForestCoverChange1.json';
 //filter map
 //nfch=NetForestCoverChange
 const drawNfch = (props) => {
  
-  var data;
+  var dataAux;
   console.log("clase draw->"+props.combinacion.select.GraficaType)
   
   if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-  data= convertir(props.data.combinacion_uno);
- return <MixedChart data={data}/>
+    dataAux= convertir(data.combinacion_uno);
+ return <MixedChart data={dataAux}/>
 } else if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration  === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
    
-   data= convertir(props.data.combinacion_dos);
- return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_dos);
+ return <MixedChart data={dataAux}/> 
 } else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-   data= convertir(props.data.combinacion_tres);
- return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_tres);
+ return <MixedChart data={dataAux}/> 
 } else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-   data= convertir(props.data.combinacion_cuatro);
- return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_cuatro);
+ return <MixedChart data={dataAux}/> 
 } else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-   data= convertir(props.data.combinacion_cinco);
-  return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_cinco);
+  return <MixedChart data={dataAux}/> 
 } else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-   data= convertir(props.data.combinacion_seis);
-  return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_seis);
+  return <MixedChart data={dataAux}/> 
 } else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-   data= convertir(props.data.combinacion_siete);
-  return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_siete);
+  return <MixedChart data={dataAux}/> 
 } else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-   data= convertir(props.data.combinacion_ocho);
-  return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_ocho);
+  return <MixedChart data={dataAux}/> 
 } else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-   data= convertir(props.data.combinacion_nueve);
-  return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_nueve);
+  return <MixedChart data={dataAux}/> 
 }else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-   data= convertir(props.data.combinacion_dies);
-  return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_dies);
+  return <MixedChart data={dataAux}/> 
 } else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-   data= convertir(props.data.combinacion_once);
-  return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_once);
+  return <MixedChart data={dataAux}/> 
 } else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-   data= convertir(props.data.combinacion_doce);
-  return <MixedChart data={data}/> 
+  dataAux= convertir(data.combinacion_doce);
+  return <MixedChart data={dataAux}/> 
 }
 
 return null

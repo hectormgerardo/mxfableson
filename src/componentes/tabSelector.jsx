@@ -1,6 +1,6 @@
 import React from 'react';
 //data
-import data from '../data/NetForestCoverChange1.json';
+
 
 
 //dashboards
@@ -19,7 +19,7 @@ const seleccionarData = (props) => {
     {
         
      return   <NetForestCoverChange combinacion={props.data}
-                                    data={data}/>
+                                   />
 
        
     }else if(props.data.dashboard==="ntch2")
