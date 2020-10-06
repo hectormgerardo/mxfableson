@@ -22,5 +22,11 @@
 .App-link {
   color: #61dafb;
 }
+.nav{
+  background-color:   #94B046;
+  color:#2B6974;
+  position: fixed;
+  top: 0;
+}
 
 
