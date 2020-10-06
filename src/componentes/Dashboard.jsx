@@ -1,5 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 
+
+const Styles = styled.div`
+.contenedor-selects{
+  background-color: #528D93 ;
+}
+.contenedor-selects-select {
+  color:white;
+  &: hover{
+    color:#94B046;
+  }
+}
+`;
 
 
 function Dashboard (props) {

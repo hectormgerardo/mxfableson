@@ -2,7 +2,7 @@
 import React from 'react';
 import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 import styled from 'styled-components';
-import banner from '../componentes/banner.jpg';
+import Banner from '../assets/banner.jpg';
 
 const Styles = styled.div`
     .bann{
@@ -10,13 +10,12 @@ const Styles = styled.div`
        text-align: center;
     }
     .jumbo{
-        background: url(${banner.jpg})
+        background: url(${Banner});
         background-size: cover;
         color: #ccc;
-        height: 200px;
+        height: 500px;
         position: relative;
         z-index: -2;
-        bottom: -5;
     }
     .overlay{
         background-color: #000;
@@ -30,7 +29,7 @@ const Styles = styled.div`
     }`;
 
 
-const Jumbotron = () => {
+export const Jumbotron = () => {
     return(
 
     <Styles>
@@ -42,4 +41,4 @@ const Jumbotron = () => {
         </Jumbo>
     </Styles>
     )
-}; export default Jumbotron;
+};
