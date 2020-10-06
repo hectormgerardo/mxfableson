@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './css/App.css';
 import Navbar from "./componentes/Navbar";
 import About from './pages/About';
+import Jumbotron from './componentes/Jumbotron'
 
 
-const App = () => {
-  return(
-
-      <div className="App">
-          <Navbar/>
-        <div id="About">
+class App extends Component {
+  render(){
+    return (
+    <React.Fragment>
+           <Jumbotron/> <Navbar/>
           <About/>
-          </div>
-      </div>
-      
+         
+    </React.Fragment>
   )
-}
+}};
 export default App;
+
