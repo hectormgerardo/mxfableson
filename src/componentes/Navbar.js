@@ -12,9 +12,9 @@ const NavBar = () => {
     return(
         <div className="App">
     <ReactBootStrap.Navbar collapseOnSelect expand="xl" className="nav" variant="light">
-    <Link to="/pages/NetForestCoverChange">
+    <Link to="/Scenathon2020">
       
-  <ReactBootStrap.Navbar.Brand href="#home">Scenathon 2020</ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Brand href="#Scenathon">Scenathon 2020</ReactBootStrap.Navbar.Brand>
   </Link>
   <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">

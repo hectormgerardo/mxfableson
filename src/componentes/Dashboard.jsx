@@ -5,11 +5,11 @@ import React from 'react';
 function Dashboard (props) {
 
     
-        const{onChange}=props
+        const{metodo}=props
         return (
           
             <div className="contenedor-selects">
-                <select  name="Scenario" onChange={onChange}>
+                <select  name="dashboard" onChange={metodo}>
                     <option value="gts">Global Target Summary </option>
                     <option value="ntch">Net Forest Cover Change(1)</option>
                     <option value="ntch2">Net Forest Cover Change(2)</option>

@@ -35,11 +35,11 @@ import React from 'react';
     }
 
 
-    if (props.data.select.GraficaType === "group" && props.data.select.Iteration === "iteration_4" && props.data.select.Scenario === "Sustainaible") {
+    if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
+        return <props.grafica/>
+    } else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
         return <props.grafica data={efe} />
-    } else if (props.data.select.GraficaType === "group" && props.data.select.Iteration === "iteration_3" && props.data.select.Scenario === "Sustainaible") {
-        return <props.grafica data={efe} />
-    } else if (props.data.select.GraficaType === "group" && props.data.select.Iteration === "iteration_4" && props.data.select.Scenario === "Current_trend") {
+    } else if (props.combinacion.select.GraficaType === "group" && props.data.select.Iteration === "iteration_4" && props.data.select.Scenario === "Current_trend") {
         return <props.grafica data={efe} />
     } else if (props.data.select.GraficaType === "group" && props.data.select.Iteration === "iteration_3" && props.data.select.Scenario === "Current_trend") {
         return <props.grafica data={efe} />
@@ -63,3 +63,9 @@ import React from 'react';
     return null
 }
 export default ChooseGrafica;
+
+//metodos para convertir de .jso to objeto literal de js
+const convertirNetForest=()=>
+{
+    console.log();
+}

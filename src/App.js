@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/App.css';
-import Nfc from './pages/Grafica';
+import Nfc from './pages/Scenathon';
 import Navbar from "./componentes/Navbar";
 import Features from "./pages/GlobalTargets";
 import About from './pages/About';
@@ -22,8 +22,8 @@ const NavBar = () => {
         <Route path="/Features" component={Features}>
           <Features />
         </Route>
-        <Route path="/pages/NetForestCoverChange" component={Nfc}>
-          <Nfc />
+        <Route path="/Scenathon2020" component={Nfc}>
+          <Nfc/>
         </Route>
         <Route path="/About" component={About}>
           <About />
