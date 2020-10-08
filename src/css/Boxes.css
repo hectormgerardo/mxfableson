@@ -2,7 +2,7 @@ l .boxes {
   margin: 20px;
   margin-top: 150px;
   background-color: rgb(198, 177, 198);
-  overflow: hidden;
+  overflow: auto;
   height: 200px;
   max-height: 35vh;
   width:800px;

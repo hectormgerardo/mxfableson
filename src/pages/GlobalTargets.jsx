@@ -8,7 +8,6 @@ import data from '../data/GlobalTargets.json';
 
 const drawGlobalTargets = (props) => {
   
-
 const convertirTargetUno=(props)=> {
  
   var dataUno=[]
@@ -70,7 +69,7 @@ var labels=[]
     labels:labels,
      datasets:[
        {
-        label:"Protectend Land",
+        label:"Target Protectend Land",
         data:dataDos,
         fill:false,
         type:"scatter",
@@ -81,7 +80,7 @@ var labels=[]
         yAxisID:"y-axis-1"
        },
        {
-        label:"Target Protectend Land",
+        label:"Protectend Land",
         data:dataUno,
         fill:false,
         type:"bar",
@@ -213,49 +212,33 @@ const convertirTargetTres=(props)=> {
   return <MixedChart2 data={dataAuxTargetUno}/> 
 }
   return (
-    <div className="App">
-      <h1>Global Targets</h1>
-      
-      
-      <div className="target-1-3">
-       <MixedChart2 
+    <div className="GlobalTargets"><br></br>
+      <div class="wrapper">
+  <div class="one">
+  <div class="wrapper">
+    <div class="uno">
+      <MixedChart2 
         data={dataAuxTargetUno}
         title="Target 1.- Zero net deforestation"/>
-
-        <MixedChart2 
-        data={dataAuxTargetTres}
-        title="Target 3.- Share of land where natural processes predominate"/>
-       
-       <MixedChart2 
+        </div>
+    <div class="dos">
+    <MixedChart2 
         data={dataAuxTargetDos}
         title="Target 2.- Share of total land which is protected"/>
-       </div>
-
-     
-     
-        
-      
-      <div className="grid">
-        <div className="box box1">
-
-        <h1>grad Uno</h1>
-
-        </div>
-
-        <div className="box box2">
-          <h1>grad dos</h1>
-        </div>
-
-        <div className="box box3">
-          <h1>grad tres</h1>
-        </div>
-
-        <div className="box box4">
-          <h1>grad cuatro</h1>
-        </div>
-
-      </div>
     </div>
+    <div class="tres">
+    <MixedChart2 
+        data={dataAuxTargetTres}
+        title="Target 3.- Share of land where natural processes predominate"/>
+    </div>
+  </div>
+  </div>
+  
+  <div class="two">Two</div>
+  <div class="three">Three</div>
+  <div class="four">Four</div>
+</div>
+      </div>
   );
   
 };

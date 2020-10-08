@@ -8,9 +8,19 @@ import {Bar} from 'react-chartjs-2';
   const  drawMixedChart2=(props)=> {
     const options = {
       responsive: true,
+      maintainAspectRatio: false,
       tooltips: {
-        mode: 'label'
-      },title: {
+        mode: 'label',
+      },legend: {
+        labels:{
+          boxWidth:10,
+          fontSize:10,
+        },
+        display: true,
+        
+        position: 'bottom'
+    },
+        title: {
         display: true,
         text: props.title
     },
@@ -62,12 +72,12 @@ import {Bar} from 'react-chartjs-2';
           }
         ]
       }
+      
     };
 
   
     return (
-        <div>
-          <h2></h2>
+        <div style={{position: "relative",width:230,height:250}}>
           
           <Bar data={props.data}
                 options={options}/>

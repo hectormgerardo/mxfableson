@@ -31,307 +31,307 @@
     "targetUno_combinacionDos":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": 13380.072890000003,
-        "Forest change target": 0
+        "Net_forest_change": 13380.072890000003,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": 6607.18245,
-        "Forest change target": 0
+        "Net_forest_change": 6607.18245,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": 8169.09802,
-        "Forest change target": 0
+        "Net_forest_change": 8169.09802,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": 6425.944880000001,
-        "Forest change target": 0
+        "Net_forest_change": 6425.944880000001,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": 6977.132150000001,
-        "Forest change target": 0
+        "Net_forest_change": 6977.132150000001,
+        "Forest_change_target": 0
       }
     ],
     "targetUno_combinacionTres":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,
     "targetUno_combinacionCuatro":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,
     "targetUno_combinacionCinco":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": -14510.124280000002,
-        "Forest change target": 0
+        "Net_forest_change": -14510.124280000002,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": -15009.13079,
-        "Forest change target": 0
+        "Net_forest_change": -15009.13079,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": -14540.74105,
-        "Forest change target": 0
+        "Net_forest_change": -14540.74105,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": -13855.582439999998,
-        "Forest change target": 0
+        "Net_forest_change": -13855.582439999998,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": -12933.63329,
-        "Forest change target": 0
+        "Net_forest_change": -12933.63329,
+        "Forest_change_target": 0
       }
     ]
     ,
     "targetUno_combinacionSeis":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": -14737.76149,
-        "Forest change target": 0
+        "Net_forest_change": -14737.76149,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": -14609.528649999998,
-        "Forest change target": 0
+        "Net_forest_change": -14609.528649999998,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": -14262.0886,
-        "Forest change target": 0
+        "Net_forest_change": -14262.0886,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": -13673.91579,
-        "Forest change target": 0
+        "Net_forest_change": -13673.91579,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": -12981.75736,
-        "Forest change target": 0
+        "Net_forest_change": -12981.75736,
+        "Forest_change_target": 0
       }
     ]
     ,
     "targetUno_combinacionSiete":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,
     "targetUno_combinacionOcho":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,
     "targetUno_combinacionNueve":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": 27754.234379999998,
-        "Forest change target": 0
+        "Net_forest_change": 27754.234379999998,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": 21216.711100000004,
-        "Forest change target": 0
+        "Net_forest_change": 21216.711100000004,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": 26188.786620000003,
-        "Forest change target": 0
+        "Net_forest_change": 26188.786620000003,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": 23589.060670000003,
-        "Forest change target": 0
+        "Net_forest_change": 23589.060670000003,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": 23448.08951,
-        "Forest change target": 0
+        "Net_forest_change": 23448.08951,
+        "Forest_change_target": 0
       }
     ]
     ,
     "targetUno_combinacionDies":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": 28117.834379999997,
-        "Forest change target": 0
+        "Net_forest_change": 28117.834379999997,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": 21216.711100000004,
-        "Forest change target": 0
+        "Net_forest_change": 21216.711100000004,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": 22431.186620000004,
-        "Forest change target": 0
+        "Net_forest_change": 22431.186620000004,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": 20099.86067,
-        "Forest change target": 0
+        "Net_forest_change": 20099.86067,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": 19958.88951,
-        "Forest change target": 0
+        "Net_forest_change": 19958.88951,
+        "Forest_change_target": 0
       }
     ]
     ,
     "targetUno_combinacionOnce":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,
     "targetUno_combinacionDoce":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetDos_combinacionUno":[
@@ -368,323 +368,323 @@
     ],"targetDos_combinacionDos":[
       {
         "Year": 2025,
-        "Protected land": 0.1623439731392669,
-        "target protected land": null
+        "Protected_land": 0.1623439731392669,
+        "target_Protected_land": null
       },
       {
         "Year": 2030,
-        "Protected land": 0.16664315134037913,
-        "target protected land": 0.3
+        "Protected_land": 0.16664315134037913,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2035,
-        "Protected land": 0.170662784883212,
-        "target protected land": 0.3
+        "Protected_land": 0.170662784883212,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2040,
-        "Protected land": 0.1747328131479547,
-        "target protected land": 0.3
+        "Protected_land": 0.1747328131479547,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2045,
-        "Protected land": 0.17876632605436,
-        "target protected land": 0.3
+        "Protected_land": 0.17876632605436,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2050,
-        "Protected land": 0.1826341310398783,
-        "target protected land": 0.3
+        "Protected_land": 0.1826341310398783,
+        "target_Protected_land": 0.3
       }
     ]
     ,"targetDos_combinacionTres":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetDos_combinacionCuatro":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetDos_combinacionCinco":[
       {
         "Year": 2025,
-        "Protected land": 0.059989334255871066,
-        "target protected land": null
+        "Protected_land": 0.059989334255871066,
+        "target_Protected_land": null
       },
       {
         "Year": 2030,
-        "Protected land": 0.059989334255871066,
-        "target protected land": 0.3
+        "Protected_land": 0.059989334255871066,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2035,
-        "Protected land": 0.059989334255871066,
-        "target protected land": 0.3
+        "Protected_land": 0.059989334255871066,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2040,
-        "Protected land": 0.059989334255871066,
-        "target protected land": 0.3
+        "Protected_land": 0.059989334255871066,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2045,
-        "Protected land": 0.059989334255871066,
-        "target protected land": 0.3
+        "Protected_land": 0.059989334255871066,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2050,
-        "Protected land": 0.059989334255871066,
-        "target protected land": 0.3
+        "Protected_land": 0.059989334255871066,
+        "target_Protected_land": 0.3
       }
     ]
     ,"targetDos_combinacionSeis":[
       {
         "Year": 2025,
-        "Protected land": 0.05998933425587106,
-        "target protected land": null
+        "Protected_land": 0.05998933425587106,
+        "target_Protected_land": null
       },
       {
         "Year": 2030,
-        "Protected land": 0.05998933425587106,
-        "target protected land": 0.3
+        "Protected_land": 0.05998933425587106,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2035,
-        "Protected land": 0.05998933425587106,
-        "target protected land": 0.3
+        "Protected_land": 0.05998933425587106,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2040,
-        "Protected land": 0.05998933425587106,
-        "target protected land": 0.3
+        "Protected_land": 0.05998933425587106,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2045,
-        "Protected land": 0.05998933425587106,
-        "target protected land": 0.3
+        "Protected_land": 0.05998933425587106,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2050,
-        "Protected land": 0.05998933425587106,
-        "target protected land": 0.3
+        "Protected_land": 0.05998933425587106,
+        "target_Protected_land": 0.3
       }
     ]
     ,"targetDos_combinacionSiete":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetDos_combinacionOcho":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetDos_combinacionNueve":[
       {
         "Year": 2025,
-        "Protected land": 0.10235463888339581,
-        "target protected land": null
+        "Protected_land": 0.10235463888339581,
+        "target_Protected_land": null
       },
       {
         "Year": 2030,
-        "Protected land": 0.10665381708450807,
-        "target protected land": 0.3
+        "Protected_land": 0.10665381708450807,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2035,
-        "Protected land": 0.08869169317125086,
-        "target protected land": 0.3
+        "Protected_land": 0.08869169317125086,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2040,
-        "Protected land": 0.11474347889208356,
-        "target protected land": 0.3
+        "Protected_land": 0.11474347889208356,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2045,
-        "Protected land": 0.11877699179848887,
-        "target protected land": 0.3
+        "Protected_land": 0.11877699179848887,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2050,
-        "Protected land": 0.1226447967840072,
-        "target protected land": 0.3
+        "Protected_land": 0.1226447967840072,
+        "target_Protected_land": 0.3
       }
     ]
     ,"targetDos_combinacionDies":[
       {
         "Year": 2025,
-        "Protected land": 0.10235463888339581,
-        "target protected land": null
+        "Protected_land": 0.10235463888339581,
+        "target_Protected_land": null
       },
       {
         "Year": 2030,
-        "Protected land": 0.10665381708450805,
-        "target protected land": 0.3
+        "Protected_land": 0.10665381708450805,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2035,
-        "Protected land": 0.11067345062734096,
-        "target protected land": 0.3
+        "Protected_land": 0.11067345062734096,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2040,
-        "Protected land": 0.11474347889208356,
-        "target protected land": 0.3
+        "Protected_land": 0.11474347889208356,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2045,
-        "Protected land": 0.11877699179848888,
-        "target protected land": 0.3
+        "Protected_land": 0.11877699179848888,
+        "target_Protected_land": 0.3
       },
       {
         "Year": 2050,
-        "Protected land": 0.12264479678400722,
-        "target protected land": 0.3
+        "Protected_land": 0.12264479678400722,
+        "target_Protected_land": 0.3
       }
     ]
     ,"targetDos_combinacionOnce":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetDos_combinacionDoce":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ],"targetTres_combinacionUno":[
       {
@@ -732,42 +732,42 @@
     ],"targetTres_combinacionDos":[
       {
         "Year": 2025,
-        "Biodiversity land": 0.4527361538461538,
+        "Biodiversity_land": 0.4527361538461538,
         "biod_target1": 0.4527361538461538,
         "biod_by_year": 0.4527361538461538,
         "biod_target3": null
       },
       {
         "Year": 2030,
-        "Biodiversity land": 0.4597607692307691,
+        "Biodiversity_land": 0.4597607692307691,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2035,
-        "Biodiversity land": 0.468673076923077,
+        "Biodiversity_land": 0.468673076923077,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2040,
-        "Biodiversity land": 0.47780576923076923,
+        "Biodiversity_land": 0.47780576923076923,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2045,
-        "Biodiversity land": 0.4863261538461539,
+        "Biodiversity_land": 0.4863261538461539,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2050,
-        "Biodiversity land": 0.49619961538461543,
+        "Biodiversity_land": 0.49619961538461543,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
@@ -776,96 +776,96 @@
     ,"targetTres_combinacionTres":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetTres_combinacionCuatro":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetTres_combinacionCinco":[
       {
         "Year": 2025,
-        "Biodiversity land": 0.41440666666666676,
+        "Biodiversity_land": 0.41440666666666676,
         "biod_target1": 0.41440666666666676,
         "biod_by_year": 0.41440666666666676,
         "biod_target3": null
       },
       {
         "Year": 2030,
-        "Biodiversity land": 0.41542166666666663,
+        "Biodiversity_land": 0.41542166666666663,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2035,
-        "Biodiversity land": 0.418445,
+        "Biodiversity_land": 0.418445,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2040,
-        "Biodiversity land": 0.42220166666666675,
+        "Biodiversity_land": 0.42220166666666675,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2045,
-        "Biodiversity land": 0.4272666666666667,
+        "Biodiversity_land": 0.4272666666666667,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2050,
-        "Biodiversity land": 0.43332333333333334,
+        "Biodiversity_land": 0.43332333333333334,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
@@ -874,42 +874,42 @@
     ,"targetTres_combinacionSeis":[
       {
         "Year": 2025,
-        "Biodiversity land": 0.4143483333333333,
+        "Biodiversity_land": 0.4143483333333333,
         "biod_target1": 0.4143483333333333,
         "biod_by_year": 0.4143483333333333,
         "biod_target3": null
       },
       {
         "Year": 2030,
-        "Biodiversity land": 0.4153266666666667,
+        "Biodiversity_land": 0.4153266666666667,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2035,
-        "Biodiversity land": 0.417715,
+        "Biodiversity_land": 0.417715,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2040,
-        "Biodiversity land": 0.42127333333333333,
+        "Biodiversity_land": 0.42127333333333333,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2045,
-        "Biodiversity land": 0.42614166666666664,
+        "Biodiversity_land": 0.42614166666666664,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2050,
-        "Biodiversity land": 0.43167833333333333,
+        "Biodiversity_land": 0.43167833333333333,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
@@ -918,96 +918,96 @@
     ,"targetTres_combinacionSiete":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetTres_combinacionOcho":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetTres_combinacionNueve":[
       {
         "Year": 2025,
-        "Biodiversity land": 0.4679824999999999,
+        "Biodiversity_land": 0.4679824999999999,
         "biod_target1": 0.4679824999999999,
         "biod_by_year": 0.4679824999999999,
         "biod_target3": null
       },
       {
         "Year": 2030,
-        "Biodiversity land": 0.4788405000000001,
+        "Biodiversity_land": 0.4788405000000001,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2035,
-        "Biodiversity land": 0.4922910000000001,
+        "Biodiversity_land": 0.4922910000000001,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2040,
-        "Biodiversity land": 0.5048285000000001,
+        "Biodiversity_land": 0.5048285000000001,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2045,
-        "Biodiversity land": 0.5157485,
+        "Biodiversity_land": 0.5157485,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2050,
-        "Biodiversity land": 0.529248,
+        "Biodiversity_land": 0.529248,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
@@ -1016,42 +1016,42 @@
     ,"targetTres_combinacionDies":[
       {
         "Year": 2025,
-        "Biodiversity land": 0.4642525,
+        "Biodiversity_land": 0.4642525,
         "biod_target1": 0.4642525,
         "biod_by_year": 0.4642525,
         "biod_target3": null
       },
       {
         "Year": 2030,
-        "Biodiversity land": 0.473091,
+        "Biodiversity_land": 0.473091,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2035,
-        "Biodiversity land": 0.48396050000000007,
+        "Biodiversity_land": 0.48396050000000007,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2040,
-        "Biodiversity land": 0.4947654999999999,
+        "Biodiversity_land": 0.4947654999999999,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2045,
-        "Biodiversity land": 0.5043815,
+        "Biodiversity_land": 0.5043815,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
       },
       {
         "Year": 2050,
-        "Biodiversity land": 0.515556,
+        "Biodiversity_land": 0.515556,
         "biod_target1": null,
         "biod_by_year": null,
         "biod_target3": null
@@ -1060,55 +1060,55 @@
     ,"targetTres_combinacionOnce":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
     ,"targetTres_combinacionDoce":[
       {
         "Year": 2030,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2035,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2040,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2045,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       },
       {
         "Year": 2050,
-        "Net forest change (1000 h/year)": null,
-        "Forest change target": 0
+        "Net_forest_change": null,
+        "Forest_change_target": 0
       }
     ]
   
