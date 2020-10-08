@@ -19,7 +19,7 @@ import {Bar} from 'react-chartjs-2';
 
           display: true,
           gridLines: {
-            display: false
+            display: true
           },
           
           
@@ -34,7 +34,7 @@ import {Bar} from 'react-chartjs-2';
           position: 'left',
           id: 'y-axis-1',
           gridLines: {
-            display: false,
+            display: true,
           },
 
           labels: {

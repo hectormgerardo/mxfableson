@@ -17,12 +17,8 @@ const seleccionarData = (props) => {
     {
       return   <GlobalTargets combinacion={props.data}/>
     }else if(props.data.dashboard==="ntch")
-    {
-        
+    { 
      return   <NetForestCoverChange combinacion={props.data}/>
-
-
-       
     }else if(props.data.dashboard==="ntch2")
     {
        
