@@ -1110,7 +1110,911 @@
         "Net_forest_change": null,
         "Forest_change_target": 0
       }
+    ],"targetCuatro_1_combinacionUno":[
+      {
+        "Year": 2050,
+        "Crop_CH4": 0.39787985000000003,
+        "Crop_CO2": 0.50728633,
+        "Crop_N2O": 0.9211121800000002,
+        "Livestock_CH4": 1.9663839900000002,
+        "Livestock_N2O": 0.7240685099999999,
+        "Target": 4
+      }
     ]
+    ,"targetCuatro_1_combinacionDos":[
+      {
+        "Year": 2050,
+        "Crop_CH4": 0.3659193300000001,
+        "Crop_CO2": 0.53226661,
+        "Crop_N2O": 0.9865786300000001,
+        "Livestock_CH4": 2.0785048000000006,
+        "Livestock_N2O": 0.7715689000000001,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_1_combinacionTres":[
+      {
+        "Year": 2050,
+        "Crop_CH4": null,
+        "Crop_CO2": null,
+        "Crop_N2O": null,
+        "Livestock_CH4": null,
+        "Livestock_N2O": null,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_1_combinacionCuatro":[
+      {
+        "Year": 2050,
+        "Crop_CH4": null,
+        "Crop_CO2": null,
+        "Crop_N2O": null,
+        "Livestock_CH4": null,
+        "Livestock_N2O": null,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_1_combinacionCinco":[
+      {
+        "Year": 2050,
+        "Crop_CH4": 0.21059539,
+        "Crop_CO2": 0.2423075,
+        "Crop_N2O": 0.26613694,
+        "Livestock_CH4": 1.08108893,
+        "Livestock_N2O": 0.38020366,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_1_combinacionSeis":[
+      {
+        "Year": 2050,
+        "Crop_CH4": 0.19076111,
+        "Crop_CO2": 0.24141809000000003,
+        "Crop_N2O": 0.26497042000000004,
+        "Livestock_CH4": 1.08309931,
+        "Livestock_N2O": 0.38101981,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_1_combinacionSiete":[
+      {
+        "Year": 2050,
+        "Crop_CH4": null,
+        "Crop_CO2": null,
+        "Crop_N2O": null,
+        "Livestock_CH4": null,
+        "Livestock_N2O": null,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_1_combinacionOcho":[
+      {
+        "Year": 2050,
+        "Crop_CH4": null,
+        "Crop_CO2": null,
+        "Crop_N2O": null,
+        "Livestock_CH4": null,
+        "Livestock_N2O": null,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_1_combinacionNueve":[
+      {
+        "Year": 2050,
+        "Crop_CH4": 0.18728446,
+        "Crop_CO2": 0.26497883,
+        "Crop_N2O": 0.65497524,
+        "Livestock_CH4": 0.88529506,
+        "Livestock_N2O": 0.34386485000000006,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_1_combinacionDies":[
+      {
+        "Year": 2050,
+        "Crop_CH4": 0.17515822000000003,
+        "Crop_CO2": 0.29084852,
+        "Crop_N2O": 0.7216082100000002,
+        "Livestock_CH4": 0.99540549,
+        "Livestock_N2O": 0.39054909,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_1_combinacionOnce":[
+      {
+        "Year": 2050,
+        "Crop_CH4": null,
+        "Crop_CO2": null,
+        "Crop_N2O": null,
+        "Livestock_CH4": null,
+        "Livestock_N2O": null,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_1_combinacionDoce":[
+      {
+        "Year": 2050,
+        "Crop_CH4": null,
+        "Crop_CO2": null,
+        "Crop_N2O": null,
+        "Livestock_CH4": null,
+        "Livestock_N2O": null,
+        "Target": 4
+      }
+    ]
+    ,"targetCuatro_2_combinacionUno":[
+      {
+        "Year": 2050,
+        "total_GHG_land": -2.05445979,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionDos":[
+      {
+        "Year": 2050,
+        "total_GHG_land": -1.50665584,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionTres":[
+      {
+        "Year": 2050,
+        "total_GHG_land": null,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionCuatro":[
+      {
+        "Year": 2050,
+        "total_GHG_land": null,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionCinco":[
+      {
+        "Year": 2050,
+        "total_GHG_land": 0.22545692999999994,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionSeis":[
+      {
+        "Year": 2050,
+        "total_GHG_land": 0.2331165199999999,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionSiete":[
+      {
+        "Year": 2050,
+        "total_GHG_land": null,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionOcho":[
+      {
+        "Year": 2050,
+        "total_GHG_land": null,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionNueve":[
+      {
+        "Year": 2050,
+        "total_GHG_land": -2.27991672,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionDies":[
+      {
+        "Year": 2050,
+        "total_GHG_land": -1.7397723600000004,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionOnce":[
+      {
+        "Year": 2050,
+        "total_GHG_land": null,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCuatro_2_combinacionDoce":[
+      {
+        "Year": 2050,
+        "total_GHG_land": null,
+        "GHG_LU_target": 0
+      }
+    ]
+    ,"targetCinco_combinacionUno":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      },
+      {
+        "c_country_t": "Argentina",
+        "Kcal_feasible": 2874.93129,
+        "Target_MDER": 2069.67389
+      },
+      {
+        "c_country_t": "Australia",
+        "Kcal_feasible": 2573.03627,
+        "Target_MDER": 2080.96859
+      },
+      {
+        "c_country_t": "Brazil",
+        "Kcal_feasible": 2739.54455,
+        "Target_MDER": 2098.67539
+      },
+      {
+        "c_country_t": "Canada",
+        "Kcal_feasible": 2568.83319,
+        "Target_MDER": 2091.95312
+      },
+      {
+        "c_country_t": "China",
+        "Kcal_feasible": 2976.14164,
+        "Target_MDER": 2109.63224
+      },
+      {
+        "c_country_t": "Colombia",
+        "Kcal_feasible": 2529.4657,
+        "Target_MDER": 2092.37217
+      },
+      {
+        "c_country_t": "Ethiopia",
+        "Kcal_feasible": 2133.10841,
+        "Target_MDER": 2019.80953
+      },
+      {
+        "c_country_t": "Finland",
+        "Kcal_feasible": 2676.97764,
+        "Target_MDER": 2077.46342
+      },
+      {
+        "c_country_t": "Germany",
+        "Kcal_feasible": 2830.67315,
+        "Target_MDER": 2082.61915
+      },
+      {
+        "c_country_t": "India",
+        "Kcal_feasible": 2285.5395,
+        "Target_MDER": 2280.85164
+      },
+      {
+        "c_country_t": "Indonesia",
+        "Kcal_feasible": 2312.4528,
+        "Target_MDER": 2080.90672
+      },
+      {
+        "c_country_t": "Malaysia",
+        "Kcal_feasible": 2801.75713,
+        "Target_MDER": 2092.03125
+      },
+      {
+        "c_country_t": "Mexico",
+        "Kcal_feasible": 2612.71263,
+        "Target_MDER": 2086.18627
+      },
+      {
+        "c_country_t": "Norway",
+        "Kcal_feasible": 2793.60797,
+        "Target_MDER": 2092.72426
+      },
+      {
+        "c_country_t": "Rest of Asia and Pacific",
+        "Kcal_feasible": 2509.65666,
+        "Target_MDER": 2066.2072
+      },
+      {
+        "c_country_t": "Rest of Central and South America",
+        "Kcal_feasible": 2447.78163,
+        "Target_MDER": 2082.81618
+      },
+      {
+        "c_country_t": "Rest of Europe non EU28",
+        "Kcal_feasible": 2967.49138,
+        "Target_MDER": 2086.73294
+      },
+      {
+        "c_country_t": "Rest of European Union",
+        "Kcal_feasible": 2838.42653,
+        "Target_MDER": 2015.0883
+      },
+      {
+        "c_country_t": "Rest of North Africa Middle East and central Asia",
+        "Kcal_feasible": 2662.20487,
+        "Target_MDER": 2138.79319
+      },
+      {
+        "c_country_t": "Rest of Sub-Saharan Africa",
+        "Kcal_feasible": 2351.94155,
+        "Target_MDER": 1929.15026
+      },
+      {
+        "c_country_t": "Russia",
+        "Kcal_feasible": 3062.18056,
+        "Target_MDER": 2073.22579
+      },
+      {
+        "c_country_t": "Rwanda",
+        "Kcal_feasible": 2427.59234,
+        "Target_MDER": 2021.20963
+      },
+      {
+        "c_country_t": "South Africa",
+        "Kcal_feasible": 2781.57602,
+        "Target_MDER": 2073.22579
+      },
+      {
+        "c_country_t": "Sweden",
+        "Kcal_feasible": 2795.42881,
+        "Target_MDER": 2080.83196
+      },
+      {
+        "c_country_t": "UK",
+        "Kcal_feasible": 2726.25751,
+        "Target_MDER": 2078.44788
+      },
+      {
+        "c_country_t": "USA",
+        "Kcal_feasible": 2753.01085,
+        "Target_MDER": 2075.43267
+      }
+    ]
+    ,"targetCinco_combinacionDos":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      },
+      {
+        "c_country_t": "Argentina",
+        "Kcal_feasible": 2774.31876,
+        "Target_MDER": 2069.67389
+      },
+      {
+        "c_country_t": "Australia",
+        "Kcal_feasible": 2573.51625,
+        "Target_MDER": 2080.96859
+      },
+      {
+        "c_country_t": "Brazil",
+        "Kcal_feasible": 2823.61566,
+        "Target_MDER": 2098.67539
+      },
+      {
+        "c_country_t": "Canada",
+        "Kcal_feasible": 2566.22516,
+        "Target_MDER": 2091.95312
+      },
+      {
+        "c_country_t": "China",
+        "Kcal_feasible": 2942.57345,
+        "Target_MDER": 2109.63224
+      },
+      {
+        "c_country_t": "Colombia",
+        "Kcal_feasible": 2529.46565,
+        "Target_MDER": 2092.37217
+      },
+      {
+        "c_country_t": "Ethiopia",
+        "Kcal_feasible": 2151.8003,
+        "Target_MDER": 2019.80953
+      },
+      {
+        "c_country_t": "Finland",
+        "Kcal_feasible": 2676.64863,
+        "Target_MDER": 2077.46342
+      },
+      {
+        "c_country_t": "Germany",
+        "Kcal_feasible": 2827.83,
+        "Target_MDER": 2082.61915
+      },
+      {
+        "c_country_t": "India",
+        "Kcal_feasible": 2286.2519,
+        "Target_MDER": 2280.85164
+      },
+      {
+        "c_country_t": "Indonesia",
+        "Kcal_feasible": 2128.51413,
+        "Target_MDER": 2080.90672
+      },
+      {
+        "c_country_t": "Malaysia",
+        "Kcal_feasible": 2784.9295,
+        "Target_MDER": 2092.03125
+      },
+      {
+        "c_country_t": "Mexico",
+        "Kcal_feasible": 2615.50744,
+        "Target_MDER": 2086.18627
+      },
+      {
+        "c_country_t": "Norway",
+        "Kcal_feasible": 2789.90464,
+        "Target_MDER": 2092.72426
+      },
+      {
+        "c_country_t": "Rest of Asia and Pacific",
+        "Kcal_feasible": 2509.66801,
+        "Target_MDER": 2066.2072
+      },
+      {
+        "c_country_t": "Rest of Central and South America",
+        "Kcal_feasible": 2447.82011,
+        "Target_MDER": 2082.81618
+      },
+      {
+        "c_country_t": "Rest of Europe non EU28",
+        "Kcal_feasible": 2967.49205,
+        "Target_MDER": 2086.73294
+      },
+      {
+        "c_country_t": "Rest of European Union",
+        "Kcal_feasible": 2838.42643,
+        "Target_MDER": 2015.0883
+      },
+      {
+        "c_country_t": "Rest of North Africa Middle East and central Asia",
+        "Kcal_feasible": 2662.20586,
+        "Target_MDER": 2138.79319
+      },
+      {
+        "c_country_t": "Rest of Sub-Saharan Africa",
+        "Kcal_feasible": 2351.93152,
+        "Target_MDER": 1929.15026
+      },
+      {
+        "c_country_t": "Russia",
+        "Kcal_feasible": 2982.47581,
+        "Target_MDER": 2073.22579
+      },
+      {
+        "c_country_t": "Rwanda",
+        "Kcal_feasible": 2427.26401,
+        "Target_MDER": 2021.20963
+      },
+      {
+        "c_country_t": "South Africa",
+        "Kcal_feasible": 2767.58067,
+        "Target_MDER": 2073.22579
+      },
+      {
+        "c_country_t": "Sweden",
+        "Kcal_feasible": 2796.65548,
+        "Target_MDER": 2080.83196
+      },
+      {
+        "c_country_t": "UK",
+        "Kcal_feasible": 2727.07251,
+        "Target_MDER": 2078.44788
+      },
+      {
+        "c_country_t": "USA",
+        "Kcal_feasible": 2753.45976,
+        "Target_MDER": 2075.43267
+      }
+    ]
+    ,"targetCinco_combinacionTres":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      }
+    ]
+    ,"targetCinco_combinacionCuatro":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      }
+    ]
+    ,"targetCinco_combinacionCinco":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      },
+      {
+        "c_country_t": "Rest of Asia and Pacific",
+        "Kcal_feasible": 2509.65666,
+        "Target_MDER": 2066.2072
+      },
+      {
+        "c_country_t": "Rest of Central and South America",
+        "Kcal_feasible": 2447.78163,
+        "Target_MDER": 2082.81618
+      },
+      {
+        "c_country_t": "Rest of Europe non EU28",
+        "Kcal_feasible": 2967.49138,
+        "Target_MDER": 2086.73294
+      },
+      {
+        "c_country_t": "Rest of European Union",
+        "Kcal_feasible": 2838.42653,
+        "Target_MDER": 2015.0883
+      },
+      {
+        "c_country_t": "Rest of North Africa Middle East and central Asia",
+        "Kcal_feasible": 2662.20487,
+        "Target_MDER": 2138.79319
+      },
+      {
+        "c_country_t": "Rest of Sub-Saharan Africa",
+        "Kcal_feasible": 2351.94155,
+        "Target_MDER": 1929.15026
+      }
+    ]
+    ,"targetCinco_combinacionSeis":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      },
+      {
+        "c_country_t": "Rest of Asia and Pacific",
+        "Kcal_feasible": 2509.66801,
+        "Target_MDER": 2066.2072
+      },
+      {
+        "c_country_t": "Rest of Central and South America",
+        "Kcal_feasible": 2447.82011,
+        "Target_MDER": 2082.81618
+      },
+      {
+        "c_country_t": "Rest of Europe non EU28",
+        "Kcal_feasible": 2967.49205,
+        "Target_MDER": 2086.73294
+      },
+      {
+        "c_country_t": "Rest of European Union",
+        "Kcal_feasible": 2838.42643,
+        "Target_MDER": 2015.0883
+      },
+      {
+        "c_country_t": "Rest of North Africa Middle East and central Asia",
+        "Kcal_feasible": 2662.20586,
+        "Target_MDER": 2138.79319
+      },
+      {
+        "c_country_t": "Rest of Sub-Saharan Africa",
+        "Kcal_feasible": 2351.93152,
+        "Target_MDER": 1929.15026
+      }
+    ]
+    ,"targetCinco_combinacionSiete":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      }
+    ]
+    ,"targetCinco_combinacionOcho":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      }
+    ]
+    ,"targetCinco_combinacionNueve":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      },
+      {
+        "c_country_t": "Argentina",
+        "Kcal_feasible": 2874.93129,
+        "Target_MDER": 2069.67389
+      },
+      {
+        "c_country_t": "Australia",
+        "Kcal_feasible": 2573.03627,
+        "Target_MDER": 2080.96859
+      },
+      {
+        "c_country_t": "Brazil",
+        "Kcal_feasible": 2739.54455,
+        "Target_MDER": 2098.67539
+      },
+      {
+        "c_country_t": "Canada",
+        "Kcal_feasible": 2568.83319,
+        "Target_MDER": 2091.95312
+      },
+      {
+        "c_country_t": "China",
+        "Kcal_feasible": 2976.14164,
+        "Target_MDER": 2109.63224
+      },
+      {
+        "c_country_t": "Colombia",
+        "Kcal_feasible": 2529.4657,
+        "Target_MDER": 2092.37217
+      },
+      {
+        "c_country_t": "Ethiopia",
+        "Kcal_feasible": 2133.10841,
+        "Target_MDER": 2019.80953
+      },
+      {
+        "c_country_t": "Finland",
+        "Kcal_feasible": 2676.97764,
+        "Target_MDER": 2077.46342
+      },
+      {
+        "c_country_t": "Germany",
+        "Kcal_feasible": 2830.67315,
+        "Target_MDER": 2082.61915
+      },
+      {
+        "c_country_t": "India",
+        "Kcal_feasible": 2285.5395,
+        "Target_MDER": 2280.85164
+      },
+      {
+        "c_country_t": "Indonesia",
+        "Kcal_feasible": 2312.4528,
+        "Target_MDER": 2080.90672
+      },
+      {
+        "c_country_t": "Malaysia",
+        "Kcal_feasible": 2801.75713,
+        "Target_MDER": 2092.03125
+      },
+      {
+        "c_country_t": "Mexico",
+        "Kcal_feasible": 2612.71263,
+        "Target_MDER": 2086.18627
+      },
+      {
+        "c_country_t": "Norway",
+        "Kcal_feasible": 2793.60797,
+        "Target_MDER": 2092.72426
+      },
+      {
+        "c_country_t": "Russia",
+        "Kcal_feasible": 3062.18056,
+        "Target_MDER": 2073.22579
+      },
+      {
+        "c_country_t": "Rwanda",
+        "Kcal_feasible": 2427.59234,
+        "Target_MDER": 2021.20963
+      },
+      {
+        "c_country_t": "South Africa",
+        "Kcal_feasible": 2781.57602,
+        "Target_MDER": 2073.22579
+      },
+      {
+        "c_country_t": "Sweden",
+        "Kcal_feasible": 2795.42881,
+        "Target_MDER": 2080.83196
+      },
+      {
+        "c_country_t": "UK",
+        "Kcal_feasible": 2726.25751,
+        "Target_MDER": 2078.44788
+      },
+      {
+        "c_country_t": "USA",
+        "Kcal_feasible": 2753.01085,
+        "Target_MDER": 2075.43267
+      }
+    ]
+    ,"targetCinco_combinacionDies":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      },
+      {
+        "c_country_t": "Argentina",
+        "Kcal_feasible": 2774.31876,
+        "Target_MDER": 2069.67389
+      },
+      {
+        "c_country_t": "Australia",
+        "Kcal_feasible": 2573.51625,
+        "Target_MDER": 2080.96859
+      },
+      {
+        "c_country_t": "Brazil",
+        "Kcal_feasible": 2823.61566,
+        "Target_MDER": 2098.67539
+      },
+      {
+        "c_country_t": "Canada",
+        "Kcal_feasible": 2566.22516,
+        "Target_MDER": 2091.95312
+      },
+      {
+        "c_country_t": "China",
+        "Kcal_feasible": 2942.57345,
+        "Target_MDER": 2109.63224
+      },
+      {
+        "c_country_t": "Colombia",
+        "Kcal_feasible": 2529.46565,
+        "Target_MDER": 2092.37217
+      },
+      {
+        "c_country_t": "Ethiopia",
+        "Kcal_feasible": 2151.8003,
+        "Target_MDER": 2019.80953
+      },
+      {
+        "c_country_t": "Finland",
+        "Kcal_feasible": 2676.64863,
+        "Target_MDER": 2077.46342
+      },
+      {
+        "c_country_t": "Germany",
+        "Kcal_feasible": 2827.83,
+        "Target_MDER": 2082.61915
+      },
+      {
+        "c_country_t": "India",
+        "Kcal_feasible": 2286.2519,
+        "Target_MDER": 2280.85164
+      },
+      {
+        "c_country_t": "Indonesia",
+        "Kcal_feasible": 2128.51413,
+        "Target_MDER": 2080.90672
+      },
+      {
+        "c_country_t": "Malaysia",
+        "Kcal_feasible": 2784.9295,
+        "Target_MDER": 2092.03125
+      },
+      {
+        "c_country_t": "Mexico",
+        "Kcal_feasible": 2615.50744,
+        "Target_MDER": 2086.18627
+      },
+      {
+        "c_country_t": "Norway",
+        "Kcal_feasible": 2789.90464,
+        "Target_MDER": 2092.72426
+      },
+      {
+        "c_country_t": "Russia",
+        "Kcal_feasible": 2982.47581,
+        "Target_MDER": 2073.22579
+      },
+      {
+        "c_country_t": "Rwanda",
+        "Kcal_feasible": 2427.26401,
+        "Target_MDER": 2021.20963
+      },
+      {
+        "c_country_t": "South Africa",
+        "Kcal_feasible": 2767.58067,
+        "Target_MDER": 2073.22579
+      },
+      {
+        "c_country_t": "Sweden",
+        "Kcal_feasible": 2796.65548,
+        "Target_MDER": 2080.83196
+      },
+      {
+        "c_country_t": "UK",
+        "Kcal_feasible": 2727.07251,
+        "Target_MDER": 2078.44788
+      },
+      {
+        "c_country_t": "USA",
+        "Kcal_feasible": 2753.45976,
+        "Target_MDER": 2075.43267
+      }
+    ]
+    ,"targetCinco_combinacionOnce":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      }
+    ]
+    ,"targetCinco_combinacionDoce":[
+      {
+        "c_country_t": null,
+        "Kcal_feasible": null,
+        "Target_MDER": null
+      }
+    ]
+    ,"targetSeis_combinacionUno":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": 1418722.17666,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionDos":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": 1410267.20863,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionTres":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": null,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionCuatro":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": null,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionCinco":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": 764251.42886,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionSeis":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": 748861.25372,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionSiete":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": null,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionOcho":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": null,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionNueve":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": 654470.7478,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionDies":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": 661405.9549100001,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionOnce":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": null,
+        "Water_target": 2453000
+      }
+    ]
+    ,"targetSeis_combinacionDoce":[
+      {
+        "Year": 2050,
+        "Blue_water_in_million_cubic_meters": null,
+        "Water_target": 2453000
+      }
+    ]
+    
   
   
   
