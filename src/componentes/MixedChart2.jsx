@@ -6,6 +6,7 @@ import {Bar} from 'react-chartjs-2';
   
   
   const  drawMixedChart2=(props)=> {
+    console.log(props.data)
     const options = {
       responsive: true,
       maintainAspectRatio: false,

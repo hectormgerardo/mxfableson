@@ -4,49 +4,49 @@ import data from '../data/Biodiversity.json';
 //nfch=NetForestCoverChange
 const drawBiodiversity = (props) => {
  
- var dataAux;
-  
-  //IDONTLIKE IFS BUT NI PEZ ANIM0
-  if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-    
-    dataAux= convertir(data.combinacion_uno);
- return <BarChart data={dataAux}/>
-} else if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration  === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAux= convertir(data.combinacion_dos);
- return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_tres);
- return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_cuatro);
- return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAux= convertir(data.combinacion_cinco);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAux= convertir(data.combinacion_seis);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_siete);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_ocho);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAux= convertir(data.combinacion_nueve);
-  return <BarChart data={dataAux}/> 
-}else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAux= convertir(data.combinacion_dies);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_once);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_doce);
-  return <BarChart data={dataAux}/> 
-}
+ 
+  let dataAux;
+ 
 
-return null
+  const { GraficaType, Iteration, Scenario } = props.combinacion.select;
+
+  switch(GraficaType){
+    case 'group':
+      switch(Iteration){
+        case 'iteration_3':
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_dos : data.combinacion_cuatro);
+          break;
+        case 'iteration_4':
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_uno : data.combinacion_tres);
+          break
+      }
+      break;
+    case 'regions':
+      switch(Iteration){
+        case 'iteration_3':
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_seis : data.combinacion_ocho);
+          break;
+        case 'iteration_4':
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_cinco : data.combinacion_siete);
+          break
+      }
+      break;
+    case 'countries':
+      switch(Iteration){
+      case 'iteration_3':
+        dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_dies : data.combinacion_doce);
+        break;
+      case 'iteration_4':
+        dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_nueve : data.combinacion_once);
+
+        break
+    }
+    break;
+  }
+  
+
+
+return <BarChart data={dataAux}/> 
 }
 
 //prueba
