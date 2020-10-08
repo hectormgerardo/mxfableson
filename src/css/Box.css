@@ -8,11 +8,11 @@
 .box8,
 .box9,
 .box10 {
-  background-color: #ffffff;
+  background-color:lightpink;
   border-radius: 10px 10px 10px 10px;
   overflow: hidden;
-  height: 200px;
-  max-height: 35vh;
+  height: 400px;
+  width: 2000%;
   -webkit-box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
 }
@@ -33,7 +33,7 @@
 }
 
 .boxy {
-  width: 300px;
+  width: 800px;
   background: green;
   padding: 50px;
   margin-left: auto;

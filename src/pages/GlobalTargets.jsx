@@ -8,6 +8,7 @@ import data from '../data/GlobalTargets.json';
 
 const drawGlobalTargets = (props) => {
   
+
 const convertirTargetUno=(props)=> {
  
   var dataUno=[]
