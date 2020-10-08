@@ -1,0 +1,111 @@
+{
+    "targetUno_combinacionUno": [
+        {
+            "Year": 2030,
+            "Net_forest_change": 13244.1101,
+            "Forest_change_target": 0
+          },
+          {
+            "Year": 2035,
+            "Net_forest_change": 6207.58031,
+            "Forest_change_target": 0
+          },
+          {
+            "Year": 2040,
+            "Net_forest_change": 11648.04557,
+            "Forest_change_target": 0
+          },
+          {
+            "Year": 2045,
+            "Net_forest_change": 9733.47823,
+            "Forest_change_target": 0
+          },
+          {
+            "Year": 2050,
+            "Net_forest_change": 10514.45622,
+            "Forest_change_target": 0
+          }
+    ],"targetDos_combinacionUno":[
+      {
+        "Year": 2025,
+        "Protected_land": 0.16234397313926693,
+        "target_Protected_land": null
+      },
+      {
+        "Year": 2030,
+        "Protected_land": 0.16664315134037916,
+        "target_Protected_land": 0.3
+      },
+      {
+        "Year": 2035,
+        "Protected_land": 0.14868102742712194,
+        "target_Protected_land": 0.3
+      },
+      {
+        "Year": 2040,
+        "Protected_land": 0.1747328131479547,
+        "target_Protected_land": 0.3
+      },
+      {
+        "Year": 2045,
+        "Protected_land": 0.17876632605436002,
+        "target_Protected_land": 0.3
+      },
+      {
+        "Year": 2050,
+        "Protected_land": 0.1826341310398783,
+        "target_Protected_land": 0.3
+      }
+    ],"targetTres_combinacionUno":[
+      {
+        "Year": 2025,
+        "Biodiversity_land": 0.45561884615384607,
+        "biod_target1": 0.45561884615384607,
+        "biod_by_year": 0.45561884615384607,
+        "biod_target3": null
+      },
+      {
+        "Year": 2030,
+        "Biodiversity_land": 0.46420538461538463,
+        "biod_target1": null,
+        "biod_by_year": null,
+        "biod_target3": null
+      },
+      {
+        "Year": 2035,
+        "Biodiversity_land": 0.47524961538461546,
+        "biod_target1": null,
+        "biod_by_year": null,
+        "biod_target3": null
+      },
+      {
+        "Year": 2040,
+        "Biodiversity_land": 0.4857607692307692,
+        "biod_target1": null,
+        "biod_by_year": null,
+        "biod_target3": null
+      },
+      {
+        "Year": 2045,
+        "Biodiversity_land": 0.4953296153846154,
+        "biod_target1": null,
+        "biod_by_year": null,
+        "biod_target3": null
+      },
+      {
+        "Year": 2050,
+        "Biodiversity_land": 0.5071115384615384,
+        "biod_target1": null,
+        "biod_by_year": null,
+        "biod_target3": null
+      }
+    ]
+  
+  
+  
+  
+  
+  
+  
+  
+  }

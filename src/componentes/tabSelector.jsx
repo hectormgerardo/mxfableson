@@ -6,6 +6,7 @@ import React from 'react';
 //dashboards
 import NetForestCoverChange from '../pages/NetForestCoverChange'
 import Biodiversity from '../pages/Biodiversity'
+import GlobalTargets from '../pages/GlobalTargets'
 
 
 
@@ -14,12 +15,12 @@ const seleccionarData = (props) => {
    
     if (props.data.dashboard==="gts")
     {
-       return <h1>Gts</h1>
+      return   <GlobalTargets combinacion={props.data}/>
     }else if(props.data.dashboard==="ntch")
     {
         
-     return   <NetForestCoverChange combinacion={props.data}
-                                   />
+     return   <NetForestCoverChange combinacion={props.data}/>
+
 
        
     }else if(props.data.dashboard==="ntch2")
@@ -28,7 +29,7 @@ const seleccionarData = (props) => {
       return  <h1>ntch2</h1>
     }else if(props.data.dashboard==="biodeversity")
     {
-       console.log("flag biodiversiti")
+  
       return   <Biodiversity combinacion={props.data}/>
     }else if(props.data.dashboard==="pabt")
     {

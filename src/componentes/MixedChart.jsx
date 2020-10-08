@@ -131,7 +131,7 @@ import {Bar} from 'react-chartjs-2';
           ]
         };
         
-  
+  console.log(data)
     return (
         <div>
           <h2>NET FOREST COVER CHANGE</h2>
