@@ -45,7 +45,7 @@ const About = () => {
               eprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h1>
               <br/>
               <h1 className = "bann_">
-              "Lorem ipsum dolor si> Excepteur sint occaecat cupidatat non proident, Duis aute irure dolor in r
+              "Lorem ipsum dolor si Excepteur sint occaecat cupidatat non proident, Duis aute irure dolor in r
               eprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                 mollit anim id est laborum. 
