@@ -6,11 +6,12 @@ import data from '../data/NetForestCoverChange1.json';
 const drawNfch = (props) => {
  
   var dataAux;
-  console.log("clase draw->"+props.combinacion.select.GraficaType)
+ 
   
   if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-    dataAux= convertir(data.combinacion_uno);
- return <MixedChart data={dataAux}/>
+    const{metodo}=props;
+   // dataAux= convertir(data.combinacion_uno);
+ // return <MixedChart data={dataAux}/>
 } else if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration  === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
    
   dataAux= convertir(data.combinacion_dos);

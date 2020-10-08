@@ -11,14 +11,17 @@ import GlobalTargets from '../pages/GlobalTargets'
 
 
 const seleccionarData = (props) => {
-   
+
+  
    
     if (props.data.dashboard==="gts")
     {
       return   <GlobalTargets combinacion={props.data}/>
     }else if(props.data.dashboard==="ntch")
     { 
+     
      return   <NetForestCoverChange combinacion={props.data}/>
+                                   
     }else if(props.data.dashboard==="ntch2")
     {
        
@@ -41,7 +44,7 @@ const seleccionarData = (props) => {
       return  <h1>fwu2</h1>
     }
     return null
-}
+  }
 
 export default seleccionarData;
 

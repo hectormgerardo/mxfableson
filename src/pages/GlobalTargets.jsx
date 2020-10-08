@@ -178,38 +178,69 @@ const convertirTargetTres=(props)=> {
     
  
 } else if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration  === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_dos);
- return <MixedChart2 data={dataAuxTargetUno}/> 
+ 
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionDos);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionDos);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionDos);
+  
 } else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_tres);
- return <MixedChart2 data={dataAuxTargetUno}/> 
+  
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionTres);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionTres);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionTres);
+
 } else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_cuatro);
- return <MixedChart2 data={dataAuxTargetUno}/> 
+  
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionCuatro);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionCuatro);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionCuatro);
+
 } else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_cinco);
-  return <MixedChart2 data={dataAuxTargetUno}/> 
+ 
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionCinco);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionCinco);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionCinco);
+
 } else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_seis);
-  return <MixedChart2 data={dataAuxTargetUno}/> 
+  
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionSeis);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionSeis);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionSeis);
+
 } else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_siete);
-  return <MixedChart2 data={dataAuxTargetUno}/> 
+  
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionSiete);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionSiete);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionSiete);
+
 } else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_ocho);
-  return <MixedChart2 data={dataAuxTargetUno}/> 
+  
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionOcho);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionOcho);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionOcho);
+
 } else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_nueve);
-  return <MixedChart2 data={dataAuxTargetUno}/> 
+  
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionNueve);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionNueve);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionNueve);
+
 }else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_dies);
-  return <MixedChart2 data={dataAuxTargetUno}/> 
+  
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionDies);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionDies);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionDies);
+
 } else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_once);
-  return <MixedChart2 data={dataAuxTargetUno}/> 
+  
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionOnce);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionOnce);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionOnce);
+
 } else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAuxTargetUno= convertirTargetUno(data.combinacion_doce);
-  return <MixedChart2 data={dataAuxTargetUno}/> 
+  dataAuxTargetUno= convertirTargetUno(data.targetUno_combinacionDoce);
+  dataAuxTargetDos= convertirTargetDos(data.targetDos_combinacionDoce);
+  dataAuxTargetTres= convertirTargetTres(data.targetTres_combinacionDoce);
 }
   return (
     <div className="GlobalTargets"><br></br>
