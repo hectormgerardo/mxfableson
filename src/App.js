@@ -9,7 +9,7 @@ import { Jumbotron_fin} from './componentes/Jumbotron_fin'
 
 
 
-class App extends Component {
+class App extends Component {  
   render(){
     return (
     <React.Fragment>
