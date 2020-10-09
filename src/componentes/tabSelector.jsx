@@ -12,8 +12,7 @@ import GlobalTargets from '../pages/GlobalTargets'
 
 const seleccionarData = (props) => {
 
-  
-   
+     
     if (props.data.dashboard==="gts")
     {
       return   <GlobalTargets combinacion={props.data}/>
