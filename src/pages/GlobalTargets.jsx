@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/graphCharacteristics.css";
 import "../css/Box.css";
+import {Container,Row,Col} from "react-bootstrap";
 
 import MixedChart from "../componentes/MixedChart";
 import data from '../data/GlobalTargets.json';
@@ -528,7 +529,7 @@ const crearDataTargetSiete=(props)=> {
     <div className="GlobalTargets"><br></br>
    
 
-      <div class="wrapper">
+   {/*   <div class="wrapper">
   <div class="one">
   <div class="wrapper">
     <div class="uno">
@@ -573,7 +574,53 @@ const crearDataTargetSiete=(props)=> {
         data={dataAuxTargetSeis}
         title="Target 6.- Fresh water use"/>
   </div>
-</div>
+  </div>*/}
+
+<h4>Target 1-3</h4>
+<Container fluid>
+  <Row>
+    <Col><MixedChart 
+        data={dataAuxTargetUno}
+        title="Target 1.- Zero net deforestation"/>
+        </Col>
+    <Col><MixedChart
+        data={dataAuxTargetDos}
+        title="Target 2.- Share of total land which is protected"/></Col>
+    <Col><MixedChart 
+        data={dataAuxTargetTres}
+        title="Target 3.- Share of land where natural processes predominate"/></Col>
+  </Row>
+</Container>
+<h4>Target 4.- Greenhouse Gas (GHG) Emissions </h4>
+<Container fluid>
+<Row>
+    <Col md={4}><BarChart data={dataAuxTargetCuatro}
+            title="From Agriculture "/></Col>
+    <Col md={4}><MixedChart 
+        data={dataAuxTargetSiete}
+        title="From Land use change"/></Col>
+  </Row>
+</Container>
+
+
+<h4>Targes 5-6</h4>
+<Container fluid>
+<Row>
+    <Col ><MixedChart 
+        data={dataAuxTargetCinco}
+        title="Target 5.-  Food security"/></Col>
+        <Col md={4}><MixedChart
+        data={dataAuxTargetSeis}
+        title="Target 6.- Fresh water use"/></Col>
+  </Row>
+</Container>
+
+
+
+
+
+
+
       </div>
   );
   

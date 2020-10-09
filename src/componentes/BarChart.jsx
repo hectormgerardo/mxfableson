@@ -12,6 +12,12 @@ const  BarChart=(props)=> {
     title: {
       display: true,
       text: props.title
+  },legend:{
+    labels:{
+      boxWidth:4,
+      fontSize:8
+    },
+    position:'right'
   },
     tooltips: {
       mode: 'label'
