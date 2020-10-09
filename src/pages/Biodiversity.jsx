@@ -4,163 +4,412 @@ import data from '../data/Biodiversity.json';
 //nfch=NetForestCoverChange
 const drawBiodiversity = (props) => {
  
- var dataAux;
+ 
   
-  //IDONTLIKE IFS BUT NI PEZ ANIM0
-  if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-    
-    dataAux= convertir(data.combinacion_uno);
- return <BarChart data={dataAux}/>
-} else if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration  === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAux= convertir(data.combinacion_dos);
- return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_tres);
- return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_cuatro);
- return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAux= convertir(data.combinacion_cinco);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAux= convertir(data.combinacion_seis);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_siete);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_ocho);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAux= convertir(data.combinacion_nueve);
-  return <BarChart data={dataAux}/> 
-}else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
-  dataAux= convertir(data.combinacion_dies);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_once);
-  return <BarChart data={dataAux}/> 
-} else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
-  dataAux= convertir(data.combinacion_doce);
-  return <BarChart data={dataAux}/> 
-}
+ 
 
-return null
+  const { GraficaType, Iteration, Scenario } = props.combinacion.select;
+
+  switch(GraficaType){
+    case 'group':
+      switch(Iteration){
+        case 'iteration_3':
+          var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_dos : data.combinacion_cuatro);
+          break;
+        case 'iteration_4':
+          var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_uno : data.combinacion_tres);
+          break
+      }
+      break;
+    case 'regions':
+      switch(Iteration){
+        case 'iteration_3':
+          var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_seis : data.combinacion_ocho);
+          break;
+        case 'iteration_4':
+          var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_cinco : data.combinacion_siete);
+          break
+      }
+      break;
+    case 'countries':
+      switch(Iteration){
+      case 'iteration_3':
+        var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_dies : data.combinacion_doce);
+        break;
+      case 'iteration_4':
+        var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_nueve : data.combinacion_once);
+
+        break
+    }
+    break;
+  }
+  
+
+
+return <BarChart data={dataAux}/> 
 }
 
 //prueba
 const convertir=(props)=> {
+  var labels=[];
+   var Protected_land_Mexico=[]; 
+   var Protected_land_Colombia=[]; 
+   var Protected_land_Argentina=[];
+   var Protected_land_Alemania=[];
+   var Protected_land_Canada=[];
+   var Protected_land_Indonesia=[]; 
+   var Protected_land_China=[]; 
+   var Protected_land_Ethiopia=[]; 
+   var Protected_land_Russia=[]; 
+   var Protected_land_Australia=[];
+   var Protected_land_Brazil=[];
+   var Protected_land_Rest_of_European_Union=[];
+   var Protected_land_Sweden=[];
+   var Protected_land_USA=[];
 
-  var data = {}; 
-  data.labels=[];
-  
-
-  
- 
-   data.c_country_t=[];
-   data.Protected_land_Mexico=[]; 
-   data.Protected_land_Colombia=[]; 
-   data.Protected_land_Argentina=[];
-   data.Protected_land_Alemania=[];
-   data.Protected_land_Canada=[];
-   data.Protected_land_Indonesia=[]; 
-   data.Protected_land_China=[]; 
-   data.Protected_land_Ethiopia=[]; 
-   data.Protected_land_Russia=[]; 
-   data.Protected_land_Australia=[];
-   data.Protected_land_Brazil=[];
-   data.Protected_land_Rest_of_European_Union=[];
-   data.Protected_land_Sweden=[];
-   data.Protected_land_USA=[];
-
-   data.Protected_land_Rest_of_Central_and_South_America=[];
-   data.Rest_of_North_Africa_Middle_East_and_central_Asia=[];
-   data.Protected_land_Rest_of_Asia_and_Pacific=[];
-   data.Protected_land_Germany=[];
-   data.Protected_land_South_Africa=[];
-   data.Rest_of_Sub_Saharan_Africa=[];
-   data.Protected_land_Otros=[];
+   var Protected_land_Rest_of_Central_and_South_America=[];
+   var Rest_of_North_Africa_Middle_East_and_central_Asia=[];
+   var Protected_land_Rest_of_Asia_and_Pacific=[];
+   var Protected_land_Germany=[];
+   var Protected_land_South_Africa=[];
+   var Rest_of_Sub_Saharan_Africa=[];
+   var Protected_land_Otros=[];
    if(props!=undefined){
    props.map((item) => {
    
     if(item.c_country_t==="Mexico"){
-    data.Protected_land_Mexico.push(item.Protected_land*100); 
+     Protected_land_Mexico.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Colombia"){
-      data.Protected_land_Colombia.push(item.Protected_land*100); 
+       Protected_land_Colombia.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Argentina")
     {
-      data.Protected_land_Argentina.push(item.Protected_land*100); 
+     Protected_land_Argentina.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Alemania")
     {
-      data.Protected_land_Alemania.push(item.Protected_land*100); 
+       Protected_land_Alemania.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Canada")
     {
-      data.Protected_land_Canada.push(item.Protected_land*100); 
+       Protected_land_Canada.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Indonesia")
     {
-      data.Protected_land_Indonesia.push(item.Protected_land*100); 
+       Protected_land_Indonesia.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Ethiopia")
     {
-      data.Protected_land_Ethiopia.push(item.Protected_land*100); 
+       Protected_land_Ethiopia.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Russia")
     {
-      data.Protected_land_Russia.push(item.Protected_land*100); 
+       Protected_land_Russia.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Australia")
     {
-      data.Protected_land_Australia.push(item.Protected_land*100); 
+       Protected_land_Australia.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Brazil")
     {
-      data.Protected_land_Brazil.push(item.Protected_land*100); 
+       Protected_land_Brazil.push(item.Protected_land*100); 
     }
     else if(item.c_country_t==="Rest of European Union")
     {
-      data.Protected_land_Rest_of_European_Union.push(item.Protected_land*100); 
+       Protected_land_Rest_of_European_Union.push(item.Protected_land*100); 
     }
     else if(item.c_country_t==="Sweden")
     {
-      data.Protected_land_Sweden.push(item.Protected_land*100); 
+       Protected_land_Sweden.push(item.Protected_land*100); 
     }
     else if(item.c_country_t==="USA")
     {
-      data.Protected_land_USA.push(item.Protected_land*100); 
+       Protected_land_USA.push(item.Protected_land*100); 
     }
     else if(item.c_country_t==="China")
     {
-      data.Protected_land_China.push(item.Protected_land*100); 
+       Protected_land_China.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Rest of Central and South America")
     {
-      data.Protected_land_Rest_of_Central_and_South_America.push(item.Protected_land*100); 
+       Protected_land_Rest_of_Central_and_South_America.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Rest of North Africa Middle East and central Asia")
     {
-      data.Rest_of_North_Africa_Middle_East_and_central_Asia.push(item.Protected_land*100); 
+       Rest_of_North_Africa_Middle_East_and_central_Asia.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Rest of Asia and Pacific")
     {
-      data.Protected_land_Rest_of_Asia_and_Pacific.push(item.Protected_land*100); 
+       Protected_land_Rest_of_Asia_and_Pacific.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Germany")
     {
-      data.Protected_land_Germany.push(item.Protected_land*100); 
+       Protected_land_Germany.push(item.Protected_land*100); 
     }else if(item.c_country_t==="South Africa")
     {
-      data.Protected_land_South_Africa.push(item.Protected_land*100); 
+       Protected_land_South_Africa.push(item.Protected_land*100); 
     }else if(item.c_country_t==="Rest of Sub-Saharan Africa")
     {
-      data.Rest_of_Sub_Saharan_Africa.push(item.Protected_land*100); 
+       Rest_of_Sub_Saharan_Africa.push(item.Protected_land*100); 
     }else if(item.c_country_t==="otros")
     {
-      data.Protected_land_Otros.push(item.Protected_land*100); 
+       Protected_land_Otros.push(item.Protected_land*100); 
     }
 
-    if(!data.labels.includes(item.Year))
+    if(!labels.includes(item.Year))
     {
-      data.labels.push(item.Year);
+       labels.push(item.Year);
     }
    }
  
 
   );}
 
-  console.log(data.Protected_land_Otros)
+  const data = {
+    labels:  labels,
+     datasets: [
+          {
+            //Aforestation ejemplo
+            type: 'bar',
+            label: 'Rest of Sub-Saharan Africa',
+            data: Rest_of_Sub_Saharan_Africa,
+            fill: false,
+            backgroundColor: '#faa75a',
+            borderColor: '#71B37C',
+            hoverBackgroundColor: '#71B37C',
+            hoverBorderColor: '#71B37C',
+            yAxisID: 'y-axis-1'
+          },{
+            type: 'bar',
+            label: 'Brazil',
+            data: Protected_land_Brazil,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#7cb342',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },{
+            type: 'bar',
+            label: 'USA',
+            data: Protected_land_USA,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#5a9bd4',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },
+          {
+            type: 'bar',
+            label: 'Canada',
+            data: Protected_land_Canada,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#5e35b1',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },
+          {
+            type: 'bar',
+            label: 'Australia',
+            data: Protected_land_Australia,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#00b6cb',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          }
+          ,
+          {
+            type: 'bar',
+            label: 'Russia',
+            data: Protected_land_Russia,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#5e35b1',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },
+          {
+            type: 'bar',
+            label: 'Rest of Central and South America',
+            data: Protected_land_Rest_of_Central_and_South_America,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#00b6cb',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },
+          {
+            type: 'bar',
+            label: 'China',
+            data: Protected_land_China,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#0072f0',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },  {
+            type: 'bar',
+            label: 'Rest of North Africa Middle East and central Asia',
+            data: Rest_of_North_Africa_Middle_East_and_central_Asia,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#9e67ab',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },  {
+            type: 'bar',
+            label: 'Rest of Asia and Pacific',
+            data: Protected_land_Rest_of_Asia_and_Pacific,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#0072f0',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },
+          {
+            type: 'bar',
+            label: 'Rest of European Union ',
+            data: Protected_land_Rest_of_European_Union,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '##ce7058',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },
+          {
+            type: 'bar',
+            label: 'Mexico',
+            data: Protected_land_Mexico,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#ffa800',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          }, {
+            type: 'bar',
+            label: 'Argentina',
+            data: Protected_land_Argentina,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#ec407a',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },{
+            type: 'bar',
+            label: 'Indonesia',
+            data: Protected_land_Indonesia,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#7ac36a',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },{
+            type: 'bar',
+            label: 'Ethiopia',
+            data: Protected_land_Ethiopia,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#f10096',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },
+          {
+            type: 'bar',
+            label: 'Colombia',
+            data: Protected_land_Colombia,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#ffa800',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },
+          {
+            type: 'bar',
+            label: 'Germany',
+            data: Protected_land_Germany,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#5e35b1',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },{
+            type: 'bar',
+            label: 'South Africa',
+            data: Protected_land_South_Africa,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#0390d0',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },{
+            type: 'bar',
+            label: 'Sweden',
+            data: Protected_land_Sweden,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#f10096',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          },
+          {
+            type: 'bar',
+            label: 'Otros',
+            data: Protected_land_Otros,
+            fill: false,
+            borderColor: '#EC932F',
+            backgroundColor: '#f66d00',
+            pointBorderColor: '#EC932F',
+            pointBackgroundColor: '#EC932F',
+            pointHoverBackgroundColor: '#EC932F',
+            pointHoverBorderColor: '#EC932F',
+            yAxisID: 'y-axis-1'
+          }
+          
+        ]
+      };
  return data
 } 
   

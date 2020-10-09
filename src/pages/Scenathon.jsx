@@ -5,7 +5,7 @@ import ComboBox from '../componentes/ComboBox'
 
 
 import Dashboard from '../componentes/Dashboard'
-import TabSelector from '../componentes/tabSelector'
+import TabSelector from '../componentes/TabSelector'
 
 
 
@@ -24,8 +24,7 @@ class Scenathon extends Component {
         dashboard:"gts"
     }
     
-    //variable para almacenar el dashboard escogido
-    
+  
      
      
      
