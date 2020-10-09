@@ -24,8 +24,7 @@ class Scenathon extends Component {
         dashboard:"gts"
     }
     
-    //variable para almacenar el dashboard escogido
-    
+  
      
      
      
