@@ -7,6 +7,9 @@ import React from 'react';
 import NetForestCoverChange from '../pages/NetForestCoverChange'
 import Biodiversity from '../pages/Biodiversity'
 import GlobalTargets from '../pages/GlobalTargets'
+import ProtectedAreaByType from '../pages/ProtectedAreaByType'
+import LandCover from '../pages/LandCover'
+import FoodEnergyIntakePerCapita from '../pages/FoodEnergyIntakePerCapita'
 
 
 
@@ -32,15 +35,32 @@ const seleccionarData = (props) => {
     }else if(props.data.dashboard==="pabt")
     {
        
-      return  <h1>pabt</h1>
+      return   <ProtectedAreaByType combinacion={props.data}/>
     }else if(props.data.dashboard==="lc")
     {
        
-      return  <h1>lc</h1>
+      return   <LandCover combinacion={props.data}/>
     }else if(props.data.dashboard==="fwu2")
     {
        
       return  <h1>fwu2</h1>
+    }
+    else if(props.data.dashboard==="fwu2")
+    {
+       
+      return  <h1>fwu2</h1>
+    }else if(props.data.dashboard==="fwu2")
+    {
+       
+      return  <h1>fwu2</h1>
+    }else if(props.data.dashboard==="fwu2")
+    {
+       
+      return  <h1>fwu2</h1>
+    }else if(props.data.dashboard==="feipc")
+    {
+       
+      return   <FoodEnergyIntakePerCapita combinacion={props.data}/>
     }
     return null
   }
