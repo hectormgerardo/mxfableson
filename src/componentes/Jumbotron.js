@@ -38,7 +38,7 @@ export const Jumbotron = () => {
         <Jumbo fluid className= "jumbo">
             <div className= "overlay"></div>
             <Container>
-                <h1 className = "bann">Scenathon 2020</h1>
+                <h1 className = "bann" data-rh="tooltip 1" >Scenathon 2020</h1>
             </Container>
         </Jumbo>
     </Styles>
