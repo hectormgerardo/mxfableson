@@ -1,5 +1,5 @@
 {
-  "combination1": [
+  "combination_1": [
     {
       "Year": 2005,
       "c_country_t": null,
@@ -341,7 +341,7 @@
       "1000 ha per year": -461.41688
     }
   ],
-  "combination 2": [
+  "combination_2": [
     {
       "Year": 2005,
       "c_country_t": "Sweden",
@@ -1338,7 +1338,7 @@
       "1000 ha per year": -8.04626
     }
   ],
-  "combination3": [
+  "combination_3": [
     {
       "Year": 2005,
       "c_country_t": null,
@@ -1680,7 +1680,7 @@
       "1000 ha per year": -461.41688
     }
   ],
-  "combination4": [
+  "combination_4": [
     {
       "Year": 2005,
       "c_country_t": "Norway",
@@ -2682,7 +2682,7 @@
       "1000 ha per year": -8.04626
     }
   ],
-  "combination5": [
+  "combination_5": [
     {
       "Year": 2005,
       "c_country_t": null,
@@ -3024,7 +3024,7 @@
       "1000 ha per year": -461.41688
     }
   ],
-  "combination6": [
+  "combination_6": [
     {
       "Year": 2005,
       "c_country_t": "Mexico",
@@ -4026,7 +4026,7 @@
       "1000 ha per year": 0
     }
   ],
-  "combination7": [
+  "combination_7": [
     {
       "Year": 2005,
       "c_country_t": null,
@@ -4368,7 +4368,7 @@
       "1000 ha per year": -461.41688
     }
   ],
-  "combination8": [
+  "combination_8": [
     {
       "Year": 2005,
       "c_country_t": "China",
