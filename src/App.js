@@ -9,13 +9,14 @@ import { Jumbotron_fin} from './componentes/Jumbotron_fin'
 
 
 
-class App extends Component {
+class App extends Component {  
   render(){
     return (
     <React.Fragment>
       <Jumbotron/> <Navbar/>
-      <div id="About"> <About/></div>
-       
+        <div id="About">
+             <About/>
+        </div>
         <Jumbotron_2/>
         <Jumbotron_3/>
         <Jumbotron_fin/>
