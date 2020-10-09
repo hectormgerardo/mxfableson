@@ -7,6 +7,7 @@ import React from 'react';
 import NetForestCoverChange from '../pages/NetForestCoverChange'
 import Biodiversity from '../pages/Biodiversity'
 import GlobalTargets from '../pages/GlobalTargets'
+import ProtectedAreaByType from '../pages/ProtectedAreaByType'
 
 
 
@@ -33,7 +34,7 @@ const seleccionarData = (props) => {
     }else if(props.data.dashboard==="pabt")
     {
        
-      return  <h1>pabt</h1>
+      return   <ProtectedAreaByType combinacion={props.data}/>
     }else if(props.data.dashboard==="lc")
     {
        
