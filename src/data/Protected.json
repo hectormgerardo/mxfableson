@@ -1,135 +1,135 @@
 
 {
-    "combinacion_uno":[
-        {
-          "Year": 2000,
-          "ProtectedAreasForest": 859805.5475699999,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 368026.27397000004
-        },
-        {
-          "Year": 2005,
-          "ProtectedAreasForest": 859805.5475699999,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 368026.27397000004
-        },
-        {
-          "Year": 2010,
-          "ProtectedAreasForest": 859805.5475699999,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 368026.27397000004
-        },
-        {
-          "Year": 2015,
-          "ProtectedAreasForest": 887819.4643399998,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 385782.29348000005
-        },
-        {
-          "Year": 2020,
-          "ProtectedAreasForest": 917117.4064699998,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 404547.50788000005
-        },
-        {
-          "Year": 2025,
-          "ProtectedAreasForest": 947100.0080599998,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 423237.67221
-        },
-        {
-          "Year": 2030,
-          "ProtectedAreasForest": 978887.3592999999,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 442048.78651000006
-        },
-        {
-          "Year": 2035,
-          "ProtectedAreasForest": 1007846.20165,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 460398.35516000004
-        },
-        {
-          "Year": 2040,
-          "ProtectedAreasForest": 1037126.3917300001,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 479019.68840999994
-        },
-        {
-          "Year": 2045,
-          "ProtectedAreasForest": 1066011.44314,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 497606.39887000003
-        },
-        {
-          "Year": 2050,
-          "ProtectedAreasForest": 1093401.0957799999,
-          "ProtectedAreasOther": 540342.81406,
-          "ProtectedAreasOtherNat": 515738.23617999995
-        }
-      ], 
-      
-      
-      "combinacion_dos":[
-        {
-          "Year": 2000,
-          "ProtectedAreasForest": null,
-          "ProtectedAreasOther": null,
-          "ProtectedAreasOtherNat": null
-        },
-        {
-          "Year": 2005,
-          "ProtectedAreasForest": null,
-          "ProtectedAreasOther": null,
-          "ProtectedAreasOtherNat": null
-        },
-        {
-          "Year": 2010,
-          "ProtectedAreasForest": null,
-          "ProtectedAreasOther": null,
-          "ProtectedAreasOtherNat": null
-        },
-        {
-          "Year": 2015,
-          "ProtectedAreasForest": null,
-          "ProtectedAreasOther": null,
-          "ProtectedAreasOtherNat": null
-        },
-        {
-          "Year": 2030,
-          "ProtectedAreasForest": null,
-          "ProtectedAreasOther": null,
-          "ProtectedAreasOtherNat": null
-        },
-        {
-          "Year": 2035,
-          "ProtectedAreasForest": null,
-          "ProtectedAreasOther": null,
-          "ProtectedAreasOtherNat": null
-        },
-        {
-          "Year": 2040,
-          "ProtectedAreasForest": null,
-          "ProtectedAreasOther": null,
-          "ProtectedAreasOtherNat": null
-        },
-        {
-          "Year": 2045,
-          "ProtectedAreasForest": null,
-          "ProtectedAreasOther": null,
-          "ProtectedAreasOtherNat": null
-        },
-        {
-          "Year": 2050,
-          "ProtectedAreasForest": null,
-          "ProtectedAreasOther": null,
-          "ProtectedAreasOtherNat": null
-        }
-      ]
-    
-    
-    
-    
-    
-    
+"combinacion_uno":[
+    {
+      "Year": 2000,
+      "ProtectedAreasForest": 859805.5475699999,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 368026.27397000004
+    },
+    {
+      "Year": 2005,
+      "ProtectedAreasForest": 859805.5475699999,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 368026.27397000004
+    },
+    {
+      "Year": 2010,
+      "ProtectedAreasForest": 859805.5475699999,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 368026.27397000004
+    },
+    {
+      "Year": 2015,
+      "ProtectedAreasForest": 887819.4643399998,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 385782.29348000005
+    },
+    {
+      "Year": 2020,
+      "ProtectedAreasForest": 917117.4064699998,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 404547.50788000005
+    },
+    {
+      "Year": 2025,
+      "ProtectedAreasForest": 947100.0080599998,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 423237.67221
+    },
+    {
+      "Year": 2030,
+      "ProtectedAreasForest": 978887.3592999999,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 442048.78651000006
+    },
+    {
+      "Year": 2035,
+      "ProtectedAreasForest": 1007846.20165,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 460398.35516000004
+    },
+    {
+      "Year": 2040,
+      "ProtectedAreasForest": 1037126.3917300001,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 479019.68840999994
+    },
+    {
+      "Year": 2045,
+      "ProtectedAreasForest": 1066011.44314,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 497606.39887000003
+    },
+    {
+      "Year": 2050,
+      "ProtectedAreasForest": 1093401.0957799999,
+      "ProtectedAreasOther": 540342.81406,
+      "ProtectedAreasOtherNat": 515738.23617999995
     }
+  ], 
+  
+  
+  "combinacion_dos":[
+    {
+      "Year": 2000,
+      "ProtectedAreasForest": null,
+      "ProtectedAreasOther": null,
+      "ProtectedAreasOtherNat": null
+    },
+    {
+      "Year": 2005,
+      "ProtectedAreasForest": null,
+      "ProtectedAreasOther": null,
+      "ProtectedAreasOtherNat": null
+    },
+    {
+      "Year": 2010,
+      "ProtectedAreasForest": null,
+      "ProtectedAreasOther": null,
+      "ProtectedAreasOtherNat": null
+    },
+    {
+      "Year": 2015,
+      "ProtectedAreasForest": null,
+      "ProtectedAreasOther": null,
+      "ProtectedAreasOtherNat": null
+    },
+    {
+      "Year": 2030,
+      "ProtectedAreasForest": null,
+      "ProtectedAreasOther": null,
+      "ProtectedAreasOtherNat": null
+    },
+    {
+      "Year": 2035,
+      "ProtectedAreasForest": null,
+      "ProtectedAreasOther": null,
+      "ProtectedAreasOtherNat": null
+    },
+    {
+      "Year": 2040,
+      "ProtectedAreasForest": null,
+      "ProtectedAreasOther": null,
+      "ProtectedAreasOtherNat": null
+    },
+    {
+      "Year": 2045,
+      "ProtectedAreasForest": null,
+      "ProtectedAreasOther": null,
+      "ProtectedAreasOtherNat": null
+    },
+    {
+      "Year": 2050,
+      "ProtectedAreasForest": null,
+      "ProtectedAreasOther": null,
+      "ProtectedAreasOtherNat": null
+    }
+  ]
+
+
+
+
+
+
+}
