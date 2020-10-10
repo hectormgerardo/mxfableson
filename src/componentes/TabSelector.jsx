@@ -14,8 +14,9 @@ import FoodEnergyIntakePerCapita from '../pages/FoodEnergyIntakePerCapita'
 import FreshWaterUse from '../pages/FreshWaterUse'
 import NetForestCoverChange2 from '../pages/NetForestCoverChange2'
 import GreenHouse2 from '../pages/GreenHouse2'
-import SuperGraph from '../componentes/SuperGraph'
+
 import GreenHouseOne from '../pages/GreenHouseOne'
+import FreshWaterTwo from '../pages/FreshWaterTwo'
 
 
 
@@ -59,7 +60,7 @@ const seleccionarData = (props) => {
     else if(props.data.dashboard==="fwu2")
     {
        
-      return  <h1>fwu2</h1>
+      return  <FreshWaterTwo combinacion={props.data}/>
     }else if(props.data.dashboard==="gge")
     {
       
