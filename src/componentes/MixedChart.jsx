@@ -12,6 +12,12 @@ import {Bar} from 'react-chartjs-2';
       title: {
         display: true,
         text: props.title
+    },legend:{
+      labels:{
+        boxWidth:4,
+        fontSize:8
+      },
+      position:'right'
     },tooltips: {
         mode: 'label'
       },

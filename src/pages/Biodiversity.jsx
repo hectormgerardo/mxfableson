@@ -49,7 +49,7 @@ const drawBiodiversity = (props) => {
 return <BarChart data={dataAux}/> 
 }
 
-//prueba
+
 const convertir=(props)=> {
   var labels=[];
    var Protected_land_Mexico=[]; 

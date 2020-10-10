@@ -8,6 +8,15 @@ import NetForestCoverChange from '../pages/NetForestCoverChange'
 import Biodiversity from '../pages/Biodiversity'
 import GlobalTargets from '../pages/GlobalTargets'
 
+import ProtectedAreaByType from '../pages/ProtectedAreaByType'
+import LandCover from '../pages/LandCover'
+import FoodEnergyIntakePerCapita from '../pages/FoodEnergyIntakePerCapita'
+import FreshWaterUse from '../pages/FreshWaterUse'
+import NetForestCoverChange2 from '../pages/NetForestCoverChange2'
+import GreenHouse2 from '../pages/GreenHouse2'
+
+
+
 
 
 const seleccionarData = (props) => {
@@ -24,7 +33,7 @@ const seleccionarData = (props) => {
     }else if(props.data.dashboard==="ntch2")
     {
        
-      return  <h1>ntch2</h1>
+      return   <NetForestCoverChange2 combinacion={props.data}/>
     }else if(props.data.dashboard==="biodeversity")
     {
   
@@ -32,15 +41,32 @@ const seleccionarData = (props) => {
     }else if(props.data.dashboard==="pabt")
     {
        
-      return  <h1>pabt</h1>
+      return   <ProtectedAreaByType combinacion={props.data}/>
     }else if(props.data.dashboard==="lc")
     {
        
-      return  <h1>lc</h1>
+      return   <LandCover combinacion={props.data}/>
+    }else if(props.data.dashboard==="fwu")
+    {
+       
+      return  <FreshWaterUse combinacion={props.data}/>
+    }
+    else if(props.data.dashboard==="fwu2")
+    {
+       
+      return  <h1>fwu2</h1>
     }else if(props.data.dashboard==="fwu2")
     {
        
       return  <h1>fwu2</h1>
+    }else if(props.data.dashboard==="gge")
+    {
+       
+      return  <h1>fwu2</h1>
+    }else if(props.data.dashboard==="gge2")
+    {
+       
+      return   <GreenHouse2 combinacion={props.data}/>
     }
     return null
   }
