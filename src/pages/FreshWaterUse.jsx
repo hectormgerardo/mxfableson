@@ -1,6 +1,6 @@
 import React from "react";
 import BarChart from "../componentes/BarChart";
-import data from '../data/NetForestCoverChange1.json';
+import data from '../data/FreshWaterUse1.json';
 
 
 
@@ -16,30 +16,30 @@ const drawFreshWaterUse= (props) => {
     case 'group':
       switch(Iteration){
         case 'iteration_3':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_dos : data.combinacion_cuatro);
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_2 : data.combination_4);
           break;
         case 'iteration_4':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_uno : data.combinacion_tres);
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_1 : data.combination_3);
           break
       }
       break;
     case 'regions':
       switch(Iteration){
         case 'iteration_3':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_seis : data.combinacion_ocho);
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_6 : data.combination_8);
           break;
         case 'iteration_4':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_cinco : data.combinacion_siete);
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_5 : data.combination_7);
           break
       }
       break;
     case 'countries':
       switch(Iteration){
       case 'iteration_3':
-        dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_dies : data.combinacion_doce);
+        dataAux= convertir(Scenario === "Sustainaible" ? data.combination_10 : data.combination_12);
         break;
       case 'iteration_4':
-        dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_nueve : data.combinacion_once);
+        dataAux= convertir(Scenario === "Sustainaible" ? data.combination_9 : data.combination_11);
 
         break
     }
