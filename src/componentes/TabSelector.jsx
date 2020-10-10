@@ -14,6 +14,8 @@ import FoodEnergyIntakePerCapita from '../pages/FoodEnergyIntakePerCapita'
 import FreshWaterUse from '../pages/FreshWaterUse'
 import NetForestCoverChange2 from '../pages/NetForestCoverChange2'
 import GreenHouse2 from '../pages/GreenHouse2'
+import SuperGraph from '../componentes/SuperGraph'
+
 
 
 
@@ -25,6 +27,7 @@ const seleccionarData = (props) => {
     if (props.data.dashboard==="gts")
     {
       return   <GlobalTargets combinacion={props.data}/>
+     //return <SuperGraph combinacion={props.data}/>
     }else if(props.data.dashboard==="ntch")
     { 
      
