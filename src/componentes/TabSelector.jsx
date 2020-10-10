@@ -15,6 +15,8 @@ import FreshWaterUse from '../pages/FreshWaterUse'
 import NetForestCoverChange2 from '../pages/NetForestCoverChange2'
 import GreenHouse2 from '../pages/GreenHouse2'
 import SuperGraph from '../componentes/SuperGraph'
+import GreenHouseOne from '../pages/GreenHouseOne'
+
 
 
 
@@ -58,18 +60,18 @@ const seleccionarData = (props) => {
     {
        
       return  <h1>fwu2</h1>
-    }else if(props.data.dashboard==="fwu2")
-    {
-       
-      return  <h1>fwu2</h1>
     }else if(props.data.dashboard==="gge")
     {
+      
        
-      return  <h1>fwu2</h1>
+      return   <GreenHouseOne combinacion={props.data}/>
     }else if(props.data.dashboard==="gge2")
     {
-       
       return   <GreenHouse2 combinacion={props.data}/>
+    }else if(props.data.dashboard==="")
+    {
+       
+return null
     }
     return null
   }

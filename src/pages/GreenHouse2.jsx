@@ -111,7 +111,7 @@ return <div>
   <BarChart data={dataGraphOneAux}
 title="Green House 2"/> 
 <BarChart data={dataGraphTwoAux}
-title="Green House 2"/> y
+title="Green House 2"/> 
   
   </div>
 }

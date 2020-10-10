@@ -22,27 +22,81 @@ const  drawSuperGraph=(props)=> {
             yAxisID:"y-axis-1"
            },{
             label:"Testiri 2",
-            data:[2,3,4,5,6,7,8,9,10],
+            data:[2,5,7,3],
             fill:false,
-            type:"line",
-            backgroundColor:"Red",
-            borderColor:"Red",
-            hoverBackgroundColor:"Red",
-            hoverBorderColor:"Red",
+            type:"scatter",
+            backgroundColor:"Black",
+            borderColor:"Black",
+            hoverBackgroundColor:"Grey",
+            hoverBorderColor:"Grey",
+            yAxisID:"y-axis-1"
+           }
+           ,{
+            label:"Testiri 3",
+            data:[null,null,null,2,5,7,3,5],
+            fill:false,
+            type:"scatter",
+            backgroundColor:"Blue",
+            borderColor:"Blue",
+            hoverBackgroundColor:"Blue",
+            hoverBorderColor:"Blue",
             yAxisID:"y-axis-1"
            }
            ,
            {
-            label:"Testiri 3",
+            label:"Testiri 4",
             data:[1,1,2,2,3,3,4,4,5,5,6,6,5],
             fill:false,
             type:"bar",
-            backgroundColor:"#81c784",
+            backgroundColor:"#0072f0",
+            borderColor:"#0072f0",
+            hoverBackgroundColor:"#0072f0",
+            hoverBorderColor:"#81c784",
+            yAxisID:"y-axis-1"
+           },
+           {
+            label:"Testiri 4",
+            data:[1,1,2,2,3,3,4,4,5,5,6,6,5],
+            fill:false,
+            type:"bar",
+            backgroundColor:"#81f784",
+            borderColor:"#81c784",
+            hoverBackgroundColor:"darkgreen",
+            hoverBorderColor:"#81c784",
+            yAxisID:"y-axis-1"
+           }, {
+            label:"Testiri 5",
+            data:[1,1,2,2,3,3,4,4,5,5,6,6,5],
+            fill:false,
+            type:"bar",
+            backgroundColor:"#51c784",
             borderColor:"#81c784",
             hoverBackgroundColor:"darkgreen",
             hoverBorderColor:"#81c784",
             yAxisID:"y-axis-1"
            }
+           ,{
+            label:"Testiri 6",
+            data:[1,1,2,2,3,3,4,4,5,5,6,6,5],
+            fill:false,
+            type:"bar",
+            backgroundColor:"#51c834",
+            borderColor:"#81c784",
+            hoverBackgroundColor:"darkgreen",
+            hoverBorderColor:"#81c784",
+            yAxisID:"y-axis-1"
+           },
+           {
+            label:"Testiri 7",
+            data:[1,1,2,2,3,3,4,4,5,5,6,6,5],
+            fill:false,
+            type:"bar",
+            backgroundColor:"darkblue",
+            borderColor:"#81c784",
+            hoverBackgroundColor:"darkblue",
+            hoverBorderColor:"#81c784",
+            yAxisID:"y-axis-1"
+           },
          ]
       }
     const options = {
@@ -116,7 +170,7 @@ const  drawSuperGraph=(props)=> {
     return (
         <div>
        
-          <Bar data={data}
+          <Bar data={props.data}
                 options={options}/>
         </div>
       );
