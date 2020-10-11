@@ -130,6 +130,8 @@ class Scenathon extends Component {
             <div className="container">
               
               
+               
+              
                  {/* componente de comboBox(opciones para el tipo de grafica)*/} 
                  <div className="Combo-Box">
                 
@@ -144,9 +146,21 @@ class Scenathon extends Component {
                 <TabSelector    data={this.state}/>         
                 </div>
                 
-                {this.selectDashboard(this.state)}
-                {this.combobox}
+
+                <div>
+              
+              {this.combobox}
+              
+              </div>
+                <div>
                 {this.dash}
+               
+                
+                </div>
+                
+
+                {this.selectDashboard(this.state)}
+
           
                
 
