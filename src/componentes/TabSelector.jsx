@@ -15,6 +15,11 @@ import FreshWaterUse from '../pages/FreshWaterUse'
 import NetForestCoverChange2 from '../pages/NetForestCoverChange2'
 import GreenHouse2 from '../pages/GreenHouse2'
 
+import GreenHouseOne from '../pages/GreenHouseOne'
+import FreshWaterTwo from '../pages/FreshWaterTwo'
+
+
+
 
 
 
@@ -25,6 +30,7 @@ const seleccionarData = (props) => {
     if (props.data.dashboard==="gts")
     {
       return   <GlobalTargets combinacion={props.data}/>
+     //return <SuperGraph combinacion={props.data}/>
     }else if(props.data.dashboard==="ntch")
     { 
      
@@ -54,20 +60,37 @@ const seleccionarData = (props) => {
     else if(props.data.dashboard==="fwu2")
     {
        
+<<<<<<< HEAD
       return  <h1>fwu2</h1>
     }else if(props.data.dashboard==="fwu2")
     {
        
       return  <h1>fwu2</h1>
     }else if(props.data.dashboard==="feipc")
+=======
+      return  <FreshWaterTwo combinacion={props.data}/>
+    }else if(props.data.dashboard==="gge")
+>>>>>>> 63e97971d718cdb8ac4c22496cb8ab49edaf405d
     {
+      
        
+<<<<<<< HEAD
       return  <FoodEnergyIntakePerCapita combinacion={props.data}/>
+=======
+      return   <GreenHouseOne combinacion={props.data}/>
+>>>>>>> 63e97971d718cdb8ac4c22496cb8ab49edaf405d
     }else if(props.data.dashboard==="gge2")
     {
-       
       return   <GreenHouse2 combinacion={props.data}/>
+<<<<<<< HEAD
     }*/
+=======
+    }else if(props.data.dashboard==="")
+    {
+       
+return null
+    }
+>>>>>>> 63e97971d718cdb8ac4c22496cb8ab49edaf405d
     return null
   }
 
