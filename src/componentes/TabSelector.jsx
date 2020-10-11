@@ -21,7 +21,7 @@ import GreenHouse2 from '../pages/GreenHouse2'
 
 const seleccionarData = (props) => {
 
-     
+     /** 
     if (props.data.dashboard==="gts")
     {
       return   <GlobalTargets combinacion={props.data}/>
@@ -59,15 +59,15 @@ const seleccionarData = (props) => {
     {
        
       return  <h1>fwu2</h1>
-    }else if(props.data.dashboard==="gge")
+    }else if(props.data.dashboard==="feipc")
     {
        
-      return  <h1>fwu2</h1>
+      return  <FoodEnergyIntakePerCapita combinacion={props.data}/>
     }else if(props.data.dashboard==="gge2")
     {
        
       return   <GreenHouse2 combinacion={props.data}/>
-    }
+    }*/
     return null
   }
 

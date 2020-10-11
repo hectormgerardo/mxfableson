@@ -142,7 +142,7 @@ const convertir=(props)=> {
 
  return data
 } 
-  
+
  
 
 export default drawNfch;
