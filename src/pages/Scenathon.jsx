@@ -141,11 +141,11 @@ class Scenathon extends Component {
                     <Dashboard metodo={this.handleChange}  data={this.state} />     
                 </div>
 
-
+  {/* componente de comboBox(opciones para el tipo de grafica)
                 <div className="tab-selector">
                 <TabSelector    data={this.state}/>         
                 </div>
-                
+                */} 
 
                 <div>
               

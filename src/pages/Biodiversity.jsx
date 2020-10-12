@@ -2,7 +2,8 @@ import React from "react";
 import BarChart from "../componentes/BarChart";
 import data from '../data/Biodiversity.json';
 //nfch=NetForestCoverChange
-const drawBiodiversity = (props) => {
+const drawBiodiversity = (props) => 
+{
  
  
   
@@ -49,8 +50,12 @@ const drawBiodiversity = (props) => {
 return <BarChart data={dataAux}/> 
 }
 
+                                                          
 
-const convertir=(props)=> {
+
+const convertir=(props)=> 
+
+{
   var labels=[];
    var Protected_land_Mexico=[]; 
    var Protected_land_Colombia=[]; 
