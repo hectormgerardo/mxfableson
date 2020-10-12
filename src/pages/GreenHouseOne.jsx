@@ -22,20 +22,20 @@ const drawGreenhouse1 = (props) => {
                 dataGraphTwo=data.graphTwo_combinationFour
               }
               var dataGraphOneAux= convertir(dataGraphOne);
-              var dataGraphTwoAux= convertir(dataGraphTwo);
+              var dataGraphTwoAux= convertir_data(dataGraphTwo);
               
               break;
             case 'iteration_4':
               if(Scenario === "Sustainaible")
               {
                 dataGraphOne= data.graphOne_combinationOne
-                dataGraphTwo=data.graphTwo_combinationOne
-                console.log(dataGraphTwo)
+                dataGraphTwo= data.graphTwo_combinationOne
+                
     
                 
               }else{
                 dataGraphOne= data.graphOne_combinationThree
-                dataGraphTwo=data.graphTwo_combinationThree
+                dataGraphTwo= data.graphTwo_combinationThree
               }
               var dataGraphOneAux= convertir(dataGraphOne);
               var dataGraphTwoAux= convertir_data(dataGraphTwo);
@@ -105,9 +105,9 @@ const drawGreenhouse1 = (props) => {
 
       return <div>
   <SuperGraph data={dataGraphOneAux}
-title="Green House 2"/> 
+title="Green House 1"/> 
 <SuperGraph data={dataGraphTwoAux}
-title="Green House 2"/> 
+title="Green House 1"/> 
   
   </div>
 

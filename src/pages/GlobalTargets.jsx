@@ -493,7 +493,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetCuatro= crearDataTargetCuatro(data.targetCuatro_1_combinacionNueve);
   dataAuxTargetCinco= crearDataTargetCinco(data.targetCinco_combinacionNueve);
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionNueve);
-  dataAuxTargetSiete= crearDataTargetSiete(data.targetSeis_combinacionNueve);
+  dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionNueve);
 
 }else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
   

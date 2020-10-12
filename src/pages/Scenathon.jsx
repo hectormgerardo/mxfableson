@@ -20,6 +20,10 @@ import FreshWaterUse from '../pages/FreshWaterUse'
 import NetForestCoverChange2 from '../pages/NetForestCoverChange2'
 import GreenHouse2 from '../pages/GreenHouse2'
 
+import GreenHouseOne from '../pages/GreenHouseOne'
+import FreshWaterTwo from '../pages/FreshWaterTwo'
+
+
 
 
  
@@ -63,11 +67,11 @@ class Scenathon extends Component {
     }
 
     selectDashboard(state){
-         console.log(this.state)
+        console.log(state)
         switch(this.state.dashboard){
             case 'Global Target Summary': 
                 this.combobox=<ComboBox onChange={this.handleChange}/>
-              this.dash=<GlobalTargets combinacion={this.state}></GlobalTargets>
+              this.dash=<GlobalTargets combinacion={this.state}/>;
               break;
             case 'Net Forest Cover Change(1)': 
             this.combobox=<ComboBox onChange={this.handleChange}/>
@@ -95,15 +99,15 @@ class Scenathon extends Component {
             break;
             case 'Fresh water use (2)':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<h1>freshwateruse2</h1>;
+                this.dash=<FreshWaterTwo combinacion={this.state}/>;
             break;
             case 'GreenHouse Gas(GHG) Emissions(1)':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<h1>greenhouse1</h1>;
+                this.dash=<GreenHouseOne combinacion={this.state}/>;
             break;
             case 'GreenHouse Gas(GHG) Emissions(2)':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<h1>greenhouse2</h1>;
+                this.dash=<GreenHouse2 combinacion={this.state}/>;
             break;
             case 'Food energy intake per capita (1)':
                 this.combobox=<ComboBox2 onChange={this.handleChange}/>
@@ -147,19 +151,18 @@ class Scenathon extends Component {
                 </div>
                 */} 
 
-                <div>
-              
+                
+{this.selectDashboard(this.state)}
               {this.combobox}
               
-              </div>
-                <div>
+              
                 {this.dash}
                
                 
-                </div>
+            
                 
 
-                {this.selectDashboard(this.state)}
+               
 
           
                

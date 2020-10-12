@@ -4,7 +4,7 @@ import data from '../data/NetForestCoverChange2.json';
 //nfch=NetForestCoverChange
 const drawNfch2 = (props) => {
  
- 
+ console.log("entre")
   
  
 
@@ -52,7 +52,7 @@ return <BarChart data={dataAux}/>
 }
 
 const convertir=(props)=> {
-  console.log(props)
+  
     var labels=[];
      var mexico=[]; 
      var colombia=[]; 
