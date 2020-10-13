@@ -11,6 +11,7 @@ import Nfc from '../pages/Scenathon';
 import Features from "../pages/GlobalTargets";
 import About from '../pages/About';
 import styled from 'styled-components';
+import TradeReport from '../pages/TradeReport';
 
 
 const Styles = styled.div`
@@ -35,8 +36,10 @@ const NavBar = () => {
 
             <ReactBootStrap.Navbar collapseOnSelect expand="xl" className="nav" variant="light">
                 <Link to="/">
-
-              <ReactBootStrap.Navbar.Brand href="#home">Fable</ReactBootStrap.Navbar.Brand>
+                  <ReactBootStrap.Navbar.Brand href="#home">Fable</ReactBootStrap.Navbar.Brand>
+              </Link>
+              <Link to="/TradeReport">
+                <ReactBootStrap.Navbar.Brand href="#home">Trade Report</ReactBootStrap.Navbar.Brand>
               </Link>
               <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
@@ -56,8 +59,11 @@ const NavBar = () => {
                     <Route path="/Features" component={Features}>
                       <Features />
                     </Route>
+                    <Route path="/TradeReport" component={TradeReport}>
+                      <TradeReport/>
+                    </Route>
                     <Route path="/" component={Nfc}>
-                      <Nfc />
+                      <Nfc/>
                     </Route>
                     <Route path="/About"  render={
                       ()=>{

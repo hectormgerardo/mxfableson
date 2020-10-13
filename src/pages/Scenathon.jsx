@@ -23,7 +23,7 @@ import GreenHouse2 from '../pages/GreenHouse2'
 import GreenHouseOne from '../pages/GreenHouseOne'
 import FreshWaterTwo from '../pages/FreshWaterTwo'
 
-
+import SustainableExporters from '../pages/SustainableExporters'
 
 
  
@@ -118,6 +118,7 @@ class Scenathon extends Component {
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<h1>Food energy intake per capita (2)</h1>;
             break;
+            
             default: break;
           }
     }
