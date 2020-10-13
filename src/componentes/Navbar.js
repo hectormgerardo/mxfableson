@@ -39,7 +39,11 @@ const NavBar = () => {
 
               <ReactBootStrap.Navbar.Brand href="#home">Fable</ReactBootStrap.Navbar.Brand>
             </Link>
-          
+            <Link to="/TradeReport">
+
+              <ReactBootStrap.Navbar.Brand href="#home">Trade Report</ReactBootStrap.Navbar.Brand>
+            </Link>
+
             <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
               <ReactBootStrap.Nav className="mr-auto">
@@ -58,9 +62,15 @@ const NavBar = () => {
             <Route path="/Features" component={Features}>
               <Features />
             </Route>
+
+            <Route path="/TradeReport" component={TradeReport}>
+              <TradeReport />
+            </Route>
             <Route path="/" component={Scenathon}>
               <Scenathon />
             </Route>
+
+            
             <Route path="/About" render={
               () => {
                 return (<h1>About</h1>);

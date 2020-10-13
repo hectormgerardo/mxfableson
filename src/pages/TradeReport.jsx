@@ -21,9 +21,9 @@ class TradeReport extends Component {
         return (        
             <div className="container"> 
                 <div>
-                    <h1>Entré a Trade Report</h1>
+                    
                     <SustainableExporters/>
-                    <Dashboard/>     
+                      
                 </div>                
             </div>
         )
