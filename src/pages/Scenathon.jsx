@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import ComboBox from '../componentes/ComboBox'
 import ComboBox2 from '../componentes/ComboBox2'
-
+import ComboBox3 from '../componentes/ComboBox3'
 
 import Dashboard from '../componentes/Dashboard'
 import TabSelector from '../componentes/TabSelector'
@@ -78,7 +78,8 @@ class Scenathon extends Component {
               this.dash=<NetForestCoverChange combinacion={this.state}/>;
               break;
             case 'Net Forest Cover Change(2)':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
+                this.combobox=<ComboBox3 onChange={this.handleChange}/>
+                
                 this.dash=<NetForestCoverChange2 combinacion={this.state}/>;
                 break;
             case 'Biodiversity':
