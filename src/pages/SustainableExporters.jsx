@@ -4,7 +4,7 @@ import data from '../data/SustainableExporters.json';
 //nfch=NetForestCoverChange
 const SustainableExporters = (props) => {
 
-  const { GraficaType, Iteration, Scenario } = props.combinacion.select;
+  /*const { GraficaType, Iteration, Scenario } = props.combinacion.select;
   let dataAux;
   switch(GraficaType){
     case 'group':
@@ -39,7 +39,8 @@ const SustainableExporters = (props) => {
         break
     }
     break;
-  }
+  }*/
+  var dataAux = convertir(data.combination_1);
 console.log(dataAux)
 return <BarChart data={dataAux}
 title="Sustainable - net exporters"/> 
