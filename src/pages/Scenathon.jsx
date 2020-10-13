@@ -48,12 +48,12 @@ class Scenathon extends Component {
     
      
 
-    //recive valor de class component "ComboBox" 
+    //recibe valor de class component "ComboBox" 
     handleChange = e => {
      
         this.setState({
             select: {
-                //el next code evitara que se sobrescriba cuando reciva un valor new
+                //el next code evitara que se sobrescriba cuando reciba un valor new
                 ...this.state.select,
                 [e.target.name]: e.target.value
                 
