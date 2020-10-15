@@ -1,194 +1,123 @@
 import React from "react";
 import BarChart from "../componentes/BarChart";
-import data from '../data/Greenhouse2.json';
+import data from '../data/SustainableExporters.json';
 //nfch=NetForestCoverChange
-const greenHouse = (props) => {
- 
- 
-   var dataGraphOne;
-   var dataGraphTwo;
+const SustainableExporters = (props) => {
 
- 
-
-  const { GraficaType, Iteration, Scenario } = props.combinacion.select;
-
+  /*const { GraficaType, Iteration, Scenario } = props.combinacion.select;
+  let dataAux;
   switch(GraficaType){
     case 'group':
       switch(Iteration){
         case 'iteration_3':
-          if(Scenario === "Sustainaible")
-          {
-            dataGraphOne= data.Greengraph_One__combination_Two
-            dataGraphTwo=data.Greengraph_Two__combination_Two
-          }else{
-            dataGraphOne=data.Greengraph_One__combination_Four
-            dataGraphTwo=data.Greengraph_Two__combination_Four
-          }
-          var dataGraphOneAux= convertir(dataGraphOne);
-          var dataGraphTwoAux= convertir(dataGraphTwo);
-          
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_1 : data.combination_1);
+          console.log(dataAux);
           break;
-        case 'iteration_4':
-          if(Scenario === "Sustainaible")
-          {
-            dataGraphOne= data.Greengraph_One__combination_One
-            dataGraphTwo=data.Greengraph_Two__combination_One
-            console.log(dataGraphTwo)
-            
-          }else{
-            dataGraphOne= data.Greengraph_One__combination_Three
-            dataGraphTwo=data.Greengraph_Two__combination_Three
-          }
-          var dataGraphOneAux= convertir(dataGraphOne);
-          var dataGraphTwoAux= convertir(dataGraphTwo);
-          console.log(dataGraphTwoAux)
-          break;
+        case 'Iteration_4':
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_1 : data.combination_1);
+          break
       }
       break;
     case 'regions':
       switch(Iteration){
-        case 'iteration_3':
-          if(Scenario === "Sustainaible")
-          {
-            dataGraphOne= data.Greengraph_One__combination_Six
-            dataGraphTwo=data.Greengraph_Two__combination_Six
-          }else{
-            dataGraphOne= data.Greengraph_One__combination_Eight
-            dataGraphTwo=data.Greengraph_Two__combination_Eight
-          }
-          var dataGraphOneAux= convertir(dataGraphOne);
-          var dataGraphTwoAux= convertir(dataGraphTwo);
+        case 'Iteration_3':
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_1 : data.combination_1);
           break;
-        case 'iteration_4':
-          if(Scenario === "Sustainaible")
-          {
-            dataGraphOne=data.Greengraph_One__combination_Five
-            dataGraphTwo=data.Greengraph_Two__combination_Five
-          }else{
-            dataGraphOne=data.Greengraph_One__combination_Seven
-            dataGraphTwo=data.Greengraph_Two__combination_Seven
-          }
-          var dataGraphOneAux= convertir(dataGraphOne);
-          var dataGraphTwoAux= convertir(dataGraphTwo);
-          break;
-         
+        case 'Iteration_4':
+          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_1 : data.combination_1);
+          break
       }
       break;
     case 'countries':
       switch(Iteration){
-      case 'iteration_3':
-        if(Scenario === "Sustainaible")
-        {
-          dataGraphOne=data.Greengraph_One__combination_Ten
-          dataGraphTwo=data.Greengraph_Two__combination_Ten
-        }else{
-          dataGraphOne=data.Greengraph_One__combination_Twelve
-          dataGraphTwo=data.Greengraph_Two__combination_Twelve
-        }
-        var dataGraphOneAux= convertir(dataGraphOne);
-        var dataGraphTwoAux= convertir(dataGraphTwo);
+      case 'Iteration_3':
+        dataAux= convertir(Scenario === "Sustainaible" ? data.combination_1 : data.combination_1);
         break;
-       
-      case 'iteration_4':
-        if(Scenario === "Sustainaible")
-        {
-          dataGraphOne=data.Greengraph_One__combination_Nine
-          dataGraphTwo=data.Greengraph_Two__combination_Nine
-        }else{
-          dataGraphOne=data.Greengraph_One__combination_Eleven
-          dataGraphTwo=data.Greengraph_Two__combination_Eleven
-        }
-        var dataGraphOneAux= convertir(dataGraphOne);
-        var dataGraphTwoAux= convertir(dataGraphTwo);
-        break;
+      case 'Iteration_4':
+        dataAux= convertir(Scenario === "Sustainaible" ? data.combination_1 : data.combination_1);
+
+        break
     }
     break;
-  }
-  
-
-
-return <div>
-  <BarChart data={dataGraphOneAux}
-title="Green House 2"/> 
-<BarChart data={dataGraphTwoAux}
-title="Green House 2"/> 
-  
-  </div>
+  }*/
+  var dataAux = convertir(data.combination_1);
+console.log(dataAux)
+return <BarChart data={dataAux}
+title="Sustainable - net exporters"/> 
 }
 
 
 const convertir=(props)=>{
-    var usa=[];
-    var UK=[];
-    var sweden=[];
-    var south_Africa=[];
-    var rwanda=[];
-    var russia=[]; 
-    var Rest_of_Sub_Saharan_Africa=[];
-    var Rest_of_North_Africa_Middle_East_and_central_Asia=[];
-    var Rest_of_European_Union=[];
-    var Rest_of_Europe_non_EU28=[]
-    var Rest_of_Central_and_South_America=[];
-    var Rest_of_Asia_and_Pacific=[];
-    var norway=[];
-    var mexico=[]; 
-    var malaysia=[];
-    var indonesia=[]; 
-    var india=[];
-    var germany = [];
-    var finland = [];
-    var otros = [];
+    var CHN=[];
+    var R_OEU=[];
+    var R_CSA=[];
+    var R_NEU=[];
+    var ARG=[];
+    var ZAF=[]; 
+    var BRA=[];
+    var IND=[];
+    var CAN=[];
+    var USA=[]
+    var AUS=[];
+    var R_SSA=[];
+    var DEU=[];
+    var NOR=[]; 
+    var MEX=[];
+    var COL=[]; 
+    var FIN=[];
+    var MYS = [];
+    var R_NMC = [];
     var labels = [];
+
 
     if (props != undefined) {
         props.map((item) => {
-          
-            if (item.c_country_t === "USA") {
-              usa.push(item.total_GHG );
-            }else if (item.c_country_t === "UK") {
-              UK.push(item.total_GHG );
-            }else if (item.c_country_t === "Sweden") {
-              sweden.push(item.total_GHG );
-            }else if (item.c_country_t === "South Africa") {
-              south_Africa.push(item.total_GHG );
+          //export quantity (unit 1000 tons) was replace to export_quantity 
+          console.log(item.alpha2)
+            if (item.alpha2 === "CHN") {
+              CHN.push(item.export_quantity );
+            }else if (item.alpha2 === "R_OEU") {
+              R_OEU.push(item.export_quantity );
+            }else if (item.alpha2 === "R_CSA") {
+              R_CSA.push(item.export_quantity );
+            }else if (item.alpha2 === "R_NEU") {
+              R_NEU.push(item.export_quantity );
             }
-            else if (item.c_country_t === "Rwanda") {
-              rwanda.push(item.total_GHG );
-            }else if (item.c_country_t === "Russia") {
-              russia.push(item.total_GHG );
-            }else if (item.c_country_t === "Rest of Sub-Saharan Africa") {
-              Rest_of_Sub_Saharan_Africa.push(item.total_GHG );
-            }else if (item.c_country_t === "Rest of North Africa Middle East and central Asia") {
-              Rest_of_North_Africa_Middle_East_and_central_Asia.push(item.total_GHG );
-            }else if (item.c_country_t === "Rest of European Union") {
-              Rest_of_European_Union.push(item.total_GHG );
-            }else if (item.c_country_t === "Rest of Europe non EU28") {
-              Rest_of_Europe_non_EU28.push(item.total_GHG );
-            }else if (item.c_country_t === "Rest of Central and South America") {
-              Rest_of_Central_and_South_America.push(item.total_GHG );
-            }else if (item.c_country_t === "Rest of Asia and Pacific") {
-              Rest_of_Asia_and_Pacific.push(item.total_GHG );
-            }else if (item.c_country_t === "Norway") {
-              norway.push(item.total_GHG );
-            }else if (item.c_country_t === "Mexico") {
-              mexico.push(item.total_GHG );
-            }else if (item.c_country_t === "Malaysia") {
-              malaysia.push(item.total_GHG );
-            }else if (item.c_country_t === "Indonesia") {
-              indonesia.push(item.total_GHG );
-            }else if (item.c_country_t === "India") {
-              india.push(item.total_GHG );
-            }else if (item.c_country_t === "Germany") {
-              germany.push(item.total_GHG );
-            }else if (item.c_country_t === "Finland") {
-              finland.push(item.total_GHG );
-            }else if (item.c_country_t === "otros") {
-              otros.push(item.total_GHG );
+            else if (item.alpha2 === "ARG") {
+              ARG.push(item.export_quantity );
+            }else if (item.alpha2 === "ZAF") {
+              ZAF.push(item.export_quantity );
+            }else if (item.alpha2 === "BRA") {
+              BRA.push(item.export_quantity );
+            }else if (item.alpha2 === "IND") {
+              IND.push(item.export_quantity );
+            }else if (item.alpha2 === "CAN") {
+              CAN.push(item.export_quantity );
+            }else if (item.alpha2 === "USA") {
+              USA.push(item.export_quantity );
+            }else if (item.alpha2 === "AUS") {
+              AUS.push(item.export_quantity );
+            }else if (item.alpha2 === "R_SSA") {
+              R_SSA.push(item.export_quantity );
+            }else if (item.alpha2 === "DEU") {
+              DEU.push(item.export_quantity );
+            }else if (item.alpha2 === "NOR") {
+              NOR.push(item.export_quantity );
+            }else if (item.alpha2 === "MEX") {
+              MEX.push(item.export_quantity );
+            }else if (item.alpha2 === "COL") {
+              COL.push(item.export_quantity );
+            }else if (item.alpha2 === "FIN") {
+              FIN.push(item.export_quantity );
+            }else if (item.alpha2 === "MYS") {
+              MYS.push(item.export_quantity );
+            }else if (item.alpha2 === "R_NMC") {
+              R_NMC.push(item.export_quantity );
             }
 
-            if(!labels.includes(item.Year))
+            if(!labels.includes(item.year))
     {
-       labels.push(item.Year);
+       labels.push(item.year);
     }
         }
       
@@ -201,8 +130,8 @@ const convertir=(props)=>{
                 {
                   //Aforestation ejemplo
                   type: 'bar',
-                  label: 'Usa',
-                  data: usa,
+                  label: 'CHN',
+                  data: CHN,
                   fill: false,
                   backgroundColor: '#faa75a',
                   borderColor: '#71B37C',
@@ -211,8 +140,8 @@ const convertir=(props)=>{
                   yAxisID: 'y-axis-1'
                 },{
                   type: 'bar',
-                  label: 'Uk',
-                  data: UK,
+                  label: 'R_OEU',
+                  data: R_OEU,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#7cb342',
@@ -223,8 +152,8 @@ const convertir=(props)=>{
                   yAxisID: 'y-axis-1'
                 },{
                   type: 'bar',
-                  label: 'Sweden',
-                  data: sweden,
+                  label: 'R_CSA',
+                  data: R_CSA,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#5a9bd4',
@@ -236,8 +165,8 @@ const convertir=(props)=>{
                 },
                 {
                   type: 'bar',
-                  label: 'South Africa',
-                  data:south_Africa,
+                  label: 'R_NEU',
+                  data:R_NEU,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#5e35b1',
@@ -249,8 +178,8 @@ const convertir=(props)=>{
                 },
                 {
                   type: 'bar',
-                  label: 'Rwanda',
-                  data: rwanda,
+                  label: 'ARG',
+                  data: ARG,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#00b6cb',
@@ -263,8 +192,8 @@ const convertir=(props)=>{
                 ,
                 {
                   type: 'bar',
-                  label: 'Russia',
-                  data: russia,
+                  label: 'ZAF',
+                  data: ZAF,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#5e35b1',
@@ -276,8 +205,8 @@ const convertir=(props)=>{
                 },
                 {
                   type: 'bar',
-                  label: 'Rest of Sub Saharan Africa',
-                  data: Rest_of_Sub_Saharan_Africa,
+                  label: 'BRA',
+                  data: BRA,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#00b6cb',
@@ -289,8 +218,8 @@ const convertir=(props)=>{
                 },
                 {
                   type: 'bar',
-                  label: 'Rest of North Africa Middle East andcentral Asia',
-                  data: Rest_of_North_Africa_Middle_East_and_central_Asia,
+                  label: 'IND',
+                  data: IND,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#0072f0',
@@ -301,8 +230,8 @@ const convertir=(props)=>{
                   yAxisID: 'y-axis-1'
                 },  {
                   type: 'bar',
-                  label: 'Rest of European Union',
-                  data: Rest_of_European_Union,
+                  label: 'CAN',
+                  data: CAN,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#9e67ab',
@@ -313,8 +242,8 @@ const convertir=(props)=>{
                   yAxisID: 'y-axis-1'
                 },  {
                   type: 'bar',
-                  label: 'Rest of Europe non EU28',
-                  data: Rest_of_Europe_non_EU28,
+                  label: 'USA',
+                  data: USA,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#0072f0',
@@ -326,8 +255,8 @@ const convertir=(props)=>{
                 },
                 {
                   type: 'bar',
-                  label: 'Rest of Central and South America',
-                  data: Rest_of_Central_and_South_America,
+                  label: 'AUS',
+                  data: AUS,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '##ce7058',
@@ -339,8 +268,8 @@ const convertir=(props)=>{
                 },
                 {
                   type: 'bar',
-                  label: 'Rest of Asia and Pacific',
-                  data: Rest_of_Asia_and_Pacific,
+                  label: 'R_SSA',
+                  data: R_SSA,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#ffa800',
@@ -351,8 +280,8 @@ const convertir=(props)=>{
                   yAxisID: 'y-axis-1'
                 }, {
                   type: 'bar',
-                  label: 'Norway',
-                  data: norway,
+                  label: 'DEU',
+                  data: DEU,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#ec407a',
@@ -363,8 +292,8 @@ const convertir=(props)=>{
                   yAxisID: 'y-axis-1'
                 },{
                   type: 'bar',
-                  label: 'Mexico',
-                  data: mexico,
+                  label: 'NOR',
+                  data: NOR,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#7ac36a',
@@ -375,8 +304,8 @@ const convertir=(props)=>{
                   yAxisID: 'y-axis-1'
                 },{
                   type: 'bar',
-                  label: 'Malaysia',
-                  data: malaysia,
+                  label: 'MEX',
+                  data: MEX,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#f10096',
@@ -388,8 +317,8 @@ const convertir=(props)=>{
                 },
                 {
                   type: 'bar',
-                  label: 'Indonesia',
-                  data: indonesia,
+                  label: 'COL',
+                  data: COL,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#ffa800',
@@ -401,8 +330,8 @@ const convertir=(props)=>{
                 },
                 {
                   type: 'bar',
-                  label: 'India',
-                  data: india,
+                  label: 'FIN',
+                  data: FIN,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#5e35b1',
@@ -413,8 +342,8 @@ const convertir=(props)=>{
                   yAxisID: 'y-axis-1'
                 },{
                   type: 'bar',
-                  label: 'Germany',
-                  data: germany,
+                  label: 'MYS',
+                  data: MYS,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#0390d0',
@@ -425,8 +354,8 @@ const convertir=(props)=>{
                   yAxisID: 'y-axis-1'
                 },{
                   type: 'bar',
-                  label: 'Finland',
-                  data: finland,
+                  label: 'R_NMC',
+                  data: R_NMC,
                   fill: false,
                   borderColor: '#EC932F',
                   backgroundColor: '#f10096',
@@ -435,29 +364,12 @@ const convertir=(props)=>{
                   pointHoverBackgroundColor: '#EC932F',
                   pointHoverBorderColor: '#EC932F',
                   yAxisID: 'y-axis-1'
-                },
-                {
-                  type: 'bar',
-                  label: 'Otros',
-                  data: otros,
-                  fill: false,
-                  borderColor: '#EC932F',
-                  backgroundColor: '#f66d00',
-                  pointBorderColor: '#EC932F',
-                  pointBackgroundColor: '#EC932F',
-                  pointHoverBackgroundColor: '#EC932F',
-                  pointHoverBorderColor: '#EC932F',
-                  yAxisID: 'y-axis-1'
-                }
-                
+                }                
               ]
             };
 
-           
+            console.log(data)
        return data
-   
-
 }
 
-
-export default greenHouse;
+export default SustainableExporters;
