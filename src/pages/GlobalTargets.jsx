@@ -1,13 +1,16 @@
 import React from "react";
 import "../css/graphCharacteristics.css";
 import "../css/Box.css";
-import {Container,Row,Col} from "react-bootstrap";
+import "../../node_modules/react-grid-layout/css/styles.css";
+import "../../node_modules/react-resizable/css/styles.css";
+import {Container,Row,Col,Jumbotron} from "react-bootstrap";
+import GridLayout from 'react-grid-layout';
 
 import MixedChart from "../componentes/MixedChart";
 import data from '../data/GlobalTargets.json';
 import BarChart from '../componentes/BarChart'
 
-
+ 
 const drawGlobalTargets = (props) => {
   
 const crearDataTargetUno=(props)=> {
@@ -527,96 +530,29 @@ const crearDataTargetSiete=(props)=> {
   return (
     
     
-    <div className="GlobalTargets"><br></br>
-   
-
-   {/*   <div class="wrapper">
-  <div class="one">
-  <div class="wrapper">
-    <div class="uno">
-      <MixedChart 
+    <div className="GlobalTargets" style={{}}><br></br>
+   <GridLayout className="layout" cols={12} rowHeight={30} width={1200}>
+        <div key="t1" data-grid={{x: 0, y: 0, w: 2.5, h: 6}}><MixedChart 
         data={dataAuxTargetUno}
-        title="Target 1.- Zero net deforestation"/>
-        </div>
-    <div class="dos">
-    <MixedChart
+        title="Target 1.- Zero net deforestation"/></div>
+        <div key="t2" data-grid={{x: 2.5, y: 0, w: 2.5, h: 6}}><MixedChart
         data={dataAuxTargetDos}
-        title="Target 2.- Share of total land which is protected"/>
-    </div>
-    <div class="tres">
-    <MixedChart 
+        title="Target 2.- Share of total land which is protected"/></div>
+        <div key="t3" data-grid={{x: 5, y: 0, w: 2.5, h: 6}}><MixedChart 
         data={dataAuxTargetTres}
-        title="Target 3.- Share of land where natural processes predominate"/>
-    </div>
-  </div>
-  </div>
-  
-  <div class="two">
-  <BarChart data={dataAuxTargetCuatro}
-            title="Target 4.- Greenhouse Gas (GHG) Emissions"/>
-
-
-<MixedChart 
+        title="Target 3.- Share of land where natural processes predominate"/></div>
+        <div key="t4" data-grid={{x: 7.5, y: 0, w: 2, h: 6}}><BarChart data={dataAuxTargetCuatro}
+            title="From Agriculture "/></div>
+        <div key="t5" data-grid={{x: 10, y: 0, w: 1.5, h: 6}}><MixedChart 
         data={dataAuxTargetSiete}
-        title=""/>
-  
-  </div>
-  
-  <div class="three">
- 
-  <MixedChart 
+        title="From Land use change"/></div>
+        <div key="t6" data-grid={{x: 0, y: 1, w: 9, h: 12}}><MixedChart 
         data={dataAuxTargetCinco}
-        title="Target 5.-  Food security"/>
-  
-
-  </div>
-  <div class="four">
-  <MixedChart
+        title="Target 5.-  Food security"/></div>
+        <div key="t7" data-grid={{x: 9, y: 1, w: 3, h: 8}}><MixedChart
         data={dataAuxTargetSeis}
-        title="Target 6.- Fresh water use"/>
-  </div>
-  </div>*/}
-
-<h4>Target 1-3</h4>
-<Container fluid>
-  <Row>
-    <Col><MixedChart 
-        data={dataAuxTargetUno}
-        title="Target 1.- Zero net deforestation"/>
-        </Col>
-    <Col><MixedChart
-        data={dataAuxTargetDos}
-        title="Target 2.- Share of total land which is protected"/></Col>
-    <Col><MixedChart 
-        data={dataAuxTargetTres}
-        title="Target 3.- Share of land where natural processes predominate"/></Col>
-  </Row>
-</Container>
-<h4>Target 4.- Greenhouse Gas (GHG) Emissions </h4>
-<Container fluid>
-<Row>
-    <Col md={4}><BarChart data={dataAuxTargetCuatro}
-            title="From Agriculture "/></Col>
-    <Col md={4}><MixedChart 
-        data={dataAuxTargetSiete}
-        title="From Land use change"/></Col>
-  </Row>
-</Container>
-
-
-<h4>Targes 5-6</h4>
-<Container fluid>
-<Row>
-    <Col ><MixedChart 
-        data={dataAuxTargetCinco}
-        title="Target 5.-  Food security"/></Col>
-        <Col md={4}><MixedChart
-        data={dataAuxTargetSeis}
-        title="Target 6.- Fresh water use"/></Col>
-  </Row>
-</Container>
-
-
+        title="Target 6.- Fresh water use"/></div>
+      </GridLayout>
 
 
 
