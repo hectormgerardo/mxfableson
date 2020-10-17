@@ -9,10 +9,12 @@ import { Bar } from 'react-chartjs-2';
 const  BarChart=(props)=> {
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     title: {
       display: true,
       text: props.title
   },legend:{
+    display:true,
     labels:{
       boxWidth:4,
       fontSize:8
@@ -75,11 +77,8 @@ const  BarChart=(props)=> {
     
     let data=props.data;
           return (
-            <div>
-             
               <Bar data={data}
                     options={options}/>
-            </div>
           );
       }
       
