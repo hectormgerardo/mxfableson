@@ -1,7 +1,7 @@
 import React from "react";
 import SuperGraph from "../componentes/SuperGraph";
 import data from '../data/Greenhouse1.json';
-
+import {Container,Row,Col} from "react-bootstrap";
 const drawGreenhouse1 = (props) => {
 
     var dataGraphOne;
@@ -104,13 +104,15 @@ const drawGreenhouse1 = (props) => {
       }
 
       return <div>
-  <SuperGraph data={dataGraphOneAux}
-title="Green House 1"/> 
-<SuperGraph data={dataGraphTwoAux}
-title="Green House 1"/> 
-  
-  </div>
-
+<Container fluid>
+<Row>
+    <Col ><SuperGraph data={dataGraphOneAux}
+title="Green House 1"/> </Col>
+        <Col ><SuperGraph data={dataGraphTwoAux}
+title="Green House 2"/> </Col>
+  </Row>
+</Container>
+</div>
 }
 
 //These are the values of graph one
