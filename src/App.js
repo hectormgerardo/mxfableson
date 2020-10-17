@@ -8,7 +8,11 @@ import { Jumbotron_3} from './componentes/Jumbotron_3'
 import { Jumbotron_fin} from './componentes/Jumbotron_fin'
 import Joyride from 'react-joyride';
 import { Last } from 'react-bootstrap/esm/PageItem';
+import ReactHintFactory from 'react-hint'
+import 'react-hint/css/index.css'
 
+
+const ReactHint = ReactHintFactory(React)
 
 export class App extends React.Component {
   state = {
@@ -23,14 +27,38 @@ export class App extends React.Component {
       }
     ]
   };
+
+  onRenderContent = (target, content) => {
+		const {catId} = target.dataset
+		const width = 240
+		const url = `https://images.pexels.com/photos/${catId}/pexels-photo-${catId}.jpeg?w=${width}`
+
+		return <div className="custom-hint__content">
+			<img src={url} width={width} />
+			<button ref={(ref) => ref && ref.focus()}
+				onClick={() => this.instance.toggleHint()}>Ok</button>
+		</div>
+	}
+
   
   render(){
     const { steps } = this.state;
     return (
     <React.Fragment>
       <Jumbotron/> 
+
+      <div>
+			<ReactHint autoPosition events delay={{show: 100, hide: 1000}} />
+			<ReactHint persist
+				attribute="data-custom"
+				className="custom-hint"
+				events={{click: true}}
+				onRenderContent={this.onRenderContent}
+				ref={(ref) => this.instance = ref}/>
+		</div>
+
       <Navbar id="Nav" />
-        <div id="About">
+        <div data-rh="Mensaje" data-rh-at="top" id="About">
              <About/>
         </div>
         <div className="app">
@@ -51,6 +79,7 @@ export class App extends React.Component {
             }
           }}
         />
+        
       </div>
 
         <Jumbotron_2/>
