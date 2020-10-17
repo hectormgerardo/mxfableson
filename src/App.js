@@ -10,6 +10,7 @@ import Joyride from 'react-joyride';
 import { Last } from 'react-bootstrap/esm/PageItem';
 import ReactHintFactory from 'react-hint'
 import 'react-hint/css/index.css'
+import LeafletMap from './pages/LeafletMap';
 
 
 const ReactHint = ReactHintFactory(React)
@@ -59,6 +60,9 @@ export class App extends React.Component {
 
       <Navbar id="Nav" />
         <div data-rh="Mensaje" data-rh-at="top" id="About">
+
+            <LeafletMap/>
+
              <About/>
         </div>
         <div className="app">
@@ -81,10 +85,12 @@ export class App extends React.Component {
         />
         
       </div>
-
+      
         <Jumbotron_2/>
         <Jumbotron_3/>
         <Jumbotron_fin/>
+
+        
          
     </React.Fragment>
   )

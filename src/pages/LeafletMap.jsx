@@ -5,7 +5,7 @@ import 'leaflet/dist/leaflet.css'; //This style is for the scroll and plus contr
 import './../css/LeafletMap.css';
 
 class LeafletMap extends Component {
-    state = { color: '#ffff00'} ;
+    state = { color: '#b4b42d'} ;
 
     colors = ['green', 'grey', 'white', 'blue', 'yellow', 'orange'] ;
 
@@ -43,7 +43,7 @@ class LeafletMap extends Component {
         const countryName = country.properties.ADMIN; //The name of the countries
         console.log (countryName);
 
-        layer.options.fillOpacity = Math.random () ; //This line is for draw diferent opacities with the countries
+        //layer.options.fillOpacity = Math.random () ; //This line is for draw diferent opacities with the countries
         //const colorIndex = Math.floor(Math.random() * this.colors.length); //The random color index in the array of the colors
         //layer.options.fillColor = this.colors[colorIndex]; //Change the color with anything color in the array od colors
 
@@ -66,9 +66,7 @@ class LeafletMap extends Component {
     render () {
         return (
             <div>
-                <h1>
-                    MyMap
-                </h1>
+                
                 <Map style={{height: '80vh'}} zoom={2} center={[20, 100]}>
                     <GeoJSON style={this.countryStyle} 
                         data={mapData.features}
