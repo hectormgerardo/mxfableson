@@ -5,6 +5,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Joyride from './componentes';
+
+export { default as ACTIONS } from './constants/actions';
+export { default as EVENTS } from './constants/events';
+export { default as LIFECYCLE } from './constants/lifecycle';
+export { default as STATUS } from './constants/status';
+
 ReactDOM.render(
   <React.StrictMode>
     <App/>
@@ -14,3 +21,5 @@ ReactDOM.render(
 
 
 serviceWorker.unregister();
+
+export default Joyride;
