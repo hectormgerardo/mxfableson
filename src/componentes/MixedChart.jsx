@@ -9,15 +9,17 @@ import {Bar} from 'react-chartjs-2';
 
     const options = {
       responsive: true,
+      maintainAspectRatio: false,
       title: {
         display: true,
         text: props.title
     },legend:{
+      display:true,
       labels:{
         boxWidth:4,
-        fontSize:8
+      fontSize:8
       },
-      position:'right'
+      position:'bottom'
     },tooltips: {
         mode: 'label'
       },
@@ -76,11 +78,8 @@ import {Bar} from 'react-chartjs-2';
         
   
     return (
-        <div>
-       
           <Bar data={data}
                 options={options}/>
-        </div>
       );
   }
   export default drawMixedChart;
