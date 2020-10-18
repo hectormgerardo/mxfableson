@@ -7,6 +7,7 @@ import { Bar } from 'react-chartjs-2';
 
 
 const  BarChart=(props)=> {
+  console.log("barchart en accion")
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -77,8 +78,11 @@ const  BarChart=(props)=> {
     
     let data=props.data;
           return (
+            <div>
               <Bar data={data}
                     options={options}/>
+            </div>
+              
           );
       }
       
