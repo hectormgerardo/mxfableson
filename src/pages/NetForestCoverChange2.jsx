@@ -37,7 +37,7 @@ const drawNfch2 = (props) => {
         break
     }
     break;
-    default: var dataAux= convertir(data.combination_1); break;
+    
   }
   
   
@@ -64,7 +64,8 @@ return(
 }
 
 const convertir=(props)=> {
-  
+  console.log("datos")
+  console.log(props)
     var labels=[];
      var mexico=[]; 
      var colombia=[]; 
@@ -184,6 +185,7 @@ const convertir=(props)=> {
       }
       if(!labels.includes(item.Year))
       {
+        
          labels.push(item.Year);
       }
      }
