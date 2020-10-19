@@ -97,6 +97,7 @@ class SustainableExporters  extends Component {
             break;
       }
     break;
+
     case 'beans':
       switch(this.state.select.tradeAdjusment){
         case 'null':
@@ -1297,6 +1298,7 @@ class SustainableExporters  extends Component {
 
   }
  
+
 }
 
 
