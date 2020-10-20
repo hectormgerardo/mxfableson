@@ -1,14 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import BarChart from "../componentes/BarChart";
 import data from '../data/Biodiversity.json';
 import {Container,Row,Col} from "react-bootstrap";
+import LeafletMap from './LeafletMap';
+
+
 //nfch=NetForestCoverChange
 const drawBiodiversity = (props) => 
 {
  
  
   
- 
+  //const [dataAux, setDataAux] = useState('');
 
   const { GraficaType, Iteration, Scenario } = props.combinacion.select;
 
@@ -20,6 +23,14 @@ const drawBiodiversity = (props) =>
           break;
         case 'iteration_4':
           var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_uno : data.combinacion_tres);
+          console.log('Data Aux this message is from Biodiversity');
+          dataAux.datasets.map((item) => {
+            console.log(item.backgroundColor)
+            console.log(item.label)
+            //this.color.push(item.backgroundColor);
+            //this.countriesName.push(item.label);
+        });
+          console.log(dataAux.datasets);
           break
       }
       break;
@@ -61,10 +72,16 @@ return (
               <Col>
               <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
               MAPA
+              
+              <LeafletMap
+                
+                countriesData = {dataAux}
+              />
               </div>
               </Col>
             </Row>
           </Container>
+          
 );
 }
 

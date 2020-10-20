@@ -9,9 +9,51 @@ class LeafletMap extends Component {
 
     colors = ['green', 'grey', 'white', 'blue', 'yellow', 'orange'] ;
 
-    componentDidMount () {
-        console.log (mapData);
+    color = []
+    countriesName = []
+
+    propsAux = null
+
+    recorrerArr (objeto) {
+
+        console.log('objeto');
+        console.log(objeto);
+        console.log(objeto);
+
+        /*objeto.countriesData.datasets.map((item) => {
+            this.color.push(item.backgroundColor);
+            this.countriesName.push(item.label);
+        });*/
+        
+        console.log(this.color)
+        console.log(this.countriesName)
+
     }
+
+    constructor(props) {
+        super(props);
+        
+        this.propsAux = props;
+        /*props.datasets.map((item) => {
+            this.color.push(item.backgroundColor);
+            this.countriesName.push(item.label);
+        });*/
+        console.log('This message is from LeafMap')
+        //console.log(props.countriesData)
+        console.log(this.propsAux.countriesData.datasets)
+        this.propsAux.countriesData.datasets.map((item) => {
+            this.color.push(item.backgroundColor);
+            this.countriesName.push(item.label);
+        });
+        
+        this.recorrerArr (props.countriesData) ;
+
+      }
+    /*componentDidMount () {
+        //console.log (mapData);
+        console.log('Estos son los parametros');
+        //console.log (props.countriesData);
+    }*/
 
     //This function is for the style of countries in the GeoJson
     countryStyle = {
@@ -29,7 +71,9 @@ class LeafletMap extends Component {
 
     changeTheCountryColor = (event) => {
         //console.log("The mouse is over the country")
-        console.log(event)
+        //console.log(event)
+
+        //console.log(this.props);
 
         event.target.setStyle({
             color: 'grey',
@@ -41,19 +85,21 @@ class LeafletMap extends Component {
 
     onEachCountry = (country, layer) => {
         const countryName = country.properties.ADMIN; //The name of the countries
-        console.log (countryName);
+        
+        //console.log('COUNTRIES  SDDDDSD');
+        //console.log (countryName);
 
         //layer.options.fillOpacity = Math.random () ; //This line is for draw diferent opacities with the countries
         //const colorIndex = Math.floor(Math.random() * this.colors.length); //The random color index in the array of the colors
         //layer.options.fillColor = this.colors[colorIndex]; //Change the color with anything color in the array od colors
 
-        layer.bindPopup(countryName + " Biodiversity 3215") ; //When i click above the countri display the name of the country. If i need to add more
+        layer.bindPopup(countryName ) ; //When i click above the countri display the name of the country. If i need to add more
         //information about the country like for example i only need to concat the string. example countryName + "other information"
         
         //admin the event on the layer with the countries
         layer.on({
             click: this.printMessageToConsole,
-            mouseover: this.changeTheCountryColor 
+            mouseover: this.changeTheCountryColor //This line change the country color when the mause is over the country 
         });
     }
 
