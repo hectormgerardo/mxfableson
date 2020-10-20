@@ -2,15 +2,76 @@ import React, { Component } from 'react';
 import { Map, GeoJSON } from 'react-leaflet';
 import mapData from './../data/Countries.json';
 import 'leaflet/dist/leaflet.css'; //This style is for the scroll and plus controls of the map
-import './../css/LeafletMap.css';
+import '../css/LeafletMap.css';
 
 class LeafletMap extends Component {
     state = { color: '#b4b42d'} ;
 
+
+constructor(props)
+{
+    super(props);
+    
+}
+
+
+     data={
+        labels:null,
+         datasets:[
+           {
+            label:"Protected Areas Forest",
+            data:null,
+            fill:false,
+            type:"bar",
+            backgroundColor:"Green",
+            borderColor:"Green",
+            hoverBackgroundColor:"Green",
+            hoverBorderColor:"Green",
+            yAxisID:"y-axis-1"
+           },
+           {
+            label:"Protected Areas Other",
+            data:null,
+            fill:false,
+            type:"bar",
+            backgroundColor:"Red",
+            borderColor:"Red",
+            hoverBackgroundColor:"Red",
+            hoverBorderColor:"#Red",
+            yAxisID:"y-axis-1"
+           },{
+              label:"Protected Areas OtherNat",
+              data:null,
+              fill:false,
+              type:"bar",
+              backgroundColor:"Yellow",
+              borderColor:"Yellow",
+              hoverBackgroundColor:"Yellow",
+              hoverBorderColor:"Yellow",
+              yAxisID:"y-axis-1"
+             }
+         ]
+      }
+       dataAux;
+constructor(props)
+{
+    super(props);
+   this.dataAux=props;
+ //  this.data.datasets=props.datos;
+   console.log('datasets')
+   var vara=Object.create(this.dataAuxx)
+   console.log(vara)
+   
+  
+//console.log("props datos datasets")
+  //  console.log(props.datos.datasets)
+}
+
+
     colors = ['green', 'grey', 'white', 'blue', 'yellow', 'orange'] ;
 
     componentDidMount () {
-        console.log (mapData);
+       // console.log (mapData);
     }
 
     //This function is for the style of countries in the GeoJson
@@ -29,7 +90,7 @@ class LeafletMap extends Component {
 
     changeTheCountryColor = (event) => {
         //console.log("The mouse is over the country")
-        console.log(event)
+      //  console.log(event)
 
         event.target.setStyle({
             color: 'grey',
@@ -41,7 +102,7 @@ class LeafletMap extends Component {
 
     onEachCountry = (country, layer) => {
         const countryName = country.properties.ADMIN; //The name of the countries
-        console.log (countryName);
+       // console.log (countryName);
 
         //layer.options.fillOpacity = Math.random () ; //This line is for draw diferent opacities with the countries
         //const colorIndex = Math.floor(Math.random() * this.colors.length); //The random color index in the array of the colors
