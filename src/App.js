@@ -11,6 +11,14 @@ import { Last } from 'react-bootstrap/esm/PageItem';
 import ReactHintFactory from 'react-hint'
 import 'react-hint/css/index.css'
 import JoyRide, { ACTIONS, EVENTS, STATUS } from "react-joyride";
+import Scenathon from './pages/Scenathon'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+
 
 
 const ReactHint = ReactHintFactory(React)
@@ -20,20 +28,7 @@ export class App extends React.Component {
     steps: [
       {
         target: '.About',
-        content: 'En este apartado se hablará a líneas generales acerca de lo que es Fable',
-      },
-      {
-        target: '.Nav',
-        content: 'a',
-      },
-
-      {
-        target: '.Jumbotron_3',
-        content: 'b',
-      },
-      {
-        target: '.Jumbotron_fin',
-        content: 'c',
+        content: 'En este apartado se hablará a líneas generales acerca de lo que es Fable'
       }
     ]
   };
@@ -124,18 +119,29 @@ export class App extends React.Component {
 
     return (
     <React.Fragment>
-      <div id="Nav">
-        <Navbar />
-      </div>
+      <div>
+        <div id="Nav">
+          <Navbar/>
+        </div>
 
-        <div data-rh="Mensaje" data-rh-at="top" id="About">
-             <About/>
+        <Jumbotron/>
+      
+          <Router>
+          <Link to="/Scenathon">
+          </Link>  
+          <Switch>
+            <Route exact path="/Scenathon" component={Scenathon}>
+              <Scenathon />
+            </Route>
+          </Switch>
+         </Router>
+        <div data-rh="Este es el apartado About" data-rh-at="top" id="About">
+          <About/>
         </div>
         <div className="app">
 
-      <div>
-      
-      <Jumbotron/>
+        <div>
+      </div>
 
 
 			<ReactHint autoPosition events delay={{show: 100, hide: 1000}} />
@@ -170,17 +176,17 @@ export class App extends React.Component {
         
       </div>
 
-        <div id="Jumbotron_2" data-rh="Mensaje" data-rh-at="top">
+        {/*<div id="Jumbotron_2" data-rh="Mensaje" data-rh-at="top">
           <Jumbotron_2 />
-        </div>
+        </div>*/}
         
-        <div id="Jumbotron_3" data-rh="Mensaje" data-rh-at="top">
+        {/*<div id="Jumbotron_3" data-rh="Mensaje" data-rh-at="top">
           <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
-        </div>
+        </div>*/}
         
-        <div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top">
+        {/*<div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top">
           <Jumbotron_fin/>
-        </div>
+        </div>*/}
          
     </React.Fragment>
   )

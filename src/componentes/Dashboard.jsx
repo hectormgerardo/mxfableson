@@ -73,7 +73,7 @@ const Dashboard = (props) =>  {
 
   
   return (
-    <div className="Dashboard">
+    <div className="Dashboard">      
       <select
         name='dashboard'
         value={selectedOption}
