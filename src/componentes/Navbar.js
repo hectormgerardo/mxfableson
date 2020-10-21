@@ -16,6 +16,7 @@ import TradeReport from '../pages/TradeReport';
 const Styles = styled.div`
 .navbar{
   background-color: transparent ;
+  position: relative;
 }
 .navbar-brand, .navbar-nav .nav-link {
   color: #006A75;
@@ -28,11 +29,8 @@ const NavBar = () => {
   return (
 
     <Styles>
-      
 
         <Router>
-
-
           <ReactBootStrap.Navbar collapseOnSelect expand="xl" className="nav" variant="light">
             <Link to="/">
               <ReactBootStrap.Navbar.Brand href="#home">Home</ReactBootStrap.Navbar.Brand>

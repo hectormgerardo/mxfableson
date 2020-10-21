@@ -3,9 +3,9 @@ import './css/App.css';
 import Navbar from "./componentes/Navbar";
 import About from './pages/About';
 import { Jumbotron } from './componentes/Jumbotron'
-import { Jumbotron_2} from './componentes/Jumbotron_2'
-import { Jumbotron_3} from './componentes/Jumbotron_3'
-import { Jumbotron_fin} from './componentes/Jumbotron_fin'
+import { Jumbotron_2}  from './componentes/Jumbotron_2'
+import { Jumbotron_3 } from './componentes/Jumbotron_3'
+import { Jumbotron_fin } from './componentes/Jumbotron_fin'
 import Joyride from 'react-joyride';
 import { Last } from 'react-bootstrap/esm/PageItem';
 import ReactHintFactory from 'react-hint'
@@ -18,8 +18,6 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-
-
 
 const ReactHint = ReactHintFactory(React)
 
@@ -47,75 +45,6 @@ export class App extends React.Component {
 
   
   render(){
-    const { steps } = this.state;
-    
-    const INITIAL_STATE = {
-      key: new Date(), // This field makes the tour to re-render when we restart the tour
-      run: false,
-      continuous: true, // Show next button
-      loading: false,
-      stepIndex: 0, // Make the component controlled
-      steps: steps
-    };
-
-    const reducer = (state = INITIAL_STATE, action) => {
-      switch (action.type) {
-        // start the tour
-        case "START":
-          return { ...state, run: true };
-        // Reset to 0th step
-        case "RESET":
-          return { ...state, stepIndex: 0 };
-        // Stop the tour
-        case "STOP":
-          return { ...state, run: false };
-        // Update the steps for next / back button click
-        case "NEXT_OR_PREV":
-          return { ...state, ...action.payload };
-        // Restart the tour - reset go to 1st step, restart create new tour
-        case "RESTART":
-          return {
-            ...state,
-            stepIndex: 0,
-            run: true,
-            loading: false,
-            key: new Date()
-          };
-        default:
-          return state;
-      } 
-    };
-
-    //const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
-
-    /*useEffect(() => {
-      dispatch({ type: "START" });
-    }, []);*/
-
-    const callback = data => {
-      const { action, index, type, status } = data;
-
-      if (
-        // If close button clicked then close the tour
-        action === ACTIONS.CLOSE ||
-        // If skipped or end tour, then close the tour
-        (status === STATUS.SKIPPED && this.state.run) ||
-        status === STATUS.FINISHED
-      ) {
-        //dispatch({ type: "STOP" });
-      } else if (type === EVENTS.STEP_AFTER || type === EVENTS.TARGET_NOT_FOUND) {
-        // Check whether next or back button click and update the step
-        /*dispatch({
-          type: "NEXT_OR_PREV",
-          payload: { stepIndex: index + (action === ACTIONS.PREV ? -1 : 1) }
-        });*/
-      }
-    };
-
-    const startTour = () => {
-      // TODO: Start the tour manually
-      //dispatch({ type: "RESTART" });
-    };
 
     return (
     <React.Fragment>
@@ -126,12 +55,12 @@ export class App extends React.Component {
 
         <Jumbotron/>
       
+              <Scenathon />
           <Router>
           <Link to="/Scenathon">
           </Link>  
           <Switch>
             <Route exact path="/Scenathon" component={Scenathon}>
-              <Scenathon />
             </Route>
           </Switch>
          </Router>
@@ -153,7 +82,6 @@ export class App extends React.Component {
 				ref={(ref) => this.instance = ref}/>
 		</div>
         <Joyride
-          steps={steps}
           continuous={true}
           showSkipButton={true}
           
