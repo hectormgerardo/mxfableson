@@ -49,9 +49,13 @@ import {Bar} from 'react-chartjs-2';
             display: true,    
             position: 'left',
             id: 'y-axis-1',
-            gridLines: {
+            gridLines: 
+            {
+               
               display: true,
+
             },
+
   
             labels: {
               show: true
@@ -78,8 +82,11 @@ import {Bar} from 'react-chartjs-2';
         
   
     return (
-          <Bar data={data}
+      <div>
+  <Bar data={data}
                 options={options}/>
+      </div>
+        
       );
   }
   export default drawMixedChart;

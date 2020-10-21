@@ -23,14 +23,6 @@ const drawBiodiversity = (props) =>
           break;
         case 'iteration_4':
           var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_uno : data.combinacion_tres);
-          console.log('Data Aux this message is from Biodiversity');
-          dataAux.datasets.map((item) => {
-            console.log(item.backgroundColor)
-            console.log(item.label)
-            //this.color.push(item.backgroundColor);
-            //this.countriesName.push(item.label);
-        });
-          console.log(dataAux.datasets);
           break
       }
       break;

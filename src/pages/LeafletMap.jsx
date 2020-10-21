@@ -69,18 +69,21 @@ class LeafletMap extends Component {
         console.log("Este es un mensaje de consola");
     }
 
-    changeTheCountryColor = (event) => {
+    changeTheCountryColor = ( event ) => {
         //console.log("The mouse is over the country")
         //console.log(event)
 
         //console.log(this.props);
 
+        console.log("Over the country")
+        console.log(event);
         event.target.setStyle({
             color: 'grey',
             //fillColor: '#b4b42d' this is the fable color
             fillColor: this.state.color,
             fillOpacity: 1
         });
+        
     }
 
     onEachCountry = (country, layer) => {

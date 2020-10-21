@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import BarChart from "../componentes/BarChart";
-import ComboBoxTradeReporters from "../componentes/ComboBoxTradeReporters";
+import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
 import data from '../data/SustainableExporters.json';
 
-class SustainableExporters  extends Component {
+class SustainableImporters  extends Component {
   
   dataAux=null;
    state = {
@@ -40,18 +40,20 @@ class SustainableExporters  extends Component {
     
   selectDashboard()
  {
-   
+
 
   switch(this.state.select.product){
     case 'abaca':
      
       switch(this.state.select.tradeAdjusment){
         case 'null':
-           this.dataAux = convertir(data.combination_1);
-           
+           this.dataAux = convertir(data.combination_2);
+           console.log("abaca null impo")
+           console.log(data.combination_2)
           break;
         case 'after':
           //var dataAux = convertir(data.combination_1);
+        //  this.dataAux = <h1>si funciono</h1>;
           break;
         case 'before':
          // var dataAux = convertir(data.combination_1);
@@ -97,7 +99,6 @@ class SustainableExporters  extends Component {
             break;
       }
     break;
-
     case 'beans':
       switch(this.state.select.tradeAdjusment){
         case 'null':
@@ -1298,7 +1299,6 @@ class SustainableExporters  extends Component {
 
   }
  
-
 }
 
 
@@ -1307,7 +1307,7 @@ render() {
 
     <div>
       <div>
-        <ComboBoxTradeReporters metodo={this.handleChange} />
+        <ComboBoxTradeReportersImporters metodo={this.handleChange} />
       </div>
 
 
@@ -1347,6 +1347,7 @@ const convertir = (props) => {
   var MYS = [];
   var R_NMC = [];
   var R_ASP=[];
+  var GBR=[];
   var labels = [];
 
 
@@ -1393,9 +1394,10 @@ const convertir = (props) => {
         MYS.push(item.export_quantity);
       } else if (item.alpha2 === "R_NMC") {
         R_NMC.push(item.export_quantity);
-      }
-      else if (item.alpha2 === "R_ASP") {
+      }else if (item.alpha2 === "R_ASP") {
         R_ASP.push(item.export_quantity);
+      }else if (item.alpha2 === "GBR") {
+        GBR.push(item.export_quantity);
       }
 
       if (!labels.includes(item.year)) {
@@ -1421,8 +1423,18 @@ const convertir = (props) => {
         hoverBackgroundColor: '#71B37C',
         hoverBorderColor: '#71B37C',
         yAxisID: 'y-axis-1'
-      }, 
-      {
+      }, {
+        //Aforestation ejemplo
+        type: 'bar',
+        label: 'GBR',
+        data: GBR,
+        fill: false,
+        backgroundColor: '#faa75a',
+        borderColor: '#71B37C',
+        hoverBackgroundColor: '#71B37C',
+        hoverBorderColor: '#71B37C',
+        yAxisID: 'y-axis-1'
+      }, {
         //Aforestation ejemplo
         type: 'bar',
         label: 'R_ASP',
@@ -1666,4 +1678,4 @@ const convertir = (props) => {
   return data
 }
 
-export default SustainableExporters;
+export default SustainableImporters;
