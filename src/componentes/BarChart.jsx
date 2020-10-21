@@ -78,10 +78,10 @@ const  BarChart=(props)=> {
   
     let data=props.data;
           return (
-            <div>
+           
               <Bar data={data}
                     options={options}/>
-            </div>
+          
               
           );
       }
