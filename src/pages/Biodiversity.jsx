@@ -2,6 +2,7 @@ import React from "react";
 import BarChart from "../componentes/BarChart";
 import data from '../data/Biodiversity.json';
 import {Container,Row,Col} from "react-bootstrap";
+import LeafletMap from './LeafletMap'
 //nfch=NetForestCoverChange
 const drawBiodiversity = (props) => 
 {
@@ -20,7 +21,6 @@ const drawBiodiversity = (props) =>
           break;
         case 'iteration_4':
           var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_uno : data.combinacion_tres);
-          break
       }
       break;
     case 'regions':
@@ -51,7 +51,7 @@ const drawBiodiversity = (props) =>
 return (
 <Container fluid>
             <Row  >
-              <Col >
+              <Col>
               <div style={{height: "100vh"}}>
                   <BarChart data={dataAux} title="Biodiversity"
                     aspectRatio={false}
@@ -60,7 +60,7 @@ return (
               </Col>
               <Col>
               <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
-              MAPA
+              <LeafletMap datos={dataAux}/>
               </div>
               </Col>
             </Row>

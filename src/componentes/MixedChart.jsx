@@ -82,10 +82,10 @@ import {Bar} from 'react-chartjs-2';
         
   
     return (
-      <div>
+    
   <Bar data={data}
                 options={options}/>
-      </div>
+    
         
       );
   }

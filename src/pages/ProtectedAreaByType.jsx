@@ -11,7 +11,7 @@ const drawProtected = (props) => {
         var dataTres=[]
         var labels=[]
       
-          
+      
          props.map((item) => {
           dataUno.push(item.ProtectedAreasOther);
           dataDos.push(item.ProtectedAreasForest);
@@ -101,11 +101,7 @@ const drawProtected = (props) => {
       }
       break;
     }
-    return <div style={{height: "100vh"}}>
-<BarChart data={dataAux}
-labelposition='top'
-aspectRatio={false}
-    title="Protected Areas By Type"/>
-  </div>;
+    return <BarChart data={dataAux}
+    title="Protected Areas By Type"/>;
   }
   export default drawProtected;
