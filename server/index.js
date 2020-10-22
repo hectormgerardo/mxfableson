@@ -15,6 +15,6 @@ app.use(express.json());
 app.listen(5000,()=>{
     console.log("escuchando el puerto 5000");
 });
-
+app.use(require('./Router'));
 //queries
 

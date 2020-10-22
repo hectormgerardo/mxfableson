@@ -1,5 +1,5 @@
 //create a new pool with configuration:
-const Pool = require('pg');
+const Pool = require('pg').Pool;
 
 const pool = new Pool({
 'user':'scenathon_dev_db',
@@ -15,7 +15,7 @@ const getSustainableImporter= async(req,res)=>
     const{iteration,product}=req.body;
     const response = await pool.query('select * from nettrade limit 50');
     res.status(200).json(response.rows);
-    
+    //res.send(response);
 }
 
 module.exports={getSustainableImporter};

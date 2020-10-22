@@ -4,6 +4,6 @@ const router = Router();
 
 const{getSustainableImporter}=require ('./db');
 
-router.get('/get',getSustainableImporter);
+router.get('/net',getSustainableImporter);
 
 module.exports=router;
