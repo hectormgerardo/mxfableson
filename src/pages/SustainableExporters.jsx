@@ -5,16 +5,17 @@ import data from '../data/SustainableExporters.json';
 
 class SustainableExporters  extends Component {
   
-  dataAux=null;
-   state = {
+ 
+  dataAux = null;
+  state = {
     select: {
       product: 'abaca',
-      tradeAdjusment: "null"
-
+      tradeAdjusment: "after",
+      scenathon_id :'6',
+      column:"Export_quantity"
     }
 
   }
-
   handleChange = e => {
      
     this.setState({

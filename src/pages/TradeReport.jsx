@@ -22,7 +22,7 @@ class TradeReport extends Component {
 
     state = {
         select: {
-            dashboard: "Sustainable_next_exporters"
+            dashboard: "Sustainable_next_importers"
         }
 
     }
@@ -49,7 +49,7 @@ class TradeReport extends Component {
         console.log("entre switch")
         switch (state) {
             case 'Sustainable_next_exporters':
-                this.dash = <SustainableExporters />;
+                this.dash = <SustainableImporters/>;
                 break;
             case 'Sustainable_next_importers':
                 this.dash = <SustainableImporters />;

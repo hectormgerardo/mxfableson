@@ -19,14 +19,22 @@ app.listen(5000,()=>{
 
 //routes
 
-app.get('/net',async(req,res)=>{
+app.get('/net/:combinaciones',async(req,res)=>{
     try{
-        const{iteration,scenathon_id,name,Product,Year}=req.body;
-const response = await pool.query('SELECT "name", "iteration","scenathon_id", "Product", "Year", "Export_quantity","Import_quantity" FROM nettrade WHERE "iteration"=$1 AND "scenathon_id"=$2 ',[1,6]);
+        console.log("entre 2")
+       
+        const{Product,iteration,scenathon_id,column}=JSON.parse(req.params.combinaciones).select;
+       console.log(iteration)
+        console.log(scenathon_id)
+
+        console.log(Product)
+        console.log(column)
+const response = await pool.query('SELECT * FROM nettrade LIMIT 100' ); 
 res.status(200).json(response.rows);
 //res.send(response);
+
 }catch(err){
-res.send('ola')
+console.log(err);
 }
 });
 

@@ -3,7 +3,7 @@ import { Bar } from 'react-chartjs-2';
 
 
 
-  
+
 
 
 const  BarChart=(props)=> {
@@ -37,10 +37,10 @@ const  BarChart=(props)=> {
 
           display: true,
           gridLines: {
-            display: false
+            display: true,
           },
-          
-          
+
+
         }
       ],
       yAxes: [
@@ -48,11 +48,11 @@ const  BarChart=(props)=> {
             stacked: true,
 
           type: 'linear',
-          display: true,    
+          display: true,
           position: 'left',
           id: 'y-axis-1',
           gridLines: {
-            display: false,
+            display: true,
           },
 
           labels: {
@@ -75,16 +75,16 @@ const  BarChart=(props)=> {
       ]
     }
   };
-  
+
     let data=props.data;
           return (
-           
+
               <Bar data={data}
                     options={options}/>
-          
-              
+
+
           );
       }
-      
+
 
 export default BarChart;

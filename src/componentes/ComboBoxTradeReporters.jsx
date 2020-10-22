@@ -126,7 +126,6 @@ function ComboBoxTradeReportersImporters (props) {
                 </select>
                 <br></br>
                 <select  name="tradeAdjusment" onChange={props.metodo}>
-                    <option value="null">null</option>
                     <option value="after">after</option>
                     <option value="before">before</option>
                 </select>
