@@ -79,8 +79,10 @@ class Scenathon extends Component {
               break;
             case 'Net Forest Cover Change(2)':
                 this.combobox=<ComboBox3 onChange={this.handleChange}/>
-                
+                console.log("aqui estoy net forest 2")
+                console.log(this.state);
                 this.dash=<NetForestCoverChange2 combinacion={this.state}/>;
+               
                 break;
             case 'Biodiversity':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
@@ -132,7 +134,7 @@ class Scenathon extends Component {
     
         return (
             
-            <div className="container">
+            <div className="container-fluid">
               
               
                

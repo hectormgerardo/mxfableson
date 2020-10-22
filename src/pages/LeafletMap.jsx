@@ -8,64 +8,6 @@ class LeafletMap extends Component {
     state = { color: '#b4b42d'} ;
 
 
-constructor(props)
-{
-    super(props);
-    
-}
-
-
-     data={
-        labels:null,
-         datasets:[
-           {
-            label:"Protected Areas Forest",
-            data:null,
-            fill:false,
-            type:"bar",
-            backgroundColor:"Green",
-            borderColor:"Green",
-            hoverBackgroundColor:"Green",
-            hoverBorderColor:"Green",
-            yAxisID:"y-axis-1"
-           },
-           {
-            label:"Protected Areas Other",
-            data:null,
-            fill:false,
-            type:"bar",
-            backgroundColor:"Red",
-            borderColor:"Red",
-            hoverBackgroundColor:"Red",
-            hoverBorderColor:"#Red",
-            yAxisID:"y-axis-1"
-           },{
-              label:"Protected Areas OtherNat",
-              data:null,
-              fill:false,
-              type:"bar",
-              backgroundColor:"Yellow",
-              borderColor:"Yellow",
-              hoverBackgroundColor:"Yellow",
-              hoverBorderColor:"Yellow",
-              yAxisID:"y-axis-1"
-             }
-         ]
-      }
-       dataAux;
-constructor(props)
-{
-    super(props);
-   this.dataAux=props;
- //  this.data.datasets=props.datos;
-   console.log('datasets')
-   var vara=Object.create(this.dataAuxx)
-   console.log(vara)
-   
-  
-//console.log("props datos datasets")
-  //  console.log(props.datos.datasets)
-}
 
 
     colors = ['green', 'grey', 'white', 'blue', 'yellow', 'orange'] ;
