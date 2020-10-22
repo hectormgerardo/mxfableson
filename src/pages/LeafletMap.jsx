@@ -7,78 +7,27 @@ import '../css/LeafletMap.css';
 class LeafletMap extends Component {
     state = { color: '#b4b42d'} ;
 
-
-/*constructor(props)
-{
-    super(props);
-    
-}*/
-
-
-/*constructor(props)
-{
-    super(props);
-   this.dataAux=props;
- //  this.data.datasets=props.datos;
-   console.log('datasets')
-   var vara=Object.create(this.dataAuxx)
-   console.log(vara)
-   
-  
-//console.log("props datos datasets")
-  //  console.log(props.datos.datasets)
-}*/
-
-
     colors = ['green', 'grey', 'white', 'blue', 'yellow', 'orange'] ;
 
     color = [];
     countriesName = [];
 
-    propsAux = null
-
-    recorrerArr (objeto) {
-
-        console.log('objeto');
-        console.log(objeto);
-        console.log(objeto);
-
-        /*objeto.countriesData.datasets.map((item) => {
-            this.color.push(item.backgroundColor);
-            this.countriesName.push(item.label);
-        });*/
-        
-        console.log(this.color)
-        console.log(this.countriesName)
-    }
-    componentDidMount () {
-       // console.log (mapData);
-    }
+    propsAux = null ;
 
     constructor(props) {
+
         super(props);
         
         this.propsAux = props;
-        /*props.datasets.map((item) => {
-            this.color.push(item.backgroundColor);
-            this.countriesName.push(item.label);
-        });*/
-        console.log('This message is from LeafMap')
-        //console.log(props.countriesData)
+        
         console.log(this.propsAux.countriesData.datasets)
         this.propsAux.countriesData.datasets.map((item) => {
             this.color.push(item.backgroundColor);
             this.countriesName.push(item.label);
         });
         
-        this.recorrerArr (props.countriesData) ;
-
-      }
-    /*componentDidMount () {
-        //console.log (mapData);
-        console.log('Estos son los parametros');
-        //console.log (props.countriesData);
-    }*/
+    }
+    
 
     //This function is for the style of countries in the GeoJson
     countryStyle = {
@@ -112,7 +61,8 @@ class LeafletMap extends Component {
     }
 
     onEachCountry = (country, layer) => {
-        const countryName = country.properties.ADMIN; //The name of the countries
+
+       const countryName = country.properties.ADMIN; //The name of the countries
        
        var indexAux = -1;
        this.countriesName.forEach(function(country, index, array) {
@@ -167,7 +117,7 @@ class LeafletMap extends Component {
                         data={mapData.features}
                         onEachFeature={this.onEachCountry}></GeoJSON>
                 </Map>
-                <input type = 'color' value = {this.state.color} onChange = {this.colorChange}></input>
+                
             </div>
         );
     } 
