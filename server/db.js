@@ -9,5 +9,13 @@ const pool = new Pool({
 'database':'scenathon_dev_db'
 
 });
+
+const getSustainableImporter= async(req,res)=>
+{
+    const{iteration,product}=req.body;
+    const response = await pool.query('select * from nettrade limit 50');
+    res.status(200).json(response.rows);
     
-module.exports=pool;
+}
+
+module.exports={getSustainableImporter};
