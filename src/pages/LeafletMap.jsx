@@ -8,52 +8,14 @@ class LeafletMap extends Component {
     state = { color: '#b4b42d'} ;
 
 
-constructor(props)
+/*constructor(props)
 {
     super(props);
     
-}
+}*/
 
 
-     data={
-        labels:null,
-         datasets:[
-           {
-            label:"Protected Areas Forest",
-            data:null,
-            fill:false,
-            type:"bar",
-            backgroundColor:"Green",
-            borderColor:"Green",
-            hoverBackgroundColor:"Green",
-            hoverBorderColor:"Green",
-            yAxisID:"y-axis-1"
-           },
-           {
-            label:"Protected Areas Other",
-            data:null,
-            fill:false,
-            type:"bar",
-            backgroundColor:"Red",
-            borderColor:"Red",
-            hoverBackgroundColor:"Red",
-            hoverBorderColor:"#Red",
-            yAxisID:"y-axis-1"
-           },{
-              label:"Protected Areas OtherNat",
-              data:null,
-              fill:false,
-              type:"bar",
-              backgroundColor:"Yellow",
-              borderColor:"Yellow",
-              hoverBackgroundColor:"Yellow",
-              hoverBorderColor:"Yellow",
-              yAxisID:"y-axis-1"
-             }
-         ]
-      }
-       dataAux;
-constructor(props)
+/*constructor(props)
 {
     super(props);
    this.dataAux=props;
@@ -65,14 +27,58 @@ constructor(props)
   
 //console.log("props datos datasets")
   //  console.log(props.datos.datasets)
-}
+}*/
 
 
     colors = ['green', 'grey', 'white', 'blue', 'yellow', 'orange'] ;
 
+    color = [];
+    countriesName = [];
+
+    propsAux = null
+
+    recorrerArr (objeto) {
+
+        console.log('objeto');
+        console.log(objeto);
+        console.log(objeto);
+
+        /*objeto.countriesData.datasets.map((item) => {
+            this.color.push(item.backgroundColor);
+            this.countriesName.push(item.label);
+        });*/
+        
+        console.log(this.color)
+        console.log(this.countriesName)
+    }
     componentDidMount () {
        // console.log (mapData);
     }
+
+    constructor(props) {
+        super(props);
+        
+        this.propsAux = props;
+        /*props.datasets.map((item) => {
+            this.color.push(item.backgroundColor);
+            this.countriesName.push(item.label);
+        });*/
+        console.log('This message is from LeafMap')
+        //console.log(props.countriesData)
+        console.log(this.propsAux.countriesData.datasets)
+        this.propsAux.countriesData.datasets.map((item) => {
+            this.color.push(item.backgroundColor);
+            this.countriesName.push(item.label);
+        });
+        
+        this.recorrerArr (props.countriesData) ;
+
+      }
+    /*componentDidMount () {
+        //console.log (mapData);
+        console.log('Estos son los parametros');
+        //console.log (props.countriesData);
+    }*/
 
     //This function is for the style of countries in the GeoJson
     countryStyle = {
@@ -88,34 +94,62 @@ constructor(props)
         console.log("Este es un mensaje de consola");
     }
 
-    changeTheCountryColor = (event) => {
+    changeTheCountryColor = ( event ) => {
         //console.log("The mouse is over the country")
-      //  console.log(event)
+        //console.log(event)
 
+        //console.log(this.props);
+
+        //console.log("Over the country")
+        //console.log(event.target);
         event.target.setStyle({
             color: 'grey',
             //fillColor: '#b4b42d' this is the fable color
             fillColor: this.state.color,
             fillOpacity: 1
         });
+        
     }
 
     onEachCountry = (country, layer) => {
         const countryName = country.properties.ADMIN; //The name of the countries
-       // console.log (countryName);
+       
+       var indexAux = -1;
+       this.countriesName.forEach(function(country, index, array) {
+            if (country == countryName) {
+                indexAux = index;
+           } 
+       });
+
+       /**
+        * If the value of indexAux is less than 1 
+        * it means that it did not find the country 
+        * and therefore it does not overwrite the color
+        */
+       if(indexAux != -1){
+            layer.options.fillColor = this.color[indexAux];
+            console.log('This is the index color ', indexAux);
+            console.log('This country: ', this.countriesName[indexAux], 'is the color: ', this.color[indexAux]);
+       }
+       
 
         //layer.options.fillOpacity = Math.random () ; //This line is for draw diferent opacities with the countries
         //const colorIndex = Math.floor(Math.random() * this.colors.length); //The random color index in the array of the colors
         //layer.options.fillColor = this.colors[colorIndex]; //Change the color with anything color in the array od colors
 
-        layer.bindPopup(countryName + " Biodiversity 3215") ; //When i click above the countri display the name of the country. If i need to add more
+        //console.log('This is the layer country')
+        //console.log(countryName)
+
+        layer.bindPopup( countryName ) ; //When i click above the countri display the name of the country. If i need to add more
         //information about the country like for example i only need to concat the string. example countryName + "other information"
-        
+        //this parameter could be a componenet or HTML code
+
         //admin the event on the layer with the countries
         layer.on({
             click: this.printMessageToConsole,
-            mouseover: this.changeTheCountryColor 
+            //mouseover: this.changeTheCountryColor //This line change the country color when the mause is over the country 
         });
+
     }
 
     //This function change the value color of the state 
