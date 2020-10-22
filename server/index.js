@@ -20,12 +20,14 @@ app.listen(5000,()=>{
 //routes
 
 app.get('/net',async(req,res)=>{
-    try {
-        const response = await pool.query('SELECT "name", "iteration","scenathon_id", "Product", "Year", "Export_quantity","Import_quantity" FROM nettrade WHERE name= $1',['USA']);
-    res.status(200).json(response.rows);
-    } catch (err){
-        console.error(err.message);
-    }
+    try{
+        const{iteration,scenathon_id,name,Product,Year}=req.body;
+const response = await pool.query('SELECT "name", "iteration","scenathon_id", "Product", "Year", "Export_quantity","Import_quantity" FROM nettrade WHERE "iteration"=$1 AND "scenathon_id"=$2 ',[1,6]);
+res.status(200).json(response.rows);
+//res.send(response);
+}catch(err){
+res.send('ola')
+}
 });
 
 
