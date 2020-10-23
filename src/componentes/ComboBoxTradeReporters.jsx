@@ -22,7 +22,7 @@ function ComboBoxTradeReportersImporters (props) {
 
             <div className="contenedor-selects">
                 <br></br>
-                <select  name="product" onChange={props.metodo}>
+                <select  name="Product" onChange={props.metodo}>
                     <option value="abaca">abaca</option>
                     <option value="apple">apple</option>
                     <option value="banana">banana</option>
@@ -125,7 +125,7 @@ function ComboBoxTradeReportersImporters (props) {
                     
                 </select>
                 <br></br>
-                <select  name="tradeAdjusment" onChange={props.metodo}>
+                <select  name="iteration" onChange={props.metodo}>
                     <option value="after">after</option>
                     <option value="before">before</option>
                 </select>

@@ -1,92 +1,84 @@
-import { render } from '@testing-library/react';
-import React, { Component} from 'react';
+
+import React, { useState, useEffect } from "react";
+
 import BarChart from "../componentes/BarChart";
 import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
 
 
-const SustainableImporters =(props)=>
+const SustainableImporters =()=>
  {
+  const [state,setState]=useState({select: {
+  Product: 'abaca',
+ iteration: "4",
+ scenathon_id :'6',
+ column:"Import_quantity"
+ }});
 
-  dataAux = null;
-  jsonDataAux=null;
-
- state = {
-  select: {
-    Product: 'abaca',
-    iteration: "4",
-    scenathon_id :'6',
-    column:"Import_quantity"
-  },
-  jsonData: null
+  //const [state,setState]=useState([]);
+  const [json,setJson]=useState([]);
 
 
-}
+
+  
   
 
-  handleChange = e => {
+  var dataAux = null;
+  
 
-    this.setState({
+
+
+
+
+
+
+
+
+
+  
+
+ const handleChange = e => {
+
+  console.log("it");
+  console.log(state.select.iteration);
+  console.log()
+
+setState({
       select: {
 
-        ...this.state.select,
-        [e.target.name]: e.target.value
+        ...state.select,
+        [e.target.name]: e.target.value,
+        iteration: e.target.value==="after"? "4":"3"
 
       }
 
-    })
-if(this.state.select.tradeAdjusment=="after")
-{
-  this.state.select.tradeAdjusment="4";
-}else{
-  this.state.select.tradeAdjusment="3";
-}
+});
+
 
 
   }
 
-  componentDidMount() 
+  
+
+  useEffect(() => 
   {
-  this.getNettrade();
-  }
-
+    
+  getNettrade();
+  }, [state]);
 
  
 
-  getNettrade = async() => {
+  const getNettrade = async() => {
     try {
    
-      const body = this.state;
+      const body =state;
+      console.log("estado")
+      console.log(body);
       const response = await fetch("http://localhost:5000/net/"+JSON.stringify(body));
-<<<<<<< HEAD
-      const json =  await response.json();
-      this.jsonDataAux=json;
+     const  jsonAux =  await response.json();
      
-      
-    this.setState({
-      select: {
-  
-        Product: this.state.select.Product,
-        iteration:  this.state.select.iteration,
-        scenathon_id : this.state.select.scenathon_id,
-        column: this.state.select.column,
-        
-  
-      },
-      jsonData:this.jsonDataAux
-  
-    });
-     
-=======
-      const jsonData = await response.json();
-      console.log(jsonData);
-      this.setState({select: {
-
-        ...this.state.select,
-        data:jsonData
-
-      }});
->>>>>>> a5bfde99dc2ffb9111028f477d609dec7715f3c9
+    setJson(jsonAux);
+   console.log(json)
     } catch (error) {
       console.error(error)
     }
@@ -100,7 +92,7 @@ if(this.state.select.tradeAdjusment=="after")
 
 
 //
-converter=()=>{
+const converter=()=>{
 console.log("render")
 function Pais(CountryCharacteristics,data) {
   
@@ -115,43 +107,23 @@ function Pais(CountryCharacteristics,data) {
 //var aux =CountryCharacteristics["Argentina"]
 //console.log(aux[0]["type"]);
 
-<<<<<<< HEAD
 //console.log(this.state.jsonData);
-=======
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            this.dataAux = convertir(data.combination_2);
-            
-            break;
-          case 'after':
-            //var dataAux = convertir(data.combination_1);
-            //  this.dataAux = <h1>si funciono</h1>;
-
-            break;
-          case 'before':
-            // var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'apple':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
->>>>>>> a5bfde99dc2ffb9111028f477d609dec7715f3c9
 
 var paisPasado="Argentina";
 var data=[];
 var paises=[];
 var labels=[];
 
-  if (this.state.jsonData != null) {
+  if (json != null) {
 
-    this.state.jsonData.map((item) => {
+    json.map((item) => {
       if (!labels.includes(item.Year)) {
         labels.push(item.Year);
       }
       data.push(item.Import_quantity);
       if (paisPasado != item.name) {
 
+        //var pais = new Pais(CountryCharacteristics[item.name], data)
         var pais = new Pais(CountryCharacteristics["Argentina"], data)
 
         paises.push(pais);
@@ -169,7 +141,7 @@ var labels=[];
     labels:labels,
     datasets:paises
 };
- this.dataAux=data;
+ dataAux=data;
 
   }   
 
@@ -177,18 +149,18 @@ var labels=[];
     return (
 
       <div>
-        {this.converter()}
+        {converter()}
        
         <div>
-          {/* <ComboBoxTradeReportersImporters metodo={this.handleChange} />*/}
-          {<h1>hola</h1>}
+           <ComboBoxTradeReportersImporters metodo={handleChange} />
+        
         </div>
 
         {/*this.selectDashboard()*/}
        
 
         <div>
-          <BarChart data={this.state.data.rows} title="Sustainable - net exporters" />
+          <BarChart data={dataAux} title="Sustainable - net exporters" />
         </div>
 
 

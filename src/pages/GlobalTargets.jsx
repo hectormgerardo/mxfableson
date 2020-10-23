@@ -21,7 +21,7 @@ const GlobalTargets = (props) => {
     let Product = [];
     let Year =[];
     let Import_quantity=[];
-    console.log("cocaina1")
+    
 
     try {
       console.log('flag 5')
