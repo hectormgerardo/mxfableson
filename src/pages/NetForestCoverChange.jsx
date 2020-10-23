@@ -23,6 +23,7 @@ const drawNfch = (props) => {
           break;
         case 'iteration_4':
           dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_uno : data.combinacion_tres);
+          console.log(dataAux);
           break
       }
       break;

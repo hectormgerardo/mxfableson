@@ -1,0 +1,29 @@
+{
+    "Argentina": [
+        {
+            "type": "bar",
+            "label": "ARG",
+            "borderColor": "#EC932F",
+            "backgroundColor": "#00b6cb",
+            "pointBorderColor": "#EC932F",
+            "pointBackgroundColor": "#EC932F",
+            "pointHoverBackgroundColor": "#EC932F",
+            "pointHoverBorderColor": "#EC932F",
+            "yAxisID": "y-axis-1"
+        }
+    ],
+    "Alemania": [
+        {
+            "type": "bar",
+            "label": "ALM",
+            "borderColor": "#EC932F",
+            "backgroundColor": "#00b6cb",
+            "pointBorderColor": "#EC932F",
+            "pointBackgroundColor": "#EC932F",
+            "pointHoverBackgroundColor": "#EC932F",
+            "pointHoverBorderColor": "#EC932F",
+            "yAxisID": "y-axis-1"
+
+        }
+    ]
+}

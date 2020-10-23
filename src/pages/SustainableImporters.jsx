@@ -1,20 +1,28 @@
+import { render } from '@testing-library/react';
 import React, { Component} from 'react';
 import BarChart from "../componentes/BarChart";
 import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
-import data from '../data/SustainableExporters.json';
+import CountryCharacteristics from '../data/CountryCharacteristics.json';
 
-class SustainableImporters extends Component {
+
+const SustainableImporters =(props)=>
+ {
 
   dataAux = null;
-  state = {
-    select: {
-      Product: 'abaca',
-      iteration: "4",
-      scenathon_id :'6',
-      column:"Import_quantity"
-    }
+  jsonDataAux=null;
 
-  }
+ state = {
+  select: {
+    Product: 'abaca',
+    iteration: "4",
+    scenathon_id :'6',
+    column:"Import_quantity"
+  },
+  jsonData: null
+
+
+}
+  
 
   handleChange = e => {
 
@@ -37,1297 +45,115 @@ if(this.state.select.tradeAdjusment=="after")
 
   }
 
-  componentDidMount() {
+  componentDidMount() 
+  {
   this.getNettrade();
   }
 
-  getNettrade = async () => {
+
+ 
+
+  getNettrade = async() => {
     try {
-      console.log('flag 5')
+   
       const body = this.state;
       const response = await fetch("http://localhost:5000/net/"+JSON.stringify(body));
-      const jsonData = await response.json();
-      console.log(jsonData);
+      const json =  await response.json();
+      this.jsonDataAux=json;
+     
+      
+    this.setState({
+      select: {
+  
+        Product: this.state.select.Product,
+        iteration:  this.state.select.iteration,
+        scenathon_id : this.state.select.scenathon_id,
+        column: this.state.select.column,
+        
+  
+      },
+      jsonData:this.jsonDataAux
+  
+    });
+     
     } catch (error) {
       console.error(error)
     }
+
+
+
   }
 
 
 
 
-  selectDashboard() {
 
+//
+converter=()=>{
+console.log("render")
+function Pais(CountryCharacteristics,data) {
+  
+  this.type=CountryCharacteristics[0]["type"];
+  this.label=CountryCharacteristics[0]["label"];
+  this.borderColor=CountryCharacteristics[0]["borderColor"];
+  this.backgroundColor=CountryCharacteristics[0]["backgroundColor"];
+  this.data=data;
+}
 
-    switch (this.state.select.Product) {
-      case 'abaca':
+//console.log("imprimir caracteristicas")
+//var aux =CountryCharacteristics["Argentina"]
+//console.log(aux[0]["type"]);
 
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            this.dataAux = convertir(data.combination_2);
-            
-            break;
-          case 'after':
-            //var dataAux = convertir(data.combination_1);
-            //  this.dataAux = <h1>si funciono</h1>;
-            break;
-          case 'before':
-            // var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'apple':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
+//console.log(this.state.jsonData);
 
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
+var paisPasado="Argentina";
+var data=[];
+var paises=[];
+var labels=[];
 
-            break;
-        }
-        break;
-      case 'banana':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'barley':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'beans':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'beef':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cassava':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cattle':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
+  if (this.state.jsonData != null) {
 
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cattle':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cereal_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'chicken':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'chickens':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'chickens':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'chips_and_participles':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cirus_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'clove':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cocoa':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'coconut':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cocooil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'coffe':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'corn':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cottcake':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cottlint':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cottoil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'cotton':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'date':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'eggs':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'fiber_hard_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'fruit_soft_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'fruit_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'grape':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'grapefruit':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'groundnut':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'groundnutcake':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-      case 'groundnutoil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'honey':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'jute':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'lemon':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'meat_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'mech_pulp':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'milk':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'millet':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'mutton_goat':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'nuts':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'oats':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'oilpalmfruit':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
+    this.state.jsonData.map((item) => {
+      if (!labels.includes(item.Year)) {
+        labels.push(item.Year);
+      }
+      data.push(item.Import_quantity);
+      if (paisPasado != item.name) {
 
-      case 'oilseed_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'olive':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'oliveoil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'onion':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'orange':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'other_oil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'other_olscake':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'palm_oil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'palmkernelcake':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'palmkerneloil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'peas':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'pepper':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'pigs':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'pigs':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'piment':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'pinapple':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'plantain':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'pork':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'potato':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'pulses_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'repecake':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'rapeoil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'rapeseed':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'rice':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'rubber':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'rye':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sesame':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sesamoil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sheep_goats':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sheep_goats':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sisal':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sorghum':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'soyabean':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'soycake':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'soyoil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'spices_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sugarbeet':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sugarcarne':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sugarraw':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sunflcake':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sunfloil':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sunflower':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'sweet_potato':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'tea':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'tabacco':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'tomato':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'tuber_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'vegetable_other':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'wheat':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
-      case 'yams':
-        switch (this.state.select.tradeAdjusment) {
-          case 'null':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'after':
-            var dataAux = convertir(data.combination_1);
-            break;
-          case 'before':
-            var dataAux = convertir(data.combination_1);
-            break;
-        }
-        break;
+        var pais = new Pais(CountryCharacteristics["Argentina"], data)
 
-    }
+        paises.push(pais);
+        paisPasado = item.name;
+        data.splice(0, data.length)
+
+      }
+    });
+
 
   }
 
 
-  render() {
+  data = {
+    labels:labels,
+    datasets:paises
+};
+ this.dataAux=data;
+
+  }   
+
+ 
     return (
 
       <div>
+        {this.converter()}
+       
         <div>
-          <ComboBoxTradeReportersImporters metodo={this.handleChange} />
+          {/* <ComboBoxTradeReportersImporters metodo={this.handleChange} />*/}
+          {<h1>hola</h1>}
         </div>
 
-        
-        {this.selectDashboard()}
+        {/*this.selectDashboard()*/}
+       
 
         <div>
           <BarChart data={this.dataAux} title="Sustainable - net exporters" />
@@ -1338,7 +164,7 @@ if(this.state.select.tradeAdjusment=="after")
 
 
     )
-  }
+  
 }
 
 
@@ -1364,6 +190,8 @@ const convertir = (props) => {
   var R_NMC = [];
   var R_ASP = [];
   var GBR = [];
+
+  //se guarda el anio
   var labels = [];
 
 
