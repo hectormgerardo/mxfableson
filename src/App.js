@@ -61,7 +61,7 @@ export class App extends React.Component {
       <Navbar id="Nav" />
         <div data-rh="Mensaje" data-rh-at="top" id="About">
 
-            <LeafletMap/>
+            
 
              <About/>
         </div>

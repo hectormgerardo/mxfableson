@@ -37,7 +37,7 @@ if(this.state.select.tradeAdjusment=="after")
 
   }
 
-  componentDidMount() {
+  componentWillMount() {
   this.getNettrade();
   }
 
@@ -48,6 +48,12 @@ if(this.state.select.tradeAdjusment=="after")
       const response = await fetch("http://localhost:5000/net/"+JSON.stringify(body));
       const jsonData = await response.json();
       console.log(jsonData);
+      this.setState({select: {
+
+        ...this.state.select,
+        data:jsonData
+
+      }});
     } catch (error) {
       console.error(error)
     }
@@ -70,6 +76,7 @@ if(this.state.select.tradeAdjusment=="after")
           case 'after':
             //var dataAux = convertir(data.combination_1);
             //  this.dataAux = <h1>si funciono</h1>;
+
             break;
           case 'before':
             // var dataAux = convertir(data.combination_1);
@@ -1330,7 +1337,7 @@ if(this.state.select.tradeAdjusment=="after")
         {this.selectDashboard()}
 
         <div>
-          <BarChart data={this.dataAux} title="Sustainable - net exporters" />
+          <BarChart data={this.state.data.rows} title="Sustainable - net exporters" />
         </div>
 
 

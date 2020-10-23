@@ -36,10 +36,10 @@ class Scenathon extends Component {
     }
     state = {
         select: {
-            GraficaType:'group',
-            Iteration:'iteration_4',
-            Scenario:'Sustainaible',
-            Year:'2000'
+            Product: 'abaca',
+            iteration: "4",
+            scenathon_id :'6',
+            column:"Export_quantity"
         },
         dashboard:"Global Target Summary"
     }

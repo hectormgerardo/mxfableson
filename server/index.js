@@ -22,7 +22,7 @@ app.listen(5000,()=>{
 app.get('/net/:combinaciones',async(req,res)=>{
     try{
         console.log("entre 2")
-        //const{Product,iteration,scenathon_id,column}=JSON.parse(req.params.combinaciones).select;
+        const{Product,iteration,scenathon_id,column}=JSON.parse(req.params.combinaciones).select;
        //console.log(iteration)
         //console.log(scenathon_id)
 
