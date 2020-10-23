@@ -58,6 +58,7 @@ if(this.state.select.tradeAdjusment=="after")
    
       const body = this.state;
       const response = await fetch("http://localhost:5000/net/"+JSON.stringify(body));
+<<<<<<< HEAD
       const json =  await response.json();
       this.jsonDataAux=json;
      
@@ -76,6 +77,16 @@ if(this.state.select.tradeAdjusment=="after")
   
     });
      
+=======
+      const jsonData = await response.json();
+      console.log(jsonData);
+      this.setState({select: {
+
+        ...this.state.select,
+        data:jsonData
+
+      }});
+>>>>>>> a5bfde99dc2ffb9111028f477d609dec7715f3c9
     } catch (error) {
       console.error(error)
     }
@@ -104,7 +115,28 @@ function Pais(CountryCharacteristics,data) {
 //var aux =CountryCharacteristics["Argentina"]
 //console.log(aux[0]["type"]);
 
+<<<<<<< HEAD
 //console.log(this.state.jsonData);
+=======
+        switch (this.state.select.tradeAdjusment) {
+          case 'null':
+            this.dataAux = convertir(data.combination_2);
+            
+            break;
+          case 'after':
+            //var dataAux = convertir(data.combination_1);
+            //  this.dataAux = <h1>si funciono</h1>;
+
+            break;
+          case 'before':
+            // var dataAux = convertir(data.combination_1);
+            break;
+        }
+        break;
+      case 'apple':
+        switch (this.state.select.tradeAdjusment) {
+          case 'null':
+>>>>>>> a5bfde99dc2ffb9111028f477d609dec7715f3c9
 
 var paisPasado="Argentina";
 var data=[];
@@ -156,7 +188,7 @@ var labels=[];
        
 
         <div>
-          <BarChart data={this.dataAux} title="Sustainable - net exporters" />
+          <BarChart data={this.state.data.rows} title="Sustainable - net exporters" />
         </div>
 
 
