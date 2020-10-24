@@ -6,7 +6,7 @@ import ComboBox2 from '../componentes/ComboBox2'
 import ComboBox3 from '../componentes/ComboBox3'
 
 import Dashboard from '../componentes/Dashboard'
-import TabSelector from '../componentes/TabSelector'
+
 
 //dashboards
 import NetForestCoverChange from '../pages/NetForestCoverChange'

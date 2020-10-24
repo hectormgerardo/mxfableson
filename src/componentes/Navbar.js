@@ -11,6 +11,7 @@ import Scenathon from '../pages/Scenathon';
 import Features from "../pages/GlobalTargets";
 import About from '../pages/About';
 import styled from 'styled-components';
+
 import TradeReport from '../pages/TradeReport';
 
 
