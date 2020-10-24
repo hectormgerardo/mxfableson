@@ -15,8 +15,7 @@ import TradeReport from '../pages/TradeReport';
 
 const Styles = styled.div`
 .navbar{
-  background-color: transparent ;
-  position: relative;
+  background-color: #FFFFFF ;
 }
 .navbar-brand, .navbar-nav .nav-link {
   color: #006A75;
