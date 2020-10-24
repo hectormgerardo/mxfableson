@@ -36,7 +36,7 @@ function ComboBoxTradeReportersImporters (props) {
                     <option value="chicken">chicken</option>
                     <option value="chickens">chickens</option>
                     <option value="chickens">chickens</option>
-                    <option value="chips_and_participles">chips and participles</option>
+                    <option value="chips_and__particles">chips and particles</option>
                     <option value="cirus_other">cirus other</option>
                     <option value="clove">clove</option>
                     <option value="cocoa">cocoa</option>
