@@ -1,7 +1,7 @@
 import React from "react";
 import BarChart from "../componentes/BarChart.jsx";
 import data from '../data/Protected.json';
-
+import {Container,Row,Col} from "react-bootstrap";
 const drawProtected = (props) => {
 
     const convertir=(props)=> {
@@ -11,7 +11,7 @@ const drawProtected = (props) => {
         var dataTres=[]
         var labels=[]
       
-          
+      
          props.map((item) => {
           dataUno.push(item.ProtectedAreasOther);
           dataDos.push(item.ProtectedAreasForest);

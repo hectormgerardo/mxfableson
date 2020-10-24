@@ -33,7 +33,6 @@ const Styles = styled.div`
 
 export const Jumbotron = () => {
     return(
-
     <Styles>
         <Jumbo fluid className= "jumbo">
             <div className= "overlay"></div>

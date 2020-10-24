@@ -23,7 +23,7 @@ import GreenHouse2 from '../pages/GreenHouse2'
 import GreenHouseOne from '../pages/GreenHouseOne'
 import FreshWaterTwo from '../pages/FreshWaterTwo'
 
-import SustainableExporters from '../pages/SustainableExporters'
+
 
 
  
@@ -66,8 +66,8 @@ class Scenathon extends Component {
         
     }
 
-    selectDashboard(state){
-        console.log(state)
+    selectDashboard(){
+        
         switch(this.state.dashboard){
             case 'Global Target Summary': 
                 this.combobox=<ComboBox onChange={this.handleChange}/>
@@ -118,8 +118,7 @@ class Scenathon extends Component {
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<h1>Food energy intake per capita (2)</h1>;
             break;
-            
-            default: break;
+           
           }
     }
 
@@ -147,14 +146,10 @@ class Scenathon extends Component {
                     <Dashboard metodo={this.handleChange}  data={this.state} />     
                 </div>
 
-  {/* componente de comboBox(opciones para el tipo de grafica)
-                <div className="tab-selector">
-                <TabSelector    data={this.state}/>         
-                </div>
-                */} 
+
 
                 
-{this.selectDashboard(this.state)}
+{this.selectDashboard()}
               {this.combobox}
               
               

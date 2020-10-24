@@ -1,6 +1,10 @@
 import React from "react";
 import BarChart from "../componentes/BarChart";
 import data from '../data/NetForestCoverChange2.json';
+import "../../node_modules/react-grid-layout/css/styles.css";
+import "../../node_modules/react-resizable/css/styles.css";
+import {Container,Row,Col,Jumbotron} from "react-bootstrap";
+import GridLayout from 'react-grid-layout';
 //nfch=NetForestCoverChange
 const drawNfch2 = (props) => {
  
@@ -33,15 +37,35 @@ const drawNfch2 = (props) => {
         break
     }
     break;
-    default: var dataAux= convertir(data.combination_1); break;
+    
   }
   
   
-return <BarChart data={dataAux}/> 
+return(
+
+
+          <Container fluid>
+            <Row  >
+              <Col >
+              <div style={{height: "100vh"}}>
+                <BarChart data={dataAux}
+                  title="Net Forest Cover Change 2"
+                  labelposition="bottom"
+                  aspectRatio={false}/></div>
+              </Col>
+              <Col>
+              <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
+              MAPA
+              </div>
+              </Col>
+            </Row>
+          </Container>
+          );
 }
 
 const convertir=(props)=> {
-  
+  console.log("datos")
+  console.log(props)
     var labels=[];
      var mexico=[]; 
      var colombia=[]; 
@@ -161,6 +185,7 @@ const convertir=(props)=> {
       }
       if(!labels.includes(item.Year))
       {
+        
          labels.push(item.Year);
       }
      }

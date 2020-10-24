@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import Navbar from "./componentes/Navbar";
+import Tour from "./componentes/Tour";
+import Touraux from "./componentes/Touraux";
 import About from './pages/About';
 import { Jumbotron } from './componentes/Jumbotron'
 import { Jumbotron_2}  from './componentes/Jumbotron_2'
@@ -16,97 +18,72 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import ReactJoyride from 'react-joyride';
+import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
 
 const ReactHint = ReactHintFactory(React)
 
 export class App extends React.Component {
-  state={
-    run: true,
-    steps: [
-      {
-        target: ".About",
-        content: "Se habla acerca de Fable",
-        title: "You can have a title here!",
-          styles: {
-            //this styles override the styles in the props
-            options: {
-              textColor: "tomato"
-            }
-          },
-          locale: { 
-            next: <span>GO GO GO</span>,
-            back: <span>BACK BACK</span>
-          },
-          placement: "top"
-      },
-      {
-        target: ".Fin",
-        content: "Se habla acerca de Fable",
-        title: "You can have a title here!",
-          styles: {
-            //this styles override the styles in the props
-            options: {
-              textColor: "tomato"
-            }
-          },
-          locale: { 
-            next: <span>GO GO GO</span>,
-            back: <span>BACK BACK</span>
-          },
-          placement: "top"
-
-      }
-      
-    ]
+  constructor(){
+    super();
+    
+  this.state={
+    run: false,
+      steps: [
+        {
+          target:'.About',
+          content: 'Esto es el Joyride'
+        },
+        {
+          target:'.Nav',
+          content: 'Esto es el Joyride parte 2'
+        }
+      ],
+      stepIndex: 0,
+    }
   };
 
-  handleClick = e => {
-    e.preventDefault();
-    
-    this.setState({
-     run: true
-    });
+
+  handleJoyrideCallback = data => {
+    const { action, index, status, type } = data;
+
+    if ([EVENTS.STEP_AFTER, EVENTS.TARGET_NOT_FOUND].includes(type)) {
+      // Update state to advance the tour
+      this.setState({ stepIndex: index + (action === ACTIONS.PREV ? -1 : 1) });
+    }
+    else if ([STATUS.FINISHED, STATUS.SKIPPED].includes(status)) {
+      // Need to set our running state to false, so we can restart if we click start again.
+      this.setState({ run: false });
+    }
+
+    console.groupCollapsed(type);
+    console.log(data); //eslint-disable-line no-console
+    console.groupEnd();
   };
   
-
+  
   render(){
+    const { run, stepIndex, steps } = this.state;
     return (
         <React.Fragment>
-          <ReactJoyride
-          steps={this.state.steps}
-          run={this.state.run}
-          continuous
-          showProgress
-          showSkipButton
-          styles={{
-           options: {
-              // modal arrow and background color
-              arrowColor: "#eee",
-              backgroundColor: "#eee",
-              // page overlay color
-              overlayColor: "rgba(79, 26, 0, 0.4)",
-              //button color
-              primaryColor: "mediumaquamarine",
-              //text color
-              textColor: "#333",
-          
-              //width of modal
-              width: 500,
-              //zindex of modal
-              zIndex: 1000
-          }
-      }}
-        />
-        <div id="Nav">
+        <div>
+          <Tour/>
+        </div>
+
+        <div className="Nav">
           <Navbar/>
         </div>
 
-          <div id="About">
+          <div className="imagen">
             <Jumbotron />
           </div>
-      
-              <Scenathon id="a"/>
+
+              <div id="graficas">
+              <Scenathon/>
+              </div>
+              <div data-rh="Este es el apartado About" data-rh-at="top" className="About">
+                <About/>
+              </div>
+
           <Router>
           <Link to="/Scenathon">
           </Link>  
@@ -115,9 +92,11 @@ export class App extends React.Component {
             </Route>
           </Switch>
          </Router>
-        <div data-rh="Este es el apartado About" data-rh-at="top" id="About">
+
+        {/*<div data-rh="Este es el apartado About" data-rh-at="top" id="About">
           <About/>
-        </div>
+        </div>*/}
+        
         <div className="app">
 
 			<ReactHint autoPosition events delay={{show: 100, hide: 1000}} />
@@ -133,15 +112,15 @@ export class App extends React.Component {
       </div>
         
 
-        <div id="Jumbotron_2" data-rh="Mensaje" data-rh-at="top">
+        <div id="Jumbotron_2" data-rh="Imagen pala" data-rh-at="top">
           <Jumbotron_2 />
         </div>
         
-        <div id="Jumbotron_3" data-rh="Mensaje" data-rh-at="top" id="Scenathon">
+        <div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
           <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
         </div>
         
-        <div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top">
+        <div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
           <Jumbotron_fin/>
         </div>
          
