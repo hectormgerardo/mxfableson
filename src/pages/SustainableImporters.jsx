@@ -78,7 +78,8 @@ setState({
      const  jsonAux =  await response.json();
      
     setJson(jsonAux);
-   console.log(json)
+    console.log("javiinfiel")
+   console.log(jsonAux);
     } catch (error) {
       console.error(error)
     }
