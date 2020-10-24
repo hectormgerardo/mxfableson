@@ -36,10 +36,10 @@ class Scenathon extends Component {
     }
     state = {
         select: {
-            Product: 'abaca',
-            iteration: "4",
-            scenathon_id :'6',
-            column:"Export_quantity"
+            GraficaType:'group',
+            Iteration:'iteration_4',
+            Scenario:'Sustainaible',
+            Year:'2000'
         },
         dashboard:"Global Target Summary"
     }
@@ -79,10 +79,8 @@ class Scenathon extends Component {
               break;
             case 'Net Forest Cover Change(2)':
                 this.combobox=<ComboBox3 onChange={this.handleChange}/>
-                console.log("aqui estoy net forest 2")
-                console.log(this.state);
+                
                 this.dash=<NetForestCoverChange2 combinacion={this.state}/>;
-               
                 break;
             case 'Biodiversity':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
