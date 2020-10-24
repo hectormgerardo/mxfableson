@@ -73,4 +73,88 @@ console.error(err.message);
 }
 });
 
+app.get('/target2/:combinaciones',async(req,res)=>{
+    try{
+    const{iteration,scenathon,group}=JSON.parse(req.params.combinaciones).select;
+    switch(group){
+        case "group": 
+        var query='SELECT "resultsScen2020"."Year", ((SUM("resultsScen2020"."ProtectedAreasForest" + "resultsScen2020"."ProtectedAreasOtherNat" +"resultsScen2020"."ProtectedAreasOther")) / SUM("resultsScen2020"."TotalLand")) AS "Protected Land" FROM "resultsScen2020" WHERE "resultsScen2020"."iteration" = $1 and "resultsScen2020"."scenathon_id" = $2  GROUP BY "resultsScen2020"."Year" ORDER BY "resultsScen2020"."Year"';
+        break;
+        case "countries":
+            var query='SELECT "resultsScen2020"."Year", ((SUM("resultsScen2020"."ProtectedAreasForest" + "resultsScen2020"."ProtectedAreasOtherNat" +"resultsScen2020"."ProtectedAreasOther")) / SUM("resultsScen2020"."TotalLand")) AS "Protected Land" FROM "resultsScen2020" WHERE "resultsScen2020"."iteration" = $1 and "resultsScen2020"."scenathon_id" = $2 GROUP BY "resultsScen2020"."Year" AND "Country" NOT LIKE \'%$_%\' ESCAPE \'$\' ORDER BY "resultsScen2020"."Year"';
+            break;
+        case "regions":
+            var query='SELECT "resultsScen2020"."Year", ((SUM("resultsScen2020"."ProtectedAreasForest" + "resultsScen2020"."ProtectedAreasOtherNat" +"resultsScen2020"."ProtectedAreasOther")) / SUM("resultsScen2020"."TotalLand")) AS "Protected Land" FROM "resultsScen2020" WHERE "resultsScen2020"."iteration" = $1 and "resultsScen2020"."scenathon_id" = $2 GROUP BY "resultsScen2020"."Year" AND "Country" LIKE \'%$_%\' ESCAPE \'$\' ORDER BY "resultsScen2020"."Year"';
+            break;
+        default: 
+            var query=null;
+            break;
+    }
+const response=await pool.query(query,[iteration,scenathon]);
+
+res.status(200).json(response.rows)
+
+
+
+}catch(err){
+console.error(err.message);
+}
+});
+
+app.get('/target3:combinaciones',async(req,res)=>{
+    try{
+
+    const{iteration,scenathon,group}=JSON.parse(req.params.combinaciones).select;
+    switch(group){
+        case "group": 
+        var query='SELECT "Year", (avg("CalcBiodivLnd")) AS "Biodiversity Land" , AVG("BiodivTarget") AS "Target Biodiversyty" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 GROUP BY "Year" ORDER BY "Year"';
+        break;
+        case "countries":
+            var query='SELECT "Year", (avg("CalcBiodivLnd")) AS "Biodiversity Land" , AVG("BiodivTarget") AS "Target Biodiversyty" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2  AND "Country" NOT LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Year" ORDER BY "Year"';
+            break;
+        case "regions":
+            var query='SELECT "Year", (avg("CalcBiodivLnd")) AS "Biodiversity Land" , AVG("BiodivTarget") AS "Target Biodiversyty" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Country" LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Year" ORDER BY "Year"';
+            break;
+        default: 
+            var query=null;
+            break;
+    }
+const response=await pool.query(query,[iteration,scenathon]);
+
+res.status(200).json(response.rows)
+
+
+
+}catch(err){
+console.error(err.message);
+}
+});
+
+app.get('/target5:combinaciones',async(req,res)=>{
+    try{
+    const{iteration,scenathon,group}=JSON.parse(req.params.combinaciones).select;
+    switch(group){
+        case "group": 
+        var query='SELECT "Country", (avg("kcal_feas")) AS Kcal_feasible, avg("kcal_mder") AS Target_MDER FROM "resultsScen2020" WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Year" = 2030 GROUP BY "Country" ORDER BY "Country";';
+        break;
+        case "countries":
+            var query='SELECT "Country", (avg("kcal_feas")) AS Kcal_feasible, avg("kcal_mder") AS Target_MDER FROM "resultsScen2020" WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Year" = 2030 AND "Country" NOT LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Country" ORDER BY "Country";';
+            break;
+        case "regions":
+            var query='SELECT "Country", (avg("kcal_feas")) AS Kcal_feasible, avg("kcal_mder") AS Target_MDER FROM "resultsScen2020" WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Year" = 2030 AND "Country" LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Country" ORDER BY "Country";';
+            break;
+        default: 
+            var query=null;
+            break;
+    }
+const response=await pool.query(query,[iteration,scenathon]);
+
+res.status(200).json(response.rows)
+
+
+
+}catch(err){
+console.error(err.message);
+}
+});
 
