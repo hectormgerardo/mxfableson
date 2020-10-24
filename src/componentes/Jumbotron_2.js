@@ -12,7 +12,7 @@ const Styles = styled.div`
         color: #ccc;
         height: 500px;
         position: absoulte;
-        z-index: -2;
+    
     }
     .overlay{
         background-color: #000;
@@ -32,9 +32,6 @@ export const Jumbotron_2 = () => {
     <Styles>
         <Jumbo fluid className= "jumbo2">
             <div className= "overlay"></div>
-            <Container>
-               
-            </Container>
         </Jumbo>
     </Styles>
     )

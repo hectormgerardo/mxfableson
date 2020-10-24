@@ -49,7 +49,7 @@ export default Dashboard;
 
 */
 import React, { useState} from "react";
-
+import { Form } from 'react-bootstrap';
 
 const Dashboard = (props) =>  {
   const{metodo}=props
@@ -73,7 +73,10 @@ const Dashboard = (props) =>  {
 
   
   return (
-    <div className="Dashboard">
+
+    
+
+    <div className="Dashboard">      
       <select
         name='dashboard'
         value={selectedOption}
