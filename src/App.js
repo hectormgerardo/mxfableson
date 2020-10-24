@@ -65,9 +65,9 @@ export class App extends React.Component {
     const { run, stepIndex, steps } = this.state;
     return (
         <React.Fragment>
-        <div>
+        {/*<div>
           <Tour/>
-        </div>
+        </div>*/}
 
         <div className="Nav">
           <Navbar/>
@@ -77,9 +77,6 @@ export class App extends React.Component {
             <Jumbotron />
           </div>
 
-              <div id="graficas">
-              <Scenathon/>
-              </div>
               <div data-rh="Este es el apartado About" data-rh-at="top" className="About">
                 <About/>
               </div>
@@ -112,17 +109,21 @@ export class App extends React.Component {
       </div>
         
 
-        <div id="Jumbotron_2" data-rh="Imagen pala" data-rh-at="top">
+        <div id="Jumbotron_2" data-rh="" data-rh-at="top">
           <Jumbotron_2 />
-        </div>
+        </div>*
         
-        <div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
+        {/*<div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
           <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
-        </div>
+      </div>*/}
         
-        <div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
+        {/*<div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
           <Jumbotron_fin/>
-        </div>
+        </div>*/}
+        {/*<div>
+          <Scenathon/>
+        </div>*/}
+
          
     </React.Fragment>
   )
