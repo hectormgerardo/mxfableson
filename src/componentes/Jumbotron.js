@@ -9,7 +9,7 @@ const Styles = styled.div`
        color: white;
        top:5;
        text-align: center;
-       font-size:85px;
+       font-size:150px;
     }
     .jumbo{
         background: url(${Banner});
@@ -33,12 +33,11 @@ const Styles = styled.div`
 
 export const Jumbotron = () => {
     return(
-
     <Styles>
         <Jumbo fluid className= "jumbo">
             <div className= "overlay"></div>
             <Container>
-                <h1 className = "bann" data-rh="tooltip 1" >Scenathon 2020</h1>
+                <h1 className = "bann" data-rh="tooltip 1" >Scenathon</h1>
             </Container>
         </Jumbo>
     </Styles>
