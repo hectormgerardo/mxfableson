@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import Navbar from "./componentes/Navbar";
+import SidebarMenu from "./componentes/SidebarMenu";
 import Tour from "./componentes/Tour";
-import Touraux from "./componentes/Touraux";
 import About from './pages/About';
 import { Jumbotron } from './componentes/Jumbotron'
 import { Jumbotron_2}  from './componentes/Jumbotron_2'
@@ -111,7 +111,7 @@ export class App extends React.Component {
 
         <div id="Jumbotron_2" data-rh="" data-rh-at="top">
           <Jumbotron_2 />
-        </div>*
+        </div>
         
         {/*<div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
           <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
@@ -120,10 +120,16 @@ export class App extends React.Component {
         {/*<div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
           <Jumbotron_fin/>
         </div>*/}
-        {/*<div>
-          <Scenathon/>
-        </div>*/}
+        <div>
+          <div className="Menu">
 
+          </div>
+          <div className="Graphs">
+            <Scenathon/>
+          </div>
+        </div>
+
+        <SidebarMenu/>
          
     </React.Fragment>
   )

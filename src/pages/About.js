@@ -35,7 +35,18 @@ const Styles = styled.div`
         bottom: 0;
         right: 0;
         z-index: -1;
-    }`;
+    }
+    
+    .vertical { 
+      border-left:  3px  solid;
+      height: 150px; 
+      color: #306973; 
+      left:30%; 
+      position:absolute;
+   }  
+    `
+    ;
+
 const About = () => {
   return (
     <Styles>
@@ -43,6 +54,7 @@ const About = () => {
             <div className= "overlay"></div>
             <Container>
               <li className="about_">Fable</li>
+              <div class= "vertical"></div>
             <h1 className = "bann_">
             The Food, Agriculture, Biodiversity, Land-Use, and Energy (FABLE) Consortium is convened as part of the Food and Land-Use Coalition (FOLU). It aims to understand how countries can transition towards sustainable land-use and food systems. In particular, we ask how countries can collectively meet associated Sustainable Development Goals (SDGs) and the objectives of the Paris Agreement. FABLE comprises 20 country teams, which develop data and modelling infrastructure to promote ambitious, integrated strategies towards sustainable land-use and food systems. </h1>
               <br/>

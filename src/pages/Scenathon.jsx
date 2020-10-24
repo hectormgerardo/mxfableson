@@ -122,21 +122,12 @@ class Scenathon extends Component {
           }
     }
 
-   
-  
-
-   
-
-
     render() {
     
         return (
             
             <div className="container">
-              
-              
-               
-              
+                            
                  {/* componente de comboBox(opciones para el tipo de grafica)*/} 
                  <div className="Combo-Box">
                 

@@ -8,8 +8,9 @@ const Styles = styled.div`
     .bann{
        color: white;
        top:5;
-       text-align: center;
+       text-align: left;
        font-size:150px;
+       text-shadow: 1px .5px 2px #000000;
     }
     .jumbo{
         background: url(${Banner});
@@ -37,10 +38,8 @@ export const Jumbotron = () => {
         <Jumbo fluid className= "jumbo">
             <div className= "overlay"></div>
             <Container>
-                <h1 className = "bann" data-rh="tooltip 1" >Fable</h1>
+                <h1 className = "bann" data-rh="tooltip 1" ><i>Fable</i></h1>
                 <h1 className = "bann" data-rh="tooltip 1" >Scenathon</h1>
-
-
             </Container>
         </Jumbo>
     </Styles>
