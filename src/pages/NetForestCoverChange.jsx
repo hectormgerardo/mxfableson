@@ -142,6 +142,8 @@ const convertir=(props)=> {
             borderColor: '#a98600',
             borderWidth: 2,
             backgroundColor: 'rgba(255,213,79, 0.7)',
+            hoverBackgroundColor: 'rgba(255,213,79,0.7)',
+
             pointBorderColor: '#ffd54f',
             pointBackgroundColor: '#ffd54f',
             pointHoverBackgroundColor: '#ffd54f',
