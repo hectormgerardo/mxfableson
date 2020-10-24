@@ -111,7 +111,7 @@ export class App extends React.Component {
 
         <div id="Jumbotron_2" data-rh="" data-rh-at="top">
           <Jumbotron_2 />
-        </div>*
+        </div>
         
         {/*<div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
           <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
@@ -120,9 +120,9 @@ export class App extends React.Component {
         {/*<div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
           <Jumbotron_fin/>
         </div>*/}
-        {/*<div>
+        <div>
           <Scenathon/>
-        </div>*/}
+        </div>
 
          
     </React.Fragment>

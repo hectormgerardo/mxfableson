@@ -18,17 +18,16 @@ const Styles = styled.div`
 .navbar{
   background-color: transparent ;
   position: absolute;
-  left: 60%;
-  text-align: left;
+  right:10%;
   top: 0;
   
 }
 .navbar-brand, .navbar-nav .nav-link {
   color: white;
-  margin-horizontal: 20px;
-  text-shadow: .5px .5px #000000;
+  margin-left: 40px;
+  text-shadow: .5px .5px 2px #000000;
   &: hover{
-    color:#D4C410;
+    color:#306973;
   }
  
 }
@@ -50,7 +49,7 @@ const NavBar = () => {
               <ReactBootStrap.Navbar.Brand href="#fable">Fable</ReactBootStrap.Navbar.Brand>
             </Link>
             <Link to="/Scenathon">
-              <ReactBootStrap.Navbar.Brand>Scenathon 2020</ReactBootStrap.Navbar.Brand>
+              <ReactBootStrap.Navbar.Brand>Schenathon 2020</ReactBootStrap.Navbar.Brand>
             </Link>
             <Link to="/Scenathon">
               <ReactBootStrap.Navbar.Brand>Schenaton 2019</ReactBootStrap.Navbar.Brand>
