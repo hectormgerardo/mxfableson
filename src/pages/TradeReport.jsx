@@ -22,7 +22,7 @@ class TradeReport extends Component {
 
     state = {
         select: {
-            dashboard: "Sustainable_next_importers"
+            dashboard: "Sustainable_next_exporters"
         }
 
     }
@@ -49,10 +49,12 @@ class TradeReport extends Component {
         console.log("entre switch")
         switch (state) {
             case 'Sustainable_next_exporters':
-                this.dash = <SustainableImporters/>;
+                this.dash = <SustainableImporters scenathon_id={"6"} column={"Export_quantity"} iteration={"4"}/>;
+                console.log("entre primero")
                 break;
             case 'Sustainable_next_importers':
-                this.dash = <SustainableImporters />;
+                this.dash = <SustainableImporters scenathon_id={"5"} column={"Import_quantity"} iteration={"4"}/>;
+                console.log("entre 2do")
                 break;
             case 'Current_trend_next_exporters':
                 this.dash = <h1>Current_trend_next_exporters</h1>
@@ -60,6 +62,8 @@ class TradeReport extends Component {
             case 'Current_trend_next_importers':
                 this.dash = <h1>Current_trend_next_importers</h1>
                 break;
+
+                
         }
 
     }

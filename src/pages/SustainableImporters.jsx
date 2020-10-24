@@ -1,55 +1,35 @@
 
 import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 import BarChart from "../componentes/BarChart";
 import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
 
 
-const SustainableImporters =()=>
+const SustainableImporters =(props)=>
  {
+  console.log("props")
+   console.log(props)
   const [state,setState]=useState({select: {
   Product: 'abaca',
- iteration: "4",
- scenathon_id :'6',
- column:"Import_quantity"
+ iteration: props.iteration,
+ scenathon_id :props.scenathon_id,
+ column:props.column
  }});
-
+ console.log("props 2");
+ console.log(props)
+ 
   //const [state,setState]=useState([]);
   const [json,setJson]=useState([]);
-
-
-
-  
-  
-
   var dataAux = null;
-  
-
-
-
-
-
-
-
-
-
-
-  
 
  const handleChange = e => {
-
-  console.log("it");
-  console.log(state.select.iteration);
-  console.log()
-
 setState({
       select: {
-
         ...state.select,
         [e.target.name]: e.target.value,
-        iteration: e.target.value==="after"? "4":"3"
-
+        iteration:state.select.scenathon_id==="6" ? e.target.value==="after"? "4":"3" : e.target.value==="after"? "2":"1"
       }
 
 });
@@ -62,7 +42,7 @@ setState({
 
   useEffect(() => 
   {
-    
+    console.log("useefect")
   getNettrade();
   }, [state]);
 
@@ -73,12 +53,13 @@ setState({
    
       const body =state;
       console.log("estado")
-      console.log(body);
+      console.log(state);
+    
       const response = await fetch("http://localhost:5000/net/"+JSON.stringify(body));
      const  jsonAux =  await response.json();
      
     setJson(jsonAux);
-   console.log(json)
+  console.log(jsonAux);
     } catch (error) {
       console.error(error)
     }
@@ -87,61 +68,97 @@ setState({
 
   }
 
+  function Pais(CountryCharacteristics,data) {
+    this.data=data;
+    this.type=CountryCharacteristics[0]["type"];
+    this.label=CountryCharacteristics[0]["label"];
+    this.borderColor=CountryCharacteristics[0]["borderColor"];
+    this.backgroundColor=CountryCharacteristics[0]["backgroundColor"];
+    
+  }
 
-
-
-
-//
-const converter=()=>{
-console.log("render")
-function Pais(CountryCharacteristics,data) {
-  
-  this.type=CountryCharacteristics[0]["type"];
-  this.label=CountryCharacteristics[0]["label"];
-  this.borderColor=CountryCharacteristics[0]["borderColor"];
-  this.backgroundColor=CountryCharacteristics[0]["backgroundColor"];
-  this.data=data;
-}
-
-//console.log("imprimir caracteristicas")
-//var aux =CountryCharacteristics["Argentina"]
-//console.log(aux[0]["type"]);
-
-//console.log(this.state.jsonData);
-
-var paisPasado="Argentina";
+const getImportQuantity=()=>
+{
+  var contador=0;
 var data=[];
 var paises=[];
 var labels=[];
-
+console.log(json);
   if (json != null) {
-
     json.map((item) => {
-      if (!labels.includes(item.Year)) {
+      if (!labels.includes(item.Year)) 
+      {
         labels.push(item.Year);
       }
       data.push(item.Import_quantity);
-      if (paisPasado != item.name) {
-
-        //var pais = new Pais(CountryCharacteristics[item.name], data)
-        var pais = new Pais(CountryCharacteristics["Argentina"], data)
-
-        paises.push(pais);
-        paisPasado = item.name;
-        data.splice(0, data.length)
-
+      contador=contador+1;
+      if (contador==11) {
+        var pais = new Pais(CountryCharacteristics[item.name], data);
+          paises.push(pais);
+          contador=0;
+        data=[];
       }
     });
 
 
   }
-
-
   data = {
     labels:labels,
     datasets:paises
 };
  dataAux=data;
+}
+
+const getExportQuantity=()=>
+{
+  var contador=0;
+var data=[];
+var paises=[];
+var labels=[];
+
+  if (json != null) {
+    json.map((item) => {
+      if (!labels.includes(item.Year)) 
+      {
+        labels.push(item.Year);
+      }
+      data.push(item.Export_quantity);
+      contador=contador+1;
+      if (contador==11) {
+        var pais = new Pais(CountryCharacteristics[item.name], data);
+          paises.push(pais);
+          contador=0;
+        data=[];
+      }
+    });
+
+
+  }
+  data = {
+    labels:labels,
+    datasets:paises
+};
+ dataAux=data;
+}
+
+
+
+const converter=()=>{
+console.log("columna");
+console.log(state.select.column)
+if(props.column=="Export_quantity")
+{
+  getExportQuantity();
+}else{
+  console.log("flag import")
+  getImportQuantity();
+}
+
+
+ 
+
+
+ 
 
   }   
 
