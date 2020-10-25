@@ -9,8 +9,6 @@ class LeafletMap extends Component {
 
     colors = ['green', 'grey', 'white', 'blue', 'yellow', 'orange'] ;
 
-    color = [];
-    countriesName = [];
 
     propsAux = null ;
 

@@ -61,6 +61,7 @@ export class App extends React.Component {
         <div data-rh="Mensaje" data-rh-at="top" id="About">
 
 
+
              <About/>
         </div>
         <div className="app">

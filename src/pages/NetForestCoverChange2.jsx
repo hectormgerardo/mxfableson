@@ -8,12 +8,14 @@ import GridLayout from 'react-grid-layout';
 //nfch=NetForestCoverChange
 const drawNfch2 = (props) => {
  
- console.log("entre")
+
   
  
 
   const { GraficaType, Iteration, Scenario } = props.combinacion.select;
-
+  console.log(GraficaType);
+  console.log(Iteration);
+  console.log(Scenario);
   switch(GraficaType){
     
     case 'regions':
@@ -33,10 +35,12 @@ const drawNfch2 = (props) => {
         break;
       case 'iteration_4':
         var dataAux= convertir(Scenario === "Sustainaible" ? data.combination_5 : data.combination_7);
-
-        break
+        break;
+  
     }
+
     break;
+    default:var dataAux= convertir(data.combination_1);
     
   }
   
