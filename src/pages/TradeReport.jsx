@@ -121,10 +121,11 @@ setState({
 
 const getImportQuantity=()=>
 {
-  var contador=0;
-var data=[];
+  
+var dataImport_quantity=[];
 var paises=[];
 var labels=[];
+var nameCounty="Argentina";
 
   if (json != null) {
     json.map((item) => {
@@ -132,19 +133,19 @@ var labels=[];
       {
         labels.push(item.Year);
       }
-      data.push(item.Import_quantity);
-      contador=contador+1;
-      if (contador==11) {
-        var pais = new Pais(CountryCharacteristics[item.name], data);
-          paises.push(pais);
-          contador=0;
-        data=[];
+      dataImport_quantity.push(item.Import_quantity);
+      if (nameCounty!=item.name) {
+        var pais = new Pais(CountryCharacteristics[nameCounty], dataImport_quantity);
+        paises.push(pais);
+        nameCounty=item.name;
+        dataImport_quantity=[];
+        dataImport_quantity.push(item.Import_quantity);
       }
     });
 
 
   }
-  data = {
+ var data = {
     labels:labels,
     datasets:paises
 };
@@ -153,30 +154,30 @@ var labels=[];
 
 const getExportQuantity=()=>
 {
-  var contador=0;
-var data=[];
+ 
+var dataExport_quantity=[];
 var paises=[];
 var labels=[];
-
+var nameCounty="Argentina";
   if (json != null) {
     json.map((item) => {
       if (!labels.includes(item.Year)) 
       {
         labels.push(item.Year);
       }
-      data.push(item.Export_quantity);
-      contador=contador+1;
-      if (contador==11) {
-        var pais = new Pais(CountryCharacteristics[item.name], data);
+      dataExport_quantity.push(item.Export_quantity);
+      if (nameCounty!=item.name) {
+        var pais = new Pais(CountryCharacteristics[nameCounty], dataExport_quantity);
           paises.push(pais);
-          contador=0;
-        data=[];
+          nameCounty=item.name;
+          dataExport_quantity=[];
+          dataExport_quantity.push(item.Export_quantity);
       }
     });
 
 
   }
-  data = {
+ var data = {
     labels:labels,
     datasets:paises
 };
