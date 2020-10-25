@@ -93,7 +93,8 @@ class Scenathon extends Component {
                 this.dash=<ProtectedAreaByType/>;
             break;
             case 'Land Cover':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
+               // this.combobox=<ComboBox onChange={this.handleChange}/>
+                this.combobox=null;
                 this.dash=<LandCover combinacion={this.state}/>;
             break;
             case 'Fresh water use (1)':

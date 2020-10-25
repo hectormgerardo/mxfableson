@@ -91,25 +91,14 @@ const FoodEnergyIntakePerCapita = (props) => {
 
 
   const getFoodEnergyIntakePerCapita = async () => {
-   
-
-   
-    try {
-          
+    try {   
       const body =state;
-      
      const response = await fetch("http://localhost:5000/foodenergy1"+JSON.stringify(body));
      const  jsonAux =  await response.json();
-  
     setJson(jsonAux);
-   
-
     } catch (error) {
       console.error(error)
     }
-
-
-
   }
 
 
@@ -182,8 +171,8 @@ setState({
     }
   
   }
-  //let dataAux;
 
+  //let dataAux;
   //const { GraficaType, Iteration, Scenario, Year } = props.combinacion.select;
   {/*
   

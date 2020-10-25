@@ -91,14 +91,6 @@ const DrawProtected = () => {
         };
         data=dataAux;
       }
-
-
-
-
-
-
-
-
     }
   
      const handleChange = e => {

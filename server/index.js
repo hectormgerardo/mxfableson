@@ -196,10 +196,11 @@ console.error(err.message);
 }
 });
 
-app.get('/landcover',async(req,res)=>{
+app.get('/landcover:combinaciones',async(req,res)=>{
     try{
-    const{iteration,scenathon,group}=JSON.parse(req.params.combinaciones).select;
-    switch(group){
+    const{Iteration,GraficaType}=JSON.parse(req.params.combinaciones).select;
+    console.log(GraficaType)
+    switch(GraficaType){
         case "group": 
         var query='SELECT "Year",sum("CalcPasture") as "CalcPasture",sum("CalcCropland") as "CalcCropland",sum("CalcForest") as "CalcForest",sum("CalcNewForest") as "CalcNewForest" ,sum("CalcOtherLand") as "CalcOtherLand",sum("CalcUrban") as "CalcUrban" from "resultsScen2020" WHERE "iteration"=$1 GROUP BY "Year" order by "Year"';
         break;
@@ -213,7 +214,7 @@ app.get('/landcover',async(req,res)=>{
             var query=null;
             break;
     }
-const response=await pool.query(query,[iteration]);
+const response=await pool.query(query,[Iteration]);
 
 res.status(200).json(response.rows)
 

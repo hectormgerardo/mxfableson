@@ -76,12 +76,84 @@
         {
             "type": "bar",
             "label": "Fat_feasible",
-            "borderColor": "36a2eb",
+            "borderColor": "#36a2eb",
             "backgroundColor": "#36a2eb",
             "pointBorderColor": "#36a2eb",
             "pointBackgroundColor": "#36a2eb",
             "pointHoverBackgroundColor": "#36a2eb",
             "pointHoverBorderColor": "#36a2eb",
+            "yAxisID": "y-axis-1"
+        }
+    ],"calcPasture": [
+        {
+            "type": "bar",
+            "label": "calcPasture",
+            "borderColor": "#36a2eb",
+            "backgroundColor": "#36a2eb",
+            "pointBorderColor": "#36a2eb",
+            "pointBackgroundColor": "#36a2eb",
+            "pointHoverBackgroundColor": "#36a2eb",
+            "pointHoverBorderColor": "#36a2eb",
+            "yAxisID": "y-axis-1"
+        }
+    ],"calcCropland": [
+        {
+            "type": "bar",
+            "label": "calcCropland",
+            "borderColor": "#ff006e",
+            "backgroundColor": "#ff006e",
+            "pointBorderColor": "#ff006e",
+            "pointBackgroundColor": "#ff006e",
+            "pointHoverBackgroundColor": "#ff006e",
+            "pointHoverBorderColor": "#ff006e",
+            "yAxisID": "y-axis-1"
+        }
+    ],"calcForest": [
+        {
+            "type": "bar",
+            "label": "calcForest",
+            "borderColor": "#e71d36",
+            "backgroundColor": "#e71d36",
+            "pointBorderColor": "#e71d36",
+            "pointBackgroundColor": "#e71d36",
+            "pointHoverBackgroundColor": "#e71d36",
+            "pointHoverBorderColor": "#e71d36",
+            "yAxisID": "y-axis-1"
+        }
+    ],"calcNewForest": [
+        {
+            "type": "bar",
+            "label": "calcNewForest",
+            "borderColor": "#4ecdc4",
+            "backgroundColor": "#4ecdc4",
+            "pointBorderColor": "#4ecdc4",
+            "pointBackgroundColor": "#4ecdc4",
+            "pointHoverBackgroundColor": "#4ecdc4",
+            "pointHoverBorderColor": "#4ecdc4",
+            "yAxisID": "y-axis-1"
+        }
+    ],"calcOtherLand": [
+        {
+            "type": "bar",
+            "label": "calcOtherLand",
+            "borderColor": "#4ecdc4",
+            "backgroundColor": "#4ecdc4",
+            "pointBorderColor": "#4ecdc4",
+            "pointBackgroundColor": "#4ecdc4",
+            "pointHoverBackgroundColor": "#4ecdc4",
+            "pointHoverBorderColor": "#4ecdc4",
+            "yAxisID": "y-axis-1"
+        }
+    ],"calcUrban": [
+        {
+            "type": "bar",
+            "label": "calcUrban",
+            "borderColor": "#9a031e",
+            "backgroundColor": "#9a031e",
+            "pointBorderColor": "#9a031e",
+            "pointBackgroundColor": "#9a031e",
+            "pointHoverBackgroundColor": "#9a031e",
+            "pointHoverBorderColor": "#9a031e",
             "yAxisID": "y-axis-1"
         }
     ]
