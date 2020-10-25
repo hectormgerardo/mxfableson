@@ -22,15 +22,15 @@ function ComboBox (props) {
 
             <div className="contenedor-selects">
                 <br></br>
-                <select  name="Scenario" onChange={onChange}>
-                    <option value="Sustainaible">Sustainaible</option>
-                    <option value="Current_trend">Current trend</option>
+                <select  name="scenathon_id" onChange={onChange}>
+                    <option value="6">Sustainaible</option>
+                    <option value="5">Current trend</option>
                     
                 </select>
                 <br></br>
                 <select  name="Iteration" onChange={onChange}>
-                    <option value="iteration_4">iteration:4</option>
-                    <option value="iteration_3">iteration:3</option>
+                    <option value="after">after</option>
+                    <option value="before">before</option>
                 </select>
                 <br></br>
                  <select  name="GraficaType" onChange={onChange}>

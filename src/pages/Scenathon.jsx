@@ -58,7 +58,7 @@ class Scenathon extends Component {
                 [e.target.name]: e.target.value
                 
             },
-            [e.target.name]:e.target.value
+            dashboard:e.target.value
            
         })
         
@@ -87,9 +87,9 @@ class Scenathon extends Component {
                 this.dash=<Biodiversity combinacion={this.state}/>;
             break;
             case 'Protected areas by type':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=null;
-                this.dash=<ProtectedAreaByType combinacion={this.state}/>;
+             //  <ComboBox onChange={this.handleChange}/>
+             this.combobox=null;
+                this.dash=<ProtectedAreaByType/>;
             break;
             case 'Land Cover':
                 this.combobox=<ComboBox onChange={this.handleChange}/>

@@ -1,0 +1,40 @@
+{
+    "ProtectedAreasForest": [
+        {
+            "type": "bar",
+            "label": "ProtectedAreasForest",
+            "borderColor": "#EC932F",
+            "backgroundColor": "#e6194b",
+            "pointBorderColor": "#EC932F",
+            "pointBackgroundColor": "#EC932F",
+            "pointHoverBackgroundColor": "#EC932F",
+            "pointHoverBorderColor": "#EC932F",
+            "yAxisID": "y-axis-1"
+        }
+    ], "ProtectedAreasOther": [
+        {
+            "type": "bar",
+            "label": "ProtectedAreasOther",
+            "borderColor": "#EC932F",
+            "backgroundColor": "#3cb44b",
+            "pointBorderColor": "#EC932F",
+            "pointBackgroundColor": "#EC932F",
+            "pointHoverBackgroundColor": "#EC932F",
+            "pointHoverBorderColor": "#EC932F",
+            "yAxisID": "y-axis-1"
+        }
+    ],
+    "ProtectedAreasOtherNat": [
+        {
+            "type": "bar",
+            "label": "ProtectedAreasOtherNat",
+            "borderColor": "#EC932F",
+            "backgroundColor": "#ffe119",
+            "pointBorderColor": "#EC932F",
+            "pointBackgroundColor": "#EC932F",
+            "pointHoverBackgroundColor": "#EC932F",
+            "pointHoverBorderColor": "#EC932F",
+            "yAxisID": "y-axis-1"
+        }
+    ]
+}

@@ -47,9 +47,13 @@ app.get('/protected:combinaciones',async(req,res)=>{
     try{
         
 
-        const{iteration,group}=JSON.parse(req.params.combinaciones).select;
+       const{Iteration,GraficaType}=JSON.parse(req.params.combinaciones).select;
+console.log(req.params.combinaciones)
 
-        switch(group){
+console.log(Iteration)
+console.log(GraficaType)
+
+        switch(GraficaType){
             case "group": 
             var query="SELECT \"Year\", SUM(\"ProtectedAreasForest\") AS \"ProtectedAreasForest\", SUM(\"ProtectedAreasOther\") AS \"ProtectedAreasOther\", SUM(\"ProtectedAreasOtherNat\") AS \"ProtectedAreasOtherNat\" FROM \"resultsScen2020\" WHERE \"iteration\"=$1 GROUP BY \"Year\" ORDER BY \"Year\"";
                 break;
@@ -63,7 +67,7 @@ app.get('/protected:combinaciones',async(req,res)=>{
                 var query=null;
                 break;
         }
-        const response=await pool.query(query,[iteration]);
+        const response=await pool.query(query,[Iteration]);
 
 res.status(200).json(response.rows)
 
