@@ -20,7 +20,8 @@ app.listen(5000,()=>{
 
 //routes
 
-app.get('/net/:combinaciones',async(req,res)=>{
+app.get('/net/:combinaciones',async(req,res)=>  
+{
     try{
         
         const{Product,iteration,scenathon_id,column}=JSON.parse(req.params.combinaciones).select;

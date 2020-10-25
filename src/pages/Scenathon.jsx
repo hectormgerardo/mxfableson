@@ -67,11 +67,11 @@ class Scenathon extends Component {
     }
 
     selectDashboard(){
-        
         switch(this.state.dashboard){
             case 'Global Target Summary': 
                 this.combobox=<ComboBox onChange={this.handleChange}/>
-              this.dash=<GlobalTargets combinacion={this.state}/>;
+         //  this.dash=<GlobalTargets combinacion={this.state}/>;
+        // this.dash=<h1>hola</h1>
               break;
             case 'Net Forest Cover Change(1)': 
             this.combobox=<ComboBox onChange={this.handleChange}/>
@@ -88,6 +88,7 @@ class Scenathon extends Component {
             break;
             case 'Protected areas by type':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
+                this.dash=null;
                 this.dash=<ProtectedAreaByType combinacion={this.state}/>;
             break;
             case 'Land Cover':
@@ -129,44 +130,17 @@ class Scenathon extends Component {
 
 
     render() {
-    
         return (
-            
             <div className="container-fluid">
-              
-              
-               
-              
-                 {/* componente de comboBox(opciones para el tipo de grafica)*/} 
-                 <div className="Combo-Box">
-                
+                {/* componente de comboBox(opciones para el tipo de grafica)*/}
+                <div className="Combo-Box">
                 </div>
-                
                 <div>
-                    <Dashboard metodo={this.handleChange}  data={this.state} />     
+                    <Dashboard metodo={this.handleChange} data={this.state} />
                 </div>
-
-
-
-                
-{this.selectDashboard()}
-              {this.combobox}
-              
-              
+                {this.selectDashboard()}
+                {this.combobox}
                 {this.dash}
-               
-                
-            
-                
-
-               
-
-          
-               
-
-           
-
-            
             </div>
         )
     }
