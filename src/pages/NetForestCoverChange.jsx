@@ -91,6 +91,7 @@ const convertir=(props)=> {
             fill: false,
             backgroundColor: 'Green',
             borderColor: '#71B37C',
+            radius: 5,
             hoverBackgroundColor: '#71B37C',
             hoverBorderColor: '#71B37C',
             yAxisID: 'y-axis-1'
@@ -102,6 +103,7 @@ const convertir=(props)=> {
                   fill: false,
                   borderColor: 'Red',
                   backgroundColor: 'Red',
+                  radius: 5,
                   pointBorderColor: 'Red',
                   pointBackgroundColor: 'Red',
                   pointHoverBackgroundColor: 'Red',
@@ -117,6 +119,7 @@ const convertir=(props)=> {
                   fill: false,
                   borderColor: 'Black',
                   backgroundColor: 'Black',
+                  radius: 5,
                   pointBorderColor: 'Black',
                   pointBackgroundColor: 'Black',
                   pointHoverBackgroundColor: 'Black',
@@ -128,9 +131,10 @@ const convertir=(props)=> {
             label: 'Aforestation',
             data: aforestation,
             fill: false,
-            backgroundColor: 'rgba(129,199,132, 0.5)',
+            backgroundColor: 'rgba(129,199,132, 0.8)',
             borderColor: 'Green',
             borderWidth: 2,
+           
             hoverBackgroundColor: 'rgba(129,199,135,0.7)',
             hoverBorderColor: 'Green',
             yAxisID: 'y-axis-1'
@@ -141,7 +145,7 @@ const convertir=(props)=> {
             fill: false,
             borderColor: '#a98600',
             borderWidth: 2,
-            backgroundColor: 'rgba(255,213,79, 0.7)',
+            backgroundColor: 'rgba(255,213,79, 0.8)',
             hoverBackgroundColor: 'rgba(255,213,79,0.7)',
 
             pointBorderColor: '#ffd54f',

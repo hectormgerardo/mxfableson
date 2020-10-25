@@ -49,7 +49,7 @@ const drawBiodiversity = (props) =>
 
 
 return (
-<Container >
+<Container fluid >
             <Row  >
               <Col>
               <div style={{height: "100vh"}}>
