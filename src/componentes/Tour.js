@@ -13,14 +13,14 @@ const Tour = () => {
           styles={{
            options: {
               // modal arrow and background color
-              arrowColor: "#eee",
-              backgroundColor: "#eee",
+              arrowColor: "#012758",
+              backgroundColor: "#fff",
               // page overlay color
-              overlayColor: "rgba(79, 26, 0, 0.4)",
+              overlayColor: "rgba(0, 0, 0, 0.5)",
               //button color
-              primaryColor: "mediumaquamarine",
+              primaryColor: "#012758",
               //text color
-              textColor: "#333",
+              textColor: "#fff",
           
               //width of modal
               width: 500,

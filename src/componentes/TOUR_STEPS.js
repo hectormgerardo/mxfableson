@@ -14,7 +14,7 @@ export default[
           locale: { 
             next: <span>Next</span>,
           },
-          placement: "bottom"
+          placement: "top"
     },
     {
         target: ".imagen",
@@ -30,7 +30,7 @@ export default[
             next: <span>End Tour</span>,
             back: <span>Back</span>
           },
-          placement: "top"
+          placement: "bottom"
 
     }
 ]

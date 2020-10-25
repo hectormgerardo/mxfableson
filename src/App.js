@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import Navbar from "./componentes/Navbar";
-import SidebarMenu from "./componentes/SidebarMenu";
 import Tour from "./componentes/Tour";
 import About from './pages/About';
 import { Jumbotron } from './componentes/Jumbotron'
@@ -19,6 +18,12 @@ import {
   Link
 } from 'react-router-dom';
 import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
+import HomeIcon from "@material-ui/icons/Home";
+import ReceiptIcon from "@material-ui/icons/Receipt";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
+import SettingsIcon from "@material-ui/icons/Settings";
+import Sidebar from "./componentes/Sidebar";
 
 const ReactHint = ReactHintFactory(React)
 
@@ -65,16 +70,16 @@ export class App extends React.Component {
     const { run, stepIndex, steps } = this.state;
     return (
         <React.Fragment>
-        {/*<div>
+        <div>
           <Tour/>
-        </div>*/}
+        </div>
 
         <div className="Nav">
           <Navbar/>
         </div>
 
           <div className="imagen">
-            <Jumbotron />
+            <Jumbotron/>
           </div>
 
               <div data-rh="Este es el apartado About" data-rh-at="top" className="About">
@@ -129,7 +134,7 @@ export class App extends React.Component {
           </div>
         </div>
 
-        <SidebarMenu/>
+        <Sidebar/>
          
     </React.Fragment>
   )
