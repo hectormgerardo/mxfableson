@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import Navbar from "./componentes/Navbar";
+import Header from "./componentes/Header";
 import Tour from "./componentes/Tour";
 import Touraux from "./componentes/Touraux";
 import About from './pages/About';
@@ -19,14 +20,17 @@ import {
   Link
 } from 'react-router-dom';
 import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
+import { Evented } from 'leaflet';
 
 const ReactHint = ReactHintFactory(React)
 
 export class App extends React.Component {
+  
   constructor(){
     super();
-    
+   // this.handleScroll = this.handleScroll.bind(this);
   this.state={
+    hidden: false,
     run: false,
       steps: [
         {
@@ -60,6 +64,35 @@ export class App extends React.Component {
     console.groupEnd();
   };
   
+  /*
+componentDidMount(){
+  const script = Navbar.document.createElement("script");
+
+    script.src = "NavbarAnimation.js";
+    script.async = true;
+
+    Navbar.document.body.appendChild(script);
+}
+ 
+  componentWillMount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount(){
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(e) {
+    let lastScrollTop = 0;
+    const currentScrollTop = Navbar.scrollTop;
+    if (!this.state.hidden && currentScrollTop > lastScrollTop) {
+      this.setState({ hidden: true });
+    } else if(this.state.hidden) {
+      this.setState({ hidden: false });
+    }
+    lastScrollTop = currentScrollTop;
+  }
+  */
   
   render(){
     const { run, stepIndex, steps } = this.state;
@@ -120,10 +153,17 @@ export class App extends React.Component {
         {/*<div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
           <Jumbotron_fin/>
         </div>*/}
+        
+        
+        <div>
+          <Header/>
+        </div>
+        
         <div>
           <Scenathon/>
-        </div>
+        </div> 
 
+        
          
     </React.Fragment>
   )

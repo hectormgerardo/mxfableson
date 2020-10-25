@@ -12,7 +12,7 @@ const Styles = styled.div`
     }
     .About{
         background-size: cover;
-        color: #ccc;
+        background-color: #FFFFF;
         height: 320px;
         position: relative;
         z-index: -2;
@@ -27,11 +27,11 @@ const Styles = styled.div`
       column-rule: 1px dotted #000;
     }
     .overlay{
-        background-color: #000;
+        background-color: #FFFFF;
         opacity:0.6;
         position: absolute;
         top:0; 
-        left: o;
+        left: 0;
         bottom: 0;
         right: 0;
         z-index: -1;
@@ -39,10 +39,11 @@ const Styles = styled.div`
     
     .vertical { 
       border-left:  3px  solid;
-      height: 150px; 
+      height: 250px; 
       color: #306973; 
       left:30%; 
       position:absolute;
+      margin-top: -30px;
    }  
     `
     ;
