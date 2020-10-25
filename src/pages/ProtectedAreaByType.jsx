@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BarChart from "../componentes/BarChart.jsx";
-import data from '../data/Protected.json';
+
 import ChartCharacteristics from '../data/ChartCharacteristics.json';
 import ComboBox from '../componentes/ComboBox'
 
