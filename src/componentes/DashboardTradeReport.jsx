@@ -18,7 +18,6 @@ function dashboardTradeReport (props) {
   
      
         return (
-           
 
             <div className="contenedor-selects">
                 <select  name="dashboard-tradeReport" onChange={props.metodo}>

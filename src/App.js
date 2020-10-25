@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import Navbar from "./componentes/Navbar";
+import Sidebar from "./componentes/Sidebar";
+import items from "./componentes/items";
 import Tour from "./componentes/Tour";
 import About from './pages/About';
 import { Jumbotron } from './componentes/Jumbotron'
@@ -18,12 +20,6 @@ import {
   Link
 } from 'react-router-dom';
 import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
-import HomeIcon from "@material-ui/icons/Home";
-import ReceiptIcon from "@material-ui/icons/Receipt";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
-import SettingsIcon from "@material-ui/icons/Settings";
-import Sidebar from "./componentes/Sidebar";
 
 const ReactHint = ReactHintFactory(React)
 
@@ -32,21 +28,9 @@ export class App extends React.Component {
     super();
     
   this.state={
-    run: false,
-      steps: [
-        {
-          target:'.About',
-          content: 'Esto es el Joyride'
-        },
-        {
-          target:'.Nav',
-          content: 'Esto es el Joyride parte 2'
-        }
-      ],
-      stepIndex: 0,
+    
     }
   };
-
 
   handleJoyrideCallback = data => {
     const { action, index, status, type } = data;
@@ -66,8 +50,13 @@ export class App extends React.Component {
   };
   
   
+
+  
   render(){
     const { run, stepIndex, steps } = this.state;
+
+    
+
     return (
         <React.Fragment>
         <div>
@@ -125,16 +114,15 @@ export class App extends React.Component {
         {/*<div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
           <Jumbotron_fin/>
         </div>*/}
-        <div>
-          <div className="Menu">
-
+          <div >
+            <div className="Graphs">
+              <Scenathon/>
+            </div>
+            <div>
+              <Sidebar items={items} />
+            </div>
           </div>
-          <div className="Graphs">
-            <Scenathon/>
-          </div>
-        </div>
 
-        <Sidebar/>
          
     </React.Fragment>
   )
