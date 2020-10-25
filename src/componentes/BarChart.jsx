@@ -23,7 +23,8 @@ const  BarChart=(props)=> {
     position:props.labelposition===undefined?'right':props.labelposition
   },
     tooltips: {
-      mode: 'label'
+      mode: 'label',
+      
     },
     elements: {
       line: {
