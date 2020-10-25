@@ -16,6 +16,7 @@ import GlobalTargets from '../pages/GlobalTargets'
 import ProtectedAreaByType from '../pages/ProtectedAreaByType'
 import LandCover from '../pages/LandCover'
 import FoodEnergyIntakePerCapita from '../pages/FoodEnergyIntakePerCapita'
+import FoodEnergyIntakePerCapita2 from '../pages/FoodEnergyIntakePerCapita2'
 import FreshWaterUse from '../pages/FreshWaterUse'
 import NetForestCoverChange2 from '../pages/NetForestCoverChange2'
 import GreenHouse2 from '../pages/GreenHouse2'
@@ -113,12 +114,13 @@ class Scenathon extends Component {
             break;
             case 'Food energy intake per capita (1)':
              //   this.combobox=<ComboBox2 onChange={this.handleChange}/>
-             this.combobox=null;   
-             this.dash=<FoodEnergyIntakePerCapita combinacion={this.state}/>;
+             this.combobox=null;  
+              
+             this.dash=<FoodEnergyIntakePerCapita/>;
             break;
             case 'Food energy intake per capita (2)':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<h1>Food energy intake per capita (2)</h1>;
+                this.combobox=null;   
+             this.dash=<FoodEnergyIntakePerCapita2/>;
             break;
            
           }

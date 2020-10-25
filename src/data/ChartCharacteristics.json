@@ -60,5 +60,29 @@
             "pointHoverBorderColor": "#EC932F",
             "yAxisID": "y-axis-1"
         }
+    ],"Protein_feasible": [
+        {
+            "type": "bar",
+            "label": "Protein_feasible",
+            "borderColor": "#EC932F",
+            "backgroundColor": "#ffe119",
+            "pointBorderColor": "#EC932F",
+            "pointBackgroundColor": "#EC932F",
+            "pointHoverBackgroundColor": "#EC932F",
+            "pointHoverBorderColor": "#EC932F",
+            "yAxisID": "y-axis-1"
+        }
+    ],"Fat_feasible": [
+        {
+            "type": "bar",
+            "label": "Fat_feasible",
+            "borderColor": "36a2eb",
+            "backgroundColor": "#36a2eb",
+            "pointBorderColor": "#36a2eb",
+            "pointBackgroundColor": "#36a2eb",
+            "pointHoverBackgroundColor": "#36a2eb",
+            "pointHoverBorderColor": "#36a2eb",
+            "yAxisID": "y-axis-1"
+        }
     ]
 }
