@@ -1,15 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import MixedChart from "../componentes/MixedChart.jsx";
-import data from '../data/GlobalTargets.json';
+import ChartCharacteristics from '../data/ChartCharacteristics.json';
+import ComboBox2 from "../componentes/ComboBox2.jsx";
+const FoodEnergyIntakePerCapita = () => {
 
-const drawFoodEnergyIntakePerCapita = (props) => {
+  function Food(ChartCharacteristics,data) {
+    this.data=data;
+    this.type=ChartCharacteristics[0]["type"];
+    this.label=ChartCharacteristics[0]["label"];
+    this.borderColor=ChartCharacteristics[0]["borderColor"];
+    this.backgroundColor=ChartCharacteristics[0]["backgroundColor"];
+    
+  }
 
+  const [state, setState] = useState({
+    select: {
+      Year: '2000',
+      scenathon_id: '6',
+      Iteration: '4',
+    }
+  });
 
+  const [json, setJson] = useState([]);
 
-
-
+  {/*
     const convertir=(props)=> {
  
+ 
+
+
+
+
         var dataUno=[]
         var dataDos=[]
         var labels=[]
@@ -51,12 +72,121 @@ const drawFoodEnergyIntakePerCapita = (props) => {
       
        return data
       } 
+*/}
+  var data = null;
 
 
 
-    let dataAux;
 
-    const { GraficaType, Iteration, Scenario, Year } = props.combinacion.select;
+  useEffect(() => {
+  
+    getFoodEnergyIntakePerCapita();
+    
+  }, [state]);
+
+
+
+
+
+
+  const getFoodEnergyIntakePerCapita = async () => {
+   
+
+   
+    try {
+          
+      const body =state;
+      
+     const response = await fetch("http://localhost:5000/foodenergy1"+JSON.stringify(body));
+     const  jsonAux =  await response.json();
+  
+    setJson(jsonAux);
+   
+
+    } catch (error) {
+      console.error(error)
+    }
+
+
+
+  }
+
+
+  const handleChange = e => {
+  
+var year = state.select.Year;
+var scenathon = state.select.scenathon_id;
+var iteration = state.select.Iteration;
+
+if(e.target.name=="scenathon_id"){
+  switch (e.target.value) {
+    case '6':
+      iteration=state.select.Iteration=="1"? "3":"4";
+      scenathon="6";
+        break;
+    case '5':
+     scenathon="5";
+     iteration=state.select.Iteration=="3"? "1":"2";
+        break;     
+}
+}else{
+ 
+  year= e.target.name=="Year"? e.target.value: state.select.Year;
+  iteration=e.target.name=="Iteration"?scenathon=="6" ? e.target.value==="after"? "4":"3" : e.target.value==="after"? "2":"1":state.select.Iteration;
+}
+
+setState({
+  select: {
+    Year: year,
+    scenathon_id:scenathon,
+    Iteration:iteration,
+
+    }
+
+ 
+});
+
+  }
+
+  const converter = () => {
+  
+
+    var labels=[];
+    var kcal_feasible=[];
+    var target_mder=[];
+    var dataSet=[]
+
+
+    if (json != null ) {
+   
+      json.map((item) => {
+          labels.push(item.Country);
+          kcal_feasible.push(item.kcal_feasible);
+          target_mder.push(item.target_mder);
+        
+      });
+
+      var food = new Food(ChartCharacteristics["kcal_feasible"],kcal_feasible);
+      dataSet.push(food);
+      food = new Food(ChartCharacteristics["target_mder"],target_mder);
+      dataSet.push(food);
+
+      var dataAux = {
+        labels:labels,
+        datasets:dataSet
+    };
+    data=dataAux;
+
+
+    }
+  
+  }
+  //let dataAux;
+
+  //const { GraficaType, Iteration, Scenario, Year } = props.combinacion.select;
+  {/*
+  
+  
   
     switch(GraficaType){
       case 'group':
@@ -91,10 +221,28 @@ const drawFoodEnergyIntakePerCapita = (props) => {
       }
       break;
     }
-    return <div style={{height:'75vh'}}><MixedChart data={dataAux}
+    */}
+  return (
+
+    <div>
+      
+      <div>
+        <ComboBox2 onChange={handleChange} />
+        {converter()}
+      </div>
+
+      
+    <div style={{height:'75vh'}}>
+      <MixedChart data={data}
     aspectRatio={false}
     labelposition="top"
-    title="Food energy intake per capita"/></div>;
-  }
-  export default drawFoodEnergyIntakePerCapita;
+    title="Food energy intake per capita"/>
+    </div>
+  
+    </div>
+  )
+
+
+}
+export default FoodEnergyIntakePerCapita;
 

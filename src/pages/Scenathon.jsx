@@ -112,8 +112,9 @@ class Scenathon extends Component {
                 this.dash=<GreenHouse2 combinacion={this.state}/>;
             break;
             case 'Food energy intake per capita (1)':
-                this.combobox=<ComboBox2 onChange={this.handleChange}/>
-                this.dash=<FoodEnergyIntakePerCapita combinacion={this.state}/>;
+             //   this.combobox=<ComboBox2 onChange={this.handleChange}/>
+             this.combobox=null;   
+             this.dash=<FoodEnergyIntakePerCapita combinacion={this.state}/>;
             break;
             case 'Food energy intake per capita (2)':
                 this.combobox=<ComboBox onChange={this.handleChange}/>

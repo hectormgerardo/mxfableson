@@ -36,5 +36,29 @@
             "pointHoverBorderColor": "#EC932F",
             "yAxisID": "y-axis-1"
         }
+    ],"kcal_feasible": [
+        {
+            "type": "bar",
+            "label": "Kcal feasible",
+            "borderColor": "#EC932F",
+            "backgroundColor": "#ffe119",
+            "pointBorderColor": "#EC932F",
+            "pointBackgroundColor": "#EC932F",
+            "pointHoverBackgroundColor": "#EC932F",
+            "pointHoverBorderColor": "#EC932F",
+            "yAxisID": "y-axis-1"
+        }
+    ],"target_mder": [
+        {
+            "type": "scatter",
+            "label": "Target (MDER)",
+            "borderColor": "#EC932F",
+            "backgroundColor": "#ffe119",
+            "pointBorderColor": "#EC932F",
+            "pointBackgroundColor": "#EC932F",
+            "pointHoverBackgroundColor": "#EC932F",
+            "pointHoverBorderColor": "#EC932F",
+            "yAxisID": "y-axis-1"
+        }
     ]
 }
