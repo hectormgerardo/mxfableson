@@ -1,36 +1,28 @@
+import { HorizontalBar } from "react-chartjs-2";
 import React from 'react';
-import {Bar} from 'react-chartjs-2';
 
+const HorizontalBarChart = (props) => {
 
-
-
-//draw triple style chart
-const  drawSuperGraph=(props)=> {
-
-     
-       
-      
     const options = {
       responsive: true,
-      maintainAspectRatio: props.aspectRatio===undefined?false:props.aspectRatio,
+      maintainAspectRatio: props.aspectRatio===undefined?true:props.aspectRatio,
       title: {
         display: true,
         text: props.title
     },legend:{
+      display:true,
       labels:{
-        boxWidth:props.labelWidth===undefined?20:props.labelWidth,
-      fontSize:props.labelSize===undefined?12:props.labelSize
+        boxWidth:props.labelwidth===undefined?20:props.labelwidth,
+        fontSize:props.labelSize===undefined?12:props.labelSize
       },
       position:props.labelposition===undefined?'right':props.labelposition
-    },tooltips: {
+    },
+      tooltips: {
         mode: 'label'
       },
       elements: {
         line: {
-          fill: false,
-          bezierCurve : false,
-          lineTension: 0,       
-
+          fill: false
         }
       },
       scales: {
@@ -40,10 +32,12 @@ const  drawSuperGraph=(props)=> {
   
             display: true,
             gridLines: {
-              display: true
-            },
-            
-            
+              display: true,
+            }, ticks: {
+                beginAtZero: true,
+            }
+  
+  
           }
         ],
         yAxes: [
@@ -51,7 +45,7 @@ const  drawSuperGraph=(props)=> {
               stacked: true,
   
             type: 'linear',
-            display: true,    
+            display: true,
             position: 'left',
             id: 'y-axis-1',
             gridLines: {
@@ -60,8 +54,7 @@ const  drawSuperGraph=(props)=> {
   
             labels: {
               show: true,
-              usePointStyle: true,
-
+              position: 'right',
             }
           },
           {
@@ -71,8 +64,9 @@ const  drawSuperGraph=(props)=> {
             id: 'y-axis-2',
             gridLines: {
               display: false
-            }
-          ,
+            },ticks: {
+                beginAtZero: true,
+            },
             labels: {
               show: true
             }
@@ -80,13 +74,14 @@ const  drawSuperGraph=(props)=> {
         ]
       }
     };
-    
-  //  let data = props.data;
-        
   
-    return (
-          <Bar data={props.data}
-                options={options}/>
-      );
-  }
-  export default drawSuperGraph;
+      let data=props.data;
+            return (
+  
+                <HorizontalBar data={data}
+                      options={options}/>
+  
+  
+            );
+        }
+        export default HorizontalBar;

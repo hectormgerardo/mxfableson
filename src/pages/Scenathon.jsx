@@ -6,7 +6,7 @@ import ComboBox2 from '../componentes/ComboBox2'
 import ComboBox3 from '../componentes/ComboBox3'
 
 import Dashboard from '../componentes/Dashboard'
-import TabSelector from '../componentes/TabSelector'
+
 
 //dashboards
 import NetForestCoverChange from '../pages/NetForestCoverChange'
@@ -52,7 +52,7 @@ class Scenathon extends Component {
                 ...this.state.select,
                 [e.target.name]: e.target.value
             },
-            [e.target.name]:e.target.value
+            dashboard:e.target.value
            
         })
         
@@ -61,11 +61,11 @@ class Scenathon extends Component {
     }
 
     selectDashboard(){
-        
         switch(this.state.dashboard){
             case 'Global Target Summary': 
                 this.combobox=<ComboBox onChange={this.handleChange}/>
-              this.dash=<GlobalTargets combinacion={this.state}/>;
+         //  this.dash=<GlobalTargets combinacion={this.state}/>;
+        // this.dash=<h1>hola</h1>
               break;
             case 'Net Forest Cover Change(1)': 
             this.combobox=<ComboBox onChange={this.handleChange}/>
@@ -81,8 +81,9 @@ class Scenathon extends Component {
                 this.dash=<Biodiversity combinacion={this.state}/>;
             break;
             case 'Protected areas by type':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<ProtectedAreaByType combinacion={this.state}/>;
+             //  <ComboBox onChange={this.handleChange}/>
+             this.combobox=null;
+                this.dash=<ProtectedAreaByType/>;
             break;
             case 'Land Cover':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
@@ -123,44 +124,17 @@ class Scenathon extends Component {
 
 
     render() {
-    
         return (
-            
-            <div className="container">
-              
-              
-               
-              
-                 {/* componente de comboBox(opciones para el tipo de grafica)*/} 
-                 <div className="Combo-Box">
-                
+            <div className="container-fluid">
+                {/* componente de comboBox(opciones para el tipo de grafica)*/}
+                <div className="Combo-Box">
                 </div>
-                
                 <div>
-                    <Dashboard metodo={this.handleChange}  data={this.state} />     
+                    <Dashboard metodo={this.handleChange} data={this.state} />
                 </div>
-
-
-
-                
-{this.selectDashboard()}
-              {this.combobox}
-              
-              
+                {this.selectDashboard()}
+                {this.combobox}
                 {this.dash}
-               
-                
-            
-                
-
-               
-
-          
-               
-
-           
-
-            
             </div>
         )
     }

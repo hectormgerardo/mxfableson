@@ -12,6 +12,7 @@ import Scenathon from '../pages/Scenathon';
 import Features from "../pages/GlobalTargets";
 import About from '../pages/About';
 import styled from 'styled-components';
+
 import TradeReport from '../pages/TradeReport';
 import IIASA_LOGO_WHITE from '../assets/IIASA_LOGO_WHITE.png';
 import IIASA_LOGO_COLOR from '../assets/IIASA_LOGO.png';
