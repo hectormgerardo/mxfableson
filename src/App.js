@@ -3,6 +3,7 @@ import './css/App.css';
 import Navbar from "./componentes/Navbar";
 import Sidebar from "./componentes/Sidebar";
 import items from "./componentes/items";
+import Header from "./componentes/Header";
 import Tour from "./componentes/Tour";
 import About from './pages/About';
 import { Jumbotron } from './componentes/Jumbotron'
@@ -20,13 +21,15 @@ import {
   Link
 } from 'react-router-dom';
 import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
+import { Evented } from 'leaflet';
 
 const ReactHint = ReactHintFactory(React)
 
 export class App extends React.Component {
+  
   constructor(){
     super();
-    
+   // this.handleScroll = this.handleScroll.bind(this);
   this.state={
     
     }
@@ -49,6 +52,35 @@ export class App extends React.Component {
     console.groupEnd();
   };
   
+  /*
+componentDidMount(){
+  const script = Navbar.document.createElement("script");
+
+    script.src = "NavbarAnimation.js";
+    script.async = true;
+
+    Navbar.document.body.appendChild(script);
+}
+ 
+  componentWillMount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount(){
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(e) {
+    let lastScrollTop = 0;
+    const currentScrollTop = Navbar.scrollTop;
+    if (!this.state.hidden && currentScrollTop > lastScrollTop) {
+      this.setState({ hidden: true });
+    } else if(this.state.hidden) {
+      this.setState({ hidden: false });
+    }
+    lastScrollTop = currentScrollTop;
+  }
+  */
   
 
   
@@ -115,14 +147,19 @@ export class App extends React.Component {
           <Jumbotron_fin/>
         </div>*/}
           <div >
-            <div className="Graphs">
-              <Scenathon/>
+            <div>
+              <Header/>
             </div>
             <div>
               <Sidebar items={items} />
             </div>
+            <div className="Graphs">
+              <Scenathon/>
+            </div>
           </div>
-
+        
+        
+        
          
     </React.Fragment>
   )

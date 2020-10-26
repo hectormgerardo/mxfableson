@@ -12,17 +12,20 @@ const Styles = styled.div`
         color: #ccc;
         height: 500px;
         position: absoulte;
-    
+        margin:0;
+        padding:0;
+        background-position:center ;
+        height:55vh;
     }
     .overlay{
         background-color: #000;
         opacity:0.6;
         position: absolute;
         top:0;
-        left: o;
+        left: 0;
         bottom: -5;
         right: 0;
-        z-index: -1;
+        
     }`;
 
 

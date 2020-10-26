@@ -1,32 +1,53 @@
 import React from 'react';
 import "../css/App.css"
-import * as ReactBootStrap from "react-bootstrap";
 import styled from 'styled-components';
+import INCON15 from '../assets/ICONOS-15.png';
+import { Icon } from 'leaflet';
 
 
 const Styles = styled.div`
-.header1{
-  
+header{
+
+
+overflow:hidden;
+  background-color: #56C02B;
+  color: white;
+  padding: 0 1%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size: 50px;
+  margin: 0;
+
+
+.header-right{
+    width:80px;
 }
 
-.headerComponent{
 
 }
+
+
+
+
 
 `;
 
 export const Header = () => {
 
     return (
-<Styles>
-     <Header className="header1">
-           
+        <Styles>
+            <header>
+            <div class="header-left">15</div>
+                    <div class="header-center">Life on Land</div>
+                    <img src={INCON15} class="header-right" />
+            </header>
+        </Styles>
 
-        </Header>
-</Styles>
+
        
 
-
-
-    )
+    );
 };
+
+export default Header;
