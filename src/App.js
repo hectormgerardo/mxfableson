@@ -53,7 +53,7 @@ export class App extends React.Component {
   };
   
   /*
-componentDidMount(){
+  componentDidMount(){
   const script = Navbar.document.createElement("script");
 
     script.src = "NavbarAnimation.js";
@@ -81,14 +81,8 @@ componentDidMount(){
     lastScrollTop = currentScrollTop;
   }
   */
-  
-
-  
   render(){
     const { run, stepIndex, steps } = this.state;
-
-    
-
     return (
         <React.Fragment>
         <div>
@@ -103,11 +97,12 @@ componentDidMount(){
             <Jumbotron/>
           </div>
 
-              <div data-rh="Este es el apartado About" data-rh-at="top" className="About">
-                <About/>
-              </div>
-
-          <Router>
+              
+          <div>
+          <Header/>
+        </div>
+         
+         <Router>
           <Link to="/Scenathon">
           </Link>  
           <Switch>
@@ -115,10 +110,11 @@ componentDidMount(){
             </Route>
           </Switch>
          </Router>
+         
 
-        {/*<div data-rh="Este es el apartado About" data-rh-at="top" id="About">
+        <div data-rh="Este es el apartado About" data-rh-at="top" id="About">
           <About/>
-        </div>*/}
+        </div>*
         
         <div className="app">
 
@@ -138,28 +134,21 @@ componentDidMount(){
         <div id="Jumbotron_2" data-rh="" data-rh-at="top">
           <Jumbotron_2 />
         </div>
-        
-        {/*<div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
+        <div data-rh="Este es el apartado About" data-rh-at="top" className="About">
+                <About/>
+              </div>
+        <div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
           <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
-      </div>*/}
+      </div>
         
-        {/*<div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
+        <div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
           <Jumbotron_fin/>
-        </div>*/}
-          <div >
-            <div>
-              <Header/>
-            </div>
-            <div>
-              <Sidebar items={items} />
-            </div>
-            <div className="Graphs">
-              <Scenathon/>
-            </div>
-          </div>
-        
-        
-        
+        </div>
+
+
+        <div>
+          <Scenathon/>
+        </div> 
          
     </React.Fragment>
   )

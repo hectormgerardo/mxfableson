@@ -2,7 +2,7 @@
 import React from 'react';
 import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 import styled from 'styled-components';
-import Banner from '../assets/banner.png';
+import Banner from '../assets/home.png';
 
 const Styles = styled.div`
     .bann{

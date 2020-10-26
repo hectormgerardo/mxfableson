@@ -9,6 +9,7 @@ const Styles = styled.div`
        text-align: center;
        font-size:20px;
        padding-left: 300px;
+       margin-left:80px;
     }
     .About{
         background-size: cover;
@@ -16,6 +17,7 @@ const Styles = styled.div`
         height: 320px;
         position: relative;
         z-index: -2;
+        background-color:transparent;
     }
     .about_{
       text-align:left;  
@@ -25,6 +27,7 @@ const Styles = styled.div`
       list-style: none;
       font-size: 75px;
       column-rule: 1px dotted #000;
+     
     }
     .overlay{
         background-color: #FFFFF;
