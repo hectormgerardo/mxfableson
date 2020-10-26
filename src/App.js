@@ -3,6 +3,7 @@ import './css/App.css';
 import Navbar from "./componentes/Navbar";
 import Header from "./componentes/Header";
 import About1 from "./componentes/About1";
+import About2 from "./componentes/About2";
 import Tour from "./componentes/Tour";
 import Touraux from "./componentes/Touraux";
 import About from './pages/About';
@@ -23,6 +24,7 @@ import {
 } from 'react-router-dom';
 import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
 import { Evented } from 'leaflet';
+
 
 const ReactHint = ReactHintFactory(React)
 
@@ -114,19 +116,31 @@ componentDidMount(){
 
           <div>
           <About1/>
-        </div>   
+        </div>
+        <div id="Jumbotron_2" data-rh="" data-rh-at="top">
+          <Jumbotron_2 />
+        </div>
+
           <div>
           <Header/>
         </div>
         <div style={{display: 'flex'}}>
           <div>
-            <Aside />
+            <Aside/>
           </div>
           <div>
           <Scenathon/>
           </div>
         </div>
 
+        
+
+        <div>
+          <About2/>
+        </div>
+<div>
+          <Jumbotron_3/>
+        </div>
          {/* <Router>
           <Link to="/Scenathon">
           </Link>  
@@ -155,14 +169,12 @@ componentDidMount(){
         <div>
       </div>
         
-
-        <div id="Jumbotron_2" data-rh="" data-rh-at="top">
-          <Jumbotron_2 />
-        </div>
+ {/*
+        
         <div data-rh="Este es el apartado About" data-rh-at="top" className="About">
                 <About/>
               </div>
-        {/*<div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
+       <div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
           <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
       </div>*/}
         

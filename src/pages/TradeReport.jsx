@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
 
-
-import ComboBox from '../componentes/ComboBox'
-import ComboBox2 from '../componentes/ComboBox2'
-import ComboBox3 from '../componentes/ComboBox3'
-
-import Dashboard from '../componentes/Dashboard'
-import TabSelector from '../componentes/TabSelector'
-
 import DashboardTradeReport from '../componentes/DashboardTradeReport'
 //dashboards
 import SustainableImporters from './SustainableImporters'
@@ -49,10 +41,10 @@ class TradeReport extends Component {
         console.log("entre switch")
         switch (state) {
             case 'Sustainable_next_exporters':
-                this.dash = <SustainableExporters />;
+                this.dash = <SustainableExporters/>;
                 break;
             case 'Sustainable_next_importers':
-                this.dash = <SustainableImporters />;
+                this.dash = <SustainableImporters/>;
                 break;
             case 'Current_trend_next_exporters':
                 this.dash = <h1>Current_trend_next_exporters</h1>

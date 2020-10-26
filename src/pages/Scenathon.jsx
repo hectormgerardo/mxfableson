@@ -7,6 +7,7 @@ import ComboBox3 from '../componentes/ComboBox3'
 
 import Dashboard from '../componentes/Dashboard'
 import TabSelector from '../componentes/TabSelector'
+import Aside from '/../componentes/Aside'
 
 //dashboards
 import NetForestCoverChange from '../pages/NetForestCoverChange'
@@ -46,13 +47,11 @@ class Scenathon extends Component {
 
     //recibe valor de class component "ComboBox" 
     handleChange = e => {
-     
         this.setState({
             select: {
                 //el next code evitara que se sobrescriba cuando reciba un valor new
                 ...this.state.select,
                 [e.target.name]: e.target.value
-                
             },
             [e.target.name]:e.target.value
            

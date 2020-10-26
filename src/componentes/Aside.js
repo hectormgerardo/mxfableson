@@ -36,40 +36,52 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
       </SidebarHeader>
 
       <SidebarContent>
-        <Menu iconShape="circle">
-          <MenuItem>
+        <Menu iconShape="round">
+          {/*<MenuItem>
             DASHBOARD
-          </MenuItem>
-          <MenuItem>Menu 1</MenuItem>
+          </MenuItem>*/}
+        {/*<MenuItem>Menu 1</MenuItem>*/}
         </Menu>
         <Menu iconShape="circle">
-          <SubMenu
-            title="Dashboard"           
-          >
-            <MenuItem>submenu 1</MenuItem>
-            <MenuItem>submenu 2</MenuItem>
-            <MenuItem>submenu 3</MenuItem>
-          </SubMenu>
-          <SubMenu
-            title="Menu 2"     
-          >
-            <MenuItem>submenu 1</MenuItem>
-            <MenuItem>submenu 2</MenuItem>
-            <MenuItem>submenu 3</MenuItem>
-          </SubMenu>
-          <SubMenu title="Multi Level Section" >
+          <SubMenu title="Dashboard" >
             <MenuItem>Global Target Summary</MenuItem>
-            <MenuItem>Net Forest Cover Change</MenuItem>
-            <SubMenu title="sub menu 3">
-              <MenuItem>submenu 3.1 </MenuItem>
-              <MenuItem>submenu 3.2 </MenuItem>
-              <SubMenu title="submenu">
+            <SubMenu icon title="Net Forest Cover Change">
+              <MenuItem>Net Forest Cover Change 1</MenuItem>
+              <MenuItem>Net Forest Cover Change 2</MenuItem>
+              {/*<SubMenu title="submenu">
                 <MenuItem>submenu 3.3.1 </MenuItem>
                 <MenuItem>submenu 3.3.2 </MenuItem>
                 <MenuItem>submenu 3.3.3 </MenuItem>
-              </SubMenu>
+                </SubMenu>*/}
+            </SubMenu>
+            <MenuItem>Biodiversity</MenuItem>
+            <MenuItem>Protected Areas by Type</MenuItem>
+            <MenuItem>Land Cover</MenuItem>
+            <SubMenu title="Fresh Water">
+              <MenuItem>Fresh Water 1</MenuItem>
+              <MenuItem>Fresh Water 2</MenuItem>
+            </SubMenu>
+            <SubMenu title="Green House Gas (GHG) Emissions">
+              <MenuItem>Green House Gas (GHG) Emissions 1</MenuItem>
+              <MenuItem>Green House Gas (GHG) Emissions 2</MenuItem>
+            </SubMenu>
+            <SubMenu title="Food Energy Intake Per Capita">
+              <MenuItem>Food Energy Intake Per Capita 1</MenuItem>
+              <MenuItem>Food Energy Intake Per Capita 2</MenuItem>
             </SubMenu>
           </SubMenu>
+            <SubMenu title="Trade Report">
+              <SubMenu title="Sustainable - net">
+                <MenuItem>Importers</MenuItem>
+                <MenuItem>Exporters</MenuItem>
+              </SubMenu>
+              <SubMenu title="Current Trend">
+                <MenuItem>Importers</MenuItem>
+                <MenuItem>Exporters</MenuItem>
+              </SubMenu>
+
+            </SubMenu>
+
         </Menu>
       </SidebarContent>
     </ProSidebar>

@@ -10,6 +10,7 @@ const Styles = styled.div`
        font-size:20px;
        padding-left: 300px;
        margin-left:80px;
+       
     }
     .About{
         background-size: cover;
