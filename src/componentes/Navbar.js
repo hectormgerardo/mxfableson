@@ -30,7 +30,7 @@ const Styles = styled.div`
   background-color: transparent ;
   padding:0 0%;
   justify-content:space-between;
-
+  width:100%;
 
 .router-container {
    
@@ -138,10 +138,10 @@ const NavBar = () => {
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-schenaton2020" href="#schenaton2020">Schenathon 2020</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2020" href="#scenathon2020">Scenathon 2020</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-schenaton2019" href="#schenaton2019">Schenaton 2019</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2019" href="#scenathon2019">Scenathon 2019</ReactBootStrap.Navbar.Brand>
               </Link>
 
             </div>
@@ -213,8 +213,8 @@ window.onscroll = function () {
     document.getElementById("navbar-link-home").style.color="#306973";
     document.getElementById("navbar-link-tour").style.color="#306973";
     document.getElementById("navbar-link-fable").style.color="#306973";
-    document.getElementById("navbar-link-schenaton2020").style.color="#306973";
-    document.getElementById("navbar-link-schenaton2019").style.color="#306973";
+    document.getElementById("navbar-link-scenathon2020").style.color="#306973";
+    document.getElementById("navbar-link-scenathon2019").style.color="#306973";
 
     
 
@@ -237,8 +237,8 @@ window.onscroll = function () {
    document.getElementById("navbar-link-home").style.color="white";
    document.getElementById("navbar-link-tour").style.color="white";
    document.getElementById("navbar-link-fable").style.color="white";
-   document.getElementById("navbar-link-schenaton2020").style.color="white";
-   document.getElementById("navbar-link-schenaton2019").style.color="white";
+   document.getElementById("navbar-link-scenathon2020").style.color="white";
+   document.getElementById("navbar-link-scenathon2019").style.color="white";
   }
   prevScrollpos = currentScrollPos;
 }

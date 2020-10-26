@@ -10,12 +10,12 @@ const Styles = styled.div`
         background: url(${Banner2});
         background-size: cover;
         color: #ccc;
-        height: 500px;
         position: absoulte;
         margin:0;
         padding:0;
         background-position:center ;
         height:55vh;
+        width:100%;
     }
     .overlay{
         background-color: #000;
