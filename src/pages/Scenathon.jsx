@@ -24,10 +24,6 @@ import GreenHouseOne from '../pages/GreenHouseOne'
 import FreshWaterTwo from '../pages/FreshWaterTwo'
 
 
-
-
- 
-
 class Scenathon extends Component {
     constructor(props) {
         super(props);
@@ -50,13 +46,11 @@ class Scenathon extends Component {
 
     //recibe valor de class component "ComboBox" 
     handleChange = e => {
-     
         this.setState({
             select: {
                 //el next code evitara que se sobrescriba cuando reciba un valor new
                 ...this.state.select,
                 [e.target.name]: e.target.value
-                
             },
             dashboard:e.target.value
            
