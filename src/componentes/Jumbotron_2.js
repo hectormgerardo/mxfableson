@@ -10,19 +10,22 @@ const Styles = styled.div`
         background: url(${Banner2});
         background-size: cover;
         color: #ccc;
-        height: 500px;
         position: absoulte;
-        z-index: -2;
+        margin:0;
+        padding:0;
+        background-position:center ;
+        height:55vh;
+        width:100%;
     }
     .overlay{
         background-color: #000;
         opacity:0.6;
         position: absolute;
         top:0;
-        left: o;
+        left: 0;
         bottom: -5;
         right: 0;
-        z-index: -1;
+        
     }`;
 
 
@@ -32,9 +35,6 @@ export const Jumbotron_2 = () => {
     <Styles>
         <Jumbo fluid className= "jumbo2">
             <div className= "overlay"></div>
-            <Container>
-               
-            </Container>
         </Jumbo>
     </Styles>
     )

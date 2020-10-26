@@ -25,7 +25,11 @@ import {Bar} from 'react-chartjs-2';
       },
       elements: {
         line: {
-          fill: false
+          fill: false,
+          tension: 0,
+          bezierCurve : false
+
+
         }
       },
       scales: {

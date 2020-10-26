@@ -23,6 +23,7 @@ const drawNfch = (props) => {
           break;
         case 'iteration_4':
           dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_uno : data.combinacion_tres);
+          console.log(dataAux);
           break
       }
       break;
@@ -52,7 +53,7 @@ const drawNfch = (props) => {
 <MixedChart data={dataAux}
   title="Net Forest Cover Change"
   aspectRatio={false}
-  labelposition="bottom"/>
+  labelposition="bottom"  />
   </div>;
 }
 
@@ -90,6 +91,7 @@ const convertir=(props)=> {
             fill: false,
             backgroundColor: 'Green',
             borderColor: '#71B37C',
+            radius: 5,
             hoverBackgroundColor: '#71B37C',
             hoverBorderColor: '#71B37C',
             yAxisID: 'y-axis-1'
@@ -101,6 +103,7 @@ const convertir=(props)=> {
                   fill: false,
                   borderColor: 'Red',
                   backgroundColor: 'Red',
+                  radius: 5,
                   pointBorderColor: 'Red',
                   pointBackgroundColor: 'Red',
                   pointHoverBackgroundColor: 'Red',
@@ -116,6 +119,7 @@ const convertir=(props)=> {
                   fill: false,
                   borderColor: 'Black',
                   backgroundColor: 'Black',
+                  radius: 5,
                   pointBorderColor: 'Black',
                   pointBackgroundColor: 'Black',
                   pointHoverBackgroundColor: 'Black',
@@ -127,18 +131,23 @@ const convertir=(props)=> {
             label: 'Aforestation',
             data: aforestation,
             fill: false,
-            backgroundColor: '#81c784',
-            borderColor: '#81c784',
-            hoverBackgroundColor: 'darkgreen',
-            hoverBorderColor: '#81c784',
+            backgroundColor: 'rgba(129,199,132, 0.8)',
+            borderColor: 'Green',
+            borderWidth: 2,
+           
+            hoverBackgroundColor: 'rgba(129,199,135,0.7)',
+            hoverBorderColor: 'Green',
             yAxisID: 'y-axis-1'
           },{
             type: 'bar',
             label: 'Forest loss',
             data: forest_loss,
             fill: false,
-            borderColor: '#EC932F',
-            backgroundColor: '#ffd54f',
+            borderColor: '#a98600',
+            borderWidth: 2,
+            backgroundColor: 'rgba(255,213,79, 0.8)',
+            hoverBackgroundColor: 'rgba(255,213,79,0.7)',
+
             pointBorderColor: '#ffd54f',
             pointBackgroundColor: '#ffd54f',
             pointHoverBackgroundColor: '#ffd54f',
