@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/App.css';
 import Navbar from "./componentes/Navbar";
 import Header from "./componentes/Header";
+import About1 from "./componentes/About1";
 import Tour from "./componentes/Tour";
 import Touraux from "./componentes/Touraux";
 import About from './pages/About';
@@ -110,11 +111,18 @@ componentDidMount(){
             <Jumbotron />
           </div>
 
-              
+          <div>
+          <About1/>
+        </div>   
           <div>
           <Header/>
         </div>
-         
+         <div>
+          <Scenathon/>
+        </div> 
+
+
+
          <Router>
           <Link to="/Scenathon">
           </Link>  
@@ -159,12 +167,10 @@ componentDidMount(){
         </div>
 
 
-        <div>
-          <Scenathon/>
-        </div> 
+      
         
         */
-      
+        
         }
         
         
