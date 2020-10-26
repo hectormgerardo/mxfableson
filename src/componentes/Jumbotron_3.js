@@ -3,32 +3,32 @@ import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const Styles = styled.div`
-  .bann_3{
-    color: #4E4E4E;
-    top:5;
-    text-align: center;
-    font-size:20px;
-  }
-  .text{
-     background-size: cover;
-     color: #ccc;
-     height: 200px;
-     position: relative;
-     z-index: -2;
-  }
-  .scena_{
-   text-align:left;
-   color: #306973;
-  }
-  .overlay{
-     background-color: #000;
-     opacity:0.6;
-     position: absolute;
-     top:0; 
-     left: o;
-     bottom: 5;
-     right: 0;
-     z-index: -1;
+    .bann_3{
+       color: #4E4E4E;
+       top:5;
+       text-align: center;
+       font-size:20px;
+    }
+    .text{
+        background-size: cover;
+        color: #ccc;
+        height: 200px;
+        position: relative;
+        z-index: -2;
+    }
+    .scena_{
+      text-align:left;
+      color: #306973;
+    }
+    .overlay{
+        background-color: #000;
+        opacity:0.6;
+        position: absolute;
+        top:0; 
+        left: o;
+        bottom: 5;
+        right: 0;
+        z-index: -1;
     }`;
 export const Jumbotron_3 = () => {
   return (

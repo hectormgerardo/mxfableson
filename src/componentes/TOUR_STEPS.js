@@ -8,13 +8,13 @@ export default[
           styles: {
             //this styles override the styles in the props
             options: {
-              textColor: "black"
+              textColor: "tomato"
             }
           },
           locale: { 
             next: <span>Next</span>,
           },
-          placement: "black"
+          placement: "bottom"
     },
     {
         target: ".imagen",
@@ -23,14 +23,14 @@ export default[
           styles: {
             //this styles override the styles in the props
             options: {
-              textColor: "black "
+              textColor: "tomato"
             }
           },
           locale: { 
             next: <span>End Tour</span>,
             back: <span>Back</span>
           },
-          placement: "bottom"
+          placement: "top"
 
     }
 ]

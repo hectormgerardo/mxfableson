@@ -17,9 +17,13 @@ const Dashboard = (props) =>  {
     "Food energy intake per capita (1)",
     "Food energy intake per capita (2)"
   ];
+  
 
   var [selectedOption, setSelectedOption] = useState(options[0]);
+
+  
   return (
+    
     <div className="Dashboard">      
       <select
         name='dashboard'
@@ -40,3 +44,7 @@ const Dashboard = (props) =>  {
   )
 }
 export default Dashboard;
+
+
+
+
