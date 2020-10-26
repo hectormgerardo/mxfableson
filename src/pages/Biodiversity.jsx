@@ -67,6 +67,7 @@ return (
               <LeafletMap
                 
                 countriesData = {dataAux}
+              
               />
               
               </div>
