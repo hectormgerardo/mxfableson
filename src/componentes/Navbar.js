@@ -13,111 +13,87 @@ import Features from "../pages/GlobalTargets";
 import About from '../pages/About';
 import styled from 'styled-components';
 import TradeReport from '../pages/TradeReport';
+import IIASA_LOGO_WHITE from '../assets/IIASA_LOGO_WHITE.png';
 import IIASA_LOGO from '../assets/IIASA_LOGO.png';
+import SDSN_LOGO_WHITE from '../assets/SDSN_LOGO_WHITE.png';
 import SDSN_LOGO from '../assets/SDSN_LOGO.png';
+import FoodAndLand_LOGO_WHITE from '../assets/FoodAndLand_LOGO_WHITE.png';
 import FoodAndLand_LOGO from '../assets/FoodAndLand_LOGO.png';
 
 
 const Styles = styled.div`
 
 
-#site-navbar{
+
+
+ 
+ 
+.navbar, #navbar{
   display:flex;
-  justify-content:space-between;
   position: fixed;
-  left:0;
-  top:0;
-  widht:100%;
-  transition: 0.5s;
+  transition: 1s;
+  align-items:center;
+  background-color: transparent ;
+  padding:0 0%;
+  justify-content:space-between;
 
 
-}
-
+.router-container {
+   
+    margin-left:100px;
+    margin-right:90px;
+  
+  .navbar-brand{
+    margin-left:30px;
+  }
+  
+  }
 
 .banner-container{
-  position:absolute;
-}
- .banner{
-  width:130px;
-} 
  
-.navbar{
-  background-color: transparent ;
-  right: 5%;
-  top: 0;
+  margin-right: 90px;
 
-  
+
+#IIASA_LOGO_WHITE{
+  width:140px;
 }
+#SDSN_LOGO_WHITE{
+margin-right:20px;
+width: 100px;
+}
+#FoodAndLand_LOGO_WHITE{
+  width: 130px;
+}
+
+}
+
+
 .navbar-brand, .navbar-nav .nav-link {
   color: white;
-  margin-left: 40px;
   text-shadow: .5px .5px 2px #000000;
   &: hover{
     color:#306973;
-  }
+    width:inherit;
+    
   
+  
+  }
+
+  .navbar-link{
+    margin-left:70px;
+  }
  
 
-  
- 
 }
 `;
-{/*export default class Navbar extends React.Component{
-  componentDidMount(){
-    
-  }
-  componentWillUnmount(){
 
-  }
-  handleScroll=()=>{}
-  render(){
-    return ()
-  }
-}*/ }
-
-/*
-<script>
-$(function(){
- $("#navbar").on("scroll",function(){
-   var lastScrollTop=0;
-   navbar= document.getElementById("navbar");
-   window.addEventListener("scroll", function(){
-     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-     if(scrollTop> lastScrollTop){
-       id.style.top="-80px"
-     }else{
-       id.style.top="0";
-     }
-     lastScrollTop=scrollTop;
-   })
- })
-})
-
-</script>
-*/
-/*
-var onScrollEvent = onScrollEvent=(id)=>{
-  var lastScrollTop=0;
-  navbar= document.getElementById("navbar");
-  window.addEventListener("scroll", function(){
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if(scrollTop> lastScrollTop){
-      id.style.top="-80px"
-    }else{
-      id.style.top="0";
-    }
-    lastScrollTop=scrollTop;
-  })
-}
-*/
 const NavBar = () => {
-
 
   return (
     <Styles>
 
-      <nav id="site-navbar">
-        {/*
+
+      {/*
         <div class="banner-container">
                   <img src={IIASA_LOGO} class="banner" />
                   <img src={SDSN_LOGO} class="banner" />
@@ -125,46 +101,58 @@ const NavBar = () => {
                 </div>
 
       */}
-        <Router>
-          <ReactBootStrap.Navbar expand="lg" className="nav" variant="light">
-            <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+      <Router>
+        <ReactBootStrap.Navbar expand="lg" className="nav" id="navbar" variant="light">
+
+          <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+            <div class="banner-container">
+
               <ReactBootStrap.Navbar.Brand href="#banners">
                 <img
                   alt=""
-                  src={IIASA_LOGO}
                   className="banner"
+                  id="IIASA_LOGO_WHITE"
+                  src={IIASA_LOGO_WHITE}
                 />
                 <img
                   alt=""
-                  src={SDSN_LOGO}
+                  src={SDSN_LOGO_WHITE}
                   className="banner"
+                  id="SDSN_LOGO_WHITE"
                 />
                 <img
                   alt=""
-                  src={FoodAndLand_LOGO}
+                  src={FoodAndLand_LOGO_WHITE}
                   className="banner"
+                  id="FoodAndLand_LOGO_WHITE"
                 />
+
               </ReactBootStrap.Navbar.Brand>
+            </div>
+
+
+            <div className="router-container" id="router-container">
 
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand href="#home">Home</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" href="#home">Home</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand href="#tour">Tour</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" href="#tour">Tour</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand href="#fable">Fable</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
-                <ReactBootStrap.Navbar.Brand href="#schenaton2020">Schenathon 2020</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" href="#schenaton2020">Schenathon 2020</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
-                <ReactBootStrap.Navbar.Brand href="#schenaton2019">Schenaton 2019</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" href="#schenaton2019">Schenaton 2019</ReactBootStrap.Navbar.Brand>
               </Link>
 
+            </div>
 
-              { /*
+            { /*
             <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
               <ReactBootStrap.Nav className="mr-auto">
 
@@ -176,37 +164,35 @@ const NavBar = () => {
               </ReactBootStrap.Nav>
             </ReactBootStrap.Navbar.Collapse>
            */}
-            </ReactBootStrap.Navbar.Collapse>
-          </ReactBootStrap.Navbar>
+          </ReactBootStrap.Navbar.Collapse>
+        </ReactBootStrap.Navbar>
 
-          {/* A <Switch> looks through its children <Route>s and
+        {/* A <Switch> looks through its children <Route>s and
                       renders the first one that matches the current URL. */}
-          <Switch>
-            {/*<Route path="/Features" component={Features}>
+        <Switch>
+          {/*<Route path="/Features" component={Features}>
               <Features />
             </Route>*/}
 
-            {/*<Route path="/TradeReport" component={TradeReport}>
+          {/*<Route path="/TradeReport" component={TradeReport}>
               <TradeReport />
                     </Route>*/}
-            {/*<Route exact path="/Scenathon" component={Scenathon}>
+          {/*<Route exact path="/Scenathon" component={Scenathon}>
                 <Scenathon />
               </Route>*/}
 
 
-            <Route path="/About" render={
-              () => {
-                return (<h1>About</h1>);
-              }
-            }>
-              <About />
-            </Route>
-          
-          </Switch>
+          <Route path="/About" render={
+            () => {
+              return (<h1>About</h1>);
+            }
+          }>
+            <About />
+          </Route>
 
-        </Router>
-      </nav>
-      
+        </Switch>
+
+      </Router>
 
     </Styles>
 
@@ -216,5 +202,30 @@ const NavBar = () => {
 
 }
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+    
+  } else {
+    document.getElementById("navbar").style.top = "-120px";
+    document.getElementById("navbar").style.backgroundColor = "white";
+    document.getElementById("IIASA_LOGO_WHITE").src = IIASA_LOGO;
+    document.getElementById("SDSN_LOGO_WHITE").src = SDSN_LOGO;
+    document.getElementById("FoodAndLand_LOGO_WHITE").src = FoodAndLand_LOGO;
 
-export default NavBar;
+
+  }
+  if (currentScrollPos === 0) {
+    document.getElementById("navbar").style.backgroundColor = "transparent";
+    document.getElementById("IIASA_LOGO_WHITE").src = IIASA_LOGO_WHITE;
+    document.getElementById("SDSN_LOGO_WHITE").src = SDSN_LOGO_WHITE;
+    document.getElementById("FoodAndLand_LOGO_WHITE").src = FoodAndLand_LOGO_WHITE;
+
+
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+export default NavBar; 

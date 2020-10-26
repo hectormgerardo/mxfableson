@@ -110,11 +110,12 @@ componentDidMount(){
             <Jumbotron />
           </div>
 
-              <div data-rh="Este es el apartado About" data-rh-at="top" className="About">
-                <About/>
-              </div>
-
-          <Router>
+              
+          <div>
+          <Header/>
+        </div>
+         
+         <Router>
           <Link to="/Scenathon">
           </Link>  
           <Switch>
@@ -122,6 +123,7 @@ componentDidMount(){
             </Route>
           </Switch>
          </Router>
+         
 
         {/*<div data-rh="Este es el apartado About" data-rh-at="top" id="About">
           <About/>
@@ -145,23 +147,30 @@ componentDidMount(){
         <div id="Jumbotron_2" data-rh="" data-rh-at="top">
           <Jumbotron_2 />
         </div>
-        
+        <div data-rh="Este es el apartado About" data-rh-at="top" className="About">
+                <About/>
+              </div>
         {/*<div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
           <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
       </div>*/}
         
         {/*<div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
           <Jumbotron_fin/>
-        </div>*/}
-        
-        
-        <div>
-          <Header/>
         </div>
-        
+
+
         <div>
           <Scenathon/>
         </div> 
+        
+        */
+      
+        }
+        
+        
+       
+        
+        
 
         
          
