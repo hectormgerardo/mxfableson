@@ -102,11 +102,11 @@ const NavBar = () => {
 
       */}
       <Router>
-        <ReactBootStrap.Navbar expand="lg" className="nav" id="navbar" variant="light">
+        <ReactBootStrap.Navbar expand="lg" className="nav navBarWidth" id="navbar" variant="light">
 
           <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-            <div class="banner-container">
+            <div className="banner-container">
 
               <ReactBootStrap.Navbar.Brand href="#banners">
                 <img
@@ -135,19 +135,19 @@ const NavBar = () => {
             <div className="router-container" id="router-container">
 
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" href="#home">Home</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand className="navbar-link">Home</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" href="#tour">Tour</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand className="navbar-link">Tour</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand className="navbar-link">Fable</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" href="#schenaton2020">Schenathon 2020</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand className="navbar-link">Schenathon 2020</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" href="#schenaton2019">Schenaton 2019</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand className="navbar-link">Schenaton 2019</ReactBootStrap.Navbar.Brand>
               </Link>
 
             </div>

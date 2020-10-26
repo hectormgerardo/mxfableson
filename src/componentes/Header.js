@@ -38,8 +38,8 @@ export const Header = () => {
     return (
         <Styles>
             <header>
-            <div class="header-left">15</div>
-                    <div class="header-center">Life on Land</div>
+            <div className="header-left">15</div>
+                    <div className="header-center">Life on Land</div>
                     <img src={INCON15} class="header-right" />
             </header>
         </Styles>
