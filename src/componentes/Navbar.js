@@ -96,11 +96,11 @@ const NavBar = () => {
 
       */}
       <Router>
-        <ReactBootStrap.Navbar expand="lg" className="nav" id="navbar" variant="light">
+        <ReactBootStrap.Navbar expand="lg" className="nav navBarWidth" id="navbar" variant="light">
 
           <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-            <div class="banner-container">
+            <div className="banner-container">
 
               <ReactBootStrap.Navbar.Brand href="#banners">
                 <img

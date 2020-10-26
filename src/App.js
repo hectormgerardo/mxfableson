@@ -12,8 +12,9 @@ import { Jumbotron_3 } from './componentes/Jumbotron_3'
 import { Jumbotron_fin } from './componentes/Jumbotron_fin'
 import { Last } from 'react-bootstrap/esm/PageItem';
 import ReactHintFactory from 'react-hint'
-import 'react-hint/css/index.css'
-import Scenathon from './pages/Scenathon'
+import 'react-hint/css/index.css';
+import Scenathon from './pages/Scenathon';
+import Aside from './componentes/Aside';
 import {
   BrowserRouter as Router,
   Switch,
@@ -117,20 +118,23 @@ componentDidMount(){
           <div>
           <Header/>
         </div>
-         <div>
+        <div style={{display: 'flex'}}>
+          <div>
+            <Aside />
+          </div>
+          <div>
           <Scenathon/>
-        </div> 
+          </div>
+        </div>
 
-
-
-         <Router>
+         {/* <Router>
           <Link to="/Scenathon">
           </Link>  
           <Switch>
             <Route exact path="/Scenathon" component={Scenathon}>
             </Route>
           </Switch>
-         </Router>
+         </Router> */}
          
 
         {/*<div data-rh="Este es el apartado About" data-rh-at="top" id="About">
