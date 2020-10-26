@@ -14,20 +14,14 @@ import About from '../pages/About';
 import styled from 'styled-components';
 import TradeReport from '../pages/TradeReport';
 import IIASA_LOGO_WHITE from '../assets/IIASA_LOGO_WHITE.png';
-import IIASA_LOGO from '../assets/IIASA_LOGO.png';
+import IIASA_LOGO_COLOR from '../assets/IIASA_LOGO.png';
 import SDSN_LOGO_WHITE from '../assets/SDSN_LOGO_WHITE.png';
-import SDSN_LOGO from '../assets/SDSN_LOGO.png';
+import SDSN_LOGO_COLOR from '../assets/SDSN_LOGO.png';
 import FoodAndLand_LOGO_WHITE from '../assets/FoodAndLand_LOGO_WHITE.png';
-import FoodAndLand_LOGO from '../assets/FoodAndLand_LOGO.png';
+import FoodAndLand_LOGO_COLOR from '../assets/FoodAndLand_LOGO.png';
 
 
 const Styles = styled.div`
-
-
-
-
- 
- 
 .navbar, #navbar{
   display:flex;
   position: fixed;
@@ -54,14 +48,14 @@ const Styles = styled.div`
   margin-right: 90px;
 
 
-#IIASA_LOGO_WHITE{
+#IIASA_LOGO{
   width:140px;
 }
-#SDSN_LOGO_WHITE{
+#SDSN_LOGO{
 margin-right:20px;
 width: 100px;
 }
-#FoodAndLand_LOGO_WHITE{
+#FoodAndLand_LOGO{
   width: 130px;
 }
 
@@ -112,20 +106,20 @@ const NavBar = () => {
                 <img
                   alt=""
                   className="banner"
-                  id="IIASA_LOGO_WHITE"
+                  id="IIASA_LOGO"
                   src={IIASA_LOGO_WHITE}
                 />
                 <img
                   alt=""
                   src={SDSN_LOGO_WHITE}
                   className="banner"
-                  id="SDSN_LOGO_WHITE"
+                  id="SDSN_LOGO"
                 />
                 <img
                   alt=""
                   src={FoodAndLand_LOGO_WHITE}
                   className="banner"
-                  id="FoodAndLand_LOGO_WHITE"
+                  id="FoodAndLand_LOGO"
                 />
 
               </ReactBootStrap.Navbar.Brand>
@@ -135,19 +129,19 @@ const NavBar = () => {
             <div className="router-container" id="router-container">
 
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand className="navbar-link">Home</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand  classname="navbar-link" id="navbar-link-home" href="#home">Home</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand className="navbar-link">Tour</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-tour" href="#tour">Tour</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand className="navbar-link">Fable</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
-                <ReactBootStrap.Navbar.Brand className="navbar-link">Schenathon 2020</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-schenaton2020" href="#schenaton2020">Schenathon 2020</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
-                <ReactBootStrap.Navbar.Brand className="navbar-link">Schenaton 2019</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-schenaton2019" href="#schenaton2019">Schenaton 2019</ReactBootStrap.Navbar.Brand>
               </Link>
 
             </div>
@@ -211,19 +205,40 @@ window.onscroll = function () {
   } else {
     document.getElementById("navbar").style.top = "-120px";
     document.getElementById("navbar").style.backgroundColor = "white";
-    document.getElementById("IIASA_LOGO_WHITE").src = IIASA_LOGO;
-    document.getElementById("SDSN_LOGO_WHITE").src = SDSN_LOGO;
-    document.getElementById("FoodAndLand_LOGO_WHITE").src = FoodAndLand_LOGO;
+    document.getElementById("IIASA_LOGO").src = IIASA_LOGO_COLOR;
+    document.getElementById("SDSN_LOGO").src = SDSN_LOGO_COLOR;
+    document.getElementById("FoodAndLand_LOGO").src = FoodAndLand_LOGO_COLOR;
+    
+    //change switch of color using getByClassName method
+    document.getElementById("navbar-link-home").style.color="#306973";
+    document.getElementById("navbar-link-tour").style.color="#306973";
+    document.getElementById("navbar-link-fable").style.color="#306973";
+    document.getElementById("navbar-link-schenaton2020").style.color="#306973";
+    document.getElementById("navbar-link-schenaton2019").style.color="#306973";
+
+    
 
 
+  /*
+   let navbarLinks = document.get
+    // Loop over them
+    for (var i = 0; i < navbarLinks.length; i++) {
+      navbarLinks[i].style.backgroundColor("black");
+    }
+    */
   }
   if (currentScrollPos === 0) {
     document.getElementById("navbar").style.backgroundColor = "transparent";
-    document.getElementById("IIASA_LOGO_WHITE").src = IIASA_LOGO_WHITE;
-    document.getElementById("SDSN_LOGO_WHITE").src = SDSN_LOGO_WHITE;
-    document.getElementById("FoodAndLand_LOGO_WHITE").src = FoodAndLand_LOGO_WHITE;
+    document.getElementById("IIASA_LOGO").src = IIASA_LOGO_WHITE;
+    document.getElementById("SDSN_LOGO").src = SDSN_LOGO_WHITE;
+    document.getElementById("FoodAndLand_LOGO").src = FoodAndLand_LOGO_WHITE;
 
-
+   //change switch of color using getByClassName method
+   document.getElementById("navbar-link-home").style.color="white";
+   document.getElementById("navbar-link-tour").style.color="white";
+   document.getElementById("navbar-link-fable").style.color="white";
+   document.getElementById("navbar-link-schenaton2020").style.color="white";
+   document.getElementById("navbar-link-schenaton2019").style.color="white";
   }
   prevScrollpos = currentScrollPos;
 }

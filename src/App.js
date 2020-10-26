@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/App.css';
 import Navbar from "./componentes/Navbar";
 import Header from "./componentes/Header";
+import About1 from "./componentes/About1";
 import Tour from "./componentes/Tour";
 import Touraux from "./componentes/Touraux";
 import About from './pages/About';
@@ -111,7 +112,9 @@ componentDidMount(){
             <Jumbotron />
           </div>
 
-              
+          <div>
+          <About1/>
+        </div>   
           <div>
           <Header/>
         </div>
@@ -120,16 +123,18 @@ componentDidMount(){
             <Aside />
           </div>
           <div>
-            <Router>
-              <Link to="/Scenathon">
-              </Link>
-              <Switch>
-                <Route exact path="/Scenathon" component={Scenathon}></Route>
-              </Switch>
-            </Router>
+          <Scenathon/>
           </div>
         </div>
-         
+
+         {/* <Router>
+          <Link to="/Scenathon">
+          </Link>  
+          <Switch>
+            <Route exact path="/Scenathon" component={Scenathon}>
+            </Route>
+          </Switch>
+         </Router> */}
          
 
         {/*<div data-rh="Este es el apartado About" data-rh-at="top" id="About">
@@ -166,12 +171,10 @@ componentDidMount(){
         </div>
 
 
-        <div>
-          <Scenathon/>
-        </div> 
+      
         
         */
-      
+        
         }
         
         
