@@ -1,5 +1,5 @@
 import React from "react";
-import BarChart from "../componentes/BarChart";
+import BarChart from "../components/BarChart";
 import data from '../data/Greenhouse2.json';
 import { Container, Row, Col } from "react-bootstrap";
 //nfch=NetForestCoverChange

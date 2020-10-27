@@ -1,5 +1,5 @@
 import React from "react";
-import MixedChart from "../componentes/MixedChart.jsx";
+import MixedChart from "../components/MixedChart.jsx";
 import data from '../data/GlobalTargets.json';
 
 const drawFoodEnergyIntakePerCapita = (props) => {

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import BarChart from "../componentes/BarChart";
+import BarChart from "../components/BarChart";
 import data from '../data/Biodiversity.json';
 import {Container,Row,Col} from "react-bootstrap";
 import LeafletMap from './LeafletMap';

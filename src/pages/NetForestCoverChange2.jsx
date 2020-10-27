@@ -1,5 +1,5 @@
 import React from "react";
-import BarChart from "../componentes/BarChart";
+import BarChart from "../components/BarChart";
 import data from '../data/NetForestCoverChange2.json';
 import "../../node_modules/react-grid-layout/css/styles.css";
 import "../../node_modules/react-resizable/css/styles.css";

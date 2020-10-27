@@ -1,5 +1,5 @@
 import React from "react";
-import BarChart from "../componentes/BarChart";
+import BarChart from "../components/BarChart";
 import data from '../data/WaterUse2.json';
 import {Container,Row,Col,Jumbotron} from "react-bootstrap";
 const drawFreshWater2 = (props) => {

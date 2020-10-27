@@ -1,5 +1,5 @@
 import React from "react";
-import BarChart from "../componentes/BarChart";
+import BarChart from "../components/BarChart";
 import data from '../data/FreshWaterUse1.json';
 
 

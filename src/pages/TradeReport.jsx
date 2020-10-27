@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
-import BarChart from "../componentes/BarChart";
-import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
+import BarChart from "../components/BarChart";
+import ComboBoxTradeReportersImporters from "../components/ComboBoxTradeReporters";
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
-import DashboardTradeReport from '../componentes/DashboardTradeReport'
+import DashboardTradeReport from '../components/DashboardTradeReport'
 
 
 const SustainableImporters =()=>

@@ -1,5 +1,5 @@
 import React from "react";
-import BarChart from "../componentes/BarChart.jsx";
+import BarChart from "../components/BarChart.jsx";
 import data from '../data/LandCover.json';
 
 const drawLandCover = (props) => {

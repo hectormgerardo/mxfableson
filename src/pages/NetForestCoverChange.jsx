@@ -1,5 +1,5 @@
 import React from "react";
-import MixedChart from "../componentes/MixedChart.jsx";
+import MixedChart from "../components/MixedChart.jsx";
 import data from '../data/NetForestCoverChange1.json';
 import {Container,Row,Col} from "react-bootstrap";
 
