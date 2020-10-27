@@ -119,7 +119,7 @@ const convertir=(props)=> {
                   fill: false,
                   borderColor: 'Black',
                   backgroundColor: 'Black',
-                  radius: 5,
+                  radius: 7,
                   pointBorderColor: 'Black',
                   pointBackgroundColor: 'Black',
                   pointHoverBackgroundColor: 'Black',

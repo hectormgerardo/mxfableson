@@ -1,4 +1,5 @@
 {
+    
     "ProtectedAreasForest": [
         {
             "type": "bar",
@@ -41,21 +42,9 @@
             "type": "bar",
             "label": "Kcal feasible",
             "borderColor": "#EC932F",
-            "backgroundColor": "#ffe119",
+            "backgroundColor": "#ffc107",
             "pointBorderColor": "#EC932F",
-            "pointBackgroundColor": "#EC932F",
-            "pointHoverBackgroundColor": "#EC932F",
-            "pointHoverBorderColor": "#EC932F",
-            "yAxisID": "y-axis-1"
-        }
-    ],"target_mder": [
-        {
-            "type": "scatter",
-            "label": "Target (MDER)",
-            "borderColor": "#EC932F",
-            "backgroundColor": "#ffe119",
-            "pointBorderColor": "#EC932F",
-            "pointBackgroundColor": "#EC932F",
+            "pointBackgroundColor": "#ffc107",
             "pointHoverBackgroundColor": "#EC932F",
             "pointHoverBorderColor": "#EC932F",
             "yAxisID": "y-axis-1"
@@ -65,7 +54,7 @@
             "type": "bar",
             "label": "Protein_feasible",
             "borderColor": "#EC932F",
-            "backgroundColor": "#ffe119",
+            "backgroundColor": "#ffc107",
             "pointBorderColor": "#EC932F",
             "pointBackgroundColor": "#EC932F",
             "pointHoverBackgroundColor": "#EC932F",
@@ -76,8 +65,8 @@
         {
             "type": "bar",
             "label": "Fat_feasible",
-            "borderColor": "#36a2eb",
-            "backgroundColor": "#36a2eb",
+            "borderColor": "#ff8f00",
+            "backgroundColor": "#ff8f00",
             "pointBorderColor": "#36a2eb",
             "pointBackgroundColor": "#36a2eb",
             "pointHoverBackgroundColor": "#36a2eb",
@@ -154,6 +143,19 @@
             "pointBackgroundColor": "#9a031e",
             "pointHoverBackgroundColor": "#9a031e",
             "pointHoverBorderColor": "#9a031e",
+            "yAxisID": "y-axis-1"
+        }
+    ],"target_mder": [
+        {
+            "type": "scatter",
+            "label": "Target (MDER)",
+            "borderColor": "red",
+            "backgroundColor": "#e64a19",
+            "pointBorderColor": "yellow",
+            "pointBackgroundColor": "#e64a19",
+            "pointHoverBackgroundColor": "#e64a19",
+            "radius":7,
+            "pointHoverBorderColor": "#EC932F",
             "yAxisID": "y-axis-1"
         }
     ]

@@ -2,10 +2,13 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
-import BarChart from "../componentes/BarChart";
+import HorizontalBarChart from "../componentes/HorizontalBarChart";
 import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
 import DashboardTradeReport from '../componentes/DashboardTradeReport'
+import HorizontalBar from "../componentes/HorizontalBarChart";
+import { Bar } from "react-chartjs-2";
+import BarChart from "../componentes/BarChart";
 
 
 const SustainableImporters =()=>
