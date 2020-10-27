@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from "react";
-import { createPortal } from "react-dom";
 
+import {Container,Row,Col} from "react-bootstrap";
+import LeafletMap from './LeafletMap'
 import BarChart from "../componentes/BarChart";
 import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
@@ -212,11 +213,13 @@ if(state.select.column=="Export_quantity")
 
         {/*this.selectDashboard()*/}
        
+<div>
 
-        <Container fluid >
-                <Row  >
+
+        <Container fluid>
+                <Row >
                   <Col>
-                  <div style={{height: "100vh"}}>
+                  <div style={{height: "100vh", widht:"30vw"}}>
                   <BarChart data={dataAux} title="Sustainable - net exporters" 
                         aspectRatio={false}
                         labelposition="bottom"/> 
@@ -229,7 +232,7 @@ if(state.select.column=="Export_quantity")
                   </Col>
                 </Row>
               </Container>
-
+              </div>
       </div>
     )
   
