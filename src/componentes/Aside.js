@@ -70,7 +70,7 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar, onChange})
           </SubMenu>
             <SubMenu title="Trade Report">
               <SubMenu title="Sustainable - net">
-                <MenuItem >Importers</MenuItem>
+                <MenuItem onClick={()=>handleChange('Food Energy Intake Per Capita 2')}>Importers</MenuItem>
                 <MenuItem >Exporters</MenuItem>
               </SubMenu>
               <SubMenu title="Current Trend">

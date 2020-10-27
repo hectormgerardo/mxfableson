@@ -7,7 +7,6 @@ import ComboBox3 from '../componentes/ComboBox3'
 
 import Dashboard from '../componentes/Dashboard'
 
-
 //dashboards
 import NetForestCoverChange from '../pages/NetForestCoverChange'
 import Biodiversity from '../pages/Biodiversity'
@@ -22,8 +21,7 @@ import GreenHouse2 from '../pages/GreenHouse2'
 
 import GreenHouseOne from '../pages/GreenHouseOne'
 import FreshWaterTwo from '../pages/FreshWaterTwo'
-
-
+import TradeReport from '../pages/TradeReport'
 class Scenathon extends Component {
     constructor(props) {
         super(props);
@@ -112,6 +110,9 @@ class Scenathon extends Component {
             case 'Food energy intake per capita (2)':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<h1>Food energy intake per capita (2)</h1>;
+            break;
+            case 'Trade Report':
+                this.dash=<TradeReport/>;
             break;
            
           }

@@ -16,6 +16,7 @@ import { Last } from 'react-bootstrap/esm/PageItem';
 import ReactHintFactory from 'react-hint'
 import 'react-hint/css/index.css';
 import Scenathon from './pages/Scenathon';
+import TradeReport from './pages/TradeReport'
 import Aside from './componentes/Aside';
 import {
   BrowserRouter as Router,
@@ -77,7 +78,7 @@ const App = () => {
         <div>
           <Header/>
         </div>
-        <div style={{display: 'flex'}} data-rh="In this section will show you the charts" data-rh-at="top">
+        <div style={{display: 'flex'}}>
           <div>
             <Aside onChange={handleChangeAside}/>
           </div>
@@ -85,9 +86,7 @@ const App = () => {
             <Scenathon currentValue={currentValue} />
           </div>
         </div>
-
-        
-
+          
         <div className="scenathon-info">
           <About2/>
         </div>

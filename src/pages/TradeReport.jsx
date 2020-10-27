@@ -8,8 +8,7 @@ import CountryCharacteristics from '../data/CountryCharacteristics.json';
 import DashboardTradeReport from '../componentes/DashboardTradeReport'
 
 
-const SustainableImporters =()=>
- {
+const SustainableImporters = () =>{
   
   const [state,setState]=useState({select: {
   Product: 'abaca',
