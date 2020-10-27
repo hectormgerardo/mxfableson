@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Map, GeoJSON } from 'react-leaflet';
+import { Map, GeoJSON, TileLayer} from 'react-leaflet';
 import mapData from './../data/Countries.json';
+import mapDataTest from './../data/CountriesTest.json';
 import 'leaflet/dist/leaflet.css'; //This style is for the scroll and plus controls of the map
 import '../css/LeafletMap.css';
 import * as L from 'leaflet';
@@ -128,7 +129,35 @@ class LeafletMap extends Component {
         'Uzbekistan'
     ];
 
-    name_countries_Rest_of_Europe_non_EU8 = [];
+    name_countries_Rest_of_Europe_non_EU8 = ['Austria',
+        'Belgium',
+        'Bulgaria',
+        'Croatia',
+        'Cyprus',
+        'Czechia',
+        'Denmark',
+        'Estonia',
+        'Finland',
+        'France',
+        'Germany',
+        'Greece',
+        'Hungary',
+        'Ireland',
+        'Italy',
+        'Latvia',
+        'Lithuania',
+        'luxembourg',
+        'Malta',
+        'Netherlands',
+        'Poland',
+        'Portugal',
+        'Romania',
+        'Slovakia',
+        'Slovenia',
+        'Spain',
+        'Sweden',
+        'Switzerland'
+        ];
 
     color = [];
 
@@ -139,6 +168,8 @@ class LeafletMap extends Component {
     data = [];
 
     propsAux = null ;
+
+    
 
     constructor(props) {
 
@@ -202,13 +233,13 @@ class LeafletMap extends Component {
 
     createListInfoCountry = (index, countryName) => {
 
-        this.htmlCode = '<strong>'+ countryName + '</strong>'
+        this.htmlCode = '<p style="text-align:center;"><strong>'+ countryName + '</strong></p>'
         
         this.htmlCode = this.htmlCode + '<ul>'
 
         var i = 0
         for (const currentValue in this.years) {
-            this.htmlCode = this.htmlCode + '<li>' + this.years[i] +': '+ this.data[index][i] + '</li>'
+            this.htmlCode = this.htmlCode + '<li>' +'<strong>' + this.years[i] + '</strong>' +': '+ this.data[index][i] + '</li>'
             i ++ ;
         }
 
@@ -231,31 +262,27 @@ class LeafletMap extends Component {
        if (this.name_countries_Rest_of_Sub_Saharan_Africa.includes(countryName)){
         indexAux = this.countriesName.indexOf( 'Rest of Sub-Saharan Africa' );
         layer.options.fillColor = this.color[indexAux];
-        this.createListInfoCountry (indexAux, countryName) ;
-        
+        //console.log('Se llamo con ', indexAux );
         var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
         layer.bindPopup(popup)
        }
        if (this.name_countries_Rest_of_North_Africa_Middle_East_and_central_Asia.includes(countryName)){
-        indexAux = this.countriesName.indexOf('Rest of North Africa Middle East and central Asia');
+        indexAux = this.countriesName.indexOf( 'Rest of North Africa Middle East and central Asia' );
         layer.options.fillColor = this.color[indexAux];
-        this.createListInfoCountry (indexAux, countryName) ;
-        
+        //console.log('Se llamo con ', indexAux );
         var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
         layer.bindPopup(popup)        
        }
        if (this.name_countries_Rest_of_Central_and_South_America.includes(countryName)){
-        indexAux = this.countriesName.indexOf('Rest of Central and South America');
+        indexAux = this.countriesName.indexOf( 'Rest of Central and South America' );
         layer.options.fillColor = this.color[indexAux];
-        this.createListInfoCountry (indexAux, countryName) ;
-        
+        //console.log('Se llamo con ', indexAux );
         var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
         layer.bindPopup(popup)
        }
        if (this.name_countries_Rest_of_Europe_non_EU8.includes(countryName)){
-        indexAux = this.countriesName.indexOf('Rest of Europe non EU8');
+        indexAux = this.countriesName.indexOf( 'Rest of European Union' );
         layer.options.fillColor = this.color[indexAux];
-        this.createListInfoCountry (indexAux, countryName) ;
         
         var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
         layer.bindPopup(popup)
@@ -304,10 +331,10 @@ class LeafletMap extends Component {
         //this parameter could be a componenet or HTML code
 
         //admin the event on the layer with the countries
-        layer.on({
+        /*layer.on({
             click: this.printMessageToConsole,
             //mouseover: this.changeTheCountryColor //This line change the country color when the mause is over the country 
-        });
+        });*/
 
     }
 
@@ -317,14 +344,25 @@ class LeafletMap extends Component {
         this.setState({color: event.target.value});
     }
 
+    corner1 = L.latLng(-90, -200)
+    corner2 = L.latLng(90, 200)
+    bounds = L.latLngBounds(this.corner1, this.corner2)
+
     render () {
         return (
             <div>
                 
-                <Map style={{height: '80vh'}} zoom={2} center={[20, 100]}>
+                <Map style={{height: '80vh'}} zoom={2} center={[20, 100]} maxBoundsViscosity = {1.0} maxBounds = {this.bounds}>
                     <GeoJSON style={this.countryStyle} 
-                        data={mapData.features}
+                        data={mapDataTest.features}
                         onEachFeature={this.onEachCountry}></GeoJSON>
+                        {//<TileLayer
+                        /*url="https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"
+                        attribution='<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
+                        id="mapbox.streets"
+                        noWrap='true'
+                        */
+                        /*/>*/}
                 </Map>
                 
             </div>

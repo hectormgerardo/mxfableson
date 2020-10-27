@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Form } from 'react-bootstrap';
 
 const Styles = styled.div`
 .contenedor selects{
@@ -22,18 +23,49 @@ function ComboBox (props) {
 
             <div className="contenedor-selects">
                 <br></br>
-                <select  name="Scenario" onChange={onChange}>
+                
+                <Form>
+                  <Form.Control name="Scenario" onChange={onChange} as="select" custom>
+                    <option value="Sustainaible">Sustainaible</option>
+                    <option value="Current_trend">Current trend</option>
+                  </Form.Control>
+                </Form>
+
+                {/*<select  name="Scenario" onChange={onChange}>
                     <option value="Sustainaible">Sustainaible</option>
                     <option value="Current_trend">Current trend</option>
                     
-                </select>
+                  </select>*/}
                 <br></br>
-                <select  name="Iteration" onChange={onChange}>
+                <Form>
+                  <Form.Control name="Iteration" onChange={onChange} as="select" custom>
                     <option value="iteration_4">iteration:4</option>
                     <option value="iteration_3">iteration:3</option>
-                </select>
+                  </Form.Control>
+                </Form>
+
+                {/*<select  name="Iteration" onChange={onChange}>
+                    <option value="iteration_4">iteration:4</option>
+                    <option value="iteration_3">iteration:3</option>
+                </select>*/}
                 <br></br>
-                 <select  name="Year" onChange={onChange}>
+                <Form>
+                  <Form.Control name="Year" onChange={onChange} as="select" custom>
+                    <option value="2000">2000</option>
+                    <option value="2005">2005</option>
+                    <option value="2010">2010</option>
+                    <option value="2015">2015</option>
+                    <option value="2020">2020</option>
+                    <option value="2025">2025</option>
+                    <option value="2030">2030</option>
+                    <option value="2035">2035</option>
+                    <option value="2040">2040</option>
+                    <option value="2045">2045</option>
+                    <option value="2050">2050</option>
+                  </Form.Control>
+                </Form>
+
+                 {/*<select  name="Year" onChange={onChange}>
                     <option value="2000">2000</option>
                     <option value="2005">2005</option>
                     <option value="2010">2010</option>
@@ -46,7 +78,7 @@ function ComboBox (props) {
                     <option value="2045">2045</option>
                     <option value="2050">2050</option>
 
-                </select>
+                    </select>*/}
                 <br></br>
             </div>
     </Styles>
