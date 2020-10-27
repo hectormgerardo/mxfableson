@@ -9,7 +9,10 @@ import {
 } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 
-const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
+const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar, onChange}) => {
+  const handleChange = (a) =>{
+    onChange(a)
+  }
   return (
     <ProSidebar
       image={false}
@@ -48,6 +51,9 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
             <SubMenu icon title="Net Forest Cover Change">
               <MenuItem>Net Forest Cover Change 1</MenuItem>
               <MenuItem>Net Forest Cover Change 2</MenuItem>
+              <MenuItem onClick={()=>handleChange('Global Target Summary')}>Global Target Summary</MenuItem>
+              <MenuItem onClick={()=>handleChange('Net Forest Cover Change(1)')}>Net Forest Cover Change(1)</MenuItem>
+              <MenuItem onClick={()=>handleChange('Net Forest Cover Change(2)')}>Net Forest Cover Change(2)</MenuItem>
               {/*<SubMenu title="submenu">
                 <MenuItem>submenu 3.3.1 </MenuItem>
                 <MenuItem>submenu 3.3.2 </MenuItem>

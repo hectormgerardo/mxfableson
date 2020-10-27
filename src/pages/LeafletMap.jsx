@@ -8,7 +8,8 @@ class LeafletMap extends Component {
     state = { color: '#b4b42d'} ;
 
     colors = ['green', 'grey', 'white', 'blue', 'yellow', 'orange'] ;
-
+    color = [];
+    countriesName = [];
 
     propsAux = null ;
 
@@ -23,6 +24,7 @@ class LeafletMap extends Component {
             this.color.push(item.backgroundColor);
             this.countriesName.push(item.label);
         });
+        
         
     }
     

@@ -61,7 +61,7 @@ class Scenathon extends Component {
     }
 
     selectDashboard(){
-        switch(this.state.dashboard){
+        switch(this.props.currentValue){
             case 'Global Target Summary': 
                 this.combobox=<ComboBox onChange={this.handleChange}/>
          //  this.dash=<GlobalTargets combinacion={this.state}/>;
@@ -117,16 +117,10 @@ class Scenathon extends Component {
           }
     }
 
-   
-  
-
-   
-
-
     render() {
         return (
             <div className="container-fluid">
-                {/* componente de comboBox(opciones para el tipo de grafica)*/}
+                {/* componente de comboBox(opciones para el tipo de grafica) */}
                 <div className="Combo-Box">
                 </div>
                 <div>

@@ -9,8 +9,6 @@ import LeafletMap from './LeafletMap';
 const drawBiodiversity = (props) => 
 {
  
- 
-  
   //const [dataAux, setDataAux] = useState('');
 
   const { GraficaType, Iteration, Scenario } = props.combinacion.select;

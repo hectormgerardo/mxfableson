@@ -24,7 +24,7 @@ const Styles = styled.div`
         position: absolute;
         top:0; 
         left: o;
-        bottom: 5;
+        bottom: 0;
         right: 0;
         z-index: -1;
     }`;

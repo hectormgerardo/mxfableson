@@ -32,6 +32,7 @@ const Styles = styled.div`
   padding:0 0%;
   justify-content:space-between;
   width:100%;
+  z-index: 9999;
 
 .router-container {
    
@@ -137,6 +138,9 @@ const NavBar = () => {
               </Link>
               <Link to="/">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
+              </Link>
+              <Link to="/">
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable" href="#scenathon-info">Scenathon</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2020" href="#scenathon2020">Scenathon 2020</ReactBootStrap.Navbar.Brand>
