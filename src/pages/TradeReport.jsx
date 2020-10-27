@@ -213,10 +213,22 @@ if(state.select.column=="Export_quantity")
         {/*this.selectDashboard()*/}
        
 
-        <div>
-          <BarChart data={dataAux} title="Sustainable - net exporters" />
-        </div>
-
+        <Container fluid >
+                <Row  >
+                  <Col>
+                  <div style={{height: "100vh"}}>
+                  <BarChart data={dataAux} title="Sustainable - net exporters" 
+                        aspectRatio={false}
+                        labelposition="bottom"/> 
+                  </div>
+                  </Col>
+                  <Col>
+                  <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
+                  <LeafletMap datos={dataAux}/>
+                  </div>
+                  </Col>
+                </Row>
+              </Container>
 
       </div>
     )
