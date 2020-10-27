@@ -54,7 +54,7 @@ return (
 <Container fluid >
             <Row  >
               <Col>
-              <div style={{height: "100vh"}}>
+              <div style={{height: "100vh", width:"30vw"}}>
                   <BarChart data={dataAux} title="Biodiversity"
                     aspectRatio={false}
                     labelposition="bottom"/> 
@@ -200,8 +200,8 @@ const convertir=(props)=>
             fill: false,
             backgroundColor: '#faa75a',
             borderColor: '#71B37C',
-            hoverBackgroundColor: '#71B37C',
-            hoverBorderColor: '#71B37C',
+            hoverBackgroundColor: '#faa75a',
+            hoverBorderColor: '#faa75a',
             yAxisID: 'y-axis-1'
           },{
             type: 'bar',
