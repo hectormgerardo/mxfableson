@@ -121,9 +121,6 @@ componentDidMount(){
           <Jumbotron_2 />
         </div>
 
-          <div>
-          <Header/>
-        </div>
         <div style={{display: 'flex'}}>
           <div>
             <Aside/>

@@ -64,8 +64,6 @@ class Scenathon extends Component {
         switch(this.state.dashboard){
             case 'Global Target Summary': 
                 this.combobox=<ComboBox onChange={this.handleChange}/>
-         //  this.dash=<GlobalTargets combinacion={this.state}/>;
-        // this.dash=<h1>hola</h1>
               break;
             case 'Net Forest Cover Change(1)': 
             this.combobox=<ComboBox onChange={this.handleChange}/>
@@ -132,8 +130,6 @@ class Scenathon extends Component {
                 <div>
                     <Dashboard metodo={this.handleChange} data={this.state} />
                 </div>
-                {this.selectDashboard()}
-                {this.combobox}
                 {this.dash}
             </div>
         )

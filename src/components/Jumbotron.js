@@ -1,4 +1,3 @@
-  
 import React from 'react';
 import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -38,10 +37,8 @@ export const Jumbotron = () => {
         <Jumbo fluid className= "jumbo">
             <div className= "overlay"></div>
             <Container>
-                <h1 className = "bann" data-rh="tooltip 1" ><i>Fable</i></h1>
-                <h1 className = "bann" data-rh="tooltip 1" >Scenathon</h1>
-
-
+                <h1 className = "bann" data-rh="tooltip 1"><i>Fable</i></h1>
+                <h1 className = "bann" data-rh="tooltip 1">Scenathon</h1>
             </Container>
         </Jumbo>
     </Styles>
