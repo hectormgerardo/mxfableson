@@ -7,14 +7,25 @@ import '../css/LeafletMap.css';
 class LeafletMap extends Component {
     state = { color: '#b4b42d'} ;
 
-
-
-
     colors = ['green', 'grey', 'white', 'blue', 'yellow', 'orange'] ;
 
-    componentDidMount () {
-       // console.log (mapData);
+
+    propsAux = null ;
+
+    constructor(props) {
+
+        super(props);
+        
+        this.propsAux = props;
+        
+        console.log(this.propsAux.countriesData.datasets)
+        this.propsAux.countriesData.datasets.map((item) => {
+            this.color.push(item.backgroundColor);
+            this.countriesName.push(item.label);
+        });
+        
     }
+    
 
     //This function is for the style of countries in the GeoJson
     countryStyle = {
@@ -30,34 +41,63 @@ class LeafletMap extends Component {
         console.log("Este es un mensaje de consola");
     }
 
-    changeTheCountryColor = (event) => {
+    changeTheCountryColor = ( event ) => {
         //console.log("The mouse is over the country")
-      //  console.log(event)
+        //console.log(event)
 
+        //console.log(this.props);
+
+        //console.log("Over the country")
+        //console.log(event.target);
         event.target.setStyle({
             color: 'grey',
             //fillColor: '#b4b42d' this is the fable color
             fillColor: this.state.color,
             fillOpacity: 1
         });
+        
     }
 
     onEachCountry = (country, layer) => {
-        const countryName = country.properties.ADMIN; //The name of the countries
-       // console.log (countryName);
+
+       const countryName = country.properties.ADMIN; //The name of the countries
+       
+       var indexAux = -1;
+       this.countriesName.forEach(function(country, index, array) {
+            if (country == countryName) {
+                indexAux = index;
+           } 
+       });
+
+       /**
+        * If the value of indexAux is less than 1 
+        * it means that it did not find the country 
+        * and therefore it does not overwrite the color
+        */
+       if(indexAux != -1){
+            layer.options.fillColor = this.color[indexAux];
+            console.log('This is the index color ', indexAux);
+            console.log('This country: ', this.countriesName[indexAux], 'is the color: ', this.color[indexAux]);
+       }
+       
 
         //layer.options.fillOpacity = Math.random () ; //This line is for draw diferent opacities with the countries
         //const colorIndex = Math.floor(Math.random() * this.colors.length); //The random color index in the array of the colors
         //layer.options.fillColor = this.colors[colorIndex]; //Change the color with anything color in the array od colors
 
-        layer.bindPopup(countryName + " Biodiversity 3215") ; //When i click above the countri display the name of the country. If i need to add more
+        //console.log('This is the layer country')
+        //console.log(countryName)
+
+        layer.bindPopup( countryName ) ; //When i click above the countri display the name of the country. If i need to add more
         //information about the country like for example i only need to concat the string. example countryName + "other information"
-        
+        //this parameter could be a componenet or HTML code
+
         //admin the event on the layer with the countries
         layer.on({
             click: this.printMessageToConsole,
-            mouseover: this.changeTheCountryColor 
+            //mouseover: this.changeTheCountryColor //This line change the country color when the mause is over the country 
         });
+
     }
 
     //This function change the value color of the state 
@@ -75,7 +115,7 @@ class LeafletMap extends Component {
                         data={mapData.features}
                         onEachFeature={this.onEachCountry}></GeoJSON>
                 </Map>
-                <input type = 'color' value = {this.state.color} onChange = {this.colorChange}></input>
+                
             </div>
         );
     } 

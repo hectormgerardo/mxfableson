@@ -1,7 +1,7 @@
 import { HorizontalBar } from "react-chartjs-2";
 import React from 'react';
 
-const  HorizontalBar=(props)=> {
+const HorizontalBarChart = (props) => {
 
     const options = {
       responsive: true,

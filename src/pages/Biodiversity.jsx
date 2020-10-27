@@ -1,15 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import BarChart from "../componentes/BarChart";
 import data from '../data/Biodiversity.json';
 import {Container,Row,Col} from "react-bootstrap";
-import LeafletMap from './LeafletMap'
+import LeafletMap from './LeafletMap';
+
+
 //nfch=NetForestCoverChange
 const drawBiodiversity = (props) => 
 {
  
  
   
- 
+  //const [dataAux, setDataAux] = useState('');
 
   const { GraficaType, Iteration, Scenario } = props.combinacion.select;
 
@@ -60,11 +62,18 @@ return (
               </Col>
               <Col>
               <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
-              <LeafletMap datos={dataAux}/>
+              MAPA
+              
+              <LeafletMap
+                
+                countriesData = {dataAux}
+              />
+              
               </div>
               </Col>
             </Row>
           </Container>
+          
 );
 }
 
