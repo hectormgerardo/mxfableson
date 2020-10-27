@@ -134,7 +134,7 @@ var iteration = state.select.Iteration;
  
 
     return (
-    <div>
+    <div style={{height: "100vh",width:"70vw"}}>
       
       <ComboBox onChange={handleChange}/>
      {converter()}

@@ -280,13 +280,15 @@ class LeafletMap extends Component {
         var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
         layer.bindPopup(popup)
        }
-       if (this.name_countries_Rest_of_Europe_non_EU8.includes(countryName)){
-        indexAux = this.countriesName.indexOf( 'Rest of European Union' );
-        layer.options.fillColor = this.color[indexAux];
+
+     //  if (this.name_countries_Rest_of_Europe_non_EU8.includes(countryName)){
+       // indexAux = this.countriesName.indexOf( 'Rest of European Union' );
+        //layer.options.fillColor = this.color[indexAux];
         
-        var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-        layer.bindPopup(popup)
-       }
+        //var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+        //layer.bindPopup(popup)
+    //   }
+
 
        indexAux = this.countriesName.indexOf(countryName);
        

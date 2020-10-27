@@ -45,7 +45,8 @@ const drawFreshWaterUse= (props) => {
     }
     break;
   }
-  return <div style={{height: "100vh"}}><BarChart data={dataAux}
+  return <div style={{height: "100vh",width:"70vw"}}>
+    <BarChart data={dataAux}
   aspectRatio={false}
   labelposition="top"
   title="Fresh Water use"/></div>;

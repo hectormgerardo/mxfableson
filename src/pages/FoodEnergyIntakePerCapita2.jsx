@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import BarChart from "../componentes/BarChart.jsx";
+import BarChart2 from "../componentes/BarChart2.jsx";
 import ChartCharacteristics from '../data/ChartCharacteristics.json';
 import ComboBoxFoodEnergy2 from "../componentes/ComboBoxFoodEnergy2.jsx";
 const FoodEnergyIntakePerCapita = (props) => {
@@ -211,10 +211,13 @@ setState({
       </div>
 
       
-    <div style={{height:'75vh'}}>
-      <BarChart data={data}
+    <div  style={{height: "100vh" ,width:"70vw"} }>
+      <BarChart2 data={data}
     aspectRatio={false}
     labelposition="top"
+    labelwidth={50}
+    labelSize={24}
+    TitleSize={45}
     title="Food energy intake per capita"/>
     </div>
   

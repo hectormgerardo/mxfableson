@@ -10,7 +10,8 @@ const FoodEnergyIntakePerCapita = (props) => {
     this.label=ChartCharacteristics[0]["label"];
     this.borderColor=ChartCharacteristics[0]["borderColor"];
     this.backgroundColor=ChartCharacteristics[0]["backgroundColor"];
-    
+    this.radius=ChartCharacteristics[0]["radius"];
+
   }
 
   const [state, setState] = useState({
@@ -142,8 +143,9 @@ setState({
   
 
     var labels=[];
-    var kcal_feasible=[];
     var target_mder=[];
+
+    var kcal_feasible=[];
     var dataSet=[]
 
 
@@ -151,14 +153,15 @@ setState({
    
       json.map((item) => {
           labels.push(item.Country);
-          kcal_feasible.push(item.kcal_feasible);
           target_mder.push(item.target_mder);
+
+          kcal_feasible.push(item.kcal_feasible);
         
       });
 
-      var food = new Food(ChartCharacteristics["kcal_feasible"],kcal_feasible);
+      var food = new Food(ChartCharacteristics["target_mder"],target_mder);
       dataSet.push(food);
-      food = new Food(ChartCharacteristics["target_mder"],target_mder);
+      food = new Food(ChartCharacteristics["kcal_feasible"],kcal_feasible);
       dataSet.push(food);
 
       var dataAux = {
@@ -222,10 +225,13 @@ setState({
       </div>
 
       
-    <div style={{height:'75vh'}}>
+    <div  style={{height: "100vh" ,width:"70vw"} }>
       <MixedChart data={data}
     aspectRatio={false}
     labelposition="top"
+    labelWidth={50}
+    labelSize={24}
+    TitleSize={45}
     title="Food energy intake per capita"/>
     </div>
   

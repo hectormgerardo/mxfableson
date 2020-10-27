@@ -124,10 +124,9 @@ componentDidMount(){
           <div>
           <Header/>
         </div>
+        
         <div style={{display: 'flex'}}>
-          <div>
-            <Aside/>
-          </div>
+          
           <div>
           <Scenathon/>
           </div>

@@ -44,10 +44,10 @@ const drawFreshWater2 = (props) => {
       }
 
       return (
-<Container fluid>
+<Container>
             <Row  >
               <Col >
-              <div style={{height: "100vh"}}>
+              <div style={{height: "100vh",width:"70vw"}}>
               <BarChart data={dataAux}
                   title="Fresh Water Use 2"
                   labelposition="bottom"
