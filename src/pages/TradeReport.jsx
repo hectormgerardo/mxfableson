@@ -1,8 +1,11 @@
 
 import React, { useState, useEffect } from "react";
-import { createPortal } from "react-dom";
 
-import HorizontalBarChart from "../componentes/HorizontalBarChart";
+
+import {Container,Row,Col} from "react-bootstrap";
+import LeafletMap from './LeafletMap'
+import BarChart from "../componentes/BarChart";
+
 import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
 import DashboardTradeReport from '../componentes/DashboardTradeReport'
@@ -93,15 +96,15 @@ setState({
   }, [state]);
 
  
-
+//llamada a la base de datos
   const getNettrade = async() => {
     try {
    
       const body =state;
       
    
-      const response = await fetch("http://localhost:5000/net/"+JSON.stringify(body));
-     const  jsonAux =  await response.json();
+     const response = await fetch("http://localhost:5000/net/"+JSON.stringify(body));
+      const  jsonAux =  await response.json();
     
     setJson(jsonAux);
 
@@ -215,12 +218,26 @@ if(state.select.column=="Export_quantity")
 
         {/*this.selectDashboard()*/}
        
-
-        <div>
-          <BarChart data={dataAux} title="Sustainable - net exporters" />
-        </div>
+<div>
 
 
+        <Container fluid>
+                <Row >
+                  <Col>
+                  <div style={{height: "100vh", widht:"30vw"}}>
+                  <BarChart data={dataAux} title="Sustainable - net exporters" 
+                        aspectRatio={false}
+                        labelposition="bottom"/> 
+                  </div>
+                  </Col>
+                  <Col>
+                  <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
+                  <LeafletMap datos={dataAux}/>
+                  </div>
+                  </Col>
+                </Row>
+              </Container>
+              </div>
       </div>
     )
   

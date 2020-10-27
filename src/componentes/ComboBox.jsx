@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Form } from 'react-bootstrap';
 
 const Styles = styled.div`
 .contenedor selects{
-  background-color: #528D93 ;
+  background-color: #528D93;
 }
 .conetenedor-select {
   color:white;
@@ -19,7 +20,6 @@ function ComboBox (props) {
         const{onChange}=props
         return (
             <Styles>
-
             <div className="contenedor-selects">
                 <br></br>
                 <select  name="scenathon_id" onChange={onChange}>
@@ -33,11 +33,18 @@ function ComboBox (props) {
                     <option value="before">before</option>
                 </select>
                 <br></br>
-                 <select  name="GraficaType" onChange={onChange}>
+                <Form>
+                  <Form.Control name="GraficaType" onChange={onChange} as="select" custom>
+                    <option value="regions">ALL ROW regions</option>
+                    <option value="countries">ALL FABLE countries</option>
+                  </Form.Control>
+                </Form>
+
+                 {/*<select  name="GraficaType" onChange={onChange}>
                     <option value="group">Group</option>
                     <option value="regions">ALL ROW regions</option>
                     <option value="countries">ALL FABLE countries</option>
-                </select>
+                </select>*/}
                 <br></br>
             </div>
     </Styles>

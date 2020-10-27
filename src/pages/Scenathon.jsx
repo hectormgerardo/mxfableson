@@ -25,10 +25,6 @@ import GreenHouseOne from '../pages/GreenHouseOne'
 import FreshWaterTwo from '../pages/FreshWaterTwo'
 
 
-
-
- 
-
 class Scenathon extends Component {
     constructor(props) {
         super(props);
@@ -51,13 +47,11 @@ class Scenathon extends Component {
 
     //recibe valor de class component "ComboBox" 
     handleChange = e => {
-     
         this.setState({
             select: {
                 //el next code evitara que se sobrescriba cuando reciba un valor new
                 ...this.state.select,
                 [e.target.name]: e.target.value
-                
             },
             dashboard:e.target.value
            
@@ -68,11 +62,11 @@ class Scenathon extends Component {
     }
 
     selectDashboard(){
+      
         switch(this.state.dashboard){
             case 'Global Target Summary': 
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-         //  this.dash=<GlobalTargets combinacion={this.state}/>;
-        // this.dash=<h1>hola</h1>
+               // this.combobox=<ComboBox onChange={this.handleChange}/>
+                
               break;
             case 'Net Forest Cover Change(1)': 
             this.combobox=<ComboBox onChange={this.handleChange}/>

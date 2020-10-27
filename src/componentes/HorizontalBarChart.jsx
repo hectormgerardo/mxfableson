@@ -1,6 +1,7 @@
 import { HorizontalBar } from "react-chartjs-2";
 import React from 'react';
 
+
 const  Horizontal_Bar=(props)=> {
 
     const options = {
