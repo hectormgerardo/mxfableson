@@ -5,6 +5,9 @@ import "../../node_modules/react-grid-layout/css/styles.css";
 import "../../node_modules/react-resizable/css/styles.css";
 import {Container,Row,Col,Jumbotron} from "react-bootstrap";
 import GridLayout from 'react-grid-layout';
+
+import LeafletMap from './LeafletMap';
+
 //nfch=NetForestCoverChange
 const drawNfch2 = (props) => {
  
@@ -44,7 +47,8 @@ const drawNfch2 = (props) => {
     
   }
   
-  
+  console.log('NET DATA AUX');
+  console.log(dataAux);
 return(
 
 
@@ -60,6 +64,10 @@ return(
               <Col>
               <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
               MAPA
+              <LeafletMap 
+                countriesMap = {dataAux}
+              />
+
               </div>
               </Col>
             </Row>

@@ -63,15 +63,22 @@ return (
               <Col>
               <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
               MAPA
-              
               <LeafletMap
+              
                 
                 countriesData = {dataAux}
+              
               />
               
               </div>
               </Col>
             </Row>
+            <LeafletMap
+              
+                
+                countriesData = {dataAux}
+              
+              />
           </Container>
           
 );
@@ -320,7 +327,7 @@ const convertir=(props)=>
           },
           {
             type: 'bar',
-            label: 'Rest of European Union ',
+            label: 'Rest of European Union',
             data: Protected_land_Rest_of_European_Union,
             fill: false,
             borderColor: '#EC932F',
