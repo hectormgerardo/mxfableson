@@ -86,7 +86,7 @@ const App = () => {
             <Scenathon currentValue={currentValue} />
           </div>
         </div>
-          
+
         <div className="scenathon-info">
           <About2/>
         </div>
@@ -134,7 +134,7 @@ const App = () => {
         <div height="100px">
           <About3/>
         </div>
-        <div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
+        <div id="Jumbotron_fin">
           <Jumbotron_fin/>
         </div>
         
