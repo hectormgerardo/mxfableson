@@ -16,6 +16,7 @@ import GlobalTargets from '../pages/GlobalTargets'
 import ProtectedAreaByType from '../pages/ProtectedAreaByType'
 import LandCover from '../pages/LandCover'
 import FoodEnergyIntakePerCapita from '../pages/FoodEnergyIntakePerCapita'
+import FoodEnergyIntakePerCapita2 from '../pages/FoodEnergyIntakePerCapita2'
 import FreshWaterUse from '../pages/FreshWaterUse'
 import NetForestCoverChange2 from '../pages/NetForestCoverChange2'
 import GreenHouse2 from '../pages/GreenHouse2'
@@ -61,11 +62,11 @@ class Scenathon extends Component {
     }
 
     selectDashboard(){
+      
         switch(this.state.dashboard){
             case 'Global Target Summary': 
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-         //  this.dash=<GlobalTargets combinacion={this.state}/>;
-        // this.dash=<h1>hola</h1>
+               // this.combobox=<ComboBox onChange={this.handleChange}/>
+                
               break;
             case 'Net Forest Cover Change(1)': 
             this.combobox=<ComboBox onChange={this.handleChange}/>
@@ -86,7 +87,8 @@ class Scenathon extends Component {
                 this.dash=<ProtectedAreaByType/>;
             break;
             case 'Land Cover':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
+               // this.combobox=<ComboBox onChange={this.handleChange}/>
+                this.combobox=null;
                 this.dash=<LandCover combinacion={this.state}/>;
             break;
             case 'Fresh water use (1)':
@@ -106,12 +108,14 @@ class Scenathon extends Component {
                 this.dash=<GreenHouse2 combinacion={this.state}/>;
             break;
             case 'Food energy intake per capita (1)':
-                this.combobox=<ComboBox2 onChange={this.handleChange}/>
-                this.dash=<FoodEnergyIntakePerCapita combinacion={this.state}/>;
+             //   this.combobox=<ComboBox2 onChange={this.handleChange}/>
+             this.combobox=null;  
+              
+             this.dash=<FoodEnergyIntakePerCapita/>;
             break;
             case 'Food energy intake per capita (2)':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<h1>Food energy intake per capita (2)</h1>;
+                this.combobox=null;   
+             this.dash=<FoodEnergyIntakePerCapita2/>;
             break;
            
           }
