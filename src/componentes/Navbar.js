@@ -130,19 +130,19 @@ const NavBar = () => {
             <div className="router-container" id="router-container">
 
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand  classname="navbar-link" id="navbar-link-home" href="#home">Home</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand  className="navbar-link" id="navbar-link-home" href="#home">Home</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-tour" href="#tour">Tour</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand className="navbar-link" id="navbar-link-tour" href="#tour">Tour</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand className="navbar-link" id="navbar-link-fable" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2020" href="#scenathon2020">Scenathon 2020</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand className="navbar-link" id="navbar-link-scenathon2020" href="#scenathon2020">Scenathon 2020</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2019" href="#scenathon2019">Scenathon 2019</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand className="navbar-link" id="navbar-link-scenathon2019" href="#scenathon2019">Scenathon 2019</ReactBootStrap.Navbar.Brand>
               </Link>
 
             </div>

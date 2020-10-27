@@ -40,7 +40,7 @@ export const Header = () => {
             <header>
             <div className="header-left">15</div>
                     <div className="header-center">Life on Land</div>
-                    <img src={INCON15} class="header-right" />
+                    <img src={INCON15} class="header-right" alt=""/>
             </header>
         </Styles>
 
