@@ -225,7 +225,7 @@ console.error(err.message);
 }
 });
 
-app.get('/biodiversity',async(req,res)=>{
+app.get('/biodiversity:combinaciones',async(req,res)=>{
     try{
 
     const{iteration,scenathon,group}=JSON.parse(req.params.combinaciones).select;
