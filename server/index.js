@@ -224,3 +224,61 @@ res.status(200).json(response.rows)
 console.error(err.message);
 }
 });
+
+app.get('/biodiversity',async(req,res)=>{
+    try{
+
+    const{iteration,scenathon,group}=JSON.parse(req.params.combinaciones).select;
+    switch(group){
+        case "group": 
+        var query='SELECT "Year","Country", (avg("CalcBiodivLnd")) AS "Biodiversity Land" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 GROUP BY "Year","Country" ORDER BY "Year","Country"';
+        break;
+        case "countries":
+            var query='SELECT "Year","Country", (avg("CalcBiodivLnd")) AS "Biodiversity Land" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Country" NOT LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Year","Country" ORDER BY "Year","Country"';
+            break;
+        case "regions":
+            var query='SELECT "Year","Country", (avg("CalcBiodivLnd")) AS "Biodiversity Land" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Country" LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Year","Country" ORDER BY "Year","Country"';
+            break;
+        default: 
+            var query=null;
+            break;
+    }
+const response=await pool.query(query,[iteration,scenathon]);
+
+res.status(200).json(response.rows)
+
+
+
+}catch(err){
+console.error(err.message);
+}
+});
+
+app.get('/target1:combinaciones',async(req,res)=>{
+    try{
+
+    const{iteration,scenathon,group}=JSON.parse(req.params.combinaciones).select;
+    switch(group){
+        case "group": 
+        var query='SELECT "Year", SUM("NetForestChange") as "Net Forest Change" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2  GROUP BY "Year" ORDER BY "Year"';
+        break;
+        case "countries":
+            var query='SELECT "Year", SUM("NetForestChange") as "Net Forest Change" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Country" NOT LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Year" ORDER BY "Year"';
+            break;
+        case "regions":
+            var query='SELECT "Year", SUM("NetForestChange") as "Net Forest Change" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Country" LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Year" ORDER BY "Year"';
+            break;
+        default: 
+            var query=null;
+            break;
+    }
+const response=await pool.query(query,[iteration,scenathon]);
+
+res.status(200).json(response.rows)
+
+
+
+}catch(err){
+console.error(err.message);
+}
+});
