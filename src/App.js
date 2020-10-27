@@ -178,9 +178,7 @@ componentDidMount(){
           <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
       </div>*/}
         
-        {/*<div id="Jumbotron_fin" data-rh="Derechos de Autor" data-rh-at="top" id="final">
-          <Jumbotron_fin/>
-        </div>
+        {/*
 
 
       
@@ -191,7 +189,9 @@ componentDidMount(){
         
         
        
-        
+        <div id="Jumbotron_fin" data-rh="Copyright" data-rh-at="top" id="final">
+          <Jumbotron_fin/>
+        </div>
         
 
         
