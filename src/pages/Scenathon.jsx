@@ -68,11 +68,11 @@ class Scenathon extends Component {
     }
 
     selectDashboard(){
+      
         switch(this.state.dashboard){
             case 'Global Target Summary': 
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-         //  this.dash=<GlobalTargets combinacion={this.state}/>;
-        // this.dash=<h1>hola</h1>
+               // this.combobox=<ComboBox onChange={this.handleChange}/>
+                
               break;
             case 'Net Forest Cover Change(1)': 
             this.combobox=<ComboBox onChange={this.handleChange}/>

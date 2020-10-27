@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BarChart from "../componentes/BarChart.jsx";
-import data from '../data/LandCover.json';
+
 import ComboBox from '../componentes/ComboBox';
 import ChartCharacteristics from '../data/ChartCharacteristics.json';
 const DrawLandCover = () => {

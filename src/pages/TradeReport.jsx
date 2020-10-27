@@ -90,15 +90,15 @@ setState({
   }, [state]);
 
  
-
+//llamada a la base de datos
   const getNettrade = async() => {
     try {
    
       const body =state;
       
    
-      const response = await fetch("http://localhost:5000/net/"+JSON.stringify(body));
-     const  jsonAux =  await response.json();
+     const response = await fetch("http://localhost:5000/net/"+JSON.stringify(body));
+      const  jsonAux =  await response.json();
     
     setJson(jsonAux);
 
