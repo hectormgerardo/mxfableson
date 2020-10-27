@@ -31,6 +31,7 @@ const Styles = styled.div`
   padding:0 0%;
   justify-content:space-between;
   width:100%;
+  z-index: 9999;
 
 .router-container {
    
