@@ -4,13 +4,12 @@ import React, { useState, useEffect } from "react";
 
 import {Container,Row,Col} from "react-bootstrap";
 import LeafletMap from './LeafletMap'
-import BarChart from "../componentes/BarChart";
+
 
 import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
 import DashboardTradeReport from '../componentes/DashboardTradeReport'
-import HorizontalBar from "../componentes/HorizontalBarChart";
-import { Bar } from "react-chartjs-2";
+
 import BarChart from "../componentes/BarChart";
 
 
@@ -224,7 +223,7 @@ if(state.select.column=="Export_quantity")
         <Container fluid>
                 <Row >
                   <Col>
-                  <div style={{height: "100vh", widht:"30vw"}}>
+                  <div style={{height: "75vh" ,width:"70vw"} }>
                   <BarChart data={dataAux} title="Sustainable - net exporters" 
                         aspectRatio={false}
                         labelposition="bottom"/> 

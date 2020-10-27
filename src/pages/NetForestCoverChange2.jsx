@@ -48,18 +48,18 @@ const drawNfch2 = (props) => {
 return(
 
 
-          <Container fluid>
+          <Container fluid >
             <Row  >
               <Col >
-              <div style={{height: "100vh"}}>
+              <div style={{height: "100vh" ,width:"30vw"} }>
                 <BarChart data={dataAux}
                   title="Net Forest Cover Change 2"
                   labelposition="bottom"
                   aspectRatio={false}/></div>
               </Col>
               <Col>
-              <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
-              MAPA
+              <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"35vw"}}>
+             
               </div>
               </Col>
             </Row>

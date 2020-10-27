@@ -211,7 +211,7 @@ setState({
       </div>
 
       
-    <div style={{height:'75vh'}}>
+    <div  style={{height: "100vh" ,width:"70vw"} }>
       <BarChart2 data={data}
     aspectRatio={false}
     labelposition="top"

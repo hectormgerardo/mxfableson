@@ -11,7 +11,7 @@ const drawNfch = (props) => {
 
 
 
-  let dataAux;
+  var dataAux=null;
 
   const { GraficaType, Iteration, Scenario } = props.combinacion.select;
 
@@ -49,7 +49,7 @@ const drawNfch = (props) => {
     }
     break;
   }
-  return <div style={{height: "100vh"}}>
+  return <div style={{height: "100vh",width:"70vw"}}>
 <MixedChart data={dataAux}
   title="Net Forest Cover Change"
   aspectRatio={false}
