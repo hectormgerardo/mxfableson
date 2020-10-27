@@ -44,14 +44,13 @@ overflow:hidden;
   font-size: 50px;
   margin: 0;
   height: 100px;
-    transition:1.5s;
+  
   
 
 
 .banner{
   max-width:100%;
 max-height:100%;
-transition:1.5s;
 }
 
 
@@ -108,7 +107,7 @@ class Scenathon extends Component {
             case 'Global Target Summary': 
                 this.combobox=<ComboBox onChange={this.handleChange}/>
               this.dash=<GlobalTargets combinacion={this.state}/>;
-              document.getElementById("banner").src=BannerLifeOnLand;
+              
               break;
             case 'Net Forest Cover Change(1)': 
             this.combobox=<ComboBox onChange={this.handleChange}/>
