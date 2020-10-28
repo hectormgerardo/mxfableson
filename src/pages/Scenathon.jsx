@@ -29,7 +29,7 @@ import BannerLifeOnLand from '../assets/banners/Mesa de trabajo 19.png';
 import BannerCleanWater from '../assets/banners/Mesa de trabajo 8.png';
 import BannerZeroHunger from '../assets/banners/Mesa de trabajo 2.png';
 import BannerClimateAction from '../assets/banners/Mesa de trabajo 16.png';
-
+import Aside from '../componentes/Aside';
 
 const Styles = styled.div`
 header{
@@ -44,7 +44,7 @@ overflow:hidden;
   font-size: 50px;
   margin: 0;
   height: 100px;
-  
+  margin-top:20px;
   
 
 
@@ -56,7 +56,10 @@ max-height:100%;
 
 }
 
-
+.container{
+    display:flex;
+    width:1500px;
+}
 
 
 
@@ -184,7 +187,7 @@ class Scenathon extends Component {
 
 
                  <div className="container">
-              
+                 <Aside />
                        
                  {/* componente de comboBox(opciones para el tipo de grafica)*/} 
                  <div className="Combo-Box">

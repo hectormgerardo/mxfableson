@@ -121,7 +121,11 @@ componentDidMount(){
           <Jumbotron_2 />
         </div>
 
-        <div style={{display: 'flex'}}>
+
+
+<Scenathon/>
+{/*
+ <div style={{display: 'flex'}}>
           <div>
             <Aside />
           </div>
@@ -129,6 +133,8 @@ componentDidMount(){
           <Scenathon/>
           </div>
         </div>
+*/ }
+       
 
         
 
