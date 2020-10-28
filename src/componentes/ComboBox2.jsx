@@ -23,31 +23,16 @@ function ComboBox (props) {
 
             <div className="contenedor-selects">
                 <br></br>
-                
-                <Form>
-                  <Form.Control name="Scenario" onChange={onChange} as="select" custom>
-                    <option value="Sustainaible">Sustainaible</option>
-                    <option value="Current_trend">Current trend</option>
-                  </Form.Control>
-                </Form>
-
-                {/*<select  name="Scenario" onChange={onChange}>
-                    <option value="Sustainaible">Sustainaible</option>
-                    <option value="Current_trend">Current trend</option>
+                <select  name="scenathon_id" onChange={onChange}>
+                <option value="6">Sustainaible</option>
+                    <option value="5">Current trend</option>
                     
-                  </select>*/}
+                  </select>
                 <br></br>
-                <Form>
-                  <Form.Control name="Iteration" onChange={onChange} as="select" custom>
-                    <option value="iteration_4">iteration:4</option>
-                    <option value="iteration_3">iteration:3</option>
-                  </Form.Control>
-                </Form>
-
-                {/*<select  name="Iteration" onChange={onChange}>
-                    <option value="iteration_4">iteration:4</option>
-                    <option value="iteration_3">iteration:3</option>
-                </select>*/}
+                <select  name="Iteration" onChange={onChange}>
+                <option value="after">after</option>
+                    <option value="before">before</option>
+                </select>
                 <br></br>
                 <Form>
                   <Form.Control name="Year" onChange={onChange} as="select" custom>

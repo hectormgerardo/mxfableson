@@ -9,11 +9,14 @@ import {
 } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 
-const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
+const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar, onChange }) => {
+  const handleChange  =e =>{
+    onChange(e);
+  }
   return (
     <ProSidebar
       image={false}
-      rtl={true}
+      rtl={false}
       collapsed={false}
       toggled={false}
       breakPoint="md"
@@ -31,45 +34,57 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
             whiteSpace: 'nowrap',
           }}
         >
-          DASHBOARD
+          Menu
         </div>
       </SidebarHeader>
 
       <SidebarContent>
-        <Menu iconShape="circle">
-          <MenuItem>
-            DASHBOARDSON
-          </MenuItem>
-          <MenuItem > Menu 1</MenuItem>
+        <Menu iconShape="round">
+          {/*<MenuItem>
+            DASHBOARD
+          </MenuItem>*/}
+        {/*<MenuItem>Menu 1</MenuItem>*/}
         </Menu>
         <Menu iconShape="circle">
-          <SubMenu
-            title="Menu 1"           
-          >
-            <MenuItem>submenu 1</MenuItem>
-            <MenuItem>submenu 2</MenuItem>
-            <MenuItem>submenu 3</MenuItem>
-          </SubMenu>
-          <SubMenu
-            title="Menu 2"     
-          >
-            <MenuItem>submenu 1</MenuItem>
-            <MenuItem>submenu 2</MenuItem>
-            <MenuItem>submenu 3</MenuItem>
-          </SubMenu>
-          <SubMenu title="Multi Level Section" >
-            <MenuItem>submenu 1 </MenuItem>
-            <MenuItem>submenu 2 </MenuItem>
-            <SubMenu title="sub menu 3">
-              <MenuItem>submenu 3.1 </MenuItem>
-              <MenuItem>submenu 3.2 </MenuItem>
-              <SubMenu title="submenu">
+          <SubMenu title="Dashboard" >
+            <MenuItem onClick={()=>handleChange("Global Target Summary")}>Global Target Summary</MenuItem>
+            <SubMenu icon title="Net Forest Cover Change">
+              <MenuItem onClick={()=>handleChange("Net Forest Cover Change 1")}>Net Forest Cover Change 1</MenuItem>
+              <MenuItem onClick={()=>handleChange("Net Forest Cover Change 2")}>Net Forest Cover Change 2</MenuItem>
+              {/*<SubMenu title="submenu">
                 <MenuItem>submenu 3.3.1 </MenuItem>
                 <MenuItem>submenu 3.3.2 </MenuItem>
                 <MenuItem>submenu 3.3.3 </MenuItem>
-              </SubMenu>
+                </SubMenu>*/}
+            </SubMenu>
+            <MenuItem onClick={()=>handleChange("Biodiversity")}>Biodiversity</MenuItem>
+            <MenuItem onClick={()=>handleChange("Protected Areas by Type")}>Protected Areas by Type</MenuItem>
+            <MenuItem onClick={()=>handleChange("Land Cover")}>Land Cover</MenuItem>
+            <SubMenu title="Fresh Water">
+              <MenuItem onClick={()=>handleChange("Fresh Water 1")}>Fresh Water 1</MenuItem>
+              <MenuItem onClick={()=>handleChange("Fresh Water 2")}>Fresh Water 2</MenuItem>
+            </SubMenu>
+            <SubMenu title="Green House Gas (GHG) Emissions">
+              <MenuItem onClick={()=>handleChange("Green House Gas (GHG) Emissions 1")}>Green House Gas (GHG) Emissions 1</MenuItem>
+              <MenuItem onClick={()=>handleChange("Green House Gas (GHG) Emissions 2")}>Green House Gas (GHG) Emissions 2</MenuItem>
+            </SubMenu>
+            <SubMenu title="Food Energy Intake Per Capita">
+              <MenuItem onClick={()=>handleChange("Food Energy Intake Per Capita 1")}>Food Energy Intake Per Capita 1</MenuItem>
+              <MenuItem onClick={()=>handleChange("Food Energy Intake Per Capita 2")}>Food Energy Intake Per Capita 2</MenuItem>
             </SubMenu>
           </SubMenu>
+            <SubMenu title="Trade Report">
+              <SubMenu title="Sustainable - net">
+                <MenuItem onClick={()=>handleChange("Importers")}>Importers</MenuItem>
+                <MenuItem>Exporters</MenuItem>
+              </SubMenu>
+              <SubMenu title="Current Trend">
+                <MenuItem>Importers</MenuItem>
+                <MenuItem>Exporters</MenuItem>
+              </SubMenu>
+
+            </SubMenu>
+
         </Menu>
       </SidebarContent>
     </ProSidebar>

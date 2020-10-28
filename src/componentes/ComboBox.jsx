@@ -22,33 +22,20 @@ function ComboBox (props) {
             <Styles>
             <div className="contenedor-selects">
                 <br></br>
-
-                <Form>
-                  <Form.Control name="Scenario" onChange={onChange} as="select" custom>
-                    <option value="Sustainaible">Sustainaible</option>
-                    <option value="Current_trend">Current trend</option>
-                  </Form.Control>
-                </Form>
-
-
-                {/*<select  name="Scenario" onChange={onChange}>
-                    <option value="Sustainaible">Sustainaible</option>
-                    <option value="Current_trend">Current trend</option>
-                   </select>*/}
+                <select  name="scenathon_id" onChange={onChange}>
+                    <option value="6">Sustainaible</option>
+                    <option value="5">Current trend</option>
+                    
+                </select>
                 <br></br>
-                <Form>
-                  <Form.Control name="Iteration" onChange={onChange} as="select" custom>
-                    <option value="iteration_4">iteration:4</option>
-                    <option value="iteration_3">iteration:3</option>
-                  </Form.Control>
-                </Form>
-                {/*<select  name="Iteration" onChange={onChange}>
-                    <option value="iteration_4">iteration:4</option>
-                    <option value="iteration_3">iteration:3</option>
-                  </select>*/}
+                <select  name="Iteration" onChange={onChange}>
+                    <option value="after">after</option>
+                    <option value="before">before</option>
+                </select>
                 <br></br>
                 <Form>
                   <Form.Control name="GraficaType" onChange={onChange} as="select" custom>
+                  <option value="group">Group</option>
                     <option value="regions">ALL ROW regions</option>
                     <option value="countries">ALL FABLE countries</option>
                   </Form.Control>

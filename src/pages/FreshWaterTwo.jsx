@@ -2,6 +2,9 @@ import React from "react";
 import BarChart from "../componentes/BarChart";
 import data from '../data/WaterUse2.json';
 import {Container,Row,Col,Jumbotron} from "react-bootstrap";
+
+import LeafletMap from './LeafletMap';
+
 const drawFreshWater2 = (props) => {
 
     const {GraficaType, Iteration, Scenario} = props.combinacion.select;
@@ -41,10 +44,10 @@ const drawFreshWater2 = (props) => {
       }
 
       return (
-<Container fluid>
+<Container>
             <Row  >
               <Col >
-              <div style={{height: "100vh"}}>
+              <div style={{height: "100vh",width:"70vw"}}>
               <BarChart data={dataAux}
                   title="Fresh Water Use 2"
                   labelposition="bottom"
@@ -53,6 +56,10 @@ const drawFreshWater2 = (props) => {
               <Col>
               <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
               MAPA
+              <LeafletMap
+                
+                countriesData = {dataAux}
+              />
               </div>
               </Col>
             </Row>

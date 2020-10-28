@@ -12,6 +12,8 @@ import {Bar} from 'react-chartjs-2';
       maintainAspectRatio: props.aspectRatio===undefined?true:props.aspectRatio,
       title: {
         display: true,
+        fontSize:props.TitleSize===undefined?12:props.TitleSize,
+
         text: props.title
     },legend:{
       display:true,
@@ -25,7 +27,11 @@ import {Bar} from 'react-chartjs-2';
       },
       elements: {
         line: {
-          fill: false
+          fill: false,
+          tension: 0,
+          bezierCurve : false
+
+
         }
       },
       scales: {
