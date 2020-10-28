@@ -309,7 +309,7 @@ app.get('/target6:combinations', async (req, res) => {
 });
 app.get('/freshwater1:combinations', async (req, res) => {
     try {
-console.log("cocaina 4")
+
         const { Iteration, scenathon_id, GraficaType } = JSON.parse(req.params.combinations).select;
         switch (GraficaType) {
             case "group":
@@ -338,22 +338,22 @@ console.log("cocaina 4")
 app.get('/freshwater2:combinations', async (req, res) => {
     try {
 
-        const { iteration, scenathon, group } = JSON.parse(req.params.combinations).select;
-        switch (group) {
+        const { Iteration, scenathon_id, GraficaType } = JSON.parse(req.params.combinations).select;
+        switch (GraficaType) {
             case "group":
-                var query = 'SELECT "Year","Country",sum("CalcWFblue") from "resultsScen2020" WHERE "iteration"=$1 and "scenathon_id"=$2 GROUP BY "Year","Country" Order by "Year","Country"';
+                var query = 'SELECT "Year","Country",sum("CalcWFblue") from "resultsScen2020" WHERE "iteration"=$1 and "scenathon_id"=$2  GROUP BY "Country","Year" ORDER BY "Country","Year"';
                 break;
             case "countries":
-                var query = 'SELECT "Year","Country",sum("CalcWFblue") from "resultsScen2020" WHERE "iteration"=$1 and "scenathon_id"=$2 AND "Country" NOT LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Year","Country" Order by "Year","Country"';
+                var query = 'SELECT "Year","Country",sum("CalcWFblue") from "resultsScen2020" WHERE "iteration"=$1 and "scenathon_id"=$2 AND "Country" NOT LIKE \'%$_%\' ESCAPE \'$\'  GROUP BY "Country","Year" ORDER BY "Country","Year"';
                 break;
             case "regions":
-                var query = 'SELECT "Year","Country",sum("CalcWFblue") from "resultsScen2020" WHERE "iteration"=$1 and "scenathon_id"=$2 AND "Country" LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Year","Country" Order by "Year","Country"';
+                var query = 'SELECT "Year","Country",sum("CalcWFblue") from "resultsScen2020" WHERE "iteration"=$1 and "scenathon_id"=$2 AND "Country" LIKE \'%$_%\' ESCAPE \'$\'  GROUP BY "Country","Year" ORDER BY "Country","Year"';
                 break;
             default:
                 var query = null;
                 break;
         }
-        const response = await pool.query(query, [iteration, scenathon]);
+        const response = await pool.query(query, [Iteration, scenathon_id]);
 
         res.status(200).json(response.rows)
 

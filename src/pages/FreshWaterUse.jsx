@@ -59,6 +59,9 @@ const DrawFreshWaterUse= (props) => {
     this.backgroundColor=ChartCharacteristics[0]["backgroundColor"];
     
   }
+  const [json, setJson] = useState([]);
+  var data = null;
+  
   const [state, setState] = useState({
     select: {
       GraficaType:'group',
@@ -75,7 +78,7 @@ const DrawFreshWaterUse= (props) => {
 
   const getFreshWater = async () => 
    {
-     console.log("get bio")
+    
      try {   
        const body =state;
       const response = await fetch("http://localhost:5000/freshwater1"+JSON.stringify(body));
@@ -156,8 +159,7 @@ const DrawFreshWaterUse= (props) => {
       
       }
     
-  const [json, setJson] = useState([]);
-  var data = null;
+
 
 
 
