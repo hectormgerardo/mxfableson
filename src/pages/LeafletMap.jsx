@@ -176,6 +176,10 @@ class LeafletMap extends Component {
         super(props);
         
         this.propsAux = props;
+
+        console.log('Estos son los props')
+        console.log(this.propsAux)
+
         try {
             
             this.propsAux.countriesData.datasets.map((item) => {
@@ -255,7 +259,9 @@ class LeafletMap extends Component {
 
     onEachCountry = (country, layer) => {
 
-       const countryName = country.properties.ADMIN; //The name of the countries
+       //const countryName = country.properties.ADMIN; //The name of the countries
+       const countryName = country.id;
+       console.log(country.id);
        
        var indexAux = -1;
  
@@ -280,15 +286,19 @@ class LeafletMap extends Component {
         var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
         layer.bindPopup(popup)
        }
-       if (this.name_countries_Rest_of_Europe_non_EU8.includes(countryName)){
-        indexAux = this.countriesName.indexOf( 'Rest of European Union' );
-        layer.options.fillColor = this.color[indexAux];
+
+     //  if (this.name_countries_Rest_of_Europe_non_EU8.includes(countryName)){
+       // indexAux = this.countriesName.indexOf( 'Rest of European Union' );
+        //layer.options.fillColor = this.color[indexAux];
         
-        var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-        layer.bindPopup(popup)
-       }
+        //var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+        //layer.bindPopup(popup)
+    //   }
+
 
        indexAux = this.countriesName.indexOf(countryName);
+       console.log(this.countriesName)
+       console.log(this.color)
        
        /*this.countriesName.forEach(function(country, index, array) {
             if (country == countryName) {

@@ -101,12 +101,12 @@ const drawGreenhouse1 = (props) => {
     <Container fluid>
       <Row>
         <Col >
-          <div style={{ height: "100vh" }}><SuperGraph data={dataGraphOneAux}
+          <div style={{height: "100vh" ,width:"35vw"} }><SuperGraph data={dataGraphOneAux}
             title="Green House 1"
             aspectRatio={false} 
             labelposition="top"/> 
             </div></Col>
-        <Col > <div style={{ height: "100vh" }}><SuperGraph data={dataGraphTwoAux}
+        <Col > <div style={{height: "100vh" ,width:"35vw"} }><SuperGraph data={dataGraphTwoAux}
           title="Green House 2"
           aspectRatio={false} 
             labelposition="top" /> </div></Col>

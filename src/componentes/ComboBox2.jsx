@@ -27,7 +27,7 @@ function ComboBox (props) {
                 <option value="6">Sustainaible</option>
                     <option value="5">Current trend</option>
                     
-                  </select>*/}
+                  </select>
                 <br></br>
                 <select  name="Iteration" onChange={onChange}>
                 <option value="after">after</option>

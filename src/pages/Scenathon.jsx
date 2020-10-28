@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 
 import ComboBox from '../componentes/ComboBox'
-import ComboBox2 from '../componentes/ComboBox2'
-import ComboBox3 from '../componentes/ComboBox3'
 
+import ComboBox3 from '../componentes/ComboBox3'
+import Aside from '../componentes/Aside';
 import Dashboard from '../componentes/Dashboard'
 
 
@@ -23,8 +23,7 @@ import GreenHouse2 from '../pages/GreenHouse2'
 
 import GreenHouseOne from '../pages/GreenHouseOne'
 import FreshWaterTwo from '../pages/FreshWaterTwo'
-
-
+import TradeReport from '../pages/TradeReport'
 class Scenathon extends Component {
     constructor(props) {
         super(props);
@@ -47,32 +46,52 @@ class Scenathon extends Component {
 
     //recibe valor de class component "ComboBox" 
     handleChange = e => {
+      
+
+       if(e.target==undefined)
+       {
+          
         this.setState({
             select: {
                 //el next code evitara que se sobrescriba cuando reciba un valor new
+                GraficaType:this.state.select.GraficaType,
+                Iteration:this.state.select.Iteration,
+                Scenario:this.state.select.Scenario,
+                Year:this.state.select.Year
+            },
+            dashboard:e
+           
+        }) 
+       }else{
+          this.setState({
+            select: {
+                //el next code evitara que se sobrescriba cuando reciba un valor new
                 ...this.state.select,
+                
                 [e.target.name]: e.target.value
             },
             dashboard:e.target.value
            
-        })
-        
+        }) 
+       }
 
         
+        
+
     }
 
     selectDashboard(){
-      
+      console.log("entre")
         switch(this.state.dashboard){
             case 'Global Target Summary': 
-               // this.combobox=<ComboBox onChange={this.handleChange}/>
-                
+                this.combobox=<ComboBox onChange={this.handleChange}/>
+               this.dash=<GlobalTargets combinacion={this.state}/>;
               break;
-            case 'Net Forest Cover Change(1)': 
+            case 'Net Forest Cover Change 1': 
             this.combobox=<ComboBox onChange={this.handleChange}/>
               this.dash=<NetForestCoverChange combinacion={this.state}/>;
               break;
-            case 'Net Forest Cover Change(2)':
+            case 'Net Forest Cover Change 2':
                 this.combobox=<ComboBox3 onChange={this.handleChange}/>
                 
                 this.dash=<NetForestCoverChange2 combinacion={this.state}/>;
@@ -81,7 +100,7 @@ class Scenathon extends Component {
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<Biodiversity combinacion={this.state}/>;
             break;
-            case 'Protected areas by type':
+            case 'Protected Areas by Type':
              //  <ComboBox onChange={this.handleChange}/>
              this.combobox=null;
                 this.dash=<ProtectedAreaByType/>;
@@ -91,31 +110,35 @@ class Scenathon extends Component {
                 this.combobox=null;
                 this.dash=<LandCover combinacion={this.state}/>;
             break;
-            case 'Fresh water use (1)':
+            case 'Fresh Water 1':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<FreshWaterUse combinacion={this.state}/>;
             break;
-            case 'Fresh water use (2)':
+            case 'Fresh Water 2':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<FreshWaterTwo combinacion={this.state}/>;
             break;
-            case 'GreenHouse Gas(GHG) Emissions(1)':
+            case 'Green House Gas (GHG) Emissions 1':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<GreenHouseOne combinacion={this.state}/>;
             break;
-            case 'GreenHouse Gas(GHG) Emissions(2)':
+            case 'Green House Gas (GHG) Emissions 2':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<GreenHouse2 combinacion={this.state}/>;
             break;
-            case 'Food energy intake per capita (1)':
+            case 'Food Energy Intake Per Capita 1':
              //   this.combobox=<ComboBox2 onChange={this.handleChange}/>
              this.combobox=null;  
               
              this.dash=<FoodEnergyIntakePerCapita/>;
             break;
-            case 'Food energy intake per capita (2)':
+            case 'Food Energy Intake Per Capita 2':
                 this.combobox=null;   
              this.dash=<FoodEnergyIntakePerCapita2/>;
+            break;
+            case 'Importers':
+                this.combobox=null;   
+             this.dash=<TradeReport/>;
             break;
            
           }
@@ -129,16 +152,21 @@ class Scenathon extends Component {
 
     render() {
         return (
-            <div className="container-fluid">
-                {/* componente de comboBox(opciones para el tipo de grafica)*/}
-                <div className="Combo-Box">
+            <div className="container-fluid" style={{display: 'flex'}}>
+               <div>
+                 <Aside onChange={this.handleChange}/>  
+               </div>
+            
+          
+                <div>
+                 {/*    <Dashboard metodo={this.handleChange} data={this.state} />*/}
                 </div>
                 <div>
-                    <Dashboard metodo={this.handleChange} data={this.state} />
-                </div>
                 {this.selectDashboard()}
                 {this.combobox}
                 {this.dash}
+                </div>
+             
             </div>
         )
     }

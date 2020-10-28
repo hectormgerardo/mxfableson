@@ -35,6 +35,7 @@ function ComboBox (props) {
                 <br></br>
                 <Form>
                   <Form.Control name="GraficaType" onChange={onChange} as="select" custom>
+                  <option value="group">Group</option>
                     <option value="regions">ALL ROW regions</option>
                     <option value="countries">ALL FABLE countries</option>
                   </Form.Control>

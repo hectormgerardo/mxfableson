@@ -10,7 +10,7 @@ const drawBiodiversity = (props) =>
 {
  
  
-  
+  var dataAux = null;
   //const [dataAux, setDataAux] = useState('');
 
   const { GraficaType, Iteration, Scenario } = props.combinacion.select;
@@ -19,29 +19,29 @@ const drawBiodiversity = (props) =>
     case 'group':
       switch(Iteration){
         case 'iteration_3':
-          var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_dos : data.combinacion_cuatro);
+           dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_dos : data.combinacion_cuatro);
           break;
         case 'iteration_4':
-          var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_uno : data.combinacion_tres);
+           dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_uno : data.combinacion_tres);
       }
       break;
     case 'regions':
       switch(Iteration){
         case 'iteration_3':
-          var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_seis : data.combinacion_ocho);
+           dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_seis : data.combinacion_ocho);
           break;
         case 'iteration_4':
-          var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_cinco : data.combinacion_siete);
+           dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_cinco : data.combinacion_siete);
           break
       }
       break;
     case 'countries':
       switch(Iteration){
       case 'iteration_3':
-        var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_diez : data.combinacion_doce);
+         dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_diez : data.combinacion_doce);
         break;
       case 'iteration_4':
-        var dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_nueve : data.combinacion_once);
+         dataAux= convertir(Scenario === "Sustainaible" ? data.combinacion_nueve : data.combinacion_once);
 
         break
     }
@@ -54,15 +54,17 @@ return (
 <Container fluid >
             <Row  >
               <Col>
-              <div style={{height: "100vh"}}>
+              <div style={{height: "100vh", width:"35vw"}}>
                   <BarChart data={dataAux} title="Biodiversity"
                     aspectRatio={false}
                     labelposition="bottom"/> 
               </div>
               </Col>
               <Col>
-              <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
-              MAPA
+
+              <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"35vw"}}>
+              
+            
               <LeafletMap
               
                 
@@ -207,8 +209,8 @@ const convertir=(props)=>
             fill: false,
             backgroundColor: '#faa75a',
             borderColor: '#71B37C',
-            hoverBackgroundColor: '#71B37C',
-            hoverBorderColor: '#71B37C',
+            hoverBackgroundColor: '#faa75a',
+            hoverBorderColor: '#faa75a',
             yAxisID: 'y-axis-1'
           },{
             type: 'bar',

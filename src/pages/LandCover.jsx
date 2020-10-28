@@ -280,12 +280,12 @@ const DrawLandCover = () => {
     return (
      <div>
 
-    <div>
+    <div >
     <ComboBox onChange={handleChange}/>
     {converter()}
     </div>
 
-    <div style={{height: "100vh"}}>
+    <div style={{height: "100vh",width:"70vw"}}>
     <BarChart data={data}
     title="Land Cover"
     labelposition='top'
