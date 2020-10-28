@@ -66,7 +66,7 @@ return (
               <LeafletMap
               
                 
-                countriesData = {dataAux}
+                //countriesData = {dataAux}
               
               />
               
@@ -76,7 +76,7 @@ return (
             <LeafletMap
               
                 
-                countriesData = {dataAux}
+               // countriesData = {dataAux}
               
               />
           </Container>
