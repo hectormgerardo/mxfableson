@@ -84,7 +84,7 @@ const DrawBiodiversity = (props) =>
 
    const getBiodiversity = async () => 
    {
-     console.log("get bio")
+     
      try {   
        const body =state;
       const response = await fetch("http://localhost:5000/biodiversity"+JSON.stringify(body));
@@ -134,7 +134,7 @@ const DrawBiodiversity = (props) =>
 
       const converter = () => {
 
-        console.log(json);
+      
         var dataBiodiversity_land=[];
 var biodiversities=[];
 var labels=[];
@@ -147,7 +147,7 @@ var nameCounty="Argentina";
       }
       dataBiodiversity_land.push(item.Biodiversity_land);
       if (nameCounty!=item.Country) {
-        console.log(nameCounty)
+      
         var biodiversity = new Biodiversity(CountryCharacteristics[nameCounty], dataBiodiversity_land);
         biodiversities.push(biodiversity);
           nameCounty=item.Country;

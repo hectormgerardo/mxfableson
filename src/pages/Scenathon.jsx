@@ -158,12 +158,14 @@ class Scenathon extends Component {
                 document.getElementById("banner").src=BannerLifeOnLand;
             break;
             case 'Fresh Water 1':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<FreshWaterUse combinacion={this.state}/>;
+              //  this.combobox=<ComboBox onChange={this.handleChange}/>
+              this.combobox=null;  
+              this.dash=<FreshWaterUse combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerCleanWater;
             break;
             case 'Fresh Water 2':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
+              //  this.combobox=<ComboBox onChange={this.handleChange}/>
+              this.combobox=null; 
                 this.dash=<FreshWaterTwo combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerCleanWater;
             break;
