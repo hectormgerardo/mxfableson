@@ -26,7 +26,7 @@ import {
 } from 'react-router-dom';
 import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
 import { Evented } from 'leaflet';
-
+import BackgroundBlue from '../src/assets/background.jpg'
 
 const ReactHint = ReactHintFactory(React)
 
@@ -64,9 +64,7 @@ const App = () => {
           <Navbar/>
         </div>
 
-          <div className="jumbotron">
             <Jumbotron/>
-          </div>
 
         <div className="About1">
           <About1/>
@@ -75,9 +73,6 @@ const App = () => {
           <Jumbotron_2 />
         </div>
 
-        <div>
-          <Header/>
-        </div>
         <div style={{display: 'flex'}}>
           <div>
             <Aside onChange={handleChangeAside}/>
@@ -85,7 +80,7 @@ const App = () => {
           <div style={{width: '100%'}}>
             <Scenathon currentValue={currentValue} />
           </div>
-        </div>
+        </div> 
 
         <div className="scenathon-info">
           <About2/>
@@ -131,15 +126,24 @@ const App = () => {
           <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
       </div>*/}
         
-        <div height="100px">
-          <About3/>
-        </div>
-        <div id="Jumbotron_fin">
+        {/*
+
+
+      
+        
+        */
+        
+        }
+        
+        
+       
+        <div id="Jumbotron_fin" data-rh="Copyright" data-rh-at="top" id="final">
           <Jumbotron_fin/>
         </div>
         
+
         
-           
+         
     </React.Fragment>
   )
 };
