@@ -37,7 +37,7 @@ return(
 <Styles>
 <div className="about-container">
 <div className="about-title">Scenathons: Ineractive Scenerario and <br/>Development Pathway Planning</div>
-<div className="about-content">Scenathons were conceived at IIASA as participatory decision-making exercises that integrate models, stakeholders, and technology to collectively solve complex, large-scale multi-objective problems.<br/>
+<div className="about-content">Scenathons were conceived at IIASA as participatory decision-making exercises that integrate models, stakeholders, and technology to collectively solve complex, large-scale multi-objective problems. <br/><br/>
 
 The Food, Agriculture, Biodiversity, Land, and Energy (FABLE) Consortium has applied the Scenathon concept to answer questions concerned with sustainability transformations of food and land use systems. Within this setting, the Scenathon process allows country teams to progressively align national pathways with the global FABLE targets and to balance trade flows.
 </div>
