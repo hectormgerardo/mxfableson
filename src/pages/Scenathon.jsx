@@ -124,7 +124,7 @@ class Scenathon extends Component {
     }
 
     selectDashboard(){
-      console.log("entre")
+    
         switch(this.state.dashboard){
             case 'Global Target Summary': 
                 this.combobox=<ComboBox onChange={this.handleChange}/>
@@ -141,8 +141,8 @@ class Scenathon extends Component {
                 document.getElementById("banner").src=BannerLifeOnLand;
                 break;
             case 'Biodiversity':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<Biodiversity combinacion={this.state}/>;
+                this.combobox=null;  
+                this.dash=<Biodiversity/>;
                 document.getElementById("banner").src=BannerLifeOnLand;
             break;
             case 'Protected Areas by Type':

@@ -47,10 +47,7 @@ app.get('/protected:combinations', async (req, res) => {
 
 
         const { Iteration, GraficaType } = JSON.parse(req.params.combinations).select;
-        console.log(req.params.combinations)
-
-        console.log(Iteration)
-        console.log(GraficaType)
+      
 
         switch (GraficaType) {
             case "group":
@@ -180,7 +177,7 @@ app.get('/foodenergy2:combinations', async (req, res) => {
 
 app.get('/foodenergy1:combinations', async (req, res) => {
     try {
-        console.log(req.params.combinations);
+        
         const { Iteration, scenathon_id, Year } = JSON.parse(req.params.combinations).select;
         var query = 'SELECT "Country", (avg("kcal_feas")) AS Kcal_feasible, avg("kcal_mder") AS Target_MDER FROM "resultsScen2020" WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Year" = $3 GROUP BY "Country" ORDER BY "Country";';
 
@@ -198,7 +195,7 @@ app.get('/foodenergy1:combinations', async (req, res) => {
 app.get('/landcover:combinations', async (req, res) => {
     try {
         const { Iteration, GraficaType } = JSON.parse(req.params.combinations).select;
-        console.log(GraficaType)
+       
         switch (GraficaType) {
             case "group":
                 var query = 'SELECT "Year",sum("CalcPasture") as "CalcPasture",sum("CalcCropland") as "CalcCropland",sum("CalcForest") as "CalcForest",sum("CalcNewForest") as "CalcNewForest" ,sum("CalcOtherLand") as "CalcOtherLand",sum("CalcUrban") as "CalcUrban" from "resultsScen2020" WHERE "iteration"=$1 GROUP BY "Year" order by "Year"';
@@ -225,24 +222,25 @@ app.get('/landcover:combinations', async (req, res) => {
 });
 
 app.get('/biodiversity:combinations', async (req, res) => {
+   
     try {
 
-        const { iteration, scenathon, group } = JSON.parse(req.params.combinations).select;
-        switch (group) {
+        const { Iteration, scenathon_id, GraficaType } = JSON.parse(req.params.combinations).select;
+        switch (GraficaType) {
             case "group":
-                var query = 'SELECT "Year","Country", (avg("CalcBiodivLnd")) AS "Biodiversity Land" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 GROUP BY "Year","Country" ORDER BY "Year","Country"';
+                var query = 'SELECT "Year","Country", (avg("CalcBiodivLnd")) AS "Biodiversity_land" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 GROUP BY "Country","Year" ORDER BY "Country","Year"';
                 break;
             case "countries":
-                var query = 'SELECT "Year","Country", (avg("CalcBiodivLnd")) AS "Biodiversity Land" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Country" NOT LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Year","Country" ORDER BY "Year","Country"';
+                var query = 'SELECT "Year","Country", (avg("CalcBiodivLnd")) AS "Biodiversity_land" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Country" NOT LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Country","Year" ORDER BY "Country","Year"';
                 break;
             case "regions":
-                var query = 'SELECT "Year","Country", (avg("CalcBiodivLnd")) AS "Biodiversity Land" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Country" LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Year","Country" ORDER BY "Year","Country"';
+                var query = 'SELECT "Year","Country", (avg("CalcBiodivLnd")) AS "Biodiversity_land" FROM "resultsScen2020"  WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Country" LIKE \'%$_%\' ESCAPE \'$\' GROUP BY "Country","Year" ORDER BY "Country","Year"';
                 break;
             default:
                 var query = null;
                 break;
         }
-        const response = await pool.query(query, [iteration, scenathon]);
+        const response = await pool.query(query, [Iteration, scenathon_id]);
 
         res.status(200).json(response.rows)
 
