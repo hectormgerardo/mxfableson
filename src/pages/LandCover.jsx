@@ -40,7 +40,7 @@ const DrawLandCover = () => {
   {
     try {   
       const body =state;
-     const response = await fetch("http://localhost:5000/landcover"+JSON.stringify(body));
+     const response = await fetch("https://server-fableson.wl.r.appspot.com/landcover"+JSON.stringify(body));
      const  jsonAux =  await response.json();
     setJson(jsonAux);
     } catch (error) {

@@ -81,7 +81,7 @@ const DrawFreshWaterUse= (props) => {
     
      try {   
        const body =state;
-      const response = await fetch("http://localhost:5000/freshwater1"+JSON.stringify(body));
+      const response = await fetch("https://server-fableson.wl.r.appspot.com/freshwater1"+JSON.stringify(body));
       const  jsonAux =  await response.json();
      setJson(jsonAux);
      } catch (error) {

@@ -98,7 +98,7 @@ const FoodEnergyIntakePerCapita = (props) => {
       const body =state;
     
       
-     const response = await fetch("http://localhost:5000/foodenergy2"+JSON.stringify(body));
+     const response = await fetch("https://server-fableson.wl.r.appspot.com/foodenergy2"+JSON.stringify(body));
      const  jsonAux =  await response.json();
   
     setJson(jsonAux);
