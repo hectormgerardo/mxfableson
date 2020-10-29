@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import BarChart from "../componentes/BarChart";
-import data from '../data/WaterUse2.json';
 import {Container,Row,Col,Jumbotron} from "react-bootstrap";
 import ComboBox from '../componentes/ComboBox';
 import LeafletMap from './LeafletMap';
@@ -130,7 +129,8 @@ useEffect(() => {
       var dataSum=[];
 var freshWater=[];
 var labels=[];
-var nameCounty="Argentina";
+var nameCounty=state.select.GraficaType==="regions"?"R_AFR":"Argentina";
+
 if (json != null) {
   json.map((item) => {
     if (!labels.includes(item.Year)) 
