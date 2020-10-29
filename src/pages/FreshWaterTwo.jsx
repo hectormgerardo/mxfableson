@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BarChart from "../componentes/BarChart";
+
 import {Container,Row,Col,Jumbotron} from "react-bootstrap";
 import ComboBox from '../componentes/ComboBox';
 import LeafletMap from './LeafletMap';
@@ -78,7 +79,7 @@ useEffect(() => {
  
    try {   
      const body =state;
-    const response = await fetch("http://localhost:5000/freshwater2"+JSON.stringify(body));
+    const response = await fetch("https://server-fableson.wl.r.appspot.com/freshwater2"+JSON.stringify(body));
     const  jsonAux =  await response.json();
    setJson(jsonAux);
    } catch (error) {
