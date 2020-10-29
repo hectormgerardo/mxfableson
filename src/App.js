@@ -6,7 +6,6 @@ import About1 from "./componentes/About1";
 import About2 from "./componentes/About2";
 import About3 from "./componentes/About3";
 import Tour from "./componentes/Tour";
-import Touraux from "./componentes/Touraux";
 import About from './pages/About';
 import { Jumbotron } from './componentes/Jumbotron'
 import { Jumbotron_2}  from './componentes/Jumbotron_2'
@@ -66,23 +65,32 @@ const App = () => {
 
             <Jumbotron/>
 
-        <div className="About1">
+        <div className="About1" id="About1">
           <About1/>
         </div>
-        <div id="Jumbotron_2">
+        <div id="Jumbotron_2" >
           <Jumbotron_2 />
         </div>
 
-        <div style={{display: 'flex'}}>
+
+        <div className="Scenathon2020">
+          <Scenathon className="Scenathon2020" id="Scenathon2020"/>
+        </div>
+{/*
+ <div style={{display: 'flex'}}>
           <div>
-            <Aside onChange={handleChangeAside}/>
+            <Aside />
           </div>
           <div style={{width: '100%'}}>
             <Scenathon currentValue={currentValue} />
           </div>
-        </div> 
+        </div>
+*/ }
+       
 
-        <div className="scenathon-info">
+        
+
+        <div className="scenathon-info" id="About2">
           <About2/>
         </div>
         <div>

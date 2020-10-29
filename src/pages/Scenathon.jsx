@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 
 import ComboBox from '../componentes/ComboBox'
-import ComboBox2 from '../componentes/ComboBox2'
-import ComboBox3 from '../componentes/ComboBox3'
 
+import ComboBox3 from '../componentes/ComboBox3'
+import Aside from '../componentes/Aside';
 import Dashboard from '../componentes/Dashboard'
 
 //dashboards
@@ -15,6 +15,7 @@ import GlobalTargets from '../pages/GlobalTargets'
 import ProtectedAreaByType from '../pages/ProtectedAreaByType'
 import LandCover from '../pages/LandCover'
 import FoodEnergyIntakePerCapita from '../pages/FoodEnergyIntakePerCapita'
+import FoodEnergyIntakePerCapita2 from '../pages/FoodEnergyIntakePerCapita2'
 import FreshWaterUse from '../pages/FreshWaterUse'
 import NetForestCoverChange2 from '../pages/NetForestCoverChange2'
 import GreenHouse2 from '../pages/GreenHouse2'
@@ -30,10 +31,17 @@ import BannerCleanWater from '../assets/banners/Mesa de trabajo 8.png';
 import BannerZeroHunger from '../assets/banners/Mesa de trabajo 2.png';
 import BannerClimateAction from '../assets/banners/Mesa de trabajo 16.png';
 
+{/*import NetForestCoverChangeInfoA from '../pages/NetForestCoverChangeInfo1';
+import NetForestCoverChangeInfo2 from '';
+import FreshWaterUseInfo1 from '';
+import FreshWaterUseInfo2 from '';
+import GreenHouseGasEmissionsInfo1 from '';
+import GreenHouseGasEmissionsInfo2 from '';
+import FoodEnergyIntakePerCapitaInfo1 from '';
+import FoodEnergyIntakePerCapitaInfo2 from '';*/}
 
 const Styles = styled.div`
 header{
-
 
 overflow:hidden;
   background-color: white;
@@ -44,7 +52,7 @@ overflow:hidden;
   font-size: 50px;
   margin: 0;
   height: 100px;
-  
+  margin-top:20px;
   
 
 
@@ -52,11 +60,17 @@ overflow:hidden;
   max-width:100%;
 max-height:100%;
 }
-
+.info{
+    max-width:80%;
+    max-height:100%;
+}
 
 }
 
-
+.container{
+    display:flex;
+    width:1500px;
+}
 
 
 
@@ -85,33 +99,54 @@ class Scenathon extends Component {
 
     //recibe valor de class component "ComboBox" 
     handleChange = e => {
+      
+
+       if(e.target==undefined)
+       {
+          
         this.setState({
             select: {
                 //el next code evitara que se sobrescriba cuando reciba un valor new
+                GraficaType:this.state.select.GraficaType,
+                Iteration:this.state.select.Iteration,
+                Scenario:this.state.select.Scenario,
+                Year:this.state.select.Year
+            },
+            dashboard:e
+           
+        }) 
+       }else{
+          this.setState({
+            select: {
+                //el next code evitara que se sobrescriba cuando reciba un valor new
                 ...this.state.select,
+                
                 [e.target.name]: e.target.value
             },
             dashboard:e.target.value
            
-        })
-        
+        }) 
+       }
 
         
+        
+
     }
 
     selectDashboard(){
-        switch(this.props.currentValue){
+      console.log("entre")
+        switch(this.state.dashboard){
             case 'Global Target Summary': 
                 this.combobox=<ComboBox onChange={this.handleChange}/>
-              this.dash=<GlobalTargets combinacion={this.state}/>;
-              
+               this.dash=<GlobalTargets combinacion={this.state}/>;
               break;
-            case 'Net Forest Cover Change(1)': 
+            case 'Net Forest Cover Change 1': 
             this.combobox=<ComboBox onChange={this.handleChange}/>
               this.dash=<NetForestCoverChange combinacion={this.state}/>;
               document.getElementById("banner").src=BannerLifeOnLand;
+              //document.getElementById("info").src="NetForestCoverChangeInfoA";
               break;
-            case 'Net Forest Cover Change(2)':
+            case 'Net Forest Cover Change 2':
                 this.combobox=<ComboBox3 onChange={this.handleChange}/>
                 this.dash=<NetForestCoverChange2 combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerLifeOnLand;
@@ -121,48 +156,53 @@ class Scenathon extends Component {
                 this.dash=<Biodiversity combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerLifeOnLand;
             break;
-            case 'Protected areas by type':
+            case 'Protected Areas by Type':
              //  <ComboBox onChange={this.handleChange}/>
              this.combobox=null;
                 this.dash=<ProtectedAreaByType/>;
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<ProtectedAreaByType combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerLifeOnLand;
             break;
             case 'Land Cover':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
+               // this.combobox=<ComboBox onChange={this.handleChange}/>
+                this.combobox=null;
                 this.dash=<LandCover combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerLifeOnLand;
             break;
-            case 'Fresh water use (1)':
+            case 'Fresh Water 1':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<FreshWaterUse combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerCleanWater;
             break;
-            case 'Fresh water use (2)':
+            case 'Fresh Water 2':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<FreshWaterTwo combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerCleanWater;
             break;
-            case 'GreenHouse Gas(GHG) Emissions(1)':
+            case 'Green House Gas (GHG) Emissions 1':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<GreenHouseOne combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerClimateAction;
             break;
-            case 'GreenHouse Gas(GHG) Emissions(2)':
+            case 'Green House Gas (GHG) Emissions 2':
                 this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.dash=<GreenHouse2 combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerClimateAction;
             break;
-            case 'Food energy intake per capita (1)':
-                this.combobox=<ComboBox2 onChange={this.handleChange}/>
-                this.dash=<FoodEnergyIntakePerCapita combinacion={this.state}/>;
-                document.getElementById("banner").src=BannerZeroHunger;
+            case 'Food Energy Intake Per Capita 1':
+             //   this.combobox=<ComboBox2 onChange={this.handleChange}/>
+             this.combobox=null;  
+              
+             this.dash=<FoodEnergyIntakePerCapita/>;
+             document.getElementById("banner").src=BannerZeroHunger;
             break;
-            case 'Food energy intake per capita (2)':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<h1>Food energy intake per capita (2)</h1>;
-                document.getElementById("banner").src=BannerZeroHunger;
+            case 'Food Energy Intake Per Capita 2':
+                this.combobox=null;   
+             this.dash=<FoodEnergyIntakePerCapita2/>;
+             document.getElementById("banner").src=BannerZeroHunger;
+            break;
+            case 'Importers':
+                this.combobox=null;   
+             this.dash=<TradeReport/>;
             break;
             case 'Trade Report':
                 this.dash=<TradeReport/>;
@@ -173,28 +213,26 @@ class Scenathon extends Component {
 
     render() {
         return (
+
             <Styles>
-                <header>
-            <img class="banner" id="banner"></img>
-            </header>
-
-
-                 <div className="container">
-              
-                       
-                 {/* componente de comboBox(opciones para el tipo de grafica)*/} 
-                 <div className="Combo-Box">
-                
+            <header>
+        <img class="banner" id="banner"></img>
+        </header>
+            <div className="container-fluid" style={{display: 'flex'}}>
+               <div>
+                 <Aside onChange={this.handleChange}/>  
+               </div>
+            
+          
+                <div>
+                 {/*    <Dashboard metodo={this.handleChange} data={this.state} />*/}
                 </div>
                 <div>
-                    <Dashboard metodo={this.handleChange} data={this.state} />
-                </div>
-               
-{this.selectDashboard()}
-              {this.combobox}
-                           
+                {this.selectDashboard()}
+                {this.combobox}
                 {this.dash}
-                       
+                </div>
+                <div class="info" id="info"></div>
             </div>
             </Styles>
            

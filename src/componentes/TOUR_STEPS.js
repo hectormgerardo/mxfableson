@@ -2,9 +2,9 @@ import React from "react";
 
 export default[
     {
-        target: ".graphs",
-        content: "Se habla acerca de Fable",
-        title: "You can have a title here!",
+        target: ".About1",
+        content: "Definition of Fable",
+        title: "Fable Information",
           styles: {
             //this styles override the styles in the props
             options: {
@@ -17,9 +17,9 @@ export default[
           placement: "top"
     },
     {
-        target: ".About1",
-        content: "Se habla acerca de Fable",
-        title: "You can have a title here!",
+        target: ".Scenathon2020",
+        content: "",
+        title: "Charts and Maps",
           styles: {
             //this styles override the styles in the props
             options: {
@@ -27,10 +27,28 @@ export default[
             }
           },
           locale: { 
-            next: <span>End Tour</span>,
+            next: <span>Next</span>,
             back: <span>Back</span>
           },
           placement: "top"
 
+    },
+    {
+      target: ".scenathon-info",
+      content: "Definition of Scenathon",
+      title: "Scenathon Information",
+        styles: {
+          //this styles override the styles in the props
+          options: {
+            textColor: "black"
+          }
+        },
+        locale: { 
+          next: <span>End Tour</span>,
+          back: <span>Back</span>
+        },
+        placement: "top"
+
     }
+    
 ]

@@ -1,7 +1,8 @@
 import { HorizontalBar } from "react-chartjs-2";
 import React from 'react';
 
-const HorizontalBarChart = (props) => {
+
+const  Horizontal_Bar=(props)=> {
 
     const options = {
       responsive: true,
@@ -50,7 +51,9 @@ const HorizontalBarChart = (props) => {
             id: 'y-axis-1',
             gridLines: {
               display: true,
-            },
+            },ticks: {
+              beginAtZero: true,
+          },
   
             labels: {
               show: true,
@@ -84,4 +87,4 @@ const HorizontalBarChart = (props) => {
   
             );
         }
-        export default HorizontalBar;
+        export default Horizontal_Bar;

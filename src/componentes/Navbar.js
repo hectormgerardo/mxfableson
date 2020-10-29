@@ -9,11 +9,11 @@ import {
   Link
 } from 'react-router-dom';
 import Scenathon from '../pages/Scenathon';
-import Features from "../pages/GlobalTargets";
+
 import About from '../pages/About';
 import styled from 'styled-components';
 
-import TradeReport from '../pages/TradeReport';
+
 import IIASA_LOGO_WHITE from '../assets/IIASA_LOGO_WHITE.png';
 import IIASA_LOGO_COLOR from '../assets/IIASA_LOGO.png';
 import SDSN_LOGO_WHITE from '../assets/SDSN_LOGO_WHITE.png';
@@ -99,7 +99,6 @@ const NavBar = () => {
       */}
       <Router>
         <ReactBootStrap.Navbar expand="lg" className="nav navBarWidth" id="navbar" variant="light">
-
           <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
             <div className="banner-container">
@@ -130,22 +129,20 @@ const NavBar = () => {
 
             <div className="router-container" id="router-container">
 
-              <Link to="/">
+              <Link to="/as">
                 <ReactBootStrap.Navbar.Brand  classname="navbar-link" id="navbar-link-home" href="#home">Home</ReactBootStrap.Navbar.Brand>
               </Link>
-              <Link to="/">
+              
+              <Link to="/sasa">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-tour" href="#tour">Tour</ReactBootStrap.Navbar.Brand>
               </Link>
-              <Link to="/">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
+              <Link href="#About1" to="/">
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable">Fable</ReactBootStrap.Navbar.Brand>
               </Link>
-              <Link to="/">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable" href="#scenathon-info">Scenathon</ReactBootStrap.Navbar.Brand>
-              </Link>
-              <Link to="/Scenathon">
+              <Link to="/Scenathon2020">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2020" href="#scenathon2020">Scenathon 2020</ReactBootStrap.Navbar.Brand>
               </Link>
-              <Link to="/Scenathon">
+              <Link to="/Scenathon2020">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2019" href="#scenathon2019">Scenathon 2019</ReactBootStrap.Navbar.Brand>
               </Link>
 
@@ -178,10 +175,13 @@ const NavBar = () => {
                     </Route>*/}
           {/*<Route exact path="/Scenathon" component={Scenathon}>
                 <Scenathon />
-              </Route>*/}
+              </Route>
+              <Route  path="/" component={Scenathon}>
+                <Scenathon />
+              </Route>
+*/}
 
-
-          <Route path="/About" render={
+          <Route path="/About1" render={
             () => {
               return (<h1>About</h1>);
             }
