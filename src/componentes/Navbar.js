@@ -133,8 +133,8 @@ const NavBar = (props) => {
 
             <div className="router-container" id="router-container">
 
-              <Link to="/as">
-                <ReactBootStrap.Navbar.Brand  classname="navbar-link" id="navbar-link-home" href="#home">Home</ReactBootStrap.Navbar.Brand>
+              <Link onClick={() => {handleClick(props.references.home)}} >
+                <ReactBootStrap.Navbar.Brand  classname="navbar-link" id="navbar-link-home">Home</ReactBootStrap.Navbar.Brand>
               </Link>
               
               <Link to="/sasa">

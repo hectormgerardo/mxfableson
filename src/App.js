@@ -51,7 +51,8 @@ export class App extends React.Component {
     this.references = {
       fable: React.createRef(),
       scenathon2020: React.createRef(),
-      scenathon: React.createRef()
+      scenathon: React.createRef(),
+      home: React.createRef()
     }
   };
 
@@ -116,7 +117,7 @@ componentDidMount(){
         </div>
 
           <div className="imagen">
-            <Jumbotron />
+            <Jumbotron jumboReference={this.references.home} />
           </div>
 
           <div>
