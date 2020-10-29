@@ -3,27 +3,28 @@ import ReactJoyride from 'react-joyride';
 import steps from "./TOUR_STEPS"
 
 
-const Tour = () => {
+const Tour = (props) => {
+
     return (
           <ReactJoyride
-          steps={steps}
+          steps={props.stepsP}
           continuous={true}
           showProgress
           showSkipButton
           styles={{
            options: {
               // modal arrow and background color
-              arrowColor: "gray",
+              arrowColor: "white",
               backgroundColor: "white",
               // page overlay color
-              overlayColor: "rgba(0.7, 0.7, 0.7, 0.4)",
+              overlayColor: "rgba(0.7, 0.7, 0.7, 0.0)",
               //button color
               primaryColor: "green",
           
               //width of modal
               width: 500,
               //zindex of modal
-              zIndex: 1000
+              zIndex: 9999
           }
       }}
         />
