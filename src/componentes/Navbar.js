@@ -99,7 +99,6 @@ const NavBar = () => {
       */}
       <Router>
         <ReactBootStrap.Navbar expand="lg" className="nav navBarWidth" id="navbar" variant="light">
-
           <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
             <div className="banner-container">
@@ -137,8 +136,8 @@ const NavBar = () => {
               <Link to="/sasa">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-tour" href="#tour">Tour</ReactBootStrap.Navbar.Brand>
               </Link>
-              <Link to="/ascac">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
+              <Link href="#About1" to="/">
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable">Fable</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon2020">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2020" href="#scenathon2020">Scenathon 2020</ReactBootStrap.Navbar.Brand>
@@ -182,7 +181,7 @@ const NavBar = () => {
               </Route>
 */}
 
-          <Route path="/About" render={
+          <Route path="/About1" render={
             () => {
               return (<h1>About</h1>);
             }

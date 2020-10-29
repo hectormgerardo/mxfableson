@@ -14,8 +14,7 @@ import BarChart from "../componentes/BarChart";
 import TradeReportMap from "./TradeReportMap";
 
 
-const SustainableImporters =()=>
- {
+const SustainableImporters = () =>{
   
   const [state,setState]=useState({select: {
   Product: 'abaca',
