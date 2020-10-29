@@ -7,7 +7,6 @@ import {Container,Row,Col,Jumbotron} from "react-bootstrap";
 import GridLayout from 'react-grid-layout';
 
 import LeafletMap from './LeafletMap';
-
 //nfch=NetForestCoverChange
 const drawNfch2 = (props) => {
  
@@ -49,6 +48,8 @@ const drawNfch2 = (props) => {
   
   console.log('NET DATA AUX');
   console.log(dataAux);
+
+
 return(
 
 

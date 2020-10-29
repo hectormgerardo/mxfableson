@@ -25,11 +25,12 @@ import {
 } from 'react-router-dom';
 import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
 import { Evented } from 'leaflet';
-import BackgroundBlue from '../src/assets/background.jpg'
+import BackgroundBlue from '../src/assets/background.jpg';
+import steps from './componentes/TOUR_STEPS';
 
 const ReactHint = ReactHintFactory(React)
 
-const App = () => {
+const App = (props) => {
   
   const [currentValue, setCurrentValue] = React.useState("")
 
@@ -56,7 +57,7 @@ const App = () => {
     return (
         <React.Fragment>
         <div>
-          <Tour/>
+          <Tour stepsP={steps}/>
         </div>
 
         <div className="Nav">

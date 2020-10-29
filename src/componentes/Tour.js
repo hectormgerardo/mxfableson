@@ -24,7 +24,7 @@ const Tour = (props) => {
               //width of modal
               width: 500,
               //zindex of modal
-              zIndex: 9999
+              zIndex: 5000
           }
       }}
         />

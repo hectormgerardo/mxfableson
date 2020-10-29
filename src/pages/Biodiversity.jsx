@@ -3,7 +3,7 @@ import BarChart from "../componentes/BarChart";
 import data from '../data/Biodiversity.json';
 import {Container,Row,Col} from "react-bootstrap";
 import LeafletMap from './LeafletMap';
-
+import Tour from '../componentes/Tour';
 
 //nfch=NetForestCoverChange
 const drawBiodiversity = (props) => 
@@ -49,38 +49,53 @@ const drawBiodiversity = (props) =>
   }
   
 
+    const steps = [
+    {
+      target: ".graph",
+      content: "Net Forest Change (loss and gain) describes the sum of all changes in forest area over a specific period of time.",
+      title: "Net Forest Change Graph",
+        styles: {
+          //this styles override the styles in the props  
+          options: {
+            textColor: "black"
+          }
+        },
+        locale: { 
+          next: <span>Next</span>,
+        },
+        placement: "top"
+    }
+  ]
+
 
 return (
 <Container fluid >
-            <Row  >
+                  <Tour stepsP={steps}/>
+          <div className="graph">
+
+            <Row >
               <Col>
-              <div style={{height: "100vh", width:"35vw"}}>
+              <div  style={{height: "100vh", width:"35vw"}}>    
                   <BarChart data={dataAux} title="Biodiversity"
                     aspectRatio={false}
-                    labelposition="bottom"/> 
+                    labelposition="bottom"/>
               </div>
               </Col>
               <Col>
 
-              <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"35vw"}}>
-              
-            
-              <LeafletMap
-              
-
-                countriesData = {dataAux}
-              
-              />
-              
+              <div className="map" style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"35vw"}}>
+                <LeafletMap countriesData = {dataAux}/>
               </div>
+              
               </Col>
             </Row>
-            <LeafletMap
+            {/*<LeafletMap
               
-                
-                countriesData = {dataAux}
               
-              />
+              countriesData = {dataAux}
+              
+            />*/}
+          </div>
           </Container>
           
 );

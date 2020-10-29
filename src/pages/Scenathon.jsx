@@ -53,6 +53,7 @@ overflow:hidden;
   margin: 0;
   height: 100px;
   margin-top:20px;
+  width: 100%;
   
 
 
@@ -60,12 +61,8 @@ overflow:hidden;
   max-width:100%;
 max-height:100%;
 }
-.info{
-    max-width:80%;
-    max-height:100%;
-}
 
-}
+
 
 .container{
     display:flex;

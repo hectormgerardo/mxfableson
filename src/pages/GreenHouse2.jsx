@@ -2,6 +2,7 @@ import React from "react";
 import BarChart from "../componentes/BarChart";
 import data from '../data/Greenhouse2.json';
 import { Container, Row, Col } from "react-bootstrap";
+import Tour from '../componentes/Tour'
 //nfch=NetForestCoverChange
 const greenHouse = (props) => {
 
@@ -100,11 +101,29 @@ const greenHouse = (props) => {
       break;
   }
 
-
+  const steps = [
+    {
+      target: ".graph",
+      content: "Average annual distribution of CO2e emissions in Gt per country gobally derived from crops and livestock (left), and from land use change and peat oxidation in Gt CO2e.(right)",
+      title: "Greenhouse Gas (GHG) emissions 2",
+        styles: {
+          //this styles override the styles in the props  
+          options: {
+            textColor: "black"
+          }
+        },
+        locale: { 
+          next: <span>End</span>,
+        },
+        placement: "top"
+    }
+  ]
 
   return (
     <Container fluid>
       <Row>
+        <Tour stepsP={steps}/>
+        <div className="graph">
         <Col><div style={{height: "100vh" ,width:"35vw"} }>
           <BarChart data={dataGraphOneAux}
             title="Green House 2" aspectRatio={false}
@@ -117,6 +136,7 @@ const greenHouse = (props) => {
             labelposition="bottom" />
         </div>
         </Col>
+        </div>
       </Row>
     </Container>);
 
