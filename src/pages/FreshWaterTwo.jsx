@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BarChart from "../componentes/BarChart";
+
 import {Container,Row,Col,Jumbotron} from "react-bootstrap";
 import ComboBox from '../componentes/ComboBox';
 import LeafletMap from './LeafletMap';
