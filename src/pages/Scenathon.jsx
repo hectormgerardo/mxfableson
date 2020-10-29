@@ -73,6 +73,7 @@ class Scenathon extends Component {
         super(props);
         this.dash= <GlobalTargets combinacion={this.state}></GlobalTargets>;
         this.combobox=<ComboBox onChange={this.handleChange}/>;
+        this.fableRef=props.fableRef;
     }
     state = {
         select: {
@@ -208,7 +209,7 @@ class Scenathon extends Component {
         return (
 
             <Styles>
-            <header>
+            <header ref={this.fableRef}>
         <img class="banner" id="banner"></img>
         </header>
             <div className="container-fluid" style={{display: 'flex'}}>
