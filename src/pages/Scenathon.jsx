@@ -46,12 +46,13 @@ overflow:hidden;
   margin: 0;
   height: 100px;
   margin-top:20px;
-  
+  transition: all 0.5s ease;
 
 
 .banner{
   max-width:100%;
 max-height:100%;
+transition: all 0.5s ease;
 }
 
 
