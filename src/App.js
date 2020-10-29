@@ -48,6 +48,11 @@ export class App extends React.Component {
       ],
       stepIndex: 0,
     }
+    this.references = {
+      fable: React.createRef(),
+      scenathon2020: React.createRef(),
+      scenathon: React.createRef()
+    }
   };
 
 
@@ -107,7 +112,7 @@ componentDidMount(){
         </div>*/}
 
         <div className="Nav">
-          <Navbar/>
+          <Navbar references={this.references}/>
         </div>
 
           <div className="imagen">
@@ -115,7 +120,7 @@ componentDidMount(){
           </div>
 
           <div>
-          <About1/>
+          <About1 aboutRef={this.references.fable}/>
         </div>
         <div id="Jumbotron_2" data-rh="" data-rh-at="top">
           <Jumbotron_2 />
@@ -123,7 +128,7 @@ componentDidMount(){
 
 
 
-<Scenathon/>
+<Scenathon fableRef={this.references.scenathon2020}/>
 {/*
  <div style={{display: 'flex'}}>
           <div>
@@ -139,7 +144,7 @@ componentDidMount(){
         
 
         <div>
-          <About2/>
+          <About2 aboutReference={this.references.scenathon}/>
         </div>
 <div>
           <Jumbotron_3/>

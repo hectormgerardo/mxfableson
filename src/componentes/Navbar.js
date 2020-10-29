@@ -35,9 +35,6 @@ const Styles = styled.div`
   z-index: 9999;
 .router-container {
    
-    margin-left:100px;
-    margin-right:90px;
-  
   .navbar-brand{
     margin-left:30px;
   }
@@ -82,7 +79,14 @@ width: 100px;
 }
 `;
 
-const NavBar = () => {
+const NavBar = (props) => {
+
+  const handleClick = (reference) => {
+    reference.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
 
   return (
     <Styles>
@@ -136,11 +140,14 @@ const NavBar = () => {
               <Link to="/sasa">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-tour" href="#tour">Tour</ReactBootStrap.Navbar.Brand>
               </Link>
-              <Link to="/ascac">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
+              <Link onClick={() => {handleClick(props.references.fable)}}>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable">Fable</ReactBootStrap.Navbar.Brand>
               </Link>
-              <Link to="/Scenathon2020">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2020" href="#scenathon2020">Scenathon 2020</ReactBootStrap.Navbar.Brand>
+              <Link onClick={() => {handleClick(props.references.scenathon)}}>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2020">Scenathon</ReactBootStrap.Navbar.Brand>
+              </Link>
+              <Link onClick={() => {handleClick(props.references.scenathon2020)}}>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2020">Scenathon 2020</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon2020">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2019" href="#scenathon2019">Scenathon 2019</ReactBootStrap.Navbar.Brand>
