@@ -1,19 +1,42 @@
-import React from "react";
+import React, { useState} from "react";
 import SuperGraph from "../componentes/SuperGraph";
 import data from '../data/Greenhouse1.json';
+import ComboBox from '../componentes/ComboBox';
 import { Container, Row, Col } from "react-bootstrap";
-const drawGreenhouse1 = (props) => {
+const DrawGreenhouse1 = (props) => {
 
   var dataGraphOne;
   var dataGraphTwo;
-  const { GraficaType, Iteration, Scenario } = props.combinacion.select;
+ 
+
+  const [state, setState] = useState({
+    select: {
+      GraficaType:'group',
+      scenathon_id:'6',
+      Iteration:'after',
+    }
+   
+  });
+
+  const handleChange = e => {
+  
+    setState({
+        select: {
+            //el next code evitara que se sobrescriba cuando reciba un valor new
+            ...state.select,
+            
+            [e.target.name]: e.target.value
+        },
+       
+    })
+    }
 
   //Cambiar por las combinaciones de los json falta ya que son dos graficas en el json 
-  switch (GraficaType) {
+  switch (state.select.GraficaType) {
     case 'group':
-      switch (Iteration) {
-        case 'iteration_3':
-          if (Scenario === "Sustainaible") {
+      switch (state.select.Iteration) {
+        case 'before':
+          if (state.select.scenathon_id === "6") {
             dataGraphOne = data.graphOne_combinationTwo
             dataGraphTwo = data.graphTwo_combinationTwo
           } else {
@@ -24,8 +47,8 @@ const drawGreenhouse1 = (props) => {
           var dataGraphTwoAux = convertir_data(dataGraphTwo);
 
           break;
-        case 'iteration_4':
-          if (Scenario === "Sustainaible") {
+        case 'after':
+          if (state.select.scenathon_id === "6") {
             dataGraphOne = data.graphOne_combinationOne
             dataGraphTwo = data.graphTwo_combinationOne
 
@@ -42,9 +65,9 @@ const drawGreenhouse1 = (props) => {
       }
       break;
     case 'regions':
-      switch (Iteration) {
-        case 'iteration_3':
-          if (Scenario === "Sustainaible") {
+      switch (state.select.Iteration) {
+        case 'before':
+          if (state.select.scenathon_id === "6") {
             dataGraphOne = data.graphOne_combinationSix
             dataGraphTwo = data.graphTwo_combinationSix
           } else {
@@ -54,8 +77,8 @@ const drawGreenhouse1 = (props) => {
           var dataGraphOneAux = convertir(dataGraphOne);
           var dataGraphTwoAux = convertir_data(dataGraphTwo);
           break;
-        case 'iteration_4':
-          if (Scenario === "Sustainaible") {
+        case 'after':
+          if (state.select.scenathon_id === "6") {
             dataGraphOne = data.graphOne_combinationFive
             dataGraphTwo = data.graphTwo_combinationEight
           } else {
@@ -69,9 +92,9 @@ const drawGreenhouse1 = (props) => {
       }
       break;
     case 'countries':
-      switch (Iteration) {
-        case 'iteration_3':
-          if (Scenario === "Sustainaible") {
+      switch (state.select.Iteration) {
+        case 'before':
+          if (state.select.scenathon_id === "6") {
             dataGraphOne = data.graphOne_combinationTen
             dataGraphTwo = data.graphTwo_combinationTen
           } else {
@@ -82,8 +105,8 @@ const drawGreenhouse1 = (props) => {
           var dataGraphTwoAux = convertir_data(dataGraphTwo);
           break;
 
-        case 'iteration_4':
-          if (Scenario === "Sustainaible") {
+        case 'after':
+          if (state.select.scenathon_id === "6") {
             dataGraphOne = data.graphOne_combinationNine
             dataGraphTwo = data.graphTwo_combinationNine
           } else {
@@ -101,7 +124,9 @@ const drawGreenhouse1 = (props) => {
     <Container fluid>
       <Row>
         <Col >
-          <div style={{height: "100vh" ,width:"35vw"} }><SuperGraph data={dataGraphOneAux}
+          <div style={{height: "100vh" ,width:"35vw"} }>
+          <ComboBox onChange={handleChange}/>
+            <SuperGraph data={dataGraphOneAux}
             title="Green House 1"
             aspectRatio={false} 
             labelposition="top"/> 
@@ -415,4 +440,4 @@ const convertir = (props) => {
 
 }
 
-export default drawGreenhouse1
+export default DrawGreenhouse1

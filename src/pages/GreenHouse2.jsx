@@ -1,23 +1,43 @@
-import React from "react";
+import React, { useState} from "react";
 import BarChart from "../componentes/BarChart";
 import data from '../data/Greenhouse2.json';
+import ComboBox from '../componentes/ComboBox';
 import { Container, Row, Col } from "react-bootstrap";
 //nfch=NetForestCoverChange
-const greenHouse = (props) => {
+const GreenHouse = (props) => {
 
 
   var dataGraphOne;
   var dataGraphTwo;
 
 
+  const [state, setState] = useState({
+    select: {
+      GraficaType:'group',
+      scenathon_id:'6',
+      Iteration:'after',
+    }
+   
+  });
 
-  const { GraficaType, Iteration, Scenario } = props.combinacion.select;
+  const handleChange = e => {
+  
+    setState({
+        select: {
+            //el next code evitara que se sobrescriba cuando reciba un valor new
+            ...state.select,
+            
+            [e.target.name]: e.target.value
+        },
+       
+    })
+    }
 
-  switch (GraficaType) {
+  switch (state.select.GraficaType) {
     case 'group':
-      switch (Iteration) {
-        case 'iteration_3':
-          if (Scenario === "Sustainaible") {
+      switch (state.select.Iteration) {
+        case 'before':
+          if (state.select.scenathon_id  === "6") {
             dataGraphOne = data.Greengraph_One__combination_Two
             dataGraphTwo = data.Greengraph_Two__combination_Two
           } else {
@@ -28,8 +48,8 @@ const greenHouse = (props) => {
           var dataGraphTwoAux = convertir(dataGraphTwo);
 
           break;
-        case 'iteration_4':
-          if (Scenario === "Sustainaible") {
+        case 'after':
+          if (state.select.scenathon_id  === "6") {
             dataGraphOne = data.Greengraph_One__combination_One
             dataGraphTwo = data.Greengraph_Two__combination_One
             console.log(dataGraphTwo)
@@ -45,9 +65,9 @@ const greenHouse = (props) => {
       }
       break;
     case 'regions':
-      switch (Iteration) {
-        case 'iteration_3':
-          if (Scenario === "Sustainaible") {
+      switch (state.select.Iteration) {
+        case 'before':
+          if (state.select.scenathon_id  === "6") {
             dataGraphOne = data.Greengraph_One__combination_Six
             dataGraphTwo = data.Greengraph_Two__combination_Six
           } else {
@@ -57,8 +77,8 @@ const greenHouse = (props) => {
           var dataGraphOneAux = convertir(dataGraphOne);
           var dataGraphTwoAux = convertir(dataGraphTwo);
           break;
-        case 'iteration_4':
-          if (Scenario === "Sustainaible") {
+        case 'after':
+          if (state.select.scenathon_id  === "6") {
             dataGraphOne = data.Greengraph_One__combination_Five
             dataGraphTwo = data.Greengraph_Two__combination_Five
           } else {
@@ -72,9 +92,9 @@ const greenHouse = (props) => {
       }
       break;
     case 'countries':
-      switch (Iteration) {
-        case 'iteration_3':
-          if (Scenario === "Sustainaible") {
+      switch (state.select.Iteration) {
+        case 'before':
+          if (state.select.scenathon_id  === "6") {
             dataGraphOne = data.Greengraph_One__combination_Ten
             dataGraphTwo = data.Greengraph_Two__combination_Ten
           } else {
@@ -85,8 +105,8 @@ const greenHouse = (props) => {
           var dataGraphTwoAux = convertir(dataGraphTwo);
           break;
 
-        case 'iteration_4':
-          if (Scenario === "Sustainaible") {
+        case 'after':
+          if (state.select.scenathon_id  === "6") {
             dataGraphOne = data.Greengraph_One__combination_Nine
             dataGraphTwo = data.Greengraph_Two__combination_Nine
           } else {
@@ -106,6 +126,7 @@ const greenHouse = (props) => {
     <Container fluid>
       <Row>
         <Col><div style={{height: "100vh" ,width:"35vw"} }>
+        <ComboBox onChange={handleChange}/>
           <BarChart data={dataGraphOneAux}
             title="Green House 2" aspectRatio={false}
             labelposition="bottom" />
@@ -466,4 +487,4 @@ const convertir = (props) => {
 }
 
 
-export default greenHouse;
+export default GreenHouse;

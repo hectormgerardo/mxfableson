@@ -24,9 +24,9 @@ function ComboBox (props) {
             <div className="contenedor-selects">
                 <br></br>
                 <Form>
-                  <Form.Control name="Scenario" onChange={onChange} as="select" custom>
-                    <option value="Sustainaible">Sustainaible</option>
-                    <option value="Current_trend">Current trend</option>
+                  <Form.Control name="scenathon_id" onChange={onChange} as="select" custom>
+                    <option value="6">Sustainaible</option>
+                    <option value="5">Current trend</option>
                   </Form.Control>
                 </Form>
 
@@ -38,8 +38,8 @@ function ComboBox (props) {
                 <br></br>
                 <Form>
                   <Form.Control name="Iteration" onChange={onChange} as="select" custom>
-                    <option value="iteration_4">iteration:4</option>
-                    <option value="iteration_3">iteration:3</option>
+                    <option value="after">iteration:4</option>
+                    <option value="before">iteration:3</option>
                   </Form.Control>
                 </Form>
 

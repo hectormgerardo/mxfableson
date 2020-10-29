@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState} from "react";
 import "../css/graphCharacteristics.css";
 import "../css/Box.css";
 import "../../node_modules/react-grid-layout/css/styles.css";
@@ -11,10 +11,32 @@ import { WidthProvider, Responsive } from "react-grid-layout";
 import MixedChart from "../componentes/MixedChart";
 import data from '../data/GlobalTargets.json';
 import BarChart from '../componentes/BarChart'
+import ComboBox from '../componentes/ComboBox';
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
-const drawGlobalTargets = (props) => {
-  
+const DrawGlobalTargets = (props) => {
+
+  const [state, setState] = useState({
+    select: {
+      GraficaType:'group',
+      scenathon_id:'6',
+      Iteration:'after',
+    }
+   
+  });
+
+ const handleChange = e => {
+console.log("entre HANDE")
+  setState({
+      select: {
+          //el next code evitara que se sobrescriba cuando reciba un valor new
+          ...state.select,
+          
+          [e.target.name]: e.target.value
+      },
+     
+  })
+  }
 const crearDataTargetUno=(props)=> {
  
   var dataUno=[]
@@ -406,7 +428,7 @@ const crearDataTargetSiete=(props)=> {
    var dataAuxTargetCinco;
   var dataAuxTargetSeis;
   var dataAuxTargetSiete;
-  if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
+  if (state.select.GraficaType === "group" &&  state.select.Iteration === "before" && state.select.scenathon_id === "6") {
    
     dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionUno);
     dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionUno);
@@ -420,8 +442,8 @@ const crearDataTargetSiete=(props)=> {
     
 
  
-} else if (props.combinacion.select.GraficaType === "group" &&  props.combinacion.select.Iteration  === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
- 
+} else if (state.select.GraficaType === "group" && state.select.Iteration  === "after" && state.select.scenathon_id === "6") {
+ console.log("entre if")
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionDos);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionDos);
   dataAuxTargetTres= crearDataTargetTres(data.targetTres_combinacionDos);
@@ -430,7 +452,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionDos);
   dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionDos);
   
-} else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
+} else if (state.select.GraficaType === "group" && state.select.Iteration === "after" && state.select.scenathon_id === "5") {
   
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionTres);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionTres);
@@ -440,7 +462,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionTres);
   dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionTres);
 
-} else if (props.combinacion.select.GraficaType === "group" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
+} else if (state.select.GraficaType === "group" && state.select.Iteration === "before" && state.select.scenathon_id === "5") {
   
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionCuatro);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionCuatro);
@@ -450,7 +472,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionCuatro);
   dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionCuatro);
 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
+} else if (state.select.GraficaType === "regions" && state.select.Iteration === "after" && state.select.scenathon_id === "6") {
  
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionCinco);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionCinco);
@@ -460,7 +482,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionCinco);
   dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionCinco);
 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
+} else if (state.select.GraficaType === "regions" && state.select.Iteration === "before" && state.select.scenathon_id === "6") {
   
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionSeis);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionSeis);
@@ -470,7 +492,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionSeis);
   dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionSeis);
 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
+} else if (state.select.GraficaType === "regions" && state.select.Iteration === "after" && state.select.scenathon_id === "5") {
   
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionSiete);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionSiete);
@@ -480,7 +502,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionSiete);
   dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionSiete);
 
-} else if (props.combinacion.select.GraficaType === "regions" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
+} else if (state.select.GraficaType === "regions" && state.select.Iteration === "before" && state.select.scenathon_id === "5") {
   
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionOcho);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionOcho);
@@ -490,7 +512,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionOcho);
   dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionOcho);
 
-} else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Sustainaible") {
+} else if (state.select.GraficaType === "countries" && state.select.Iteration === "after" && state.select.scenathon_id === "6") {
   
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionNueve);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionNueve);
@@ -500,7 +522,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionNueve);
   dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionNueve);
 
-}else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Sustainaible") {
+}else if (state.select.GraficaType === "countries" && state.select.Iteration === "before" && state.select.scenathon_id === "6") {
   
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionDies);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionDies);
@@ -510,7 +532,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionDies);
   dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionDies);
 
-} else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_4" && props.combinacion.select.Scenario === "Current_trend") {
+} else if (state.select.GraficaType === "countries" && state.select.Iteration === "after" && state.select.scenathon_id === "5") {
   
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionOnce);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionOnce);
@@ -520,7 +542,7 @@ const crearDataTargetSiete=(props)=> {
   dataAuxTargetSeis= crearDataTargetSeis(data.targetSeis_combinacionOnce);
   dataAuxTargetSiete= crearDataTargetSiete(data.targetCuatro_2_combinacionOnce);
 
-} else if (props.combinacion.select.GraficaType === "countries" && props.combinacion.select.Iteration === "iteration_3" && props.combinacion.select.Scenario === "Current_trend") {
+} else if (state.select.GraficaType === "countries" && state.select.Iteration === "before" && state.select.scenathon_id === "5") {
   dataAuxTargetUno= crearDataTargetUno(data.targetUno_combinacionDoce);
   dataAuxTargetDos= crearDataTargetDos(data.targetDos_combinacionDoce);
   dataAuxTargetTres= crearDataTargetTres(data.targetTres_combinacionDoce);
@@ -532,6 +554,7 @@ const crearDataTargetSiete=(props)=> {
   return (
     
 <div style={{width:"70vw"}}>
+<ComboBox onChange={handleChange}/>
 <ResponsiveReactGridLayout
           className="layout"
           cols={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }}
@@ -597,4 +620,4 @@ const crearDataTargetSiete=(props)=> {
   );
 };
 
-export default drawGlobalTargets;
+export default DrawGlobalTargets;

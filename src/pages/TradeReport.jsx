@@ -13,63 +13,76 @@ import DashboardTradeReport from '../componentes/DashboardTradeReport'
 import BarChart from "../componentes/BarChart";
 
 
-const SustainableImporters =()=>
+const SustainableImporters =(props)=>
  {
   
   const [state,setState]=useState({select: {
   Product: 'abaca',
- iteration: "4",
- scenathon_id :"6",
- column:"Export_quantity"
+ iteration: props.iteration,
+ scenathon_id :props.scenathon_id,
+ column:"Export_quantity",
+ dashboard:props.dashboard
  }});
+
+ setState({
+  select: {
+    Product: 'abaca',
+    iteration: props.iteration  ,
+    scenathon_id :props.scenathon_id,
+    column:"Export_quantity"
+    
+  }
+
+});
 
   //const [state,setState]=useState([]);
   const [json,setJson]=useState([]);
   var dataAux = null;
 
  const handleChange = e => {
+   console.log("entre handels")
 var scenathon_id=state.select.scenathon_id;
 var columnAux=state.select.column;
 var Product =state.select.Product;
 var iteration=state.select.iteration;
 
  
-  if(e.target.name=="dashboard-tradeReport"){
-  switch (e.target.value) {
+ 
+  switch (state.select.dashboard) {
     case 'Sustainable_next_exporters':
        // this.dash = <SustainableImporters scenathon_id={"6"} column={"Export_quantity"} iteration={"4"}/>;
        scenathon_id="6";
        columnAux="Export_quantity";
-      iteration=state.select.iteration=="1"? "3":"4";
+    ///  iteration=state.select.iteration=="1"? "3":"4";
+      iteration=e.target.name=="iteration"?e.target.value==="after"? "4":"3":state.select.iteration;
        
         break;
     case 'Sustainable_next_importers':
      //   this.dash = <SustainableImporters scenathon_id={"5"} column={"Import_quantity"} iteration={"4"}/>;
      scenathon_id="6";
      columnAux="Import_quantity";
-     iteration=state.select.iteration=="1"? "3":"4";
+    // iteration=state.select.iteration=="1"? "3":"4";
+     iteration=e.target.name=="iteration"?e.target.value==="after"? "4":"3":state.select.iteration;
         break;
     case 'Current_trend_next_exporters':
       //  this.dash = <h1>Current_trend_next_exporters</h1>
       scenathon_id="5";
       columnAux="Export_quantity";
-     iteration=state.select.iteration=="3"? "1":"2";
+   //  iteration=state.select.iteration=="3"? "1":"2";
 //iteration="2";
+iteration=e.target.name=="iteration"?e.target.value==="after"? "2":"1":state.select.iteration;
         break;
     case 'Current_trend_next_importers':
       scenathon_id="5";
       columnAux="Import_quantity";
-      iteration=state.select.iteration=="3"? "1":"2";
+    //  iteration=state.select.iteration=="3"? "1":"2";
+    iteration=e.target.name=="iteration"?e.target.value==="after"? "2":"1":state.select.iteration;
       //  this.dash = <h1>Current_trend_next_importers</h1>
         break;
 
         
 }
-}else{
-  
-  Product= e.target.name=="Product"? e.target.value: state.select.Product;
-  iteration=e.target.name=="iteration"?scenathon_id==="6" ? e.target.value==="after"? "4":"3" : e.target.value==="after"? "2":"1":state.select.iteration;
-}
+
 
 setState({
       select: {
@@ -115,7 +128,8 @@ setState({
 
   }
 
-  function Pais(CountryCharacteristics,data) {
+  function Pais(CountryCharacteristics,data) 
+  {
     this.data=data;
     this.type=CountryCharacteristics[0]["type"];
     this.label=CountryCharacteristics[0]["label"];
@@ -210,7 +224,7 @@ if(state.select.column=="Export_quantity")
         {converter()}
        
         <div>
-        <DashboardTradeReport metodo={handleChange} />
+        
            <ComboBoxTradeReportersImporters metodo={handleChange} />
         
         </div>

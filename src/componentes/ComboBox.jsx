@@ -33,6 +33,7 @@ function ComboBox (props) {
                     <option value="before">before</option>
                 </select>
                 <br></br>
+               {/*
                 <Form>
                   <Form.Control name="GraficaType" onChange={onChange} as="select" custom>
                   <option value="group">Group</option>
@@ -40,12 +41,12 @@ function ComboBox (props) {
                     <option value="countries">ALL FABLE countries</option>
                   </Form.Control>
                 </Form>
-
-                 {/*<select  name="GraficaType" onChange={onChange}>
+*/}
+                <select  name="GraficaType" onChange={onChange}>
                     <option value="group">Group</option>
                     <option value="regions">ALL ROW regions</option>
                     <option value="countries">ALL FABLE countries</option>
-                </select>*/}
+                </select>
                 <br></br>
             </div>
     </Styles>
