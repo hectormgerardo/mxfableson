@@ -130,7 +130,8 @@ useEffect(() => {
       var dataSum=[];
 var freshWater=[];
 var labels=[];
-var nameCounty="Argentina";
+var nameCounty=state.select.GraficaType==="regions"?"R_AFR":"Argentina";
+
 if (json != null) {
   json.map((item) => {
     if (!labels.includes(item.Year)) 
