@@ -7,13 +7,14 @@ import {
   SidebarHeader,
   SidebarContent,
 } from 'react-pro-sidebar';
-import 'react-pro-sidebar/dist/css/styles.css';
-
+import '../css/SideMenu.css';
+ 
 const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar, onChange }) => {
   const handleChange  =e =>{
     onChange(e);
   }
   return (
+  
     <ProSidebar
       image={false}
       rtl={false}
@@ -79,8 +80,8 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar, onChange }
                 <MenuItem>Exporters</MenuItem>
               </SubMenu>
               <SubMenu title="Current Trend">
-                <MenuItem>Importers</MenuItem>
-                <MenuItem>Exporters</MenuItem>
+                <MenuItem >Importers</MenuItem>
+                <MenuItem >Exporters</MenuItem>
               </SubMenu>
 
             </SubMenu>

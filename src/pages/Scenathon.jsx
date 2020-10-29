@@ -7,7 +7,6 @@ import ComboBox3 from '../componentes/ComboBox3'
 import Aside from '../componentes/Aside';
 import Dashboard from '../componentes/Dashboard'
 
-
 //dashboards
 import NetForestCoverChange from '../pages/NetForestCoverChange'
 import Biodiversity from '../pages/Biodiversity'
@@ -23,6 +22,7 @@ import GreenHouse2 from '../pages/GreenHouse2'
 
 import GreenHouseOne from '../pages/GreenHouseOne'
 import FreshWaterTwo from '../pages/FreshWaterTwo'
+import TradeReport from '../pages/TradeReport'
 
 import styled from 'styled-components';
 
@@ -31,10 +31,17 @@ import BannerCleanWater from '../assets/banners/Mesa de trabajo 8.png';
 import BannerZeroHunger from '../assets/banners/Mesa de trabajo 2.png';
 import BannerClimateAction from '../assets/banners/Mesa de trabajo 16.png';
 
-import TradeReport from '../pages/TradeReport'
+{/*import NetForestCoverChangeInfoA from '../pages/NetForestCoverChangeInfo1';
+import NetForestCoverChangeInfo2 from '';
+import FreshWaterUseInfo1 from '';
+import FreshWaterUseInfo2 from '';
+import GreenHouseGasEmissionsInfo1 from '';
+import GreenHouseGasEmissionsInfo2 from '';
+import FoodEnergyIntakePerCapitaInfo1 from '';
+import FoodEnergyIntakePerCapitaInfo2 from '';*/}
+
 const Styles = styled.div`
 header{
-
 
 overflow:hidden;
   background-color: white;
@@ -46,6 +53,7 @@ overflow:hidden;
   margin: 0;
   height: 100px;
   margin-top:20px;
+  width: 100%;
   
 
 
@@ -55,7 +63,6 @@ max-height:100%;
 }
 
 
-}
 
 .container{
     display:flex;
@@ -124,7 +131,7 @@ class Scenathon extends Component {
     }
 
     selectDashboard(){
-      console.log("entre")
+    
         switch(this.state.dashboard){
             case 'Global Target Summary': 
                 this.combobox=<ComboBox onChange={this.handleChange}/>
@@ -134,6 +141,7 @@ class Scenathon extends Component {
             this.combobox=<ComboBox onChange={this.handleChange}/>
               this.dash=<NetForestCoverChange combinacion={this.state}/>;
               document.getElementById("banner").src=BannerLifeOnLand;
+              //document.getElementById("info").src="NetForestCoverChangeInfoA";
               break;
             case 'Net Forest Cover Change 2':
                 this.combobox=<ComboBox3 onChange={this.handleChange}/>
@@ -141,8 +149,8 @@ class Scenathon extends Component {
                 document.getElementById("banner").src=BannerLifeOnLand;
                 break;
             case 'Biodiversity':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<Biodiversity combinacion={this.state}/>;
+                this.combobox=null;  
+                this.dash=<Biodiversity/>;
                 document.getElementById("banner").src=BannerLifeOnLand;
             break;
             case 'Protected Areas by Type':
@@ -158,12 +166,14 @@ class Scenathon extends Component {
                 document.getElementById("banner").src=BannerLifeOnLand;
             break;
             case 'Fresh Water 1':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
-                this.dash=<FreshWaterUse combinacion={this.state}/>;
+              //  this.combobox=<ComboBox onChange={this.handleChange}/>
+              this.combobox=null;  
+              this.dash=<FreshWaterUse combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerCleanWater;
             break;
             case 'Fresh Water 2':
-                this.combobox=<ComboBox onChange={this.handleChange}/>
+              //  this.combobox=<ComboBox onChange={this.handleChange}/>
+              this.combobox=null; 
                 this.dash=<FreshWaterTwo combinacion={this.state}/>;
                 document.getElementById("banner").src=BannerCleanWater;
             break;
@@ -193,15 +203,12 @@ class Scenathon extends Component {
                 this.combobox=null;   
              this.dash=<TradeReport/>;
             break;
+            case 'Trade Report':
+                this.dash=<TradeReport/>;
+            break;
            
           }
     }
-
-   
-  
-
-   
-
 
     render() {
         return (
@@ -224,7 +231,7 @@ class Scenathon extends Component {
                 {this.combobox}
                 {this.dash}
                 </div>
-             
+                <div class="info" id="info"></div>
             </div>
             </Styles>
            

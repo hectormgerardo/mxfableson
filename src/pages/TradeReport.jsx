@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 
 import {Container,Row,Col} from "react-bootstrap";
-import LeafletMap from './LeafletMap'
+import LeafletMap from './TradeReportMap'
 
 
 import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
@@ -11,10 +11,10 @@ import CountryCharacteristics from '../data/CountryCharacteristics.json';
 import DashboardTradeReport from '../componentes/DashboardTradeReport'
 
 import BarChart from "../componentes/BarChart";
+import TradeReportMap from "./TradeReportMap";
 
 
-const SustainableImporters =()=>
- {
+const SustainableImporters = () =>{
   
   const [state,setState]=useState({select: {
   Product: 'abaca',
@@ -231,10 +231,11 @@ if(state.select.column=="Export_quantity")
                   </Col>
                   <Col>
                   <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
-                  <LeafletMap datos={dataAux}/>
+                  <TradeReportMap countriesData={dataAux}/>
                   </div>
                   </Col>
                 </Row>
+                <TradeReportMap countriesData={dataAux}/>
               </Container>
               </div>
       </div>
