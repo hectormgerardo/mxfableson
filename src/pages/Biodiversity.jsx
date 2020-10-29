@@ -78,6 +78,7 @@ const DrawBiodiversity = (props) =>
 
 
   useEffect(() => {
+    
      getBiodiversity();
    }, [state]);
  
@@ -87,7 +88,9 @@ const DrawBiodiversity = (props) =>
      
      try {   
        const body =state;
-      const response = await fetch("http://localhost:5000/biodiversity"+JSON.stringify(body));
+
+      const response = await fetch("https://server-fableson.wl.r.appspot.com/biodiversity"+JSON.stringify(body));
+
       const  jsonAux =  await response.json();
      setJson(jsonAux);
      } catch (error) {
@@ -138,7 +141,8 @@ const DrawBiodiversity = (props) =>
         var dataBiodiversity_land=[];
 var biodiversities=[];
 var labels=[];
-var nameCounty="Argentina";
+var nameCounty=state.select.GraficaType==="regions"?"R_AFR":"Argentina";
+
   if (json != null) {
     json.map((item) => {
       if (!labels.includes(item.Year)) 

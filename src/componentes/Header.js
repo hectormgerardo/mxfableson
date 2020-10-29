@@ -22,10 +22,10 @@ overflow:hidden;
   height: 100px;
   margin-top:25px;
   
-
+  width: "100vw";
 
 .banner{
-  max-width:100%;
+width: "100vw";,
 max-height:100%;
 }
 
@@ -43,7 +43,7 @@ export const Header = () => {
     return (
         <Styles>
             <header>
-            <img src={BannerLifeOnLand} class="banner"></img>
+            <img src={BannerLifeOnLand} class="banner" width="100vw"></img>
             </header>
         </Styles>
 

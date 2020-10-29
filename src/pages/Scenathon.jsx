@@ -139,6 +139,8 @@ class Scenathon extends Component {
             //    this.combobox=<ComboBox onChange={this.handleChange}/>
             this.combobox=null;  
                this.dash=<GlobalTargets combinacion={this.state}/>;
+               console.log("cocaina")
+               console.log(this.state)
               break;
             case 'Net Forest Cover Change 1': 
          //   this.combobox=<ComboBox onChange={this.handleChange}/>

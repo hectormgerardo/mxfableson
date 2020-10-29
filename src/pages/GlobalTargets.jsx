@@ -69,9 +69,9 @@ const crearDataTargetUno=(props)=> {
         data:dataUno,
         fill:false,
         type:"bar",
-        backgroundColor:"#81c784",
+        backgroundColor:"#388e3c",
         borderColor:"#81c784",
-        hoverBackgroundColor:"darkgreen",
+        hoverBackgroundColor:"#388e3c",
         hoverBorderColor:"#81c784",
         yAxisID:"y-axis-1"
        }
@@ -113,9 +113,9 @@ var labels=[]
         data:dataUno,
         fill:false,
         type:"bar",
-        backgroundColor:"#81c784",
+        backgroundColor:"#7cb342",
         borderColor:"#81c784",
-        hoverBackgroundColor:"darkgreen",
+        hoverBackgroundColor:"#7cb342",
         hoverBorderColor:"#81c784",
         yAxisID:"y-axis-1"
        }
@@ -152,9 +152,10 @@ const crearDataTargetTres=(props)=> {
         data:dataDos,
         fill:false,
         type:"scatter",
-        backgroundColor:"Yellow",
+        backgroundColor:"Orange",
         borderColor:"Yellow",
-        hoverBackgroundColor:"Yellow",
+        hoverBackgroundColor:"Orange",
+        radius:5,
         hoverBorderColor:"Yellow",
         yAxisID:"y-axis-1"
        },
@@ -163,9 +164,9 @@ const crearDataTargetTres=(props)=> {
         data:dataUno,
         fill:false,
         type:"bar",
-        backgroundColor:"#81c784",
+        backgroundColor:"#cddc39",
         borderColor:"#81c784",
-        hoverBackgroundColor:"darkgreen",
+        hoverBackgroundColor:"#cddc39",
         hoverBorderColor:"#81c784",
         yAxisID:"y-axis-1"
        },  {
@@ -215,10 +216,11 @@ const crearDataTargetTres=(props)=> {
         data:dataDos,
         fill:false,
         type:"scatter",
-        backgroundColor:"Red",
-        borderColor:"Red",
-        hoverBackgroundColor:"Red",
-        hoverBorderColor:"Red",
+        backgroundColor:"#e64a19",
+        borderColor:"#e64a19",
+        radius:4,
+        hoverBackgroundColor:"#e64a19",
+        hoverBorderColor:"#e64a19",
         yAxisID:"y-axis-1"
        },
        {
@@ -226,9 +228,9 @@ const crearDataTargetTres=(props)=> {
         data:dataUno,
         fill:false,
         type:"bar",
-        backgroundColor:"#81c784",
+        backgroundColor:"#ffc107",
         borderColor:"#81c784",
-        hoverBackgroundColor:"darkgreen",
+        hoverBackgroundColor:"#ffc107",
         hoverBorderColor:"#81c784",
         yAxisID:"y-axis-1"
        }
@@ -270,9 +272,9 @@ const crearDataTargetSeis=(props)=> {
         data:dataUno,
         fill:false,
         type:"bar",
-        backgroundColor:"#81c784",
+        backgroundColor:"#0072f0",
         borderColor:"#81c784",
-        hoverBackgroundColor:"darkgreen",
+        hoverBackgroundColor:"#0072f0",
         hoverBorderColor:"#81c784",
         yAxisID:"y-axis-1"
        }
@@ -312,10 +314,10 @@ const crearDataTargetCuatro=(props)=> {
         data:dataSeis,
         fill:false,
         type:"scatter",
-        backgroundColor:"Red",
-        borderColor:"Red",
-        hoverBackgroundColor:"Red",
-        hoverBorderColor:"Red",
+        backgroundColor:"#c3502b",
+        borderColor:"#c3502b",
+        hoverBackgroundColor:"#c3502b",
+        hoverBorderColor:"#c3502b",
         yAxisID:"y-axis-1"
        },
        {
@@ -323,9 +325,9 @@ const crearDataTargetCuatro=(props)=> {
         data:dataUno,
         fill:false,
         type:"bar",
-        backgroundColor:"#81c784",
+        backgroundColor:"#999999",
         borderColor:"#81c784",
-        hoverBackgroundColor:"darkgreen",
+        hoverBackgroundColor:"#999999",
         hoverBorderColor:"#81c784",
         yAxisID:"y-axis-1"
        },{
@@ -333,9 +335,9 @@ const crearDataTargetCuatro=(props)=> {
         data:dataDos,
         fill:false,
         type:"bar",
-        backgroundColor:"black",
+        backgroundColor:"#d1d1d1",
         borderColor:"black",
-        hoverBackgroundColor:"black",
+        hoverBackgroundColor:"#d1d1d1",
         hoverBorderColor:"black",
         yAxisID:"y-axis-1"
        },{
@@ -343,9 +345,9 @@ const crearDataTargetCuatro=(props)=> {
         data:dataTres,
         fill:false,
         type:"bar",
-        backgroundColor:"green",
+        backgroundColor:"#607d8b",
         borderColor:"green",
-        hoverBackgroundColor:"green",
+        hoverBackgroundColor:"#607d8b",
         hoverBorderColor:"green",
         yAxisID:"y-axis-1"
        },
@@ -354,9 +356,9 @@ const crearDataTargetCuatro=(props)=> {
         data:dataCuatro,
         fill:false,
         type:"bar",
-        backgroundColor:"yellow",
+        backgroundColor:"#9e9e9e",
         borderColor:"yellow",
-        hoverBackgroundColor:"yellow",
+        hoverBackgroundColor:"#9e9e9e",
         hoverBorderColor:"yellow",
         yAxisID:"y-axis-1"
        },{
@@ -364,9 +366,9 @@ const crearDataTargetCuatro=(props)=> {
         data:dataCinco,
         fill:false,
         type:"bar",
-        backgroundColor:"blue",
+        backgroundColor:"#616161",
         borderColor:"blue",
-        hoverBackgroundColor:"blue",
+        hoverBackgroundColor:"#616161",
         hoverBorderColor:"blue",
         yAxisID:"y-axis-1"
        }
@@ -398,10 +400,10 @@ const crearDataTargetSiete=(props)=> {
         data:dataDos,
         fill:false,
         type:"scatter",
-        backgroundColor:"Red",
-        borderColor:"Red",
-        hoverBackgroundColor:"Red",
-        hoverBorderColor:"Red",
+        backgroundColor:"#e64a19",
+        borderColor:"#e64a19",
+        hoverBackgroundColor:"#e64a19",
+        hoverBorderColor:"#e64a19",
         yAxisID:"y-axis-1"
        },
        {
@@ -409,9 +411,9 @@ const crearDataTargetSiete=(props)=> {
         data:dataUno,
         fill:false,
         type:"bar",
-        backgroundColor:"#81c784",
+        backgroundColor:"#607d8b",
         borderColor:"#81c784",
-        hoverBackgroundColor:"darkgreen",
+        hoverBackgroundColor:"#607d8b",
         hoverBorderColor:"#81c784",
         yAxisID:"y-axis-1"
        }
