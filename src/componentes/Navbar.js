@@ -33,7 +33,6 @@ const Styles = styled.div`
   justify-content:space-between;
   width:100%;
   z-index: 9999;
-
 .router-container {
    
     margin-left:100px;
@@ -63,17 +62,17 @@ width: 100px;
 
 }
 
-
-.navbar-brand, .navbar-nav .nav-link {
-  color: white;
-  text-shadow: .5px .5px 2px #000000;
-  &: hover{
+ navbar-brand: hover{
     color:#306973;
     width:inherit;
     
   
   
   }
+.navbar-brand, .navbar-nav .nav-link {
+  color: white;
+  text-shadow: .5px .5px 2px #000000;
+ 
 
   .navbar-link{
     margin-left:70px;
@@ -209,6 +208,7 @@ window.onscroll = function () {
     document.getElementById("navbar").style.top = "0";
     
   } else {
+
     document.getElementById("navbar").style.top = "-120px";
     document.getElementById("navbar").style.backgroundColor = "white";
     document.getElementById("IIASA_LOGO").src = IIASA_LOGO_COLOR;
@@ -217,6 +217,7 @@ window.onscroll = function () {
     
     //change switch of color using getByClassName method
     document.getElementById("navbar-link-home").style.color="#306973";
+    
     document.getElementById("navbar-link-tour").style.color="#306973";
     document.getElementById("navbar-link-fable").style.color="#306973";
     document.getElementById("navbar-link-scenathon2020").style.color="#306973";
@@ -234,6 +235,7 @@ window.onscroll = function () {
     */
   }
   if (currentScrollPos === 0) {
+ 
     document.getElementById("navbar").style.backgroundColor = "transparent";
     document.getElementById("IIASA_LOGO").src = IIASA_LOGO_WHITE;
     document.getElementById("SDSN_LOGO").src = SDSN_LOGO_WHITE;

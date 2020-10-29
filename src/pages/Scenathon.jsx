@@ -60,6 +60,7 @@ max-height:100%;
 .container{
     display:flex;
     width:1500px;
+    border:5px solid green;
 }
 
 

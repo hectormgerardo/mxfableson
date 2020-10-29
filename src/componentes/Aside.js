@@ -7,7 +7,7 @@ import {
   SidebarHeader,
   SidebarContent,
 } from 'react-pro-sidebar';
-import 'react-pro-sidebar/dist/css/styles.css';
+import '../css/SideMenu.css';
 
 const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar, onChange }) => {
   const handleChange  =e =>{
