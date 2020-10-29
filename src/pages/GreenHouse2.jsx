@@ -2,6 +2,8 @@ import React from "react";
 import BarChart from "../componentes/BarChart";
 import data from '../data/Greenhouse2.json';
 import { Container, Row, Col } from "react-bootstrap";
+
+import LeafletMap from './LeafletMap';
 //nfch=NetForestCoverChange
 const greenHouse = (props) => {
 
@@ -118,6 +120,16 @@ const greenHouse = (props) => {
         </div>
         </Col>
       </Row>
+
+      Graph 1
+      <LeafletMap 
+        countriesData = {dataGraphOneAux}
+      />
+      Graph 2
+      <LeafletMap 
+        countriesData = {dataGraphTwoAux}
+      />
+
     </Container>);
 
 }
@@ -207,7 +219,7 @@ const convertir = (props) => {
       {
         //Aforestation ejemplo
         type: 'bar',
-        label: 'Usa',
+        label: 'USA',
         data: usa,
         fill: false,
         backgroundColor: '#faa75a',
@@ -217,7 +229,7 @@ const convertir = (props) => {
         yAxisID: 'y-axis-1'
       }, {
         type: 'bar',
-        label: 'Uk',
+        label: 'United Kingdom',
         data: UK,
         fill: false,
         borderColor: '#EC932F',
@@ -282,7 +294,7 @@ const convertir = (props) => {
       },
       {
         type: 'bar',
-        label: 'Rest of Sub Saharan Africa',
+        label: 'Rest of Sub-Saharan Africa',
         data: Rest_of_Sub_Saharan_Africa,
         fill: false,
         borderColor: '#EC932F',
@@ -295,7 +307,7 @@ const convertir = (props) => {
       },
       {
         type: 'bar',
-        label: 'Rest of North Africa Middle East andcentral Asia',
+        label: 'Rest of North Africa Middle East and central Asia',
         data: Rest_of_North_Africa_Middle_East_and_central_Asia,
         fill: false,
         borderColor: '#EC932F',

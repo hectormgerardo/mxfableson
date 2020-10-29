@@ -68,19 +68,14 @@ return (
               <LeafletMap
               
                 
-                //countriesData = {dataAux}
+                countriesData = {dataAux}
               
               />
               
               </div>
               </Col>
             </Row>
-            <LeafletMap
-              
-                
-               // countriesData = {dataAux}
-              
-              />
+            
           </Container>
           
 );
