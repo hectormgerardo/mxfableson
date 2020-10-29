@@ -8,7 +8,7 @@ import * as L from 'leaflet';
 import { ThemeProvider } from 'styled-components';
 
 
-class LeafletMap extends Component {
+class TradeReportMap extends Component {
     state = { color: '#b4b42d'} ;
 
     //This list is for the countries of Rest_of_Sub_Saharan_Africa
@@ -64,8 +64,7 @@ class LeafletMap extends Component {
 		'Uganda',
 		'Western Sahara',
 		'Zambia',
-        'Zimbabwe',
-        'French Guiana'];
+        'Zimbabwe'];
         
     //This list is for the countries of Rest of Central and South America
     //because in the data they do not come by individual countries
@@ -171,6 +170,8 @@ class LeafletMap extends Component {
     propsAux = null ;
 
     isColored = false;
+
+    paisesTest = []
     
 
     constructor(props) {
@@ -178,10 +179,28 @@ class LeafletMap extends Component {
         super(props);
         
         this.propsAux = props;
-        console.log('Este es el trade Senathon info')
-        console.log(this.propsAux)
 
-        try {
+        console.log('Este es el trade report info props')
+        console.log(this.propsAux.countriesData)
+
+        this.paisesTest = this.propsAux.countriesData.datasets
+
+        for (const country in this.paisesTest) {
+            console.log(this.paisesTest[country].label)
+            this.color.push(this.paisesTest[country].backgroundColor);
+            this.countriesName.push(this.paisesTest[country].label);
+            this.data.push(this.paisesTest[country].data);
+        }
+
+        this.years = this.propsAux.labels
+
+        console.log(this.color)
+        console.log(this.countriesName)
+        console.log(this.data)
+
+        //console.log(this.paisesTest[1].label);
+
+        /*try {
             
             this.propsAux.countriesData.datasets.map((item) => {
                 this.color.push(item.backgroundColor);
@@ -194,7 +213,7 @@ class LeafletMap extends Component {
 
         } catch ( e ) {
             console.error ( e );
-        }
+        }*/
         
     }
     
@@ -234,7 +253,6 @@ class LeafletMap extends Component {
     //htmlCode = ''
 
     createListInfoCountry = (index, countryName) => {
-
         this.htmlCode = '<p style="text-align:center;"><strong>'+ countryName + '</strong></p>'
         
         this.htmlCode = this.htmlCode + '<ul>'
@@ -265,7 +283,7 @@ class LeafletMap extends Component {
 
     onEachCountry = (country, layer) => {
 
-       const countryName = country.properties.ADMIN; //The name of the countries
+       const countryName = country.id; //The name of the countries
        
        var indexAux = -1;
  
@@ -329,13 +347,13 @@ class LeafletMap extends Component {
             layer.bindPopup(popup)
             this.isColored = true;
        }
-       if (!this.isColored) {
+       /*if (!this.isColored) {
         indexAux = this.countriesName.indexOf('Otros');
         layer.options.fillColor = this.color[indexAux];
             
             var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
             layer.bindPopup(popup)
-       }
+       }*/
 
        
 
@@ -390,4 +408,4 @@ class LeafletMap extends Component {
     } 
 }
 
-export default LeafletMap;
+export default TradeReportMap;

@@ -493,7 +493,7 @@ const convertir=(props) => {
         },
         {
           type: 'bar',
-          label: 'ColombiaRest of Sub-Saharan Africa',
+          label: 'Rest of Sub-Saharan Africa',
           data: Fresh_water_Rest_of_Sub_Saharan_Africa,
           fill: false,
           borderColor: '#EC932F',
