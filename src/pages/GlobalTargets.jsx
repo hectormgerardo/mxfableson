@@ -555,7 +555,7 @@ const crearDataTargetSiete=(props)=> {
 }
   return (
     
-<div style={{width:"70vw"}}>
+<div style={{width:"100vw"}}>
 <ComboBox onChange={handleChange}/>
 <ResponsiveReactGridLayout
           className="layout"
