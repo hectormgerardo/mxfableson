@@ -5,6 +5,9 @@ import "../../node_modules/react-grid-layout/css/styles.css";
 import "../../node_modules/react-resizable/css/styles.css";
 import {Container,Row,Col,Jumbotron} from "react-bootstrap";
 import GridLayout from 'react-grid-layout';
+
+import LeafletMap from './LeafletMap';
+
 //nfch=NetForestCoverChange
 const drawNfch2 = (props) => {
  
@@ -44,22 +47,25 @@ const drawNfch2 = (props) => {
     
   }
   
-  
+  console.log('NET DATA AUX');
+  console.log(dataAux);
 return(
 
 
-          <Container fluid>
+          <Container fluid >
             <Row  >
               <Col >
-              <div style={{height: "100vh"}}>
+              <div style={{height: "100vh" ,width:"30vw"} }>
                 <BarChart data={dataAux}
                   title="Net Forest Cover Change 2"
                   labelposition="bottom"
                   aspectRatio={false}/></div>
               </Col>
               <Col>
-              <div style={{borderStyle:'solid', textAlign:'center', height: "75vh"}}>
-              MAPA
+
+              <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"35vw"}}>
+             
+
               </div>
               </Col>
             </Row>

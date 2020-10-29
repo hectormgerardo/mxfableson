@@ -22,112 +22,112 @@ function ComboBoxTradeReportersImporters (props) {
 
             <div className="contenedor-selects">
                 <br></br>
-                <select  name="Product" onChange={props.metodo}>
-                    <option value="abaca">abaca</option>
-                    <option value="apple">apple</option>
-                    <option value="banana">banana</option>
-                    <option value="barley">barley</option>
-                    <option value="beans">beans</option>
-                    <option value="beef">beef</option>
-                    <option value="cassava">cassava</option>
-                    <option value="cattle">cattle</option>
-                    <option value="cattle">cattle</option>
-                    <option value="cereal_other">cereal_other</option>
-                    <option value="chicken">chicken</option>
-                    <option value="chickens">chickens</option>
-                    <option value="chickens">chickens</option>
-                    <option value="chips_and__particles">chips and particles</option>
-                    <option value="cirus_other">cirus other</option>
-                    <option value="clove">clove</option>
-                    <option value="cocoa">cocoa</option>
-                    <option value="coconut">coconut</option>
-                    <option value="cocooil">cocooil</option>
-                    <option value="coffe">coffe</option>
-                    <option value="corn">corn</option>
-                    <option value="cottcake">cottcake</option>
-                    <option value="cottlint">cottlint</option>
-                    <option value="cottoil">cottoil</option>
-                    <option value="cotton">cotton</option>
-                    <option value="date">date</option>
-                    <option value="eggs">eggs</option>
-                    <option value="fiber_hard_other">fiber hard other</option>
-                    <option value="fruit_soft_other">fruit soft other</option>
-                    <option value="fruit_other">fruit other</option>
-                    <option value="grape">grape</option>
-                    <option value="grapefruit">grapefruit</option>
-                    <option value="groundnut">groundnut</option>
-                    <option value="groundnutcake">groundnutcake</option>
-                    <option value="groundnutoil">groundnutoil</option>
-                    <option value="honey">honey</option>
-                    <option value="jute">jute</option>
-                    <option value="lemon">lemon</option>
-                    <option value="meat_other">meat other</option>
-                    <option value="mech_pulp">mech pulp</option>
-                    <option value="milk">milk</option>
-                    <option value="millet">millet</option>
-                    <option value="mutton_goat">mutton_goat</option>
-                    <option value="nuts">nuts</option>
-                    <option value="oats">oats</option>
-                    <option value="oilpalmfruit">oilpalmfruit</option>
-                    <option value="oilseed_other">oilseed other</option>
-                    <option value="olive">olive</option>
-                    <option value="oliveoil">oliveoil</option>
-                    <option value="onion">onion</option>
-                    <option value="orange">orange</option>
-                    <option value="other_oil">other oil</option>
-                    <option value="other_olscake">other olscake</option>
-                    <option value="palm_oil">palm oil</option>
-                    <option value="palmkernelcake">palmkernelcake</option>
-                    <option value="palmkerneloil">palmkerneloil</option>
-                    <option value="peas">peas</option>
-                    <option value="pepper">pepper</option>
-                    <option value="pigs">pigs</option>
-                    <option value="pigs">pigs</option>
-                    <option value="piment">piment</option>
-                    <option value="pinapple">pinapple</option>
-                    <option value="plantain">plantain</option>
-                    <option value="pork">pork</option>
-                    <option value="potato">potato</option>
-                    <option value="pulses_other">pulses other</option>
-                    <option value="repecake">repecake</option>
-                    <option value="rapeoil">rapeoil</option>
-                    <option value="rapeseed">rapeseed</option>
-                    <option value="rice">rice</option>
-                    <option value="rubber">rubber</option>
-                    <option value="rye">rye</option>
-                    <option value="sesame">sesame</option>
-                    <option value="sesamoil">sesamoil</option>
-                    <option value="sheep_goats">sheep goats</option>
-                    <option value="sheep_goats">sheep_goats</option>
-                    <option value="sisal">sisal</option>
-                    <option value="sorghum">sorghum</option>
-                    <option value="soyabean">soyabean</option>
-                    <option value="soycake">soycake</option>
-                    <option value="soyoil">soyoil</option>
-                    <option value="spices_other">spices other</option>
-                    <option value="sugarbeet">sugarbeet</option>
-                    <option value="sugarcarne">sugarcarne</option>
-                    <option value="sugarraw">sugarraw</option>
-                    <option value="sunflcake">sunflcake</option>
-                    <option value="sunfloil">sunfloil</option>
-                    <option value="sunflower">sunflower</option>
-                    <option value="sweet_potato">sweet_potato</option>
-                    <option value="tea">tea</option>
-                    <option value="tabacco">tabacco</option>
-                    <option value="tomato">tomato</option>
-                    <option value="tuber_other">tuber other</option>
-                    <option value="vegetable_other">vegetable other</option>
-                    <option value="wheat">wheat</option>
-                    <option value="yams">yams</option>
+                <select class="selectBox" name="Product" onChange={props.metodo}>
+                    <option  class="selectOption" value="abaca">abaca</option>
+                    <option class="selectOption" value="apple">apple</option>
+                    <option class="selectOption"  value="banana">banana</option>
+                    <option  class="selectOption" value="barley">barley</option>
+                    <option  class="selectOption" value="beans">beans</option>
+                    <option class="selectOption" value="beef">beef</option>
+                    <option class="selectOption" value="cassava">cassava</option>
+                    <option class="selectOption" value="cattle">cattle</option>
+                    <option  class="selectOption" value="cattle">cattle</option>
+                    <option class="selectOption" value="cereal_other">cereal_other</option>
+                    <option class="selectOption" value="chicken">chicken</option>
+                    <option class="selectOption" value="chickens">chickens</option>
+                    <option class="selectOption" value="chickens">chickens</option>
+                    <option class="selectOption" value="chips_and__particles">chips and particles</option>
+                    <option class="selectOption" value="cirus_other">cirus other</option>
+                    <option class="selectOption" value="clove">clove</option>
+                    <option class="selectOption" value="cocoa">cocoa</option>
+                    <option  class="selectOption" value="coconut">coconut</option>
+                    <option class="selectOption" value="cocooil">cocooil</option>
+                    <option  class="selectOption"value="coffe">coffe</option>
+                    <option  class="selectOption"value="corn">corn</option>
+                    <option  class="selectOption" value="cottcake">cottcake</option>
+                    <option class="selectOption" value="cottlint">cottlint</option>
+                    <option class="selectOption" value="cottoil">cottoil</option>
+                    <option  class="selectOption"value="cotton">cotton</option>
+                    <option  class="selectOption"value="date">date</option>
+                    <option class="selectOption" value="eggs">eggs</option>
+                    <option class="selectOption" value="fiber_hard_other">fiber hard other</option>
+                    <option  class="selectOption"value="fruit_soft_other">fruit soft other</option>
+                    <option  class="selectOption"value="fruit_other">fruit other</option>
+                    <option  class="selectOption"value="grape">grape</option>
+                    <option  class="selectOption"value="grapefruit">grapefruit</option>
+                    <option  class="selectOption"value="groundnut">groundnut</option>
+                    <option  class="selectOption"value="groundnutcake">groundnutcake</option>
+                    <option  class="selectOption"value="groundnutoil">groundnutoil</option>
+                    <option  class="selectOption"value="honey">honey</option>
+                    <option class="selectOption" value="jute">jute</option>
+                    <option class="selectOption" value="lemon">lemon</option>
+                    <option  class="selectOption"value="meat_other">meat other</option>
+                    <option  class="selectOption"value="mech_pulp">mech pulp</option>
+                    <option  class="selectOption"value="milk">milk</option>
+                    <option  class="selectOption"value="millet">millet</option>
+                    <option class="selectOption" value="mutton_goat">mutton_goat</option>
+                    <option  class="selectOption"value="nuts">nuts</option>
+                    <option  class="selectOption"value="oats">oats</option>
+                    <option class="selectOption" value="oilpalmfruit">oilpalmfruit</option>
+                    <option class="selectOption" value="oilseed_other">oilseed other</option>
+                    <option  class="selectOption"value="olive">olive</option>
+                    <option class="selectOption" value="oliveoil">oliveoil</option>
+                    <option  class="selectOption" value="onion">onion</option>
+                    <option  class="selectOption"value="orange">orange</option>
+                    <option class="selectOption" value="other_oil">other oil</option>
+                    <option class="selectOption" value="other_olscake">other olscake</option>
+                    <option  class="selectOption" value="palm_oil">palm oil</option>
+                    <option class="selectOption" value="palmkernelcake">palmkernelcake</option>
+                    <option class="selectOption" value="palmkerneloil">palmkerneloil</option>
+                    <option class="selectOption" value="peas">peas</option>
+                    <option class="selectOption" value="pepper">pepper</option>
+                    <option class="selectOption" value="pigs">pigs</option>
+                    <option class="selectOption" value="pigs">pigs</option>
+                    <option class="selectOption" value="piment">piment</option>
+                    <option class="selectOption" value="pinapple">pinapple</option>
+                    <option class="selectOption" value="plantain">plantain</option>
+                    <option class="selectOption" value="pork">pork</option>
+                    <option  class="selectOption"value="potato">potato</option>
+                    <option class="selectOption" value="pulses_other">pulses other</option>
+                    <option class="selectOption" value="repecake">repecake</option>
+                    <option class="selectOption" value="rapeoil">rapeoil</option>
+                    <option class="selectOption" value="rapeseed">rapeseed</option>
+                    <option  class="selectOption"value="rice">rice</option>
+                    <option  class="selectOption"value="rubber">rubber</option>
+                    <option class="selectOption" value="rye">rye</option>
+                    <option class="selectOption" value="sesame">sesame</option>
+                    <option class="selectOption" value="sesamoil">sesamoil</option>
+                    <option class="selectOption" value="sheep_goats">sheep goats</option>
+                    <option class="selectOption" value="sheep_goats">sheep_goats</option>
+                    <option class="selectOption" value="sisal">sisal</option>
+                    <option class="selectOption" value="sorghum">sorghum</option>
+                    <option class="selectOption" value="soyabean">soyabean</option>
+                    <option class="selectOption" value="soycake">soycake</option>
+                    <option class="selectOption" value="soyoil">soyoil</option>
+                    <option class="selectOption" value="spices_other">spices other</option>
+                    <option class="selectOption" value="sugarbeet">sugarbeet</option>
+                    <option class="selectOption" value="sugarcarne">sugarcarne</option>
+                    <option class="selectOption" value="sugarraw">sugarraw</option>
+                    <option class="selectOption" value="sunflcake">sunflcake</option>
+                    <option class="selectOption" value="sunfloil">sunfloil</option>
+                    <option class="selectOption" value="sunflower">sunflower</option>
+                    <option class="selectOption" value="sweet_potato">sweet_potato</option>
+                    <option class="selectOption" value="tea">tea</option>
+                    <option class="selectOption" value="tabacco">tabacco</option>
+                    <option class="selectOption" value="tomato">tomato</option>
+                    <option class="selectOption" value="tuber_other">tuber other</option>
+                    <option class="selectOption" value="vegetable_other">vegetable other</option>
+                    <option class="selectOption"value="wheat">wheat</option>
+                    <option class="selectOption" value="yams">yams</option>
 
 
 
                     
                 </select>
                 <br></br>
-                <select  name="iteration" onChange={props.metodo}>
-                    <option value="after">after</option>
-                    <option value="before">before</option>
+                <select  class="selectBox" name="iteration" onChange={props.metodo}>
+                    <option class="selectOption" value="after">after</option>
+                    <option  class="selectOption" value="before">before</option>
                 </select>
               
             </div>

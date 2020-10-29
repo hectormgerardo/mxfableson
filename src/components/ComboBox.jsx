@@ -2,42 +2,33 @@ import React from 'react';
 import styled from 'styled-components';
 import { Form } from 'react-bootstrap';
 
-const Styles = styled.div`
-.contenedor selects{
-  background-color: #528D93;
-}
-.conetenedor-select {
-  color:white;
-  &: hover{
-    color:#94B046;
-  }
-}
-`;
+import '../css/ComboBox.css';
 
 function ComboBox (props) {
 
     
         const{onChange}=props
         return (
-            <Styles>
-            <div className="contenedor-selects">
+            
+            <div class="contenedor-selects">
                 <br></br>
-                <select  name="scenathon_id" onChange={onChange}>
-                    <option value="6">Sustainaible</option>
-                    <option value="5">Current trend</option>
+                <select class="selectBox" name="scenathon_id" onChange={onChange}>
+                    <option class="selectOption" value="6">Sustainaible</option>
+                    <option class="selectOption" value="5">Current trend</option>
                     
                 </select>
                 <br></br>
-                <select  name="Iteration" onChange={onChange}>
-                    <option value="after">after</option>
-                    <option value="before">before</option>
+                <select class="selectBox"  name="Iteration" onChange={onChange}>
+                    <option class="selectOption" value="after">after</option>
+                    <option class="selectOption" value="before">before</option>
                 </select>
                 <br></br>
                 <Form>
-                  <Form.Control name="GraficaType" onChange={onChange} as="select" custom>
-                    <option value="regions">ALL ROW regions</option>
-                    <option value="countries">ALL FABLE countries</option>
-                  </Form.Control>
+                  <select class="selectBox" name="GraficaType" onChange={onChange}>
+                  <option class="selectOption" value="group">Group</option>
+                    <option class="selectOption" value="regions">ALL ROW regions</option>
+                    <option class="selectOption" value="countries">ALL FABLE countries</option>
+                  </select>
                 </Form>
 
                  {/*<select  name="GraficaType" onChange={onChange}>
@@ -47,7 +38,7 @@ function ComboBox (props) {
                 </select>*/}
                 <br></br>
             </div>
-    </Styles>
+    
 
 
         )

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import BarChart from "../components/BarChart.jsx";
-
+import BarChart from "../componentes/BarChart.jsx";
+import ComboBox2 from '../componentes/ComboBox2'
 import ChartCharacteristics from '../data/ChartCharacteristics.json';
 import ComboBox from '../components/ComboBox'
 
-const DrawProtected = (props) => {
+const DrawProtected = () => {
 
  
   function Area(ChartCharacteristics,data) {
@@ -38,8 +38,7 @@ const DrawProtected = (props) => {
     
       const getProtectedAreaByType = async() => {
         try {
-          console.log("ESTADO")
-      console.log(state)
+          
           const body =state;
           
          const response = await fetch("http://localhost:5000/protected"+JSON.stringify(body));
@@ -59,8 +58,7 @@ const DrawProtected = (props) => {
       const converter=()=>
       {
 
-       // console.log(json);
-       
+              
         var labels=[];
         var areaForest=[];
         var areaOther=[];
@@ -93,14 +91,6 @@ const DrawProtected = (props) => {
         };
         data=dataAux;
       }
-
-console.log(data);
-
-
-
-
-
-
     }
   
      const handleChange = e => {
@@ -136,7 +126,7 @@ var iteration = state.select.Iteration;
               }
 
            
-        })
+        });
         
 
         
@@ -144,7 +134,7 @@ var iteration = state.select.Iteration;
  
 
     return (
-    <div>
+    <div style={{height: "100vh",width:"70vw"}}>
       
       <ComboBox onChange={handleChange}/>
      {converter()}

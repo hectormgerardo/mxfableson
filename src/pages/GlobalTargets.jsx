@@ -531,7 +531,7 @@ const crearDataTargetSiete=(props)=> {
 }
   return (
     
-<div>
+<div style={{width:"70vw"}}>
 <ResponsiveReactGridLayout
           className="layout"
           cols={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }}
@@ -566,8 +566,8 @@ const crearDataTargetSiete=(props)=> {
           <BarChart 
             data={dataAuxTargetCuatro}
             aspectRatio={false}
-            labelWidth={4}
-            labelSize={8}
+            labelWidth={6}
+            labelSize={10}
             labelposition="right"
             title="From Agriculture "/>
         </div>

@@ -165,10 +165,10 @@ console.error(err.message);
 
 app.get('/foodenergy2:combinaciones',async(req,res)=>{
     try{
-    const{iteration,year}=JSON.parse(req.params.combinaciones).select;
+        const{Iteration,Year}=JSON.parse(req.params.combinaciones).select;
         var query='Select "Country",avg("prot_feas")as "Protein_feasible",avg("fat_feas") as "Fat_feasible" from "resultsScen2020" WHERE "iteration"=$1 AND "Year"=$2 GROUP BY "Country"';
         
-const response=await pool.query(query,[iteration,year]);
+const response=await pool.query(query,[Iteration,Year]);
 
 res.status(200).json(response.rows)
 
@@ -178,12 +178,14 @@ res.status(200).json(response.rows)
 console.error(err.message);
 }
 });
+
 app.get('/foodenergy1:combinaciones',async(req,res)=>{
     try{
-    const{iteration,scenathon,year}=JSON.parse(req.params.combinaciones).select;
+        console.log(req.params.combinaciones);
+    const{Iteration,scenathon_id,Year}=JSON.parse(req.params.combinaciones).select;
         var query='SELECT "Country", (avg("kcal_feas")) AS Kcal_feasible, avg("kcal_mder") AS Target_MDER FROM "resultsScen2020" WHERE "iteration" = $1 AND "scenathon_id" = $2 AND "Year" = $3 GROUP BY "Country" ORDER BY "Country";';
         
-const response=await pool.query(query,[iteration,scenathon,year]);
+const response=await pool.query(query,[Iteration,scenathon_id,Year]);
 
 res.status(200).json(response.rows)
 
@@ -194,10 +196,11 @@ console.error(err.message);
 }
 });
 
-app.get('/landcover',async(req,res)=>{
+app.get('/landcover:combinaciones',async(req,res)=>{
     try{
-    const{iteration,scenathon,group}=JSON.parse(req.params.combinaciones).select;
-    switch(group){
+    const{Iteration,GraficaType}=JSON.parse(req.params.combinaciones).select;
+    console.log(GraficaType)
+    switch(GraficaType){
         case "group": 
         var query='SELECT "Year",sum("CalcPasture") as "CalcPasture",sum("CalcCropland") as "CalcCropland",sum("CalcForest") as "CalcForest",sum("CalcNewForest") as "CalcNewForest" ,sum("CalcOtherLand") as "CalcOtherLand",sum("CalcUrban") as "CalcUrban" from "resultsScen2020" WHERE "iteration"=$1 GROUP BY "Year" order by "Year"';
         break;
@@ -211,7 +214,7 @@ app.get('/landcover',async(req,res)=>{
             var query=null;
             break;
     }
-const response=await pool.query(query,[iteration]);
+const response=await pool.query(query,[Iteration]);
 
 res.status(200).json(response.rows)
 
