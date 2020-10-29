@@ -189,34 +189,18 @@ return (
 
               <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"35vw"}}>
               
-              {/* 
+               
               <LeafletMap
               
-<<<<<<< HEAD
                 
-                countriesData = {dataAux}
-=======
-
-             //   countriesData = {dataAux}
->>>>>>> b3bd750dacfe2f84acfcca9c348f5c568f383ed6
+                //countriesData = {data}
               
               />
-              */}
+              
               </div>
               </Col>
             </Row>
-<<<<<<< HEAD
             
-=======
-            {/* 
-            <LeafletMap
-              
-                
-               // countriesData = {dataAux}
-              
-              />
-              */}
->>>>>>> b3bd750dacfe2f84acfcca9c348f5c568f383ed6
           </Container>
           
 );

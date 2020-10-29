@@ -186,7 +186,7 @@ class TradeReportMap extends Component {
         this.paisesTest = this.propsAux.countriesData.datasets
 
         for (const country in this.paisesTest) {
-            //console.log(this.paisesTest[country].label)
+            console.log(this.paisesTest[country].label)
             this.color.push(this.paisesTest[country].backgroundColor);
             this.countriesName.push(this.paisesTest[country].label);
             this.data.push(this.paisesTest[country].data);

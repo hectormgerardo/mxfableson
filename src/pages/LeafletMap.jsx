@@ -64,7 +64,8 @@ class LeafletMap extends Component {
 		'Uganda',
 		'Western Sahara',
 		'Zambia',
-        'Zimbabwe'];
+        'Zimbabwe',
+        'French Guiana'];
         
     //This list is for the countries of Rest of Central and South America
     //because in the data they do not come by individual countries
