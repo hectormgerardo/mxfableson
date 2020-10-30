@@ -25,56 +25,7 @@ const FoodEnergyIntakePerCapita = (props) => {
 
   const [json, setJson] = useState([]);
 
-  {/*
-    const convertir=(props)=> {
  
- 
-
-
-
-
-        var dataUno=[]
-        var dataDos=[]
-        var labels=[]
-          
-         props.map((item) => {
-          dataUno.push(item.Kcal_feasible);
-          dataDos.push(item.Target_MDER);
-         labels.push(item.c_country_t);
-          
-        });
-       
-        const data={
-          labels:labels,
-           datasets:[
-             {
-              label:"Target (MDER)",
-              data:dataDos,
-              fill:false,
-              type:"scatter",
-              backgroundColor:"Red",
-              borderColor:"Red",
-              hoverBackgroundColor:"Red",
-              hoverBorderColor:"Red",
-              yAxisID:"y-axis-1"
-             },
-             {
-              label:"Kcal feasible",
-              data:dataUno,
-              fill:false,
-              type:"bar",
-              backgroundColor:"#81c784",
-              borderColor:"#81c784",
-              hoverBackgroundColor:"darkgreen",
-              hoverBorderColor:"#81c784",
-              yAxisID:"y-axis-1"
-             }
-           ]
-        }
-      
-       return data
-      } 
-*/}
   var data = null;
 
 
@@ -109,21 +60,21 @@ var year = state.select.Year;
 var scenathon = state.select.scenathon_id;
 var iteration = state.select.Iteration;
 
-if(e.target.name=="scenathon_id"){
+if(e.target.name==="scenathon_id"){
   switch (e.target.value) {
     case '6':
-      iteration=state.select.Iteration=="1"? "3":"4";
+      iteration=state.select.Iteration==="1"? "3":"4";
       scenathon="6";
         break;
     case '5':
      scenathon="5";
-     iteration=state.select.Iteration=="3"? "1":"2";
+     iteration=state.select.Iteration==="3"? "1":"2";
         break;     
 }
 }else{
  
-  year= e.target.name=="Year"? e.target.value: state.select.Year;
-  iteration=e.target.name=="Iteration"?scenathon=="6" ? e.target.value==="after"? "4":"3" : e.target.value==="after"? "2":"1":state.select.Iteration;
+  year= e.target.name==="Year"? e.target.value: state.select.Year;
+  iteration=e.target.name==="Iteration"?scenathon==="6" ? e.target.value==="after"? "4":"3" : e.target.value==="after"? "2":"1":state.select.Iteration;
 }
 
 setState({
@@ -149,7 +100,7 @@ setState({
     var dataSet=[]
 
 
-    if (json != null ) {
+    if (json !== null ) {
    
       json.map((item) => {
           labels.push(item.Country);
@@ -175,46 +126,8 @@ setState({
   
   }
 
-  //let dataAux;
-  //const { GraficaType, Iteration, Scenario, Year } = props.combinacion.select;
-  {/*
+
   
-  
-  
-    switch(GraficaType){
-      case 'group':
-        switch(Iteration){
-          case 'iteration_3':
-            dataAux= convertir(Scenario === "Sustainaible" ? data.targetCinco_combinacionDos : data.targetCinco_combinacionCuatro);
-            break;
-          case 'iteration_4':
-            dataAux= convertir(Year === "2030" ? data.targetCinco_combinacionUno : data.targetCinco_combinacionTres);
-            break
-        }
-        break;
-      case 'regions':
-        switch(Iteration){
-          case 'iteration_3':
-            dataAux= convertir(Scenario === "Sustainaible" ? data.targetCinco_combinacionSeis : data.targetCinco_combinacionOcho);
-            break;
-          case 'iteration_4':
-            dataAux= convertir(Scenario === "Sustainaible" ? data.targetCinco_combinacionCinco : data.targetCinco_combinacionSiete);
-            break
-        }
-        break;
-      case 'countries':
-        switch(Iteration){
-        case 'iteration_3':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.targetCinco_combinacionDies : data.targetCinco_combinacionDoce);
-          break;
-        case 'iteration_4':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.targetCinco_combinacionNueve : data.targetCinco_combinacionOnce);
-  
-          break
-      }
-      break;
-    }
-    */}
   return (
 
     <div>
