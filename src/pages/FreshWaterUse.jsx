@@ -96,7 +96,7 @@ const DrawFreshWaterUse = () => {
     var dataSet = []
 
 
-    if (json != null) {
+    if (json !== null) {
 
       json.forEach(item => {
         labels.push(item.Year);

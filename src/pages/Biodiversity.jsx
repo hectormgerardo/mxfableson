@@ -98,7 +98,7 @@ const DrawBiodiversity = (props) =>
 
       const converter = () => {
 
-      
+      console.log(`entre`)
         var dataBiodiversity_land=[];
 var biodiversities=[];
 var labels=[];
@@ -132,7 +132,7 @@ var nameCounty=state.select.GraficaType==="regions"?"R_AFR":"Argentina";
  data=dataAux;
       }
       
-
+      
 
 return (
 <Container fluid >
@@ -157,14 +157,14 @@ return (
 
               <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"35vw"}}>
               
-               
+               {/* 
               <LeafletMap
               
                 
-                //countriesData = {data}
+                countriesData = {data}
               
               />
-              
+              */}
               </div>
               </Col>
             </Row>
