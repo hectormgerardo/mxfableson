@@ -32,7 +32,31 @@ const ReactHint = ReactHintFactory(React)
 
 const App = (props) => {
   
-  const [currentValue, setCurrentValue] = React.useState("")
+  constructor(){
+    super();
+   // this.handleScroll = this.handleScroll.bind(this);
+  this.state={
+    hidden: false,
+    run: false,
+      steps: [
+        {
+          target:'.About',
+          content: 'Esto es el Joyride'
+        },
+        {
+          target:'.Nav',
+          content: 'Esto es el Joyride parte 2'
+        }
+      ],
+      stepIndex: 0,
+    }
+    this.references = {
+      fable: React.createRef(),
+      scenathon2020: React.createRef(),
+      scenathon: React.createRef(),
+      home: React.createRef()
+    }
+  };
 
   const handleChangeAside = (value) => {
     setCurrentValue(value)
@@ -61,22 +85,25 @@ const App = (props) => {
         </div>
 
         <div className="Nav">
-          <Navbar/>
+          <Navbar references={this.references}/>
         </div>
 
-            <Jumbotron/>
+          <div className="imagen">
+            <Jumbotron jumboReference={this.references.home} />
+          </div>
 
-        <div className="About1" id="About1">
-          <About1/>
+          <div>
+          <About1 aboutRef={this.references.fable}/>
         </div>
         <div id="Jumbotron_2" >
           <Jumbotron_2 />
         </div>
 
 
-        <div className="Scenathon2020">
-          <Scenathon className="Scenathon2020" id="Scenathon2020"/>
-        </div>
+
+
+<Scenathon fableRef={this.references.scenathon2020}/>
+
 {/*
  <div style={{display: 'flex'}}>
           <div>
@@ -90,9 +117,9 @@ const App = (props) => {
        
 
         
+        <div>
+          <About2 aboutReference={this.references.scenathon}/>
 
-        <div className="scenathon-info" id="About2">
-          <About2/>
         </div>
         <div>
           <Jumbotron_3/>
