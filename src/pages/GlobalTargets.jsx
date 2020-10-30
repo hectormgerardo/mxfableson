@@ -610,7 +610,7 @@ const crearDataTargetSiete=(props)=> {
             aspectRatio={false}
             labelposition="top"
             labelString='Kcal per capita /day'
-            fontSize='18'
+            fontSize='15'
             fontColor='black'
             title="Target 5.-  Food security"/>
             </div>
@@ -620,7 +620,7 @@ const crearDataTargetSiete=(props)=> {
             aspectRatio={false}
             labelposition="bottom"
             labelString='blue water in million cubic meters'
-            fontSize='16'
+            fontSize='14'
             fontColor='black'
 
             title="Target 6.- Fresh water use"/>

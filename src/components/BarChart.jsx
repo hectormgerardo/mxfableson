@@ -9,6 +9,8 @@ function BarChart(props){
     maintainAspectRatio: props.aspectRatio===undefined?true:props.aspectRatio,
     title: {
       display: true,
+      TfontSize:props.TitleSize===undefined?12:props.TitleSize,
+
       text: props.title
   },legend:{
     
@@ -58,6 +60,7 @@ function BarChart(props){
             labelString:props.labelString===undefined?'':props.labelString,
             fontColor:props.fontColor===undefined?'#546372':props.fontColor,
             fontSize:props.fontSize===undefined?18:props.fontSize,
+            fontFamily: "Montserrat",
 
           },
 

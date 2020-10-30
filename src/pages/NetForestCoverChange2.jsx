@@ -72,6 +72,8 @@ return(
                   title="Net Forest Cover Change 2"
                   labelposition="bottom"
                   display={false}
+                  labelString='ha per year'
+  fontSize='25'
                   aspectRatio={false}/></div>
               </Col>
               <Col>
@@ -229,7 +231,7 @@ const convertir=(props)=> {
               fill: false,
               backgroundColor: '#faa75a',
               borderColor: '#71B37C',
-              hoverBackgroundColor: '#71B37C',
+              hoverBackgroundColor: 'orange',
               hoverBorderColor: '#71B37C',
               yAxisID: 'y-axis-1'
             },{

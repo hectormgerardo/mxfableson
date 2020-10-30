@@ -66,6 +66,8 @@ import {Bar} from 'react-chartjs-2';
               labelString:props.labelString===undefined?'':props.labelString,
               fontColor:props.fontColor===undefined?'#546372':props.fontColor,
               fontSize:props.fontSize===undefined?18:props.fontSize,
+              fontFamily: "Montserrat",
+              
 
             },
 

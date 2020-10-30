@@ -146,6 +146,9 @@ return (
               <div style={{height: "100vh", width:"35vw"}}>
                   <BarChart data={data} title="Biodiversity"
                     aspectRatio={false}
+                    labelString='ha per year'
+                    fontSize='25'
+                  
                     labelposition="bottom"/> 
               </div>
               

@@ -218,6 +218,8 @@ setState({
     labelwidth={50}
     labelSize={24}
     TitleSize={45}
+    labelString='Energy intake per capita'
+
     title="Food energy intake per capita"/>
     </div>
   
