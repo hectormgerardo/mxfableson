@@ -7,7 +7,7 @@ import ChartCharacteristics from '../data/ChartCharacteristics.json';
 //filter map
 //nfch=NetForestCoverChange
 
-const DrawFreshWaterUse= (props) => {
+const DrawFreshWaterUse= () => {
 
   {/*
   let dataAux;

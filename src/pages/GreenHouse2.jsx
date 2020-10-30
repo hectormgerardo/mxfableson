@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import LeafletMap from './LeafletMap';
 //nfch=NetForestCoverChange
-const GreenHouse = (props) => {
+const GreenHouse = () => {
 
 
   var dataGraphOne;

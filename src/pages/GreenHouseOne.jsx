@@ -3,7 +3,7 @@ import SuperGraph from "../componentes/SuperGraph";
 import data from '../data/Greenhouse1.json';
 import ComboBox from '../componentes/ComboBox';
 import { Container, Row, Col } from "react-bootstrap";
-const DrawGreenhouse1 = (props) => {
+const DrawGreenhouse1 = () => {
 
   var dataGraphOne;
   var dataGraphTwo;

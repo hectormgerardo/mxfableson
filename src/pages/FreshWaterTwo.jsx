@@ -6,7 +6,7 @@ import ComboBox from '../componentes/ComboBox';
 import LeafletMap from './LeafletMap';
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
 
-const DrawFreshWater2 = (props) => {
+const DrawFreshWater2 = () => {
 
  //   const {GraficaType, Iteration, Scenario} = props.combinacion.select;
 {/** 

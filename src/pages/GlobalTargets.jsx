@@ -8,7 +8,7 @@ import GridLayout from 'react-grid-layout';
 import { Responsive as ResponsiveGridLayout } from 'react-grid-layout';
 import { WidthProvider, Responsive } from "react-grid-layout";
 
-import MixedChart from "../componentes/MixedChart";
+import MixedChart from "../components/MixedChart";
 import data from '../data/GlobalTargets.json';
 import BarChart from '../componentes/BarChart'
 import ComboBox from '../componentes/ComboBox';

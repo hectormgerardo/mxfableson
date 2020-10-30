@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import './css/App.css';
-import Navbar from "./componentes/Navbar";
-import Header from "./componentes/Header";
-import About1 from "./componentes/About1";
-import About2 from "./componentes/About2";
-import Tour from "./componentes/Tour";
-import Touraux from "./componentes/Touraux";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import About1 from "./components/About1";
+import About2 from "./components/About2";
+import Tour from "./components/Tour";
+import Touraux from "./components/Touraux";
 import About from './pages/About';
-import { Jumbotron } from './componentes/Jumbotron'
-import { Jumbotron_2}  from './componentes/Jumbotron_2'
-import { Jumbotron_3 } from './componentes/Jumbotron_3'
-import { Jumbotron_fin } from './componentes/Jumbotron_fin'
+import { Jumbotron } from './components/Jumbotron'
+import { Jumbotron_2}  from './components/Jumbotron_2'
+import { Jumbotron_3 } from './components/Jumbotron_3'
+import { Jumbotron_fin } from './components/Jumbotron_fin'
 import { Last } from 'react-bootstrap/esm/PageItem';
 import ReactHintFactory from 'react-hint'
 import 'react-hint/css/index.css';
 import Scenathon from './pages/Scenathon';
-import Aside from './componentes/Aside';
+import Aside from './components/Aside';
 import {
   BrowserRouter as Router,
   Switch,
@@ -47,6 +47,12 @@ export class App extends React.Component {
         }
       ],
       stepIndex: 0,
+    }
+    this.references = {
+      fable: React.createRef(),
+      scenathon2020: React.createRef(),
+      scenathon: React.createRef(),
+      home: React.createRef()
     }
   };
 
@@ -107,15 +113,15 @@ componentDidMount(){
         </div>*/}
 
         <div className="Nav">
-          <Navbar/>
+          <Navbar references={this.references}/>
         </div>
 
           <div className="imagen">
-            <Jumbotron />
+            <Jumbotron jumboReference={this.references.home} />
           </div>
 
           <div>
-          <About1/>
+          <About1 aboutRef={this.references.fable}/>
         </div>
         <div id="Jumbotron_2" data-rh="" data-rh-at="top">
           <Jumbotron_2 />
@@ -123,7 +129,7 @@ componentDidMount(){
 
 
 
-<Scenathon/>
+<Scenathon fableRef={this.references.scenathon2020}/>
 {/*
  <div style={{display: 'flex'}}>
           <div>
@@ -139,7 +145,7 @@ componentDidMount(){
         
 
         <div>
-          <About2/>
+          <About2 aboutReference={this.references.scenathon}/>
         </div>
 <div>
           <Jumbotron_3/>

@@ -1,8 +1,6 @@
 import React from 'react';
 //data
 
-
-
 //dashboards
 import NetForestCoverChange from '../pages/NetForestCoverChange'
 import Biodiversity from '../pages/Biodiversity'
@@ -17,11 +15,6 @@ import GreenHouse2 from '../pages/GreenHouse2'
 
 import GreenHouseOne from '../pages/GreenHouseOne'
 import FreshWaterTwo from '../pages/FreshWaterTwo'
-
-
-
-
-
 
 
 const seleccionarData = (props) => {
