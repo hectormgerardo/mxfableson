@@ -33,6 +33,18 @@ const FoodEnergyIntakePerCapita = (props) => {
 
   useEffect(() => {
   
+    const getFoodEnergyIntakePerCapita = async () => {
+      try {   
+        const body =state;
+       const response = await fetch("https://server-fableson.wl.r.appspot.com/foodenergy1"+JSON.stringify(body));
+       const  jsonAux =  await response.json();
+      setJson(jsonAux);
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  
+  
     getFoodEnergyIntakePerCapita();
     
   }, [state]);
@@ -40,18 +52,6 @@ const FoodEnergyIntakePerCapita = (props) => {
 
 
 
-
-
-  const getFoodEnergyIntakePerCapita = async () => {
-    try {   
-      const body =state;
-     const response = await fetch("https://server-fableson.wl.r.appspot.com/foodenergy1"+JSON.stringify(body));
-     const  jsonAux =  await response.json();
-    setJson(jsonAux);
-    } catch (error) {
-      console.error(error)
-    }
-  }
 
 
   const handleChange = e => {
@@ -69,7 +69,8 @@ if(e.target.name==="scenathon_id"){
     case '5':
      scenathon="5";
      iteration=state.select.Iteration==="3"? "1":"2";
-        break;     
+        break;    
+        default:  iteration=state.select.Iteration==="1"? "3":"4"; 
 }
 }else{
  
@@ -102,7 +103,7 @@ setState({
 
     if (json !== null ) {
    
-      json.map((item) => {
+      json.forEach(item => {
           labels.push(item.Country);
           target_mder.push(item.target_mder);
 

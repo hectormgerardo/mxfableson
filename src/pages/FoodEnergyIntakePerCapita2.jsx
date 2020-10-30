@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import BarChart2 from "../components/BarChart2.jsx";
 import ChartCharacteristics from '../data/ChartCharacteristics.json';
 import ComboBoxFoodEnergy2 from "../components/ComboBoxFoodEnergy2.jsx";
-const FoodEnergyIntakePerCapita = (props) => {
+const FoodEnergyIntakePerCapita = () => {
 
   function Food(ChartCharacteristics,data) {
     this.data=data;
@@ -23,62 +23,34 @@ const FoodEnergyIntakePerCapita = (props) => {
 
   const [json, setJson] = useState([]);
 
-  {/*
-    const convertir=(props)=> {
- 
- 
-
-
-
-
-        var dataUno=[]
-        var dataDos=[]
-        var labels=[]
-          
-         props.map((item) => {
-          dataUno.push(item.Kcal_feasible);
-          dataDos.push(item.Target_MDER);
-         labels.push(item.c_country_t);
-          
-        });
-       
-        const data={
-          labels:labels,
-           datasets:[
-             {
-              label:"Target (MDER)",
-              data:dataDos,
-              fill:false,
-              type:"scatter",
-              backgroundColor:"Red",
-              borderColor:"Red",
-              hoverBackgroundColor:"Red",
-              hoverBorderColor:"Red",
-              yAxisID:"y-axis-1"
-             },
-             {
-              label:"Kcal feasible",
-              data:dataUno,
-              fill:false,
-              type:"bar",
-              backgroundColor:"#81c784",
-              borderColor:"#81c784",
-              hoverBackgroundColor:"darkgreen",
-              hoverBorderColor:"#81c784",
-              yAxisID:"y-axis-1"
-             }
-           ]
-        }
-      
-       return data
-      } 
-*/}
   var data = null;
 
 
 
 
   useEffect(() => {
+    const getFoodEnergyIntakePerCapita = async () => {
+   
+
+   
+      try {
+            
+        const body =state;
+      
+        
+       const response = await fetch("https://server-fableson.wl.r.appspot.com/foodenergy2"+JSON.stringify(body));
+       const  jsonAux =  await response.json();
+    
+      setJson(jsonAux);
+     
+  
+      } catch (error) {
+        console.error(error)
+      }
+  
+  
+  
+    }
   
     getFoodEnergyIntakePerCapita();
     
@@ -89,28 +61,6 @@ const FoodEnergyIntakePerCapita = (props) => {
 
 
 
-  const getFoodEnergyIntakePerCapita = async () => {
-   
-
-   
-    try {
-          
-      const body =state;
-    
-      
-     const response = await fetch("https://server-fableson.wl.r.appspot.com/foodenergy2"+JSON.stringify(body));
-     const  jsonAux =  await response.json();
-  
-    setJson(jsonAux);
-   
-
-    } catch (error) {
-      console.error(error)
-    }
-
-
-
-  }
 
 
   const handleChange = e => {
@@ -138,7 +88,7 @@ setState({
 
     if (json != null ) {
    
-      json.map((item) => {
+      json.forEach(item => {
           labels.push(item.Country);
           Protein_feasible.push(item.Protein_feasible);
           Fat_feasible.push(item.Fat_feasible);
@@ -160,47 +110,7 @@ setState({
     }
   
   }
-  //let dataAux;
-
-  //const { GraficaType, Iteration, Scenario, Year } = props.combinacion.select;
-  {/*
-  
-  
-  
-    switch(GraficaType){
-      case 'group':
-        switch(Iteration){
-          case 'iteration_3':
-            dataAux= convertir(Scenario === "Sustainaible" ? data.targetCinco_combinacionDos : data.targetCinco_combinacionCuatro);
-            break;
-          case 'iteration_4':
-            dataAux= convertir(Year === "2030" ? data.targetCinco_combinacionUno : data.targetCinco_combinacionTres);
-            break
-        }
-        break;
-      case 'regions':
-        switch(Iteration){
-          case 'iteration_3':
-            dataAux= convertir(Scenario === "Sustainaible" ? data.targetCinco_combinacionSeis : data.targetCinco_combinacionOcho);
-            break;
-          case 'iteration_4':
-            dataAux= convertir(Scenario === "Sustainaible" ? data.targetCinco_combinacionCinco : data.targetCinco_combinacionSiete);
-            break
-        }
-        break;
-      case 'countries':
-        switch(Iteration){
-        case 'iteration_3':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.targetCinco_combinacionDies : data.targetCinco_combinacionDoce);
-          break;
-        case 'iteration_4':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.targetCinco_combinacionNueve : data.targetCinco_combinacionOnce);
-  
-          break
-      }
-      break;
-    }
-    */}
+ 
   return (
 
     <div>

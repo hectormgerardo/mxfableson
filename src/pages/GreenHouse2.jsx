@@ -42,16 +42,16 @@ const GreenHouse = () => {
       switch (state.select.Iteration) {
         case 'before':
           if (state.select.scenathon_id  === "6") {
-            dataGraphOne = data.Greengraph_One__combination_Two
-            dataGraphTwo = data.Greengraph_Two__combination_Two
+            dataGraphOne = data.Greengraph_One__combination_Two;
+            dataGraphTwo = data.Greengraph_Two__combination_Two;
           } else {
-            dataGraphOne = data.Greengraph_One__combination_Four
-            dataGraphTwo = data.Greengraph_Two__combination_Four
+            dataGraphOne = data.Greengraph_One__combination_Four;
+            dataGraphTwo = data.Greengraph_Two__combination_Four;
           }
            dataGraphOneAux = convertir(dataGraphOne);
            dataGraphTwoAux = convertir(dataGraphTwo);
-
           break;
+        
         case 'after':
           if (state.select.scenathon_id  === "6") {
             dataGraphOne = data.Greengraph_One__combination_One
@@ -64,8 +64,12 @@ const GreenHouse = () => {
           }
            dataGraphOneAux = convertir(dataGraphOne);
            dataGraphTwoAux = convertir(dataGraphTwo);
-          console.log(dataGraphTwoAux)
+         
           break;
+          default: dataGraphOne = data.Greengraph_One__combination_Two;
+      dataGraphTwo = data.Greengraph_Two__combination_Two;
+         
+         
       }
       break;
     case 'regions':
@@ -81,6 +85,7 @@ const GreenHouse = () => {
            dataGraphOneAux = convertir(dataGraphOne);
            dataGraphTwoAux = convertir(dataGraphTwo);
           break;
+          
         case 'after':
           if (state.select.scenathon_id  === "6") {
             dataGraphOne = data.Greengraph_One__combination_Five
@@ -92,7 +97,8 @@ const GreenHouse = () => {
            dataGraphOneAux = convertir(dataGraphOne);
            dataGraphTwoAux = convertir(dataGraphTwo);
           break;
-
+          default: dataGraphOne = data.Greengraph_One__combination_Two;
+          dataGraphTwo = data.Greengraph_Two__combination_Two;
       }
       break;
     case 'countries':
@@ -120,8 +126,12 @@ const GreenHouse = () => {
            dataGraphOneAux = convertir(dataGraphOne);
            dataGraphTwoAux = convertir(dataGraphTwo);
           break;
+          default: dataGraphOne = data.Greengraph_One__combination_Two;
+      dataGraphTwo = data.Greengraph_Two__combination_Two;
       }
       break;
+      default: dataGraphOne = data.Greengraph_One__combination_Two;
+      dataGraphTwo = data.Greengraph_Two__combination_Two;
   }
 
 
@@ -182,7 +192,7 @@ const convertir = (props) => {
   var labels = [];
 
   if (props !== undefined) {
-    props.map((item) => {
+    props.forEach(item => {
 
       if (item.c_country_t === "USA") {
         usa.push(item.total_GHG);

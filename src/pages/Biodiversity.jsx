@@ -39,26 +39,25 @@ const DrawBiodiversity = (props) =>
 
 
   useEffect(() => {
-    
-     getBiodiversity();
+    const getBiodiversity = async () => 
+    {
+      
+      try {   
+        const body =state;
+ 
+       const response = await fetch("https://server-fableson.wl.r.appspot.com/biodiversity"+JSON.stringify(body));
+ 
+       const  jsonAux =  await response.json();
+      setJson(jsonAux);
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    getBiodiversity();
    }, [state]);
  
 
-   const getBiodiversity = async () => 
-   {
-     
-     try {   
-       const body =state;
-
-      const response = await fetch("https://server-fableson.wl.r.appspot.com/biodiversity"+JSON.stringify(body));
-
-      const  jsonAux =  await response.json();
-     setJson(jsonAux);
-     } catch (error) {
-       console.error(error)
-     }
-   }
-
+ 
    const handleChange = e => {
   
     var group = state.select.GraficaType;
@@ -74,7 +73,8 @@ const DrawBiodiversity = (props) =>
         case '5':
          scenathon="5";
          iteration=state.select.Iteration==="3"? "1":"2";
-            break;     
+            break;    
+            default:  iteration=state.select.Iteration==="1"? "3":"4"; 
     }
     }else{
      
@@ -105,7 +105,7 @@ var labels=[];
 var nameCounty=state.select.GraficaType==="regions"?"R_AFR":"Argentina";
 
   if (json != null) {
-    json.map((item) => {
+    json.forEach(item => {
       if (!labels.includes(item.Year)) 
       {
         labels.push(item.Year);

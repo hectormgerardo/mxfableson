@@ -48,11 +48,7 @@ setState({
 
  }
  useEffect(() => {
-    getNettrade();
-  }, [state]);
-
-//llamada a la base de datos
-const getNettrade = async() => {
+  const getNettrade = async() => {
     try {
  
       const body =state;
@@ -71,6 +67,11 @@ const getNettrade = async() => {
 
 
   }
+    getNettrade();
+  }, [state]);
+
+
+
 
   const converter=()=>
 {
@@ -80,7 +81,7 @@ var paises=[];
 var labels=[];
 var nameCounty="Argentina";
   if (json != null) {
-    json.map((item) => {
+    json.forEach(item => {
       if (!labels.includes(item.Year)) 
       {
         labels.push(item.Year);

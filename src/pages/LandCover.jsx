@@ -30,22 +30,23 @@ const DrawLandCover = () => {
   var data = null;
 
   useEffect(() => {
+    const getLandCover = async () => 
+    {
+      try {   
+        const body =state;
+       const response = await fetch("https://server-fableson.wl.r.appspot.com/landcover"+JSON.stringify(body));
+       const  jsonAux =  await response.json();
+      setJson(jsonAux);
+      } catch (error) {
+        console.error(error)
+      }
+    }
     getLandCover();
   }, [state]);
 
 
 
-  const getLandCover = async () => 
-  {
-    try {   
-      const body =state;
-     const response = await fetch("https://server-fableson.wl.r.appspot.com/landcover"+JSON.stringify(body));
-     const  jsonAux =  await response.json();
-    setJson(jsonAux);
-    } catch (error) {
-      console.error(error)
-    }
-  }
+
 
   const converter = () => 
   {
@@ -61,7 +62,7 @@ const DrawLandCover = () => {
     console.log(json);
     if (json !== null ) {
    
-      json.map((item) => {
+      json.forEach(item => {
           labels.push(item.Year);
           calcPasture.push(item.CalcPasture);
           calcCropland.push(item.CalcCropland);
@@ -110,7 +111,8 @@ const DrawLandCover = () => {
         case '5':
          scenathon="5";
          iteration=state.select.Iteration==="3"? "1":"2";
-            break;     
+            break;   
+            default:  iteration=state.select.Iteration==="1"? "3":"4";  
     }
     }else{
      

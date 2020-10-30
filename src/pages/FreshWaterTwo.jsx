@@ -33,22 +33,23 @@ var data = null;
 
 
 useEffect(() => {
+  const getFreshWaterTwo = async () => 
+  {
+  
+    try {   
+      const body =state;
+     const response = await fetch("https://server-fableson.wl.r.appspot.com/freshwater2"+JSON.stringify(body));
+     const  jsonAux =  await response.json();
+    setJson(jsonAux);
+    } catch (error) {
+      console.error(error)
+    }
+  }
+ 
   getFreshWaterTwo();
  }, [state]);
 
 
- const getFreshWaterTwo = async () => 
- {
- 
-   try {   
-     const body =state;
-    const response = await fetch("https://server-fableson.wl.r.appspot.com/freshwater2"+JSON.stringify(body));
-    const  jsonAux =  await response.json();
-   setJson(jsonAux);
-   } catch (error) {
-     console.error(error)
-   }
- }
 
 
  const handleChange = e => {
@@ -66,7 +67,8 @@ useEffect(() => {
       case '5':
        scenathon="5";
        iteration=state.select.Iteration==="3"? "1":"2";
-          break;     
+          break;   
+          default:  iteration=state.select.Iteration==="1"? "3":"4";  
   }
   }else{
    
@@ -96,13 +98,13 @@ var labels=[];
 var nameCounty=state.select.GraficaType==="regions"?"R_AFR":"Argentina";
 
 if (json != null) {
-  json.map((item) => {
+  json.forEach(item => {
     if (!labels.includes(item.Year)) 
     {
       labels.push(item.Year);
     }
     dataSum.push(item.sum);
-    if (nameCounty!=item.Country) {
+    if (nameCounty!==item.Country) {
     
       var fresh = new FreshWaterTwo(CountryCharacteristics[nameCounty], dataSum);
       freshWater.push(fresh);

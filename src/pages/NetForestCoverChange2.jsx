@@ -41,8 +41,12 @@ const DrawNfch2 = () => {
           break;
         case 'after':
            dataAux= convertir(state.select.scenathon_id  === "6" ? data.combination_1 : data.combination_2);
-          break
+          break;
+          default:dataAux= convertir(data.combination_1);
+          
       }
+      break;
+      default:dataAux= convertir(data.combination_1);
       break;
     case 'countries':
       switch(state.select.Iteration){
@@ -52,11 +56,12 @@ const DrawNfch2 = () => {
       case 'after':
          dataAux= convertir(state.select.scenathon_id  === "6" ? data.combination_5 : data.combination_7);
         break;
-  
+        default:dataAux= convertir(data.combination_1);
+       
     }
-
     break;
-    default:dataAux= convertir(data.combination_1);
+    
+   
     
   }
   
@@ -121,7 +126,7 @@ const convertir=(props)=> {
 
      
      if(props!==undefined){
-     props.map((item) => {
+      props.forEach(item => {
      
       if(item.c_country_t==="Mexico"){
        mexico.push(item.ha_per_year); 

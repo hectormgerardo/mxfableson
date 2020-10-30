@@ -8,7 +8,7 @@ import * as L from 'leaflet';
 
 class TradeReportMap extends Component {
     state = { color: '#b4b42d'} ;
-
+popup=null;
     //This list is for the countries of Rest_of_Sub_Saharan_Africa
     //because in the data they do not come by individual countries
     name_countries_Rest_of_Sub_Saharan_Africa = [
@@ -290,29 +290,29 @@ class TradeReportMap extends Component {
         
         layer.options.fillColor = this.color[indexAux];
         //console.log('Se llamo con ', indexAux );
-        var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-        layer.bindPopup(popup)
+         this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+        layer.bindPopup(this.popup)
        }
        if (this.name_countries_Rest_of_North_Africa_Middle_East_and_central_Asia.includes(countryName)){
         indexAux = this.countriesName.indexOf( 'Rest of North Africa Middle East and central Asia' );
         layer.options.fillColor = this.color[indexAux];
         //console.log('Se llamo con ', indexAux );
-        var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-        layer.bindPopup(popup)        
+        this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+        layer.bindPopup(this.popup)        
        }
        if (this.name_countries_Rest_of_Central_and_South_America.includes(countryName)){
         indexAux = this.countriesName.indexOf( 'Rest of Central and South America' );
         layer.options.fillColor = this.color[indexAux];
         //console.log('Se llamo con ', indexAux );
-        var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-        layer.bindPopup(popup)
+        this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+        layer.bindPopup(this.popup)
        }
        if (this.name_countries_Rest_of_Europe_non_EU8.includes(countryName)){
         indexAux = this.countriesName.indexOf( 'Rest of European Union' );
         layer.options.fillColor = this.color[indexAux];
         
-        var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-        layer.bindPopup(popup)
+        this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+        layer.bindPopup(this.popup)
        }
 
        indexAux = this.countriesName.indexOf(countryName);
@@ -338,11 +338,11 @@ class TradeReportMap extends Component {
         * and therefore it does not overwrite the color
         */
        
-       if(indexAux != -1){
+       if(indexAux !== -1){
             layer.options.fillColor = this.color[indexAux];
             
-            var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-            layer.bindPopup(popup)
+            this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+            layer.bindPopup(this.popup)
             this.isColored = true;
        }
        /*if (!this.isColored) {

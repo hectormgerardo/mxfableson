@@ -47,23 +47,20 @@ const DrawGreenhouse1 = () => {
           }
            dataGraphOneAux = convertir(dataGraphOne);
            dataGraphTwoAux = convertir_data(dataGraphTwo);
-
           break;
         case 'after':
           if (state.select.scenathon_id === "6") {
             dataGraphOne = data.graphOne_combinationOne
             dataGraphTwo = data.graphTwo_combinationOne
-
-
-
           } else {
             dataGraphOne = data.graphOne_combinationThree
             dataGraphTwo = data.graphTwo_combinationThree
           }
            dataGraphOneAux = convertir(dataGraphOne);
            dataGraphTwoAux = convertir_data(dataGraphTwo);
-
           break;
+          default:dataGraphOne = data.graphOne_combinationTwo;
+          dataGraphTwo = data.graphTwo_combinationTwo;
       }
       break;
     case 'regions':
@@ -79,6 +76,7 @@ const DrawGreenhouse1 = () => {
            dataGraphOneAux = convertir(dataGraphOne);
            dataGraphTwoAux = convertir_data(dataGraphTwo);
           break;
+         
         case 'after':
           if (state.select.scenathon_id === "6") {
             dataGraphOne = data.graphOne_combinationFive
@@ -90,9 +88,12 @@ const DrawGreenhouse1 = () => {
            dataGraphOneAux = convertir(dataGraphOne);
            dataGraphTwoAux = convertir_data(dataGraphTwo);
           break;
+          default:dataGraphOne = data.graphOne_combinationTwo;
+          dataGraphTwo = data.graphTwo_combinationTwo;
 
       }
       break;
+    
     case 'countries':
       switch (state.select.Iteration) {
         case 'before':
@@ -118,8 +119,12 @@ const DrawGreenhouse1 = () => {
            dataGraphOneAux = convertir(dataGraphOne);
            dataGraphTwoAux = convertir_data(dataGraphTwo);
           break;
+          default:dataGraphOne = data.graphOne_combinationTwo;
+          dataGraphTwo = data.graphTwo_combinationTwo;
       }
       break;
+      default:dataGraphOne = data.graphOne_combinationTwo;
+      dataGraphTwo = data.graphTwo_combinationTwo;
   }
 
   return (
@@ -157,7 +162,7 @@ const convertir_data = (props) => {
 
   if (props !== undefined) {
 
-    props.map((item) => {
+    props.forEach(item => {
       graphTwo_Total_GHG_land.push(item.total_GHG_land);
       graphTwo_Target_GHG_lu.push(item.Target_GHG_LU);
       graphTwo_FAO_LU_global.push(item.FAO_LU_global);
@@ -300,7 +305,7 @@ const convertir = (props) => {
 
   if (props !== undefined) {
 
-    props.map((item) => {
+    props.forEach(item => {
       total_GHG_agri.push(item.Total_GHG_agric);
       target_GHG_agri.push(item.Target_GHG_agri);
       FAO_LU_global.push(item.FAO_Agric_global);

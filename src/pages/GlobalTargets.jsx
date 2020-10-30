@@ -10,6 +10,7 @@ import data from '../data/GlobalTargets.json';
 import BarChart from '../components/BarChart'
 import ComboBox from '../components/ComboBox';
 
+
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 const DrawGlobalTargets = (props) => {
 
@@ -39,14 +40,22 @@ const crearDataTargetUno=(props)=> {
   var dataUno=[]
   var dataDos=[]
   var labels=[]
-    
+  props.forEach(item => {
+
+    dataUno.push(item.Net_forest_change);
+    dataDos.push(item.Forest_change_target);
+   labels.push(item.Year);
+  });
+  /**
+   
    props.map((item) => {
     dataUno.push(item.Net_forest_change);
     dataDos.push(item.Forest_change_target);
    labels.push(item.Year);
     
   });
- 
+ * 
+   */
   const data={
     labels:labels,
      datasets:[
@@ -84,11 +93,17 @@ var dataUno=[]
 var dataDos=[]
 var labels=[]
   
-   props.map((item) => {
+ //  props.map((item) => {
+  //  dataUno.push(item.Protected_land);
+//dataDos.push(item.target_Protected_land);
+  //  labels.push(item.Year);
+    
+ // });
+
+  props.forEach(item => {
     dataUno.push(item.Protected_land);
     dataDos.push(item.target_Protected_land);
     labels.push(item.Year);
-    
   });
  
   const data={
@@ -131,7 +146,16 @@ const crearDataTargetTres=(props)=> {
   var dataTres=[]
   var dataCuatro=[]
   var labels=[]
+  props.forEach(item => {
+    dataUno.push(item.Biodiversity_land);
+    dataDos.push(item.biod_by_year);
+    dataTres.push(item.biod_target1);
+    dataCuatro.push(item.biod_target3);
+    labels.push(item.Year);
 
+  });
+/**
+ * 
 
     props.map((item) => {
       dataUno.push(item.Biodiversity_land);
@@ -141,6 +165,7 @@ const crearDataTargetTres=(props)=> {
      labels.push(item.Year);
      
    });
+    */
    const data={
     labels:labels,
      datasets:[
@@ -197,13 +222,21 @@ const crearDataTargetTres=(props)=> {
   var dataUno=[]
   var dataDos=[]
   var labels=[]
-    
-   props.map((item) => {
+
+  props.forEach(item => {
     dataUno.push(item.Kcal_feasible);
     dataDos.push(item.Target_MDER);
    labels.push(item.c_country_t);
-    
+
   });
+
+
+ //  props.map((item) => {
+   // dataUno.push(item.Kcal_feasible);
+    //dataDos.push(item.Target_MDER);
+   //labels.push(item.c_country_t);
+    
+ // });
  
   const data={
     labels:labels,
@@ -242,14 +275,22 @@ const crearDataTargetSeis=(props)=> {
   var dataUno=[]
   var dataDos=[]
   var labels=[]
-    
+     props.forEach(item => {
+      dataUno.push(item.Blue_water_in_million_cubic_meters);
+      dataDos.push(item.Water_target);
+     labels.push(item.Year);
+
+     });
+     /**
+     
    props.map((item) => {
     dataUno.push(item.Blue_water_in_million_cubic_meters);
     dataDos.push(item.Water_target);
    labels.push(item.Year);
     
   });
- 
+  * 
+      */
   const data={
     labels:labels,
      datasets:[
@@ -290,7 +331,17 @@ const crearDataTargetCuatro=(props)=> {
   var dataCinco=[]
   var dataSeis=[]
   var labels=[];
-    
+  props.forEach(item => {
+
+    dataUno.push(item.Crop_CH4);
+    dataDos.push(item.Crop_CO2);
+    dataTres.push(item.Crop_N2O);
+    dataCuatro.push(item.Livestock_CH4);
+    dataCinco.push(item.Livestock_N2O);
+    dataSeis.push(item.Target);
+
+  });
+  /* 
    props.map((item) => {
     dataUno.push(item.Crop_CH4);
     dataDos.push(item.Crop_CO2);
@@ -301,6 +352,7 @@ const crearDataTargetCuatro=(props)=> {
    
     
   });
+  */
   labels.push(2050);
  
   const data={
@@ -381,14 +433,22 @@ const crearDataTargetSiete=(props)=> {
   var dataDos=[]
   var labels=[]
   labels.push(2050);
-    
+  props.forEach(item => {
+
+    dataUno.push(item.total_GHG_land);
+    dataDos.push(item.GHG_LU_target);
+ 
+
+  });
+  /*
+  
    props.map((item) => {
     dataUno.push(item.total_GHG_land);
     dataDos.push(item.GHG_LU_target);
  
     
   });
- 
+ */
   const data={
     labels:labels,
      datasets:[

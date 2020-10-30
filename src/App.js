@@ -5,10 +5,10 @@ import Navbar from "./components/Navbar";
 import About1 from "./components/About1";
 import About2 from "./components/About2";
 
-import { Jumbotron } from './components/Jumbotron'
-import { Jumbotron_2}  from './components/Jumbotron_2'
-import { Jumbotron_3 } from './components/Jumbotron_3'
-import { Jumbotron_fin } from './components/Jumbotron_fin'
+import    Jumbotron  from './components/Jumbotron'
+import  Jumbotron2  from './components/Jumbotron2'
+import  Jumbotron3  from './components/Jumbotron3'
+import JumbotronFin  from './components/JumbotronFin'
 
 import ReactHintFactory from 'react-hint'
 import 'react-hint/css/index.css';
@@ -22,20 +22,20 @@ import { ACTIONS, EVENTS, STATUS } from 'react-joyride';
 const ReactHint = ReactHintFactory(React)
 
 export class App extends React.Component {
-  
-  constructor(){
+
+  constructor() {
     super();
-   // this.handleScroll = this.handleScroll.bind(this);
-  this.state={
-    hidden: false,
-    run: false,
+    // this.handleScroll = this.handleScroll.bind(this);
+    this.state = {
+      hidden: false,
+      run: false,
       steps: [
         {
-          target:'.About',
+          target: '.About',
           content: 'Esto es el Joyride'
         },
         {
-          target:'.Nav',
+          target: '.Nav',
           content: 'Esto es el Joyride parte 2'
         }
       ],
@@ -66,130 +66,73 @@ export class App extends React.Component {
     console.log(data); //eslint-disable-line no-console
     console.groupEnd();
   };
-  
-  /*
-componentDidMount(){
-  const script = Navbar.document.createElement("script");
 
-    script.src = "NavbarAnimation.js";
-    script.async = true;
 
-    Navbar.document.body.appendChild(script);
-}
- 
-  componentWillMount(){
-    window.removeEventListener('scroll', this.handleScroll);
-  }
+  render() {
 
-  componentWillUnmount(){
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll(e) {
-    let lastScrollTop = 0;
-    const currentScrollTop = Navbar.scrollTop;
-    if (!this.state.hidden && currentScrollTop > lastScrollTop) {
-      this.setState({ hidden: true });
-    } else if(this.state.hidden) {
-      this.setState({ hidden: false });
-    }
-    lastScrollTop = currentScrollTop;
-  }
-  */
-  
-  render(){
-   
     return (
-        <React.Fragment>
+      <React.Fragment>
         {/*<div>
           <Tour/>
         </div>*/}
 
         <div className="Nav">
-          <Navbar references={this.references}/>
+          <Navbar references={this.references} />
         </div>
 
-          <div className="imagen">
-            <Jumbotron jumboReference={this.references.home} />
-          </div>
+        <div className="imagen">
+          <Jumbotron jumboReference={this.references.home} />
+        </div>
 
-          <div>
-          <About1 aboutRef={this.references.fable}/>
+        <div>
+          <About1 aboutRef={this.references.fable} />
         </div>
         <div id="Jumbotron_2" data-rh="" data-rh-at="top">
-          <Jumbotron_2/>
+          <Jumbotron2/>
         </div>
 
 
 
-<Scenathon fableRef={this.references.scenathon2020}/>
-{/*
- <div style={{display: 'flex'}}>
-          <div>
-            <Aside />
-          </div>
-          <div>
-          <Scenathon/>
-          </div>
-        </div>
-*/ }
-       
-
-        
-
+        <Scenathon fableRef={this.references.scenathon2020} />
         <div>
-          <About2 aboutReference={this.references.scenathon}/>
+          <About2 aboutReference={this.references.scenathon} />
         </div>
-<div>
-          <Jumbotron_3/>
+        <div>
+          <Jumbotron3 />
         </div>
-       
-         
 
-     
+
+
+
         <div className="app">
 
-			<ReactHint autoPosition events delay={{show: 100, hide: 1000}} />
-			<ReactHint persist
-				attribute="data-custom"
-				className="custom-hint"
-				events={{click: true}}
-				onRenderContent={this.onRenderContent}
-				ref={(ref) => this.instance = ref}/>
-		</div>
+          <ReactHint autoPosition events delay={{ show: 100, hide: 1000 }} />
+          <ReactHint persist
+            attribute="data-custom"
+            className="custom-hint"
+            events={{ click: true }}
+            onRenderContent={this.onRenderContent}
+            ref={(ref) => this.instance = ref} />
+        </div>
 
         <div>
-      </div>
-        
- {/*
-        
-        <div data-rh="Este es el apartado About" data-rh-at="top" className="About">
-                <About/>
-              </div>
-       <div id="Jumbotron_3" data-rh="Scenathon" data-rh-at="top" id="Scenathon">
-          <Jumbotron_3 data-rh="Mensaje" data-rh-at="top"/>
-      </div>*/}
-        
-        {/*
-
-
-      
-        
-        */
-        
-        }
-        
-        
-       
-        <div id="Jumbotron_fin" data-rh="Copyright" data-rh-at="top" id="final">
-          <Jumbotron_fin/>
         </div>
-        
 
-        
-         
-    </React.Fragment>
-  )
-}};
+
+
+
+
+
+        <div id="Jumbotron_fin" data-rh="Copyright" data-rh-at="top" id="final">
+          <JumbotronFin/>
+        </div>
+
+
+
+
+      </React.Fragment>
+    )
+  }
+};
 export default App;
 

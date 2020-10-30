@@ -45,29 +45,30 @@ const SustainableExporter =()=>
   }
 
   useEffect(() => {
+    const getNetSustainableImporter = async() => {
+      try {
+   
+        const body =state;
+        console.log(body)
+        
+     
+       const response = await fetch("https://server-fableson.wl.r.appspot.com/net/"+JSON.stringify(body));
+        const  jsonAux =  await response.json();
+      
+      setJson(jsonAux);
+  
+      } catch (error) {
+        console.error(error)
+      }
+  
+  
+  
+    }
+  
     getNetSustainableImporter();
   }, [state]);
 
-  //llamada a la base de datos
-const getNetSustainableImporter = async() => {
-    try {
- 
-      const body =state;
-      console.log(body)
-      
-   
-     const response = await fetch("https://server-fableson.wl.r.appspot.com/net/"+JSON.stringify(body));
-      const  jsonAux =  await response.json();
-    
-    setJson(jsonAux);
-
-    } catch (error) {
-      console.error(error)
-    }
-
-
-
-  }
+  
 
   const converter=()=>
   {
@@ -78,7 +79,7 @@ const getNetSustainableImporter = async() => {
   var nameCounty="Argentina";
   
     if (json != null) {
-      json.map((item) => {
+      json.forEach(item => {
         if (!labels.includes(item.Year)) 
         {
           labels.push(item.Year);
