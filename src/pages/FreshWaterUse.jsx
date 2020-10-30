@@ -103,7 +103,7 @@ const DrawFreshWaterUse= () => {
             
           });
     
-          var freshWaterUse = new FreshWaterUse(ChartCharacteristics["million_cubic_metres"],sum);
+          var freshWaterUse = new FreshWaterUse(ChartCharacteristics["cubic_metres"],sum);
           dataSet.push(freshWaterUse);
          
           var dataAux = {
@@ -132,7 +132,15 @@ const DrawFreshWaterUse= () => {
    
     <BarChart data={data}
   aspectRatio={false}
-  labelposition="top"
+  labelposition="bottom"
+  labelwidth={50}
+  labelSize={24}
+  labelString='Blue water cubic metres'
+  fontSize='24'
+  TitleSize={55}
+
+
+
   title="Fresh Water use"/>
   
   </div>

@@ -139,6 +139,7 @@ data=dataAux;
               <BarChart data={data}
                   title="Fresh Water Use 2"
                   labelposition="bottom"
+                  labelSize={15}
                   aspectRatio={false}/>
                 
                   </div>

@@ -142,9 +142,11 @@ setState({
       <MixedChart data={data}
     aspectRatio={false}
     labelposition="top"
-    labelWidth={50}
-    labelSize={24}
-    TitleSize={45}
+    labelwidth={40}
+    labelSize={20}
+    TitleSize={30}
+    labelString='Energy intake per capita'
+
     title="Food energy intake per capita"/>
     </div>
   

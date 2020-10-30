@@ -114,7 +114,9 @@ return (
                   <Col>
                   
                   <div style={{height: "100vh", width:"35vw"}}>
-                      <BarChart data={dataAux} title="Sustainable net exporters"
+                      <BarChart data={dataAux} title="Current trend net exporters"
+                                                                              labelString='Export quantity'
+
                         aspectRatio={false}
                         labelposition="bottom"/> 
                   </div>
