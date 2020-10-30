@@ -8,7 +8,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import Scenathon from '../pages/Scenathon';
+
 
 import About from '../pages/About';
 import styled from 'styled-components';
@@ -79,7 +79,14 @@ width: 100px;
 }
 `;
 
-const NavBar = () => {
+const NavBar = (props) => {
+
+  const handleClick = (reference) => {
+    reference.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
 
   return (
     <Styles>
@@ -126,18 +133,21 @@ const NavBar = () => {
 
             <div className="router-container" id="router-container">
 
-              <Link to="/as">
-                <ReactBootStrap.Navbar.Brand  classname="navbar-link" id="navbar-link-home" href="#home">Home</ReactBootStrap.Navbar.Brand>
+              <Link onClick={() => {handleClick(props.references.home)}} >
+                <ReactBootStrap.Navbar.Brand  classname="navbar-link" id="navbar-link-home">Home</ReactBootStrap.Navbar.Brand>
               </Link>
               
               <Link to="/sasa">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-tour" href="#tour">Tour</ReactBootStrap.Navbar.Brand>
               </Link>
-              <Link to="/ascac">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable" href="#fable">Fable</ReactBootStrap.Navbar.Brand>
+              <Link onClick={() => {handleClick(props.references.fable)}}>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-fable">Fable</ReactBootStrap.Navbar.Brand>
               </Link>
-              <Link to="/Scenathon2020">
-                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2020" href="#scenathon2020">Scenathon 2020</ReactBootStrap.Navbar.Brand>
+              <Link onClick={() => {handleClick(props.references.scenathon)}}>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon">Scenathon</ReactBootStrap.Navbar.Brand>
+              </Link>
+              <Link onClick={() => {handleClick(props.references.scenathon2020)}}>
+                <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2020">Scenathon 2020</ReactBootStrap.Navbar.Brand>
               </Link>
               <Link to="/Scenathon2020">
                 <ReactBootStrap.Navbar.Brand classname="navbar-link" id="navbar-link-scenathon2019" href="#scenathon2019">Scenathon 2019</ReactBootStrap.Navbar.Brand>
@@ -205,6 +215,7 @@ window.onscroll = function () {
     document.getElementById("navbar").style.top = "0";
     
   } else {
+
     document.getElementById("navbar").style.top = "-120px";
     document.getElementById("navbar").style.backgroundColor = "white";
     document.getElementById("IIASA_LOGO").src = IIASA_LOGO_COLOR;
@@ -213,11 +224,12 @@ window.onscroll = function () {
     
     //change switch of color using getByClassName method
     document.getElementById("navbar-link-home").style.color="#306973";
+
     document.getElementById("navbar-link-tour").style.color="#306973";
     document.getElementById("navbar-link-fable").style.color="#306973";
     document.getElementById("navbar-link-scenathon2020").style.color="#306973";
     document.getElementById("navbar-link-scenathon2019").style.color="#306973";
-
+    document.getElementById("navbar-link-scenathon").style.color="#306973";
     
 
 
@@ -230,6 +242,7 @@ window.onscroll = function () {
     */
   }
   if (currentScrollPos === 0) {
+ 
     document.getElementById("navbar").style.backgroundColor = "transparent";
     document.getElementById("IIASA_LOGO").src = IIASA_LOGO_WHITE;
     document.getElementById("SDSN_LOGO").src = SDSN_LOGO_WHITE;
@@ -241,6 +254,7 @@ window.onscroll = function () {
    document.getElementById("navbar-link-fable").style.color="white";
    document.getElementById("navbar-link-scenathon2020").style.color="white";
    document.getElementById("navbar-link-scenathon2019").style.color="white";
+   document.getElementById("navbar-link-scenathon").style.color="white";
   }
   prevScrollpos = currentScrollPos;
 }

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import BarChart from "../componentes/BarChart";
+import BarChart from "../components/BarChart";
 
 import {Container,Row,Col,Jumbotron} from "react-bootstrap";
-import ComboBox from '../componentes/ComboBox';
+import ComboBox from '../components/ComboBox';
 import LeafletMap from './LeafletMap';
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
 
-const DrawFreshWater2 = (props) => {
+const DrawFreshWater2 = () => {
 
  //   const {GraficaType, Iteration, Scenario} = props.combinacion.select;
 {/** 

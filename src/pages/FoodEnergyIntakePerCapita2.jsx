@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import BarChart2 from "../componentes/BarChart2.jsx";
+import BarChart2 from "../components/BarChart2.jsx";
 import ChartCharacteristics from '../data/ChartCharacteristics.json';
-import ComboBoxFoodEnergy2 from "../componentes/ComboBoxFoodEnergy2.jsx";
+import ComboBoxFoodEnergy2 from "../components/ComboBoxFoodEnergy2.jsx";
 const FoodEnergyIntakePerCapita = (props) => {
 
   function Food(ChartCharacteristics,data) {

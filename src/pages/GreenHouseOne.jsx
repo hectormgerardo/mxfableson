@@ -1,12 +1,14 @@
 import React, { useState} from "react";
-import SuperGraph from "../componentes/SuperGraph";
+import SuperGraph from "../components/SuperGraph";
 import data from '../data/Greenhouse1.json';
-import ComboBox from '../componentes/ComboBox';
+import ComboBox from '../components/ComboBox';
 import { Container, Row, Col } from "react-bootstrap";
-const DrawGreenhouse1 = (props) => {
+const DrawGreenhouse1 = () => {
 
-  var dataGraphOne;
-  var dataGraphTwo;
+  var dataGraphOne=null;
+  var dataGraphTwo=null;
+  var dataGraphOneAux = null;
+  var dataGraphTwoAux=null;
  
 
   const [state, setState] = useState({
@@ -37,14 +39,14 @@ const DrawGreenhouse1 = (props) => {
       switch (state.select.Iteration) {
         case 'before':
           if (state.select.scenathon_id === "6") {
-            dataGraphOne = data.graphOne_combinationTwo
-            dataGraphTwo = data.graphTwo_combinationTwo
+            dataGraphOne = data.graphOne_combinationTwo;
+            dataGraphTwo = data.graphTwo_combinationTwo;
           } else {
-            dataGraphOne = data.graphOne_combinationFour
-            dataGraphTwo = data.graphTwo_combinationFour
+            dataGraphOne = data.graphOne_combinationFour;
+            dataGraphTwo = data.graphTwo_combinationFour;
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir_data(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir_data(dataGraphTwo);
 
           break;
         case 'after':
@@ -58,8 +60,8 @@ const DrawGreenhouse1 = (props) => {
             dataGraphOne = data.graphOne_combinationThree
             dataGraphTwo = data.graphTwo_combinationThree
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir_data(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir_data(dataGraphTwo);
 
           break;
       }
@@ -74,8 +76,8 @@ const DrawGreenhouse1 = (props) => {
             dataGraphOne = data.graphOne_combinationEight
             dataGraphTwo = data.graphTwo_combinationSeven
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir_data(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir_data(dataGraphTwo);
           break;
         case 'after':
           if (state.select.scenathon_id === "6") {
@@ -85,8 +87,8 @@ const DrawGreenhouse1 = (props) => {
             dataGraphOne = data.graphOne_combinationSeven
             dataGraphTwo = data.Greengraph_Two__combination_Seven
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir_data(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir_data(dataGraphTwo);
           break;
 
       }
@@ -101,8 +103,8 @@ const DrawGreenhouse1 = (props) => {
             dataGraphOne = data.graphOne_combinationTwelve
             dataGraphTwo = data.graphTwo_combinationTwelve
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir_data(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir_data(dataGraphTwo);
           break;
 
         case 'after':
@@ -113,8 +115,8 @@ const DrawGreenhouse1 = (props) => {
             dataGraphOne = data.graphOne_combinationEleven
             dataGraphTwo = data.graphTwo_combinationEleven
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir_data(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir_data(dataGraphTwo);
           break;
       }
       break;
@@ -153,7 +155,7 @@ const convertir_data = (props) => {
 
   var labels = [];
 
-  if (props != undefined) {
+  if (props !== undefined) {
 
     props.map((item) => {
       graphTwo_Total_GHG_land.push(item.total_GHG_land);
@@ -296,7 +298,7 @@ const convertir = (props) => {
   var crop_CO2 = [];
   var labels = [];
 
-  if (props != undefined) {
+  if (props !== undefined) {
 
     props.map((item) => {
       total_GHG_agri.push(item.Total_GHG_agric);

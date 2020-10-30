@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 
-import ComboBox from '../componentes/ComboBox'
+import ComboBox from '../components/ComboBox'
 
-import ComboBox3 from '../componentes/ComboBox3'
-import Aside from '../componentes/Aside';
-import Dashboard from '../componentes/Dashboard'
+
+import Aside from '../components/Aside';
+
 
 
 //dashboards
@@ -51,12 +51,13 @@ overflow:hidden;
   margin: 0;
   height: 100px;
   margin-top:20px;
-  
+  transition: all 0.5s ease;
 
 
 .banner{
   max-width:100%;
 max-height:100%;
+transition: all 0.5s ease;
 }
 
 
@@ -65,6 +66,7 @@ max-height:100%;
 .container{
     display:flex;
     width:1500px;
+    border:5px solid green;
 }
 
 
@@ -77,6 +79,7 @@ class Scenathon extends Component {
         super(props);
         this.dash= <GlobalTargets combinacion={this.state}></GlobalTargets>;
         this.combobox=<ComboBox onChange={this.handleChange}/>;
+        this.fableRef=props.fableRef;
     }
     state = {
         select: {
@@ -96,7 +99,7 @@ class Scenathon extends Component {
     handleChange = e => {
       
 
-       if(e.target==undefined)
+       if(e.target===undefined)
        {
           
         this.setState({
@@ -111,9 +114,7 @@ class Scenathon extends Component {
            
         }) 
        }else{
-           console.log("ELSEEEE")
-        console.log(e.target.name);
-        console.log(e.target.value);
+         
           this.setState({
             select: {
                 //el next code evitara que se sobrescriba cuando reciba un valor new
@@ -144,13 +145,12 @@ class Scenathon extends Component {
             case 'Net Forest Cover Change 1': 
          //   this.combobox=<ComboBox onChange={this.handleChange}/>
             this.combobox=null;  
-              this.dash=<NetForestCoverChange combinacion={this.state}/>;
-              document.getElementById("banner").src=BannerLifeOnLand;
+              this.dash=<NetForestCoverChange/>;
               break;
             case 'Net Forest Cover Change 2':
                // this.combobox=<ComboBox3 onChange={this.handleChange}/>
                this.combobox=null;   
-               this.dash=<NetForestCoverChange2 combinacion={this.state}/>;
+               this.dash=<NetForestCoverChange2/>;
                 document.getElementById("banner").src=BannerLifeOnLand;
                 break;
             case 'Biodiversity':
@@ -167,31 +167,29 @@ class Scenathon extends Component {
             case 'Land Cover':
                // this.combobox=<ComboBox onChange={this.handleChange}/>
                 this.combobox=null;
-                this.dash=<LandCover combinacion={this.state}/>;
-                document.getElementById("banner").src=BannerLifeOnLand;
+                this.dash=<LandCover/>;
             break;
             case 'Fresh Water 1':
               //  this.combobox=<ComboBox onChange={this.handleChange}/>
               this.combobox=null;  
-              this.dash=<FreshWaterUse combinacion={this.state}/>;
+              this.dash=<FreshWaterUse/>;
                 document.getElementById("banner").src=BannerCleanWater;
             break;
             case 'Fresh Water 2':
               //  this.combobox=<ComboBox onChange={this.handleChange}/>
               this.combobox=null; 
-                this.dash=<FreshWaterTwo combinacion={this.state}/>;
-                document.getElementById("banner").src=BannerCleanWater;
+                this.dash=<FreshWaterTwo/>;
             break;
             case 'Green House Gas (GHG) Emissions 1':
              //   this.combobox=<ComboBox onChange={this.handleChange}/>
              this.combobox=null;   
-             this.dash=<GreenHouseOne combinacion={this.state}/>;
+             this.dash=<GreenHouseOne/>;
                 document.getElementById("banner").src=BannerClimateAction;
             break;
             case 'Green House Gas (GHG) Emissions 2':
                // this.combobox=<ComboBox onChange={this.handleChange}/>
                this.combobox=null;    
-               this.dash=<GreenHouse2 combinacion={this.state}/>;
+               this.dash=<GreenHouse2/>;
                 document.getElementById("banner").src=BannerClimateAction;
             break;
             case 'Food Energy Intake Per Capita 1':
@@ -235,19 +233,19 @@ class Scenathon extends Component {
     render() {
         return (
 
-            <Styles>
-            <header>
+        
+                <Styles>
+            <header ref={this.fableRef}>
         <img class="banner" id="banner"></img>
         </header>
             <div className="container-fluid" style={{display: 'flex'}}>
+               
                <div>
                  <Aside onChange={this.handleChange}/>  
                </div>
             
           
-                <div>
-                 {/*    <Dashboard metodo={this.handleChange} data={this.state} />*/}
-                </div>
+               
                 <div>
                 {this.selectDashboard()}
                 {this.combobox}
@@ -256,7 +254,6 @@ class Scenathon extends Component {
              
             </div>
             </Styles>
-           
         )
     }
 }

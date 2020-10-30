@@ -1,16 +1,18 @@
 import React, { useState} from "react";
-import BarChart from "../componentes/BarChart";
+import BarChart from "../components/BarChart";
 import data from '../data/Greenhouse2.json';
-import ComboBox from '../componentes/ComboBox';
+import ComboBox from '../components/ComboBox';
 import { Container, Row, Col } from "react-bootstrap";
 
 import LeafletMap from './LeafletMap';
 //nfch=NetForestCoverChange
-const GreenHouse = (props) => {
+const GreenHouse = () => {
 
 
-  var dataGraphOne;
-  var dataGraphTwo;
+  var dataGraphOne=null;
+  var dataGraphTwo=null;
+  var dataGraphOneAux = null;
+  var dataGraphTwoAux = null;
 
 
   const [state, setState] = useState({
@@ -46,8 +48,8 @@ const GreenHouse = (props) => {
             dataGraphOne = data.Greengraph_One__combination_Four
             dataGraphTwo = data.Greengraph_Two__combination_Four
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir(dataGraphTwo);
 
           break;
         case 'after':
@@ -60,8 +62,8 @@ const GreenHouse = (props) => {
             dataGraphOne = data.Greengraph_One__combination_Three
             dataGraphTwo = data.Greengraph_Two__combination_Three
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir(dataGraphTwo);
           console.log(dataGraphTwoAux)
           break;
       }
@@ -76,8 +78,8 @@ const GreenHouse = (props) => {
             dataGraphOne = data.Greengraph_One__combination_Eight
             dataGraphTwo = data.Greengraph_Two__combination_Eight
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir(dataGraphTwo);
           break;
         case 'after':
           if (state.select.scenathon_id  === "6") {
@@ -87,8 +89,8 @@ const GreenHouse = (props) => {
             dataGraphOne = data.Greengraph_One__combination_Seven
             dataGraphTwo = data.Greengraph_Two__combination_Seven
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir(dataGraphTwo);
           break;
 
       }
@@ -103,8 +105,8 @@ const GreenHouse = (props) => {
             dataGraphOne = data.Greengraph_One__combination_Twelve
             dataGraphTwo = data.Greengraph_Two__combination_Twelve
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir(dataGraphTwo);
           break;
 
         case 'after':
@@ -115,8 +117,8 @@ const GreenHouse = (props) => {
             dataGraphOne = data.Greengraph_One__combination_Eleven
             dataGraphTwo = data.Greengraph_Two__combination_Eleven
           }
-          var dataGraphOneAux = convertir(dataGraphOne);
-          var dataGraphTwoAux = convertir(dataGraphTwo);
+           dataGraphOneAux = convertir(dataGraphOne);
+           dataGraphTwoAux = convertir(dataGraphTwo);
           break;
       }
       break;
@@ -179,7 +181,7 @@ const convertir = (props) => {
   var otros = [];
   var labels = [];
 
-  if (props != undefined) {
+  if (props !== undefined) {
     props.map((item) => {
 
       if (item.c_country_t === "USA") {

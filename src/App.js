@@ -1,29 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './css/App.css';
-import Navbar from "./componentes/Navbar";
-import Header from "./componentes/Header";
-import About1 from "./componentes/About1";
-import About2 from "./componentes/About2";
-import Tour from "./componentes/Tour";
-import Touraux from "./componentes/Touraux";
-import About from './pages/About';
-import { Jumbotron } from './componentes/Jumbotron'
-import { Jumbotron_2}  from './componentes/Jumbotron_2'
-import { Jumbotron_3 } from './componentes/Jumbotron_3'
-import { Jumbotron_fin } from './componentes/Jumbotron_fin'
-import { Last } from 'react-bootstrap/esm/PageItem';
+import Navbar from "./components/Navbar";
+
+import About1 from "./components/About1";
+import About2 from "./components/About2";
+
+import { Jumbotron } from './components/Jumbotron'
+import { Jumbotron_2}  from './components/Jumbotron_2'
+import { Jumbotron_3 } from './components/Jumbotron_3'
+import { Jumbotron_fin } from './components/Jumbotron_fin'
+
 import ReactHintFactory from 'react-hint'
 import 'react-hint/css/index.css';
 import Scenathon from './pages/Scenathon';
-import Aside from './componentes/Aside';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom';
-import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
-import { Evented } from 'leaflet';
+
+
+import { ACTIONS, EVENTS, STATUS } from 'react-joyride';
+
 
 
 const ReactHint = ReactHintFactory(React)
@@ -47,6 +40,12 @@ export class App extends React.Component {
         }
       ],
       stepIndex: 0,
+    }
+    this.references = {
+      fable: React.createRef(),
+      scenathon2020: React.createRef(),
+      scenathon: React.createRef(),
+      home: React.createRef()
     }
   };
 
@@ -99,7 +98,7 @@ componentDidMount(){
   */
   
   render(){
-    const { run, stepIndex, steps } = this.state;
+   
     return (
         <React.Fragment>
         {/*<div>
@@ -107,23 +106,23 @@ componentDidMount(){
         </div>*/}
 
         <div className="Nav">
-          <Navbar/>
+          <Navbar references={this.references}/>
         </div>
 
           <div className="imagen">
-            <Jumbotron />
+            <Jumbotron jumboReference={this.references.home} />
           </div>
 
           <div>
-          <About1/>
+          <About1 aboutRef={this.references.fable}/>
         </div>
         <div id="Jumbotron_2" data-rh="" data-rh-at="top">
-          <Jumbotron_2 />
+          <Jumbotron_2/>
         </div>
 
 
 
-<Scenathon/>
+<Scenathon fableRef={this.references.scenathon2020}/>
 {/*
  <div style={{display: 'flex'}}>
           <div>
@@ -139,25 +138,15 @@ componentDidMount(){
         
 
         <div>
-          <About2/>
+          <About2 aboutReference={this.references.scenathon}/>
         </div>
 <div>
           <Jumbotron_3/>
         </div>
-         {/* <Router>
-          <Link to="/Scenathon">
-          </Link>  
-          <Switch>
-            <Route exact path="/Scenathon" component={Scenathon}>
-            </Route>
-          </Switch>
-         </Router> */}
+       
          
 
-        {/*<div data-rh="Este es el apartado About" data-rh-at="top" id="About">
-          <About/>
-        </div>*/}
-        
+     
         <div className="app">
 
 			<ReactHint autoPosition events delay={{show: 100, hide: 1000}} />

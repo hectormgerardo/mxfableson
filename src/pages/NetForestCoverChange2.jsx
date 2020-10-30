@@ -1,15 +1,14 @@
 import React, { useState} from "react";
-import BarChart from "../componentes/BarChart";
+import BarChart from "../components/BarChart";
 import data from '../data/NetForestCoverChange2.json';
 import "../../node_modules/react-grid-layout/css/styles.css";
 import "../../node_modules/react-resizable/css/styles.css";
-import {Container,Row,Col,Jumbotron} from "react-bootstrap";
-import GridLayout from 'react-grid-layout';
-import ComboBox3 from '../componentes/ComboBox3';
+import {Container,Row,Col} from "react-bootstrap";
+import ComboBox3 from '../components/ComboBox3';
 import LeafletMap from './LeafletMap';
 
 //nfch=NetForestCoverChange
-const DrawNfch2 = (props) => {
+const DrawNfch2 = () => {
  
   const [state, setState] = useState({
     select: {
@@ -19,7 +18,7 @@ const DrawNfch2 = (props) => {
     }
    
   });
-  
+  var dataAux=null;
   const handleChange = e => {
   //console.log(e)
       setState({
@@ -38,26 +37,26 @@ const DrawNfch2 = (props) => {
     case 'regions':
       switch(state.select.Iteration){
         case 'before':
-          var dataAux= convertir(state.select.scenathon_id  === "6" ? data.combination_3 : data.combination_4);
+           dataAux= convertir(state.select.scenathon_id  === "6" ? data.combination_3 : data.combination_4);
           break;
         case 'after':
-          var dataAux= convertir(state.select.scenathon_id  === "6" ? data.combination_1 : data.combination_2);
+           dataAux= convertir(state.select.scenathon_id  === "6" ? data.combination_1 : data.combination_2);
           break
       }
       break;
     case 'countries':
       switch(state.select.Iteration){
       case 'before':
-        var dataAux= convertir(state.select.scenathon_id  === "6" ? data.combination_6 : data.combination_8);
+         dataAux= convertir(state.select.scenathon_id  === "6" ? data.combination_6 : data.combination_8);
         break;
       case 'after':
-        var dataAux= convertir(state.select.scenathon_id  === "6" ? data.combination_5 : data.combination_7);
+         dataAux= convertir(state.select.scenathon_id  === "6" ? data.combination_5 : data.combination_7);
         break;
   
     }
 
     break;
-    default:var dataAux= convertir(data.combination_1);
+    default:dataAux= convertir(data.combination_1);
     
   }
   
@@ -122,7 +121,7 @@ const convertir=(props)=> {
      var otros=[];
 
      
-     if(props!=undefined){
+     if(props!==undefined){
      props.map((item) => {
      
       if(item.c_country_t==="Mexico"){
