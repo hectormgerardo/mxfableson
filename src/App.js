@@ -4,8 +4,8 @@ import Navbar from "./componentes/Navbar";
 import Header from "./componentes/Header";
 import About1 from "./componentes/About1";
 import About2 from "./componentes/About2";
+import About3 from "./componentes/About3";
 import Tour from "./componentes/Tour";
-import Touraux from "./componentes/Touraux";
 import About from './pages/About';
 import { Jumbotron } from './componentes/Jumbotron'
 import { Jumbotron_2}  from './componentes/Jumbotron_2'
@@ -15,6 +15,7 @@ import { Last } from 'react-bootstrap/esm/PageItem';
 import ReactHintFactory from 'react-hint'
 import 'react-hint/css/index.css';
 import Scenathon from './pages/Scenathon';
+import TradeReport from './pages/TradeReport'
 import Aside from './componentes/Aside';
 import {
   BrowserRouter as Router,
@@ -24,11 +25,12 @@ import {
 } from 'react-router-dom';
 import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
 import { Evented } from 'leaflet';
-
+import BackgroundBlue from '../src/assets/background.jpg';
+import steps from './componentes/TOUR_STEPS';
 
 const ReactHint = ReactHintFactory(React)
 
-export class App extends React.Component {
+const App = (props) => {
   
   constructor(){
     super();
@@ -56,8 +58,11 @@ export class App extends React.Component {
     }
   };
 
+  const handleChangeAside = (value) => {
+    setCurrentValue(value)
+  }
 
-  handleJoyrideCallback = data => {
+  /*handleJoyrideCallback = data => {
     const { action, index, status, type } = data;
 
     if ([EVENTS.STEP_AFTER, EVENTS.TARGET_NOT_FOUND].includes(type)) {
@@ -67,50 +72,17 @@ export class App extends React.Component {
     else if ([STATUS.FINISHED, STATUS.SKIPPED].includes(status)) {
       // Need to set our running state to false, so we can restart if we click start again.
       this.setState({ run: false });
-    }
+    }*/
 
-    console.groupCollapsed(type);
-    console.log(data); //eslint-disable-line no-console
+    //console.groupCollapsed(type);
+    //console.log(data); //eslint-disable-line no-console
     console.groupEnd();
-  };
-  
-  /*
-componentDidMount(){
-  const script = Navbar.document.createElement("script");
-
-    script.src = "NavbarAnimation.js";
-    script.async = true;
-
-    Navbar.document.body.appendChild(script);
-}
- 
-  componentWillMount(){
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount(){
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll(e) {
-    let lastScrollTop = 0;
-    const currentScrollTop = Navbar.scrollTop;
-    if (!this.state.hidden && currentScrollTop > lastScrollTop) {
-      this.setState({ hidden: true });
-    } else if(this.state.hidden) {
-      this.setState({ hidden: false });
-    }
-    lastScrollTop = currentScrollTop;
-  }
-  */
-  
-  render(){
-    const { run, stepIndex, steps } = this.state;
+    
     return (
         <React.Fragment>
-        {/*<div>
-          <Tour/>
-        </div>*/}
+        <div>
+          <Tour stepsP={steps}/>
+        </div>
 
         <div className="Nav">
           <Navbar references={this.references}/>
@@ -123,31 +95,33 @@ componentDidMount(){
           <div>
           <About1 aboutRef={this.references.fable}/>
         </div>
-        <div id="Jumbotron_2" data-rh="" data-rh-at="top">
+        <div id="Jumbotron_2" >
           <Jumbotron_2 />
         </div>
 
 
 
+
 <Scenathon fableRef={this.references.scenathon2020}/>
+
 {/*
  <div style={{display: 'flex'}}>
           <div>
             <Aside />
           </div>
-          <div>
-          <Scenathon/>
+          <div style={{width: '100%'}}>
+            <Scenathon currentValue={currentValue} />
           </div>
         </div>
 */ }
        
 
         
-
         <div>
           <About2 aboutReference={this.references.scenathon}/>
+
         </div>
-<div>
+        <div>
           <Jumbotron_3/>
         </div>
          {/* <Router>
@@ -171,8 +145,9 @@ componentDidMount(){
 				attribute="data-custom"
 				className="custom-hint"
 				events={{click: true}}
-				onRenderContent={this.onRenderContent}
-				ref={(ref) => this.instance = ref}/>
+				//onRenderContent={this.onRenderContent}
+        //ref={(ref) => this.instance = ref}
+        />
 		</div>
 
         <div>
@@ -207,6 +182,6 @@ componentDidMount(){
          
     </React.Fragment>
   )
-}};
+};
 export default App;
 

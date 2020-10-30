@@ -14,6 +14,7 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar, onChange }
     onChange(e);
   }
   return (
+  
     <ProSidebar
       image={false}
       rtl={false}
@@ -79,8 +80,8 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar, onChange }
                 <MenuItem>Exporters</MenuItem>
               </SubMenu>
               <SubMenu title="Current Trend">
-                <MenuItem>Importers</MenuItem>
-                <MenuItem>Exporters</MenuItem>
+                <MenuItem >Importers</MenuItem>
+                <MenuItem >Exporters</MenuItem>
               </SubMenu>
 
             </SubMenu>

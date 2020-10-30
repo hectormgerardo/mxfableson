@@ -43,12 +43,9 @@ export const Header = () => {
     return (
         <Styles>
             <header>
-            <img src={BannerLifeOnLand} class="banner"></img>
+              <img src={BannerLifeOnLand} class="banner"></img>
             </header>
         </Styles>
-
-
-       
 
     );
 };

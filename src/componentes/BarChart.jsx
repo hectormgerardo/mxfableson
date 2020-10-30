@@ -2,7 +2,7 @@ import React from 'react';
 import { Bar,HorizontalBar } from 'react-chartjs-2';
 
 
-function BarChart(props){
+const BarChart = (props) => {
 
   const options = {
     responsive: true,
