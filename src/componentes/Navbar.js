@@ -33,12 +33,8 @@ const Styles = styled.div`
   justify-content:space-between;
   width:100%;
   z-index: 9999;
-
 .router-container {
    
-    margin-left:100px;
-    margin-right:90px;
-  
   .navbar-brand{
     margin-left:30px;
   }
@@ -63,17 +59,17 @@ width: 100px;
 
 }
 
-
-.navbar-brand, .navbar-nav .nav-link {
-  color: white;
-  text-shadow: .5px .5px 2px #000000;
-  &: hover{
+ navbar-brand: hover{
     color:#306973;
     width:inherit;
     
   
   
   }
+.navbar-brand, .navbar-nav .nav-link {
+  color: white;
+  text-shadow: .5px .5px 2px #000000;
+ 
 
   .navbar-link{
     margin-left:70px;

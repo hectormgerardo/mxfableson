@@ -11,10 +11,13 @@ function BarChart(props){
       display: true,
       text: props.title
   },legend:{
-    display:true,
+    
+    display:props.display===undefined?true:props.display,
+
     labels:{
       boxWidth:props.labelwidth===undefined?20:props.labelwidth,
       fontSize:props.labelSize===undefined?12:props.labelSize
+      
     },
     position:props.labelposition===undefined?'right':props.labelposition
   },
@@ -50,12 +53,18 @@ function BarChart(props){
           id: 'y-axis-1',
           gridLines: {
             display: true,
+          }, scaleLabel: {
+            display: true,
+            labelString:props.labelString===undefined?'':props.labelString,
+            fontColor:props.fontColor===undefined?'#546372':props.fontColor,
+            fontSize:props.fontSize===undefined?18:props.fontSize,
+
           },
 
           labels: {
             show: true,
             position: 'right',
-          }
+          },
         },
         {
           type: 'linear',

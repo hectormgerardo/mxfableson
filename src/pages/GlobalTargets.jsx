@@ -569,6 +569,9 @@ const crearDataTargetSiete=(props)=> {
             data={dataAuxTargetUno}
             title="Target 1.- Zero net deforestation"
             aspectRatio={false}
+            labelString='1000h/year'
+            fontSize='16'
+            fontColor='black'
             labelposition="bottom"/>
         </div>
         <div key="t2" data-grid={{x: 2, y: 0, w: 2, h: 7}} >
@@ -576,6 +579,7 @@ const crearDataTargetSiete=(props)=> {
             data={dataAuxTargetDos}
             aspectRatio={false}
             labelposition="bottom"
+            
             title="Target 2.- Share of total land which is protected"/>
           </div>
         <div key="t3" data-grid={{x: 4, y: 0, w: 2, h: 7}}>
@@ -608,6 +612,9 @@ const crearDataTargetSiete=(props)=> {
             data={dataAuxTargetCinco}
             aspectRatio={false}
             labelposition="top"
+            labelString='Kcal per capita /day'
+            fontSize='18'
+            fontColor='black'
             title="Target 5.-  Food security"/>
             </div>
         <div key="t7" data-grid={{x: 7, y: 1, w: 2.5, h: 8}} style={{borderStyle:'none'}}>
@@ -615,6 +622,10 @@ const crearDataTargetSiete=(props)=> {
             data={dataAuxTargetSeis}
             aspectRatio={false}
             labelposition="bottom"
+            labelString='blue water in million cubic meters'
+            fontSize='16'
+            fontColor='black'
+
             title="Target 6.- Fresh water use"/>
             </div>
         </ResponsiveReactGridLayout>

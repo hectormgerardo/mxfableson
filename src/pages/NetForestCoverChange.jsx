@@ -76,6 +76,8 @@ const DrawNfch = (props) => {
 <MixedChart data={dataAux}
   title="Net Forest Cover Change"
   aspectRatio={false}
+  
+  
   labelposition="bottom"  />
   </div>
   )

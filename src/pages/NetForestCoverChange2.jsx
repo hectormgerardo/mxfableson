@@ -67,16 +67,17 @@ return(
           <Container fluid >
             <Row  >
               <Col >
-              <div style={{height: "100vh" ,width:"30vw"} }>
+              <div style={{height: "70vh" ,width:"40vw"} }>
               <ComboBox3 onChange={handleChange}/>
                 <BarChart data={dataAux}
                   title="Net Forest Cover Change 2"
                   labelposition="bottom"
+                  display={false}
                   aspectRatio={false}/></div>
               </Col>
               <Col>
 
-              <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"35vw"}}>
+              <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"40vw"}}>
                 <LeafletMap
                   countriesData = {dataAux}
                 />
