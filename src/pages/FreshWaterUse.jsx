@@ -104,7 +104,7 @@ const DrawFreshWaterUse = () => {
 
       });
 
-      var freshWaterUse = new FreshWaterUse(ChartCharacteristics["million_cubic_metres"], sum);
+      var freshWaterUse = new FreshWaterUse(ChartCharacteristics["cubic_metres"], sum);
       dataSet.push(freshWaterUse);
 
       var dataAux = {
@@ -124,20 +124,28 @@ const DrawFreshWaterUse = () => {
 
   return (
     <div>
-      <div>
-        <ComboBox onChange={handleChange} />
-        {converter()}
-      </div>
+<div>
+<ComboBox onChange={handleChange}/>
+{converter()}
+</div>
+   
+  <div style={{height: "100vh",width:"70vw"}}>
+   
+    <BarChart data={data}
+  aspectRatio={false}
+  labelposition="bottom"
+  labelwidth={50}
+  labelSize={24}
+  labelString='Blue water cubic metres'
+  fontSize='24'
+  TitleSize={55}
 
-      <div style={{ height: "100vh", width: "70vw" }}>
 
-        <BarChart data={data}
-          aspectRatio={false}
-          labelposition="top"
-          title="Fresh Water use" />
 
-      </div>
-    </div>
+  title="Fresh Water use"/>
+  
+  </div>
+  </div>
   );
 }
 export default DrawFreshWaterUse;

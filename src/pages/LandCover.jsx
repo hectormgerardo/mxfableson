@@ -147,8 +147,13 @@ const DrawLandCover = () => {
 
     <div style={{height: "100vh",width:"70vw"}}>
     <BarChart data={data}
+    labelwidth={40}
+    labelSize={24}
     title="Land Cover"
-    labelposition='top'
+    labelposition='right'
+    labelString='Ha per year'
+    fontSize='20'
+    fontColor='black'
    aspectRatio={false}/>
     </div>
 

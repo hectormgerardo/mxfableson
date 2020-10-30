@@ -114,6 +114,8 @@ const SustainableExporter =()=>
                   
                   <div style={{height: "100vh", width:"35vw"}}>
                       <BarChart data={dataAux} title="Sustainable net exporters"
+                                                        labelString='Import quantity'
+
                         aspectRatio={false}
                         labelposition="bottom"/> 
                   </div>

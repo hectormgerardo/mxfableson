@@ -78,6 +78,9 @@ const DrawNfch = () => {
 <MixedChart data={dataAux}
   title="Net Forest Cover Change"
   aspectRatio={false}
+  labelString='ha per year'
+  fontSize='25'
+  
   labelposition="bottom"  />
   </div>
   )

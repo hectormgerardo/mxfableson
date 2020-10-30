@@ -71,16 +71,19 @@ return(
           <Container fluid >
             <Row  >
               <Col >
-              <div style={{height: "100vh" ,width:"30vw"} }>
+              <div style={{height: "70vh" ,width:"40vw"} }>
               <ComboBox3 onChange={handleChange}/>
                 <BarChart data={dataAux}
                   title="Net Forest Cover Change 2"
                   labelposition="bottom"
+                  display={false}
+                  labelString='ha per year'
+  fontSize='25'
                   aspectRatio={false}/></div>
               </Col>
               <Col>
 
-              <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"35vw"}}>
+              <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"30vw"}}>
                 <LeafletMap
                   countriesData = {dataAux}
                 />
@@ -233,7 +236,7 @@ const convertir=(props)=> {
               fill: false,
               backgroundColor: '#faa75a',
               borderColor: '#71B37C',
-              hoverBackgroundColor: '#71B37C',
+              hoverBackgroundColor: 'orange',
               hoverBorderColor: '#71B37C',
               yAxisID: 'y-axis-1'
             },{

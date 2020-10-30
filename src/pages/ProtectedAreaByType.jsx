@@ -139,6 +139,13 @@ var iteration = state.select.Iteration;
       
 
       <BarChart data={data}
+        labelString='ha per year'
+        fontSize='25'
+        labelposition="bottom"
+        labelwidth={50}
+        labelSize={16}
+
+      
     title="Protected Areas By Type"/>
     
     </div>
