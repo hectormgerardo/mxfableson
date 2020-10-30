@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 
-import ComboBox from '../componentes/ComboBox'
+import ComboBox from '../components/ComboBox'
 
-import ComboBox3 from '../componentes/ComboBox3'
-import Aside from '../componentes/Aside';
-import Dashboard from '../componentes/Dashboard'
+
+import Aside from '../components/Aside';
+
 
 
 //dashboards
@@ -100,7 +100,7 @@ class Scenathon extends Component {
     handleChange = e => {
       
 
-       if(e.target==undefined)
+       if(e.target===undefined)
        {
           
         this.setState({
@@ -115,9 +115,7 @@ class Scenathon extends Component {
            
         }) 
        }else{
-           console.log("ELSEEEE")
-        console.log(e.target.name);
-        console.log(e.target.value);
+         
           this.setState({
             select: {
                 //el next code evitara que se sobrescriba cuando reciba un valor new
@@ -237,7 +235,7 @@ class Scenathon extends Component {
         return (
 
         
-                <Stsyles>
+                <Styles>
             <header ref={this.fableRef}>
         <img class="banner" id="banner"></img>
         </header>
@@ -256,7 +254,7 @@ class Scenathon extends Component {
                 </div>
              
             </div>
-            </Stsyles>
+            </Styles>
         )
     }
 }

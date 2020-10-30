@@ -1,12 +1,11 @@
 import React, { useState} from "react";
-import MixedChart from "../componentes/MixedChart.jsx";
+import MixedChart from "../components/MixedChart.jsx";
 import data from '../data/NetForestCoverChange1.json';
-import {Container,Row,Col} from "react-bootstrap";
-import ComboBox from '../componentes/ComboBox';
-import { Responsive as ResponsiveGridLayout } from 'react-grid-layout';
+import ComboBox from '../components/ComboBox';
+
 //filter map
 //nfch=NetForestCoverChange
-const DrawNfch = (props) => {
+const DrawNfch = () => {
   
   const [state, setState] = useState({
     select: {

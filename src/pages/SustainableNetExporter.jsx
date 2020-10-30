@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import BarChart from "../componentes/BarChart";
+import BarChart from "../components/BarChart";
 import {Container,Row,Col} from "react-bootstrap";
-import ComboBoxTradeReportersImporters from "../componentes/ComboBoxTradeReporters";
+import ComboBoxTradeReportersImporters from "../components/ComboBoxTradeReporters";
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
 
 const SustainableExporter =()=>
@@ -32,7 +32,7 @@ const SustainableExporter =()=>
  var dataAux = null;
 
  const handleChange = e => {
-   var  iteration = e.target.name=="iteration"? e.target.value=="after"?'4':'3':state.select.iteration;
+   var  iteration = e.target.name==="iteration"? e.target.value==="after"?'4':'3':state.select.iteration;
    console.log("hande")
    console.log(iteration)
 setState({
@@ -86,7 +86,7 @@ var nameCounty="Argentina";
         labels.push(item.Year);
       }
       dataExport_quantity.push(item.Export_quantity);
-      if (nameCounty!=item.name) {
+      if (nameCounty!==item.name) {
         var pais = new Pais(CountryCharacteristics[nameCounty], dataExport_quantity);
           paises.push(pais);
           nameCounty=item.name;

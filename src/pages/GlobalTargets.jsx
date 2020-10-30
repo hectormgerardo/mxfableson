@@ -3,15 +3,12 @@ import "../css/graphCharacteristics.css";
 import "../css/Box.css";
 import "../../node_modules/react-grid-layout/css/styles.css";
 import "../../node_modules/react-resizable/css/styles.css";
-import {Container,Row,Col,Jumbotron} from "react-bootstrap";
-import GridLayout from 'react-grid-layout';
-import { Responsive as ResponsiveGridLayout } from 'react-grid-layout';
 import { WidthProvider, Responsive } from "react-grid-layout";
 
 import MixedChart from "../components/MixedChart";
 import data from '../data/GlobalTargets.json';
-import BarChart from '../componentes/BarChart'
-import ComboBox from '../componentes/ComboBox';
+import BarChart from '../components/BarChart'
+import ComboBox from '../components/ComboBox';
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 const DrawGlobalTargets = (props) => {

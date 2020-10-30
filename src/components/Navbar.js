@@ -8,7 +8,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import Scenathon from '../pages/Scenathon';
+
 
 import About from '../pages/About';
 import styled from 'styled-components';

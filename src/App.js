@@ -1,29 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './css/App.css';
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
+
 import About1 from "./components/About1";
 import About2 from "./components/About2";
-import Tour from "./components/Tour";
-import Touraux from "./components/Touraux";
-import About from './pages/About';
+
 import { Jumbotron } from './components/Jumbotron'
 import { Jumbotron_2}  from './components/Jumbotron_2'
 import { Jumbotron_3 } from './components/Jumbotron_3'
 import { Jumbotron_fin } from './components/Jumbotron_fin'
-import { Last } from 'react-bootstrap/esm/PageItem';
+
 import ReactHintFactory from 'react-hint'
 import 'react-hint/css/index.css';
 import Scenathon from './pages/Scenathon';
-import Aside from './components/Aside';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom';
-import Joyride, { ACTIONS, EVENTS, STATUS } from 'react-joyride';
-import { Evented } from 'leaflet';
+
+
+import { ACTIONS, EVENTS, STATUS } from 'react-joyride';
+
 
 
 const ReactHint = ReactHintFactory(React)
@@ -105,7 +98,7 @@ componentDidMount(){
   */
   
   render(){
-    const { run, stepIndex, steps } = this.state;
+   
     return (
         <React.Fragment>
         {/*<div>
@@ -124,7 +117,7 @@ componentDidMount(){
           <About1 aboutRef={this.references.fable}/>
         </div>
         <div id="Jumbotron_2" data-rh="" data-rh-at="top">
-          <Jumbotron_2 />
+          <Jumbotron_2/>
         </div>
 
 
@@ -150,20 +143,10 @@ componentDidMount(){
 <div>
           <Jumbotron_3/>
         </div>
-         {/* <Router>
-          <Link to="/Scenathon">
-          </Link>  
-          <Switch>
-            <Route exact path="/Scenathon" component={Scenathon}>
-            </Route>
-          </Switch>
-         </Router> */}
+       
          
 
-        {/*<div data-rh="Este es el apartado About" data-rh-at="top" id="About">
-          <About/>
-        </div>*/}
-        
+     
         <div className="app">
 
 			<ReactHint autoPosition events delay={{show: 100, hide: 1000}} />
