@@ -1,8 +1,8 @@
 import React from "react";
-import MixedChart from "../componentes/MixedChart.jsx";
+import MixedChart from "../components/MixedChart.jsx";
 import data from '../data/NetForestCoverChange1.json';
 import {Container,Row,Col} from "react-bootstrap";
-import Tour from '../componentes/Tour';
+import Tour from '../components/Tour';
 
 import { Responsive as ResponsiveGridLayout } from 'react-grid-layout';
 //filter map

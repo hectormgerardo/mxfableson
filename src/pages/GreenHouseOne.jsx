@@ -1,8 +1,8 @@
 import React from "react";
-import SuperGraph from "../componentes/SuperGraph";
+import SuperGraph from "../components/SuperGraph";
 import data from '../data/Greenhouse1.json';
 import { Container, Row, Col } from "react-bootstrap";
-import Tour from '../componentes/Tour'
+import Tour from '../components/Tour'
 const drawGreenhouse1 = (props) => {
 
   var dataGraphOne;

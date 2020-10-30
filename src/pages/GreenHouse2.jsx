@@ -1,8 +1,8 @@
 import React from "react";
-import BarChart from "../componentes/BarChart";
+import BarChart from "../components/BarChart";
 import data from '../data/Greenhouse2.json';
 import { Container, Row, Col } from "react-bootstrap";
-import Tour from '../componentes/Tour'
+import Tour from '../components/Tour'
 
 import LeafletMap from './LeafletMap';
 //nfch=NetForestCoverChange
