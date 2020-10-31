@@ -3,6 +3,7 @@ import BarChart from "../components/BarChart";
 import {Container,Row,Col} from "react-bootstrap";
 import ComboBoxTradeReportersImporters from "../components/ComboBoxTradeReporters";
 import CountryCharacteristics from '../data/CountryCharacteristics.json';
+import TradeReportMap from './TradeReportMap'
 
 const SustainableExporter =()=>
 {
@@ -13,8 +14,15 @@ const SustainableExporter =()=>
       this.label=CountryCharacteristics[0]["label"];
       this.borderColor=CountryCharacteristics[0]["borderColor"];
       this.backgroundColor=CountryCharacteristics[0]["backgroundColor"];
-      
     }
+
+    function PaisMap(CountryCharacteristics,data) 
+    {
+      this.data=data;
+      this.label=CountryCharacteristics[0]["label"];
+      this.backgroundColor=CountryCharacteristics[0]["backgroundColor"];
+    }
+
     const [state,setState]=useState({select: {
         Product: 'abaca',
        iteration: "4",
@@ -25,12 +33,13 @@ const SustainableExporter =()=>
 
        //const [state,setState]=useState([]);
  const [json,setJson]=useState([]);
- var dataAux = null;
-
+ var dataChart = null;
+ var dataMap = null;
+ 
  const handleChange = e => {
     var  iteration = e.target.name==="iteration"? e.target.value==="after"?'4':'3':state.select.iteration;
    
-    console.log(iteration)
+
  setState({
          select: {
            
@@ -49,7 +58,7 @@ const SustainableExporter =()=>
       try {
    
         const body =state;
-        console.log(body)
+      
         
      
        const response = await fetch("https://server-fableson.wl.r.appspot.com/net/"+JSON.stringify(body));
@@ -74,33 +83,55 @@ const SustainableExporter =()=>
   {
     
   var dataImport_quantity=[];
-  var paises=[];
+  var datasetsCharts=[];
+  var dataSetsMap=[];
   var labels=[];
-  var nameCounty="Argentina";
+  var nameCounty=state.select.GraficaType==="regions"?"R_AFR":"Argentina";
   
     if (json != null) {
+      console.log(json  )
       json.forEach(item => {
         if (!labels.includes(item.Year)) 
         {
           labels.push(item.Year);
         }
         dataImport_quantity.push(item.Import_quantity);
-        if (nameCounty!==item.name) {
+        if (nameCounty!==item.name) 
+        {
+         
+         
           var pais = new Pais(CountryCharacteristics[nameCounty], dataImport_quantity);
-          paises.push(pais);
+          datasetsCharts.push(pais);
+           pais = new PaisMap(CountryCharacteristics[nameCounty], dataImport_quantity);
+          dataSetsMap.push(pais);
+
+
           nameCounty=item.name;
           dataImport_quantity=[];
           dataImport_quantity.push(item.Import_quantity);
         }
       });
-  
+  //colores
+  //labels
+  //data
   
     }
    var data = {
       labels:labels,
-      datasets:paises
+      datasets:datasetsCharts
   };
-   dataAux=data;
+   dataChart=data;
+
+  
+
+
+
+
+
+
+
+
+
   }
 
   return (
@@ -113,7 +144,8 @@ const SustainableExporter =()=>
                   <Col>
                   
                   <div style={{height: "100vh", width:"35vw"}}>
-                      <BarChart data={dataAux} title="Sustainable net exporters"
+               
+                      <BarChart data={dataChart} title="Sustainable net exporters"
                                                         labelString='Import quantity'
 
                         aspectRatio={false}
@@ -124,15 +156,14 @@ const SustainableExporter =()=>
                   <Col>
     
                   <div style={{borderStyle:'solid', textAlign:'center', height: "70vh",width:"35vw"}}>
+                
+                 {/** 
+                  <TradeReportMap countriesData = {dataChart} />
+                   */}
+
+                   <TradeReportMap countriesData = {dataChart} Product={state.select.Product}/>
+               
                   
-                  {/* 
-                  <LeafletMap
-                  
-    
-                 //   countriesData = {dataAux}
-                  
-                  />
-                  */}
                   </div>
                   </Col>
                 </Row>
