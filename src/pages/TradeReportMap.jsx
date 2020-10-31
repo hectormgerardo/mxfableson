@@ -16,11 +16,11 @@ const TradeReportMap =(props)=> {
 
     const converter=()=>{
 
-        console.log("converter");
+      
        
      //   paisesTest = propsAux.countriesData.datasets
 if(props.countriesData.datasets!==null){
-    console.log(props)
+    
       for (const country in props.countriesData.datasets) {
             
             color.push(props.countriesData.datasets[country].backgroundColor);
@@ -286,7 +286,7 @@ var popup=null;
  const onEachCountry = (country, layer) => {
     
        const countryName = country.id; //The name of the countries
-     console.log("entre")
+ 
        var indexAux = -1;
  
        if (name_countries_Rest_of_Sub_Saharan_Africa.includes(countryName)){
@@ -352,8 +352,7 @@ var popup=null;
         */
        
        if(indexAux != -1){
-           console.log("here")
-        console.log(layer)
+        
             layer.options.fillColor = color[indexAux];
             
             popup = L.popup().setContent(createListInfoCountry (indexAux, countryName));
@@ -417,10 +416,9 @@ var popup=null;
            mapa= props.countriesData.datasets.length!==0?<GeoJSON style={countryStyle} 
            key={hash(props.countriesData.datasets)} 
            data={mapDataTest.features}
-            onEachFeature={onEachCountry}/>:<h1>HOLA NO SE PUDO</h1>
+            onEachFeature={onEachCountry}/>:null
                     }  
 
-                {console.log(mapa)}
                     {/** 
                     <TileLayer
                         /*url="https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"

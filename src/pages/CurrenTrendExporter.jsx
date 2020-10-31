@@ -55,7 +55,7 @@ setState({
       console.log(body)
       
    
-     const response = await fetch("https://server-fableson.wl.r.appspot.com/net/"+JSON.stringify(body));
+     const response = await fetch("https://server-fableson.wl.r.appspot.com/net"+JSON.stringify(body));
       const  jsonAux =  await response.json();
     
     setJson(jsonAux);
@@ -79,8 +79,12 @@ setState({
 var dataExport_quantity=[];
 var paises=[];
 var labels=[];
-var nameCounty="Argentina";
-  if (json != null) {
+var nameCounty="";
+  if (json.length !==0) {
+    var firstElement =JSON.parse(JSON.stringify(json[0]));
+     
+    nameCounty=firstElement["name"];
+    console.log(nameCounty)
     json.forEach(item => {
       if (!labels.includes(item.Year)) 
       {

@@ -52,7 +52,7 @@ const SustainableExporter =()=>
         console.log(body)
         
      
-       const response = await fetch("https://server-fableson.wl.r.appspot.com/net/"+JSON.stringify(body));
+       const response = await fetch("https://server-fableson.wl.r.appspot.com/net"+JSON.stringify(body));
         const  jsonAux =  await response.json();
       
       setJson(jsonAux);
@@ -76,9 +76,12 @@ const SustainableExporter =()=>
   var dataImport_quantity=[];
   var paises=[];
   var labels=[];
-  var nameCounty="Argentina";
+  var nameCounty="";
   
-    if (json != null) {
+    if (json.length !==0) {
+      var firstElement =JSON.parse(JSON.stringify(json[0]));
+     
+      nameCounty=firstElement["name"];
       json.forEach(item => {
         if (!labels.includes(item.Year)) 
         {

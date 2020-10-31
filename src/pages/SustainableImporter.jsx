@@ -16,12 +16,6 @@ const SustainableExporter =()=>
       this.backgroundColor=CountryCharacteristics[0]["backgroundColor"];
     }
 
-    function PaisMap(CountryCharacteristics,data) 
-    {
-      this.data=data;
-      this.label=CountryCharacteristics[0]["label"];
-      this.backgroundColor=CountryCharacteristics[0]["backgroundColor"];
-    }
 
     const [state,setState]=useState({select: {
         Product: 'abaca',
@@ -61,7 +55,7 @@ const SustainableExporter =()=>
       
         
      
-       const response = await fetch("https://server-fableson.wl.r.appspot.com/net/"+JSON.stringify(body));
+       const response = await fetch("https://server-fableson.wl.r.appspot.com/net"+JSON.stringify(body));
         const  jsonAux =  await response.json();
       
       setJson(jsonAux);
@@ -81,16 +75,22 @@ const SustainableExporter =()=>
 
   const converter=()=>
   {
+    console.log("metodo converter sustainable json")
+
     
   var dataImport_quantity=[];
   var datasetsCharts=[];
-  var dataSetsMap=[];
+
   var labels=[];
-  var nameCounty=state.select.GraficaType==="regions"?"R_AFR":"Argentina";
+  var nameCounty="";
   
-    if (json != null) {
-      console.log(json  )
+    if (json.length !==0) {
+      //console.log(json)
+      var firstElement =JSON.parse(JSON.stringify(json[0]));
+     
+      nameCounty=firstElement["name"];
       json.forEach(item => {
+        
         if (!labels.includes(item.Year)) 
         {
           labels.push(item.Year);
@@ -102,8 +102,7 @@ const SustainableExporter =()=>
          
           var pais = new Pais(CountryCharacteristics[nameCounty], dataImport_quantity);
           datasetsCharts.push(pais);
-           pais = new PaisMap(CountryCharacteristics[nameCounty], dataImport_quantity);
-          dataSetsMap.push(pais);
+         
 
 
           nameCounty=item.name;
