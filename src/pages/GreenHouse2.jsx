@@ -42,7 +42,7 @@ const GreenHouse = () => {
         const body =state;
       
         console.log(state)
-       const response = await fetch("http://localhost:3456/gas2"+JSON.stringify(body));
+       const response = await fetch("https://server-fableson.wl.r.appspot.com/gas2"+JSON.stringify(body));
        const  jsonAux =  await response.json();
     
       setJson(jsonAux);

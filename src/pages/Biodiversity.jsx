@@ -98,7 +98,7 @@ const DrawBiodiversity = (props) =>
 
       const converter = () => {
 
-      console.log(`entre`)
+      
         var dataBiodiversity_land=[];
 var biodiversities=[];
 var labels=[];
