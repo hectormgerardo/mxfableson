@@ -46,7 +46,7 @@ const DrawBiodiversity = (props) =>
         const body =state;
  
        const response = await fetch("https://server-fableson.wl.r.appspot.com/biodiversity"+JSON.stringify(body));
- 
+     
        const  jsonAux =  await response.json();
       setJson(jsonAux);
       } catch (error) {

@@ -37,7 +37,8 @@ const DrawFreshWater2 = () => {
 
       try {
         const body = state;
-        const response = await fetch("https://server-fableson.wl.r.appspot.com/freshwater2" + JSON.stringify(body));
+       const response = await fetch("https://server-fableson.wl.r.appspot.com/freshwater2" + JSON.stringify(body));
+      //  const response = await fetch("http://localhost:3456/freshwater2"+JSON.stringify(body));
         const jsonAux = await response.json();
         setJson(jsonAux);
       } catch (error) {
@@ -96,12 +97,13 @@ const DrawFreshWater2 = () => {
     var labels = [];
     var nameCounty = state.select.GraficaType === "regions" ? "R_AFR" : "Argentina";
 
-    if (json != null) {
+    if (json !== null) {
+
       json.forEach(item => {
         if (!labels.includes(item.Year)) {
           labels.push(item.Year);
         }
-        dataSum.push(item.sum);
+        dataSum.push(item.BlueWater);
         if (nameCounty !== item.Country) {
 
           var fresh = new FreshWaterTwo(CountryCharacteristics[nameCounty], dataSum);

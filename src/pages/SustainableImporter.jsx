@@ -55,7 +55,9 @@ const SustainableExporter =()=>
       
         
      
-       const response = await fetch("https://server-fableson.wl.r.appspot.com/net"+JSON.stringify(body));
+     //const response = await fetch("https://server-fableson.wl.r.appspot.com/net"+JSON.stringify(body));
+     //  const response = await fetch("https://server-fableson.wl.r.appspot.com/net"+JSON.stringify(body));
+     const response = await fetch("http://localhost:3456/net"+JSON.stringify(body));
         const  jsonAux =  await response.json();
       
       setJson(jsonAux);
@@ -89,48 +91,31 @@ const SustainableExporter =()=>
       var firstElement =JSON.parse(JSON.stringify(json[0]));
      
       nameCounty=firstElement["name"];
-      json.forEach(item => {
+      json.forEach(item => 
+        {
         
         if (!labels.includes(item.Year)) 
         {
+         
           labels.push(item.Year);
         }
         dataImport_quantity.push(item.Import_quantity);
         if (nameCounty!==item.name) 
         {
-         
-         
           var pais = new Pais(CountryCharacteristics[nameCounty], dataImport_quantity);
           datasetsCharts.push(pais);
-         
-
-
           nameCounty=item.name;
           dataImport_quantity=[];
           dataImport_quantity.push(item.Import_quantity);
         }
       });
-  //colores
-  //labels
-  //data
-  
     }
+   
    var data = {
       labels:labels,
       datasets:datasetsCharts
   };
    dataChart=data;
-
-  
-
-
-
-
-
-
-
-
-
   }
 
   return (

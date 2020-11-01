@@ -93,12 +93,12 @@ import {Bar} from 'react-chartjs-2';
       }
     };
     
-    let data = props.data;
+    
         
   
     return (
     
-  <Bar data={data}
+  <Bar data={props.data}
                 options={options}/>
     
         
