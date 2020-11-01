@@ -2,7 +2,7 @@ import React from 'react';
 import "../css/App.css"
 import styled from 'styled-components';
 import INCON15 from '../assets/ICONOS-15.png';
-import { Icon } from 'leaflet';
+
 
 
 const Styles = styled.div`

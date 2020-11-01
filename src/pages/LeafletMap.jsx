@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { Map, GeoJSON, TileLayer} from 'react-leaflet';
-import mapData from './../data/Countries.json';
+import { Map, GeoJSON} from 'react-leaflet';
+
 import mapDataTest from './../data/CountriesTest.json';
 import 'leaflet/dist/leaflet.css'; //This style is for the scroll and plus controls of the map
 import '../css/LeafletMap.css';
 import * as L from 'leaflet';
-import { ThemeProvider } from 'styled-components';
+
 
 
 class LeafletMap extends Component {
     state = { color: '#b4b42d'} ;
-
+     popup=null
     //This list is for the countries of Rest_of_Sub_Saharan_Africa
     //because in the data they do not come by individual countries
     name_countries_Rest_of_Sub_Saharan_Africa = [
@@ -64,7 +64,8 @@ class LeafletMap extends Component {
 		'Uganda',
 		'Western Sahara',
 		'Zambia',
-        'Zimbabwe'];
+        'Zimbabwe',
+        'French Guiana'];
         
     //This list is for the countries of Rest of Central and South America
     //because in the data they do not come by individual countries
@@ -169,6 +170,7 @@ class LeafletMap extends Component {
 
     propsAux = null ;
 
+    isColored = false;
     
 
     constructor(props) {
@@ -176,9 +178,12 @@ class LeafletMap extends Component {
         super(props);
         
         this.propsAux = props;
+        console.log('Este es el trade Senathon info')
+        console.log(this.propsAux)
+
         try {
-            
-            this.propsAux.countriesData.datasets.map((item) => {
+           
+            this.propsAux.countriesData.datasets.forEach(item => {
                 this.color.push(item.backgroundColor);
                 this.countriesName.push(item.label);
                 this.data.push(item.data);
@@ -186,13 +191,11 @@ class LeafletMap extends Component {
 
             this.years = this.propsAux.countriesData.labels
 
-            console.log('JIJO');
-            console.log(this.data)
-            
 
         } catch ( e ) {
             console.error ( e );
         }
+        
         
     }
     
@@ -208,7 +211,7 @@ class LeafletMap extends Component {
     };
 
     printMessageToConsole = (event) => {
-        console.log('Este es un mensaje de consola');
+        console.log('This is a console message');
     }
 
     changeTheCountryColor = ( event ) => {
@@ -239,7 +242,15 @@ class LeafletMap extends Component {
 
         var i = 0
         for (const currentValue in this.years) {
-            this.htmlCode = this.htmlCode + '<li>' +'<strong>' + this.years[i] + '</strong>' +': '+ this.data[index][i] + '</li>'
+            //try { 
+                this.htmlCode = this.htmlCode + '<li>' +'<strong>' + this.years[i] + '</strong>' +': '+ this.data[index][i] + '</li>'
+            /*} catch ( e ) {
+                console.log('Con este pais murio: ', countryName)
+                console.log('Este es el indece: ', index)
+                console.log(this.countriesName)
+            }*/
+            
+            
             i ++ ;
         }
 
@@ -261,34 +272,33 @@ class LeafletMap extends Component {
  
        if (this.name_countries_Rest_of_Sub_Saharan_Africa.includes(countryName)){
         indexAux = this.countriesName.indexOf( 'Rest of Sub-Saharan Africa' );
+        
         layer.options.fillColor = this.color[indexAux];
         //console.log('Se llamo con ', indexAux );
-        var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-        layer.bindPopup(popup)
+         this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+        layer.bindPopup(this.popup)
        }
        if (this.name_countries_Rest_of_North_Africa_Middle_East_and_central_Asia.includes(countryName)){
         indexAux = this.countriesName.indexOf( 'Rest of North Africa Middle East and central Asia' );
         layer.options.fillColor = this.color[indexAux];
         //console.log('Se llamo con ', indexAux );
-        var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-        layer.bindPopup(popup)        
+        this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+        layer.bindPopup(this.popup)        
        }
        if (this.name_countries_Rest_of_Central_and_South_America.includes(countryName)){
         indexAux = this.countriesName.indexOf( 'Rest of Central and South America' );
         layer.options.fillColor = this.color[indexAux];
         //console.log('Se llamo con ', indexAux );
-        var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-        layer.bindPopup(popup)
+         this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+        layer.bindPopup(this.popup)
        }
-
-     //  if (this.name_countries_Rest_of_Europe_non_EU8.includes(countryName)){
-       // indexAux = this.countriesName.indexOf( 'Rest of European Union' );
-        //layer.options.fillColor = this.color[indexAux];
+       if (this.name_countries_Rest_of_Europe_non_EU8.includes(countryName)){
+        indexAux = this.countriesName.indexOf( 'Rest of European Union' );
+        layer.options.fillColor = this.color[indexAux];
         
-        //var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-        //layer.bindPopup(popup)
-    //   }
-
+         this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+        layer.bindPopup(this.popup)
+       }
 
        indexAux = this.countriesName.indexOf(countryName);
        
@@ -312,13 +322,22 @@ class LeafletMap extends Component {
         * it means that it did not find the country 
         * and therefore it does not overwrite the color
         */
-       if(indexAux != -1){
+       
+       if(indexAux !== -1){
             layer.options.fillColor = this.color[indexAux];
-            this.createListInfoCountry (indexAux, countryName) ;
-        
-            var popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
-            layer.bindPopup(popup)
+            
+             this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+            layer.bindPopup(this.popup)
+            this.isColored = true;
        }
+       if (!this.isColored) {
+        indexAux = this.countriesName.indexOf('Otros');
+        layer.options.fillColor = this.color[indexAux];
+            
+             this.popup = L.popup().setContent(this.createListInfoCountry (indexAux, countryName));
+            layer.bindPopup(this.popup)
+       }
+
        
 
         //layer.options.fillOpacity = Math.random () ; //This line is for draw diferent opacities with the countries
