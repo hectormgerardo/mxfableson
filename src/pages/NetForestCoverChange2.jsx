@@ -5,6 +5,8 @@ import "../../node_modules/react-resizable/css/styles.css";
 import {Container,Row,Col} from "react-bootstrap";
 import ComboBox3 from '../components/ComboBox3';
 import LeafletMap from './LeafletMap';
+import CountryCharacteristics from '../data/CountryCharacteristics.json';
+
 //nfch=NetForestCoverChange
 const DrawNfch2 = () => {
  
@@ -38,7 +40,7 @@ const DrawNfch2 = () => {
       
       try {   
         const body =state;
-       const response = await fetch("https://server-fableson.wl.r.appspot.com/netforest2"+JSON.stringify(body));
+       const response = await fetch("http://localhost:3456/netforest2"+JSON.stringify(body));
        const  jsonAux =  await response.json();
       setJson(jsonAux);
       } catch (error) {
@@ -118,11 +120,13 @@ var nameCounty=state.select.GraficaType==="regions"?"R_AFR":"Argentina";
 
 
   }
-  
-  console.log('NET DATA AUX');
-  console.log(dataAux);
-
-
+ var dataAux = {
+    labels:labels,
+    datasets:datasetAux
+};
+ data=dataAux;
+      }
+      
 return(
 
 
@@ -154,15 +158,9 @@ return(
                 />
   */}
               </div>
-
               </Col>
             </Row>
           </Container>
           );
 }
-
-
-
-
-
 export default DrawNfch2;

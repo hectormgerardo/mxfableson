@@ -3,12 +3,35 @@ import SuperGraph from "../components/SuperGraph";
 import data from '../data/Greenhouse1.json';
 import ComboBox from '../components/ComboBox';
 import { Container, Row, Col } from "react-bootstrap";
-import Tour from '../components/Tour'
-const drawGreenhouse1 = (props) => {
+const DrawGreenhouse1 = () => {
 
-  var dataGraphOne;
-  var dataGraphTwo;
-  const { GraficaType, Iteration, Scenario } = props.combinacion.select;
+  var dataGraphOne=null;
+  var dataGraphTwo=null;
+  var dataGraphOneAux = null;
+  var dataGraphTwoAux=null;
+ 
+
+  const [state, setState] = useState({
+    select: {
+      GraficaType:'group',
+      scenathon_id:'6',
+      Iteration:'after',
+    }
+   
+  });
+
+  const handleChange = e => {
+  
+    setState({
+        select: {
+            //el next code evitara que se sobrescriba cuando reciba un valor new
+            ...state.select,
+            
+            [e.target.name]: e.target.value
+        },
+       
+    })
+    }
 
   //Cambiar por las combinaciones de los json falta ya que son dos graficas en el json 
   switch (state.select.GraficaType) {
@@ -104,29 +127,9 @@ const drawGreenhouse1 = (props) => {
       dataGraphTwo = data.graphTwo_combinationTwo;
   }
 
-  const steps = [
-    {
-      target: ".graph",
-      content: "Computed annual global greenhouse gas emissions from crops and livestock (left), and from land use and peat oxidation (right) in Gt.",
-      title: "Greenhouse Gas (GHG) emissions 1",
-        styles: {
-          //this styles override the styles in the props  
-          options: {
-            textColor: "black"
-          }
-        },
-        locale: { 
-          next: <span>End</span>,
-        },
-        placement: "top"
-    }
-  ]
-
   return (
     <Container fluid>
       <Row>
-        <Tour stepsP={steps}/>
-        <div className="graph">
         <Col >
           <div style={{height: "100vh" ,width:"35vw"} }>
           <ComboBox onChange={handleChange}/>
@@ -138,8 +141,7 @@ const drawGreenhouse1 = (props) => {
         <Col > <div style={{height: "100vh" ,width:"35vw"} }><SuperGraph data={dataGraphTwoAux}
           title="Green House 2"
           aspectRatio={false} 
-          labelposition="top" /> </div></Col>
-        </div>
+            labelposition="top" /> </div></Col>
       </Row>
     </Container>
  ); 

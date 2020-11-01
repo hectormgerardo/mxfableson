@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import BarChart from "../components/BarChart";
-import Tour from "../components/Tour";
 import ComboBox from '../components/ComboBox';
 import ChartCharacteristics from '../data/ChartCharacteristics.json';
 
@@ -8,64 +7,6 @@ import ChartCharacteristics from '../data/ChartCharacteristics.json';
 const DrawFreshWaterUse = () => {
 
 
-  switch(GraficaType){
-    case 'group':
-      switch(Iteration){
-        case 'iteration_3':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_2 : data.combination_4);
-          break;
-        case 'iteration_4':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_1 : data.combination_3);
-          break
-      }
-      break;
-    case 'regions':
-      switch(Iteration){
-        case 'iteration_3':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_6 : data.combination_8);
-          break;
-        case 'iteration_4':
-          dataAux= convertir(Scenario === "Sustainaible" ? data.combination_5 : data.combination_7);
-          break
-      }
-      break;
-    case 'countries':
-      switch(Iteration){
-      case 'iteration_3':
-        dataAux= convertir(Scenario === "Sustainaible" ? data.combination_10 : data.combination_12);
-        break;
-      case 'iteration_4':
-        dataAux= convertir(Scenario === "Sustainaible" ? data.combination_9 : data.combination_11);
-
-        break
-    }
-    break;
-  }
-  const steps = [
-    {
-      target: ".graph",
-      content: "Fresh water use for irrigation and livestock. The high demand of water continues to be expected the following decades, not showing much variation through the years.",
-      title: "Fresh Water Use 1",
-        styles: {
-          //this styles override the styles in the props  
-          options: {
-            textColor: "black"
-          }
-        },
-        locale: { 
-          next: <span>End</span>,
-        },
-        placement: "top"
-    }
-  ]
-
-
-  return <div style={{height: "100vh",width:"70vw"}}>
-    <Tour stepsP={steps}/>
-    <div className="graph" style={{height: "100vh",width:"70vw"}}>
-
-    <BarChart data={dataAux}
-  */}
 
 
   function FreshWaterUse(ChartCharacteristics, data) {
@@ -203,7 +144,7 @@ const DrawFreshWaterUse = () => {
 
   title="Fresh Water use"/>
   
-  </div>;
+  </div>
   </div>
   );
 }
