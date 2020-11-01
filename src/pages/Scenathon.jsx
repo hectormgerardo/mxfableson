@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
-
-
-import ComboBox from '../components/ComboBox'
-
-import ComboBox3 from '../components/ComboBox3'
 import Aside from '../components/Aside';
-import Dashboard from '../components/Dashboard'
-
 //dashboards
 import NetForestCoverChange from '../pages/NetForestCoverChange'
 import Biodiversity from '../pages/Biodiversity'
 import GlobalTargets from '../pages/GlobalTargets'
-
 import ProtectedAreaByType from '../pages/ProtectedAreaByType'
 import LandCover from '../pages/LandCover'
 import FoodEnergyIntakePerCapita from '../pages/FoodEnergyIntakePerCapita'
@@ -21,8 +13,6 @@ import NetForestCoverChange2 from '../pages/NetForestCoverChange2'
 import GreenHouse2 from '../pages/GreenHouse2'
 import GreenHouseOne from '../pages/GreenHouseOne'
 import FreshWaterTwo from '../pages/FreshWaterTwo'
-import TradeReport from '../pages/TradeReport'
-
 import styled from 'styled-components';
 import BannerLifeOnLand from '../assets/banners/Mesa de trabajo 19.png';
 import BannerCleanWater from '../assets/banners/Mesa de trabajo 8.png';
@@ -34,17 +24,9 @@ import CurrenTrendExporter from './CurrenTrendExporter'
 import CurrenTrendImporter from './CurrenTrendImporter'
 
 
-{/*import NetForestCoverChangeInfoA from '../pages/NetForestCoverChangeInfo1';
-import NetForestCoverChangeInfo2 from '';
-import FreshWaterUseInfo1 from '';
-import FreshWaterUseInfo2 from '';
-import GreenHouseGasEmissionsInfo1 from '';
-import GreenHouseGasEmissionsInfo2 from '';
-import FoodEnergyIntakePerCapitaInfo1 from '';
-import FoodEnergyIntakePerCapitaInfo2 from '';*/}
-
 const Styles = styled.div`
 header{
+
 
 overflow:hidden;
   background-color: white;
@@ -56,12 +38,7 @@ overflow:hidden;
   margin: 0;
   height: 100px;
   margin-top:20px;
-
   transition: all 0.5s ease;
-
-  width: 100%;
-  
-
 
 
 .banner{
@@ -71,6 +48,7 @@ transition: all 0.5s ease;
 }
 
 
+}
 
 .container{
     display:flex;
@@ -211,12 +189,28 @@ class Scenathon extends Component {
                 this.combobox=null;   
              this.dash=<SustainableNetExporter/>;
             break;
-            case 'Trade Report':
-                this.dash=<TradeReport/>;
+            case 'Sustainable_next_importers':
+                this.combobox=null;   
+             this.dash=<SustainableImporter/>;
             break;
-           
+            case 'Current_trend_next_exporters':
+                this.combobox=null;   
+             this.dash=<CurrenTrendExporter/>;
+            break;
+            case 'Current_trend_next_importers':
+                this.combobox=null;   
+                this.dash=<CurrenTrendImporter/>;
+            break;
+            default: this.combobox=null;  
+            this.dash=<GlobalTargets combinacion={this.state}/>;
           }
     }
+
+   
+  
+
+   
+
 
     render() {
         return (
@@ -239,10 +233,9 @@ class Scenathon extends Component {
                 {this.combobox}
                 {this.dash}
                 </div>
-                <div class="info" id="info"></div>
+             
             </div>
             </Styles>
-           
         )
     }
 }
