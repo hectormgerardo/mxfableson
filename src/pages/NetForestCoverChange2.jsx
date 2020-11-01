@@ -40,7 +40,10 @@ const DrawNfch2 = () => {
       
       try {   
         const body =state;
-       const response = await fetch("http://localhost:3456/netforest2"+JSON.stringify(body));
+
+     const response = await fetch("https://server-fableson.wl.r.appspot.com/forestTwo"+JSON.stringify(body));
+   // const response = await fetch("http://localhost:3456/forestTwo"+JSON.stringify(body));
+
        const  jsonAux =  await response.json();
       setJson(jsonAux);
       } catch (error) {
