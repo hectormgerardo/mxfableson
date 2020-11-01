@@ -55,9 +55,9 @@ const SustainableExporter =()=>
       
         
      
-     //const response = await fetch("https://server-fableson.wl.r.appspot.com/net"+JSON.stringify(body));
-     //  const response = await fetch("https://server-fableson.wl.r.appspot.com/net"+JSON.stringify(body));
-     const response = await fetch("http://localhost:3456/net"+JSON.stringify(body));
+     const response = await fetch("https://server-fableson.wl.r.appspot.com/net"+JSON.stringify(body));
+    
+  //  const response = await fetch("http://localhost:3456/net"+JSON.stringify(body));
         const  jsonAux =  await response.json();
       
       setJson(jsonAux);
@@ -87,7 +87,7 @@ const SustainableExporter =()=>
   var nameCounty="";
   
     if (json.length !==0) {
-      //console.log(json)
+      //console.log(json);
       var firstElement =JSON.parse(JSON.stringify(json[0]));
      
       nameCounty=firstElement["name"];
